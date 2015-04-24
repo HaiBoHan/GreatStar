@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="a2f6fe8d-290d-460b-bba2-3cb830bc12b1" name="ShipPlanFeeQry" displayName="ShipPlanFeeQry" description="" help="" QueryType="List" QueryURI="7115ae99-3ed7-4cd5-ba80-0457c89679e8" QuerySourceFullName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailFeeBE.ShipPlanDetailFeeHead" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="4509e235-6abb-4b01-84a7-ad356c261b70" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="ba31b4a7-e888-43ed-9e8b-86f99a711c7b" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="67a9cb34-01ce-4135-8c47-d34d3b7d4170" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="36dbf633-f8ae-48bc-9dc3-34edf17e11e3" UIFormItemID="841bf0d3-e9b3-49d5-afc7-a31ef1de09a4" UIModelID="7f4bb95f-20ae-4073-8617-9ab897abfa6f" />
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="deb5c1d4-a5ca-467f-bb22-7581aa3b27cb" name="DocNo" displayName="单据编号" description="" help="" />
+      <BasicFilter id="051e8ef9-cdd1-469c-b967-fd242ab1afdf" name="BusinessDate" displayName="业务日期" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="9138422a-42a5-465d-bfe4-52a81eef93f3" name="DocNo" displayName="单据编号" description="" help="" />
+      <Column id="96ea498c-e2fe-4d83-a3ac-60fe893cedb0" name="BusinessDate" displayName="业务日期" description="" help="" />
+      <Column id="6b9f1886-47c8-4339-af15-90009d05077c" name="ShipPlanOrderNo.BillNoItemID" displayName="出运发票号" description="" help="" />
+    </DefaultColumns>
+  </DefaultCase>
+</QueryComponent>

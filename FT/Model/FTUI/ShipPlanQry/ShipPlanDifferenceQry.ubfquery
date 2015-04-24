@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="2df0e277-7320-4930-869d-350e60ac137d" name="ShipPlanDifferenceQry" displayName="ShipPlanDifferenceQry" description="" help="" QueryType="List" QueryURI="20ecd0da-8119-4f2e-9564-fdde13833522" QuerySourceFullName="UFIDA.U9.Cust.GS.FT.ShipPlanDifferenceBE.ShipPlanDifference" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="fcaac295-cd5e-4f77-ad43-e8c5644fbc8a" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="470e89a4-d448-4076-88f0-baf7e46b7be5" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="f0f083b6-0150-49fe-a08f-311c3e52cd6a" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="d23f6eb0-bf43-46bf-90a2-69e4d4bb314e" UIFormItemID="59fc38a4-5253-425d-8294-4f6c129637cb" UIModelID="fe40176b-b7cd-4410-8732-9b89ceaeebbf" />
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="1fe83788-535b-43c2-a1f5-3b0399b13428" name="ShipPlanDocNo" displayName="出运明细单号" description="" help="" />
+      <BasicFilter id="795cd6fd-979b-41f6-9845-5eb7620da2b7" name="SODocNo" displayName="销售订单号" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="080a295e-6412-46ac-b5a9-f6534f0ad2e3" name="ShipPlanDocNo" displayName="出运明细单号" description="" help="" />
+      <Column id="6062fbd6-5145-4406-aae2-10e92b88034f" name="ShipPlanLineNo" displayName="出运明细单行号" description="" help="" />
+      <Column id="3908e4c8-c36a-49ae-9a73-d0d2580c9565" name="SODocNo" displayName="销售订单号" description="" help="" />
+      <Column id="70da714f-7978-42c8-97d5-4ac97397bbfb" name="SODocLineNo" displayName="销售订单行号" description="" help="" />
+      <Column id="7b472ed7-6b47-4c56-b29d-1b9f4d502b22" name="ItemCode" displayName="料品编码" description="" help="" />
+      <Column id="df6e1a34-01ff-43e0-b777-b99f059fd9c9" name="ItemName" displayName="料品名称" description="" help="" />
+      <Column id="c0b15fe9-cae7-4291-8bc7-630bfd07a170" name="PlanQty" displayName="计划出运数量" description="" help="" />
+      <Column id="66756a1e-f893-4b10-9238-0ddbc6e56907" name="ActualQty" displayName="实际出运数量" description="" help="" />
+      <Column id="b92e4331-aff1-49da-b03d-52a008996231" name="DiffQty" displayName="差异数量" description="" help="" />
+      <Column id="e1180220-747d-4251-bb78-3d3dcd6ad560" name="ShipUOM.Name" displayName="计量单位.名称" description="" help="" />
+    </DefaultColumns>
+  </DefaultCase>
+</QueryComponent>

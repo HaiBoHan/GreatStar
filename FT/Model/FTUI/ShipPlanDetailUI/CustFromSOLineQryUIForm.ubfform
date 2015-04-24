@@ -1,0 +1,119 @@
+<View ID="37b53c70-0bbb-48e5-a30a-e2701b4a51cd" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="10" Height="336" LayoutType="GridBag" Name="CustFromSOLineQryUIForm" Namespace="UFIDA.U9.Cust.GS.FT.CustFromSOLineQryUIModel" TabStop="False" TemplateCode="UI_ModalFormtwoColumns" TemplateType="CustomTemplate" UIModelID="8662d1c6-43a2-4fdd-9ac5-412031e29f7c" URI=".UI_弹出Form_2列WebPart" ViewID="4983" Width="640" X="8" Y="8">
+  <Columns>
+    <Column Fixed="True" Name="Column0" Type="Title" Width="610" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="280" Name="Row0" />
+    <Row Fixed="True" Height="25" Name="Row1" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="5a0698d9-5e93-4c2e-b66a-2cd4c724f403" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="7" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="0" GridRowCount="11" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="0" Height="280" LayoutType="GridBag" Name="Card0" TabIndex="1" TabStop="False" Width="610" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="145" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column1" Width="145" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column3" Type="Title" Width="145" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column4" Width="145" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+      <Row Fixed="True" Height="20" Name="Row1" />
+      <Row Fixed="True" Height="20" Name="Row2" />
+      <Row Fixed="True" Height="20" Name="Row3" />
+      <Row Fixed="True" Height="20" Name="Row4" />
+      <Row Fixed="True" Height="20" Name="Row5" />
+      <Row Fixed="True" Height="20" Name="Row6" />
+      <Row Fixed="True" Height="20" Name="Row7" />
+      <Row Fixed="True" Height="20" Name="Row8" />
+      <Row Fixed="False" Height="20" Name="Row9" />
+      <Row Fixed="False" Height="20" Name="Row10" />
+    </Rows>
+    <Label ID="11393335-f91b-491c-83c8-9c099e9f52f8" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID29" RelationControl="ID29" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="145">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="9f62ed86-5390-402a-9cce-7701b4072436" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID29" RelationControl="lblID29" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="CustQrySOLienView" Visible="False" Width="145" X="150" Y="0">
+      <Events />
+      <RelationControls />
+      <PrecisionBind />
+      <RoundRuleBind />
+      <ValueOfRoundByValueBind />
+      <CurrencyType />
+    </NumberControl>
+    <Label ID="b626e1b0-b595-4f7c-a4eb-765779653a6b" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion74" RelationControl="SysVersion74" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="145" X="0" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="f0ba3120-f6c8-4662-bd39-756c80d4dbdf" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion74" RelationControl="lblSysVersion74" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="CustQrySOLienView" Visible="False" Width="145" X="150" Y="25">
+      <Events />
+      <RelationControls />
+      <PrecisionBind />
+      <RoundRuleBind />
+      <ValueOfRoundByValueBind />
+      <CurrencyType />
+    </NumberControl>
+    <Label ID="bf3e7972-9baa-4977-9333-0a757a5a56d4" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblOrg71" RelationControl="Org71" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="145">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="0fafbe3a-53d2-4293-b44d-64f76f759b11" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="Org71" RelationControl="lblOrg71" TabIndex="5" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Org" UIViewID="CustQrySOLienView" Visible="True" Width="145" X="150" Y="0">
+      <Events />
+      <RelationControls />
+      <RefNameFields />
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="0e9937ec-dc56-46cc-8ba7-1f4c6794cc04" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblDocNo1122" RelationControl="DocNo1122" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="145" X="0" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="e777572a-29ae-4943-8f5a-f614a2286775" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="DocNo1122" RelationControl="lblDocNo1122" TabIndex="7" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocNo1" UIViewID="CustQrySOLienView" Visible="True" Width="145" X="150" Y="25">
+      <Events />
+      <RelationControls />
+    </TextBox>
+  </Card>
+  <Card ID="5a6c2fe3-4f12-404d-b310-3abd6d90c925" BorderStyle="False" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="0" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="10" GridRowCount="1" GridRowSpace="0" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="25" LayoutType="GridBag" Name="Card1" TabIndex="2" TabStop="False" Width="610" X="10" Y="300">
+    <Columns>
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column0" Type="Value" Width="60" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="30" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="80" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="7c9a48b5-cd07-415e-b5ff-95c2b4d014f9" DisplayName="BtnClose" DisplayNameIndexStr="" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" Name="BtnClose" TabIndex="6" TabStop="True" Width="80" X="520" Y="0">
+      <Events />
+    </Button>
+    <Button ID="b6f183b9-8d27-42c9-83d1-0f522d65b212" DisplayName="BtnOk" DisplayNameIndexStr="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" Name="BtnOk" TabIndex="5" TabStop="True" Width="80" X="430" Y="0">
+      <Events />
+    </Button>
+    <Button ID="ee5147d0-5573-454d-b605-f9730e0626b4" DisplayName="BtnClear" DisplayNameIndexStr="" DisplayNameResourceID="6ac671d4-6527-45e6-accc-cc1342244f0a" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" Name="BtnClear" TabIndex="4" TabStop="True" Width="80" X="320" Y="0">
+      <Events />
+    </Button>
+    <DropDownButton ID="96885f4b-3162-43a2-9fd1-0ce025b3118f" DisplayName="DDBtnActivity" DisplayNameIndexStr="" DisplayNameResourceID="d24eab78-82b5-4f55-aa4a-f1c85a2c0489" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" Name="DDBtnActivity" TabIndex="2" TabStop="True" Width="80" X="90" Y="0">
+      <Events />
+    </DropDownButton>
+    <DropDownButton ID="981eae4d-29ad-47da-a261-3750f5ac63bc" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="61a151e6-462e-4392-b264-c988ddd844b8" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="DDBQuery" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" Name="DDBtnQuery" TabIndex="3" TabStop="True" Width="80" X="180" Y="0">
+      <Events />
+    </DropDownButton>
+    <DropDownButton ID="9b3ec755-642d-4d21-891a-966bccce407d" DisplayName="DDBtnOperation" DisplayNameIndexStr="" DisplayNameResourceID="c4e31736-3819-479a-9f0a-2a306ba44bec" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="DDBtnOperation" TabIndex="1" TabStop="True" Width="80" X="0" Y="0">
+      <Events />
+    </DropDownButton>
+  </Card>
+  <Events />
+</View>

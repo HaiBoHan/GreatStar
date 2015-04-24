@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="72a01431-3609-4171-8339-f4abf5a8b12e" name="FTListUI" displayName="FTListUI" description="" help="" type="" assemblyName="UFIDA.U9.Cust.GS.FT.FTListUI" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="6471c532-4fc4-4f7c-a967-967712534665" name="FTListUI" displayName="FTListUI" description="" help="" componentid="99c3023a-ee81-485b-a906-6b95f3d4fc40" path="FTListUI.ubfuiproj" type="UI" isRuntime="False" />
+    <Import id="8a8060af-f1d3-4db2-a31d-ca9bde05ed1c" name="FTListBP" displayName="FTListBP" description="" help="" componentid="c3595fb5-65c7-49e2-bdb7-4a14c20885cb" path="..\FTListBP\FTListBP.ubfbpproj" type="BP" isRuntime="False" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="bae765f5-236f-442a-ad0c-9cb584f84e51" name="BillNoRuleListUI.ubfquery" displayName="BillNoRuleListUI.ubfquery" description="" help="" include="BillNoRuleListUI.ubfquery" type="" />
+    <Item id="087b05ec-7d00-4b05-9a3d-119c47fe88ab" name="BillNoListUI.ubfquery" displayName="BillNoListUI.ubfquery" description="" help="" include="BillNoListUI.ubfquery" type="" />
+    <Item id="85d341cf-6adc-46e2-b340-40edbe25c2c3" name="BillNOItemListUI.ubfquery" displayName="BillNOItemListUI.ubfquery" description="" help="" include="BillNOItemListUI.ubfquery" type="" />
+    <Item id="c10cedff-2e60-4b7e-a47f-e4edbd526a79" name="BrokerageUIList.ubfquery" displayName="BrokerageUIList.ubfquery" description="" help="" include="BrokerageUIList.ubfquery" type="" />
+    <Item id="474b8ef4-bdb3-4d81-8711-f093b9ff65eb" name="MarginListUI.ubfquery" displayName="MarginListUI.ubfquery" description="" help="" include="MarginListUI.ubfquery" type="" />
+    <Item id="454235dc-d53b-4e0d-990b-0bd477658c31" name="AllFormTypeListUI.ubfquery" displayName="AllFormTypeListUI.ubfquery" description="" help="" include="AllFormTypeListUI.ubfquery" type="" />
+    <Item id="215e6a9c-636d-425c-8e25-4b4fb13fa85b" name="DiscountListUI.ubfquery" displayName="DiscountListUI.ubfquery" description="" help="" include="DiscountListUI.ubfquery" type="" />
+    <Item id="71b65481-b54d-417c-9da1-228d91225561" name="BillNoQry.ubfquery" displayName="BillNoQry.ubfquery" description="" help="" include="BillNoQry.ubfquery" type="" />
+  </ItemGroup>
+</Project>

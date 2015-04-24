@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceGroup>
+  <ServiceGroupInfo id="e3e909a4-168d-4782-a544-e355bfc51d2a" name="FI" displayName="FI" description="" help="" fullPath="D:\UFIDA\UBFDocs\GS\FI\FI.sg" applicationID="" />
+  <AssemblyGroup>
+    <Assembly ID="daa708bc-fde6-441c-a362-cf5087c6d7b4" name="UFIDA.U9.Cust.GS.FI.FIBE" type="BE" path="" />
+    <Assembly ID="2f44ba22-9fca-45bc-b452-da1c755c0849" name="UFIDA.U9.Cust.GS.FI.FIUI" type="UI" path="" />
+    <Assembly ID="ec0d9ee5-5674-4417-8f7d-accf6aa2456c" name="UFIDA.U9.Cust.GS.FI.FIBP" type="BP" path="" />
+    <Assembly ID="45fbeba7-2989-4ceb-aed3-8e75bc1c506c" name="UFIDA.U9.Cust.GS.FI.DeductionRegisterUI" type="UI" path="" />
+    <Assembly ID="59dbc5e2-ca4c-4656-ae5e-f42eda503869" name="UFIDA.U9.Cust.GS.FI.PrePaymentUI" type="UI" path="" />
+    <Assembly ID="fbcae1c2-c457-43c9-8440-359a974becec" name="UFIDA.U9.Cust.GS.FI.PaymentUI" type="UI" path="" />
+    <Assembly ID="5de91347-e725-487e-be9b-956bcea8795c" name="UFIDA.U9.Cust.GS.FI.OperatorBonusUI" type="UI" path="" />
+  </AssemblyGroup>
+</ServiceGroup>

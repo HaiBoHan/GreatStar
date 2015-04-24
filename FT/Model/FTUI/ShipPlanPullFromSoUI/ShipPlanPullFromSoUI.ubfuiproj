@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="7547df5f-708c-4da3-847e-1325bba74eeb" name="ShipPlanPullFromSoUI" displayName="ShipPlanPullFromSoUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailList" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="df433f53-eaf5-4177-a7f5-2c6c36a4210e" name="SMBE" displayName="SMBE" description="" help="" componentid="c901c367-9f35-425c-812e-9a9966cb21a3" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="fa981c11-20f8-4e04-b34d-18f85a1de45c" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="3a617809-d776-4bdd-bcd1-d3f9c51cdf12" name="ShipPlanFromSOBListUIModel.ubfuim" displayName="ShipPlanFromSOBListUIModel.ubfuim" description="" help="" include="ShipPlanFromSOBListUIModel.ubfuim" type="" />
+    <Item id="083992b7-c26b-4495-b210-ba3b96c3a3cf" name="ShipPlanFromSOBListUIForm.ubfform" displayName="ShipPlanFromSOBListUIForm.ubfform" description="" help="" include="ShipPlanFromSOBListUIForm.ubfform" type="" />
+    <Item id="f4a1582c-d01d-4ed0-9bb5-9a7a22c5f062" name="ShipPlanDetailListBListUIModel.ubfuim" displayName="ShipPlanDetailListBListUIModel.ubfuim" description="" help="" include="ShipPlanDetailListBListUIModel.ubfuim" type="" />
+    <Item id="4f65cf80-a4df-4c2d-9b52-63d04987eac8" name="ShipPlanDetailListBListUIForm.ubfform" displayName="ShipPlanDetailListBListUIForm.ubfform" description="" help="" include="ShipPlanDetailListBListUIForm.ubfform" type="" />
+    <Item id="0e104b82-193b-4318-9f6c-77d8bfc1b004" name="ShipPlanSpanceBListUIModel.ubfuim" displayName="ShipPlanSpanceBListUIModel.ubfuim" description="" help="" include="ShipPlanSpanceBListUIModel.ubfuim" type="" />
+    <Item id="2cfb326f-cd16-4985-8bf3-a579622ba6a2" name="ShipPlanSpanceBListUIForm.ubfform" displayName="ShipPlanSpanceBListUIForm.ubfform" description="" help="" include="ShipPlanSpanceBListUIForm.ubfform" type="" />
+    <Item id="36dbf633-f8ae-48bc-9dc3-34edf17e11e3" name="ShipPlanFeeBListUIModel.ubfuim" displayName="ShipPlanFeeBListUIModel.ubfuim" description="" help="" include="ShipPlanFeeBListUIModel.ubfuim" type="" />
+    <Item id="841bf0d3-e9b3-49d5-afc7-a31ef1de09a4" name="ShipPlanFeeBListUIForm.ubfform" displayName="ShipPlanFeeBListUIForm.ubfform" description="" help="" include="ShipPlanFeeBListUIForm.ubfform" type="" />
+    <Item id="d23f6eb0-bf43-46bf-90a2-69e4d4bb314e" name="ShipPlanDifferenceBListUIModel.ubfuim" displayName="ShipPlanDifferenceBListUIModel.ubfuim" description="" help="" include="ShipPlanDifferenceBListUIModel.ubfuim" type="" />
+    <Item id="59fc38a4-5253-425d-8294-4f6c129637cb" name="ShipPlanDifferenceBListUIForm.ubfform" displayName="ShipPlanDifferenceBListUIForm.ubfform" description="" help="" include="ShipPlanDifferenceBListUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>

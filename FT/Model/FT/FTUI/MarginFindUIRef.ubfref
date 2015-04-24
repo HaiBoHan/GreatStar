@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="cccff35e-7fe9-4de5-9595-6ebeb2ed51d1" name="MarginFindUIRef" displayName="余量档案" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="FTUI.MarginFindUIRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="401500dc-c0b9-41cc-b013-e696e27a39e7" name="cRef" displayName="cRef" description="" help="余量档案" refEntityId="b940c7cc-4ed1-4c95-9996-bcaca7c4b4df" refEntityName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="2cac434b-cbe7-4820-bca6-423fbcd59136" name="ID" displayName="ID" description="" help="余量档案.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin:ID" displayNameIndexStr="2" />
+        <RefField id="6c9282a3-753c-4726-b1ef-5e6ad8a234e6" name="ItemsType_Name" displayName="料品分类名称" description="" help="料品分类.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin:ItemsType.Name" displayNameIndexStr="" />
+        <RefField id="3651540b-ae4d-4aea-86a3-313768ba7a5b" name="MarginScale" displayName="余量比例" description="" help="余量档案.Misc.余量比例" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin:MarginScale" displayNameIndexStr="2" />
+        <RefField id="d23bc2b9-421c-436b-bfdd-2d9e2b6a69de" name="IsValid" displayName="有效" description="" help="余量档案.Misc.有效" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin:IsValid" displayNameIndexStr="2" />
+        <RefField id="1cf5cdae-7d84-4583-a1ad-afeff9b99dfb" name="ValidDate" displayName="有效开始日期" description="" help="余量档案.Misc.有效开始日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin:ValidDate" displayNameIndexStr="2" />
+        <RefField id="90178c17-aacf-4482-80fa-2039487ff262" name="UnValidDate" displayName="失效日期" description="" help="余量档案.Misc.失效日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin:UnValidDate" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

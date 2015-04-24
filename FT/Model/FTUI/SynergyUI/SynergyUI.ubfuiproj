@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="df64b906-2521-40ea-8cf4-e3a2558478a7" name="SynergyUI" displayName="SynergyUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.SynergyUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="77d95a1a-98ab-4fdc-a05b-02481a39343f" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="d07fc415-a21a-4351-a288-dfbaee306c57" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="7081b91e-98f4-49af-83a6-fb29229baee2" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="bb879f2a-698a-47cd-b394-5b5c4c8d62e4" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="822a4635-75f0-4a34-8b5f-7880c1e0ad41" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="5c8ed63c-9aed-4d8f-aba8-6e8320bde81f" name="SynergyUIModel.ubfuim" displayName="SynergyUIModel.ubfuim" description="" help="" include="SynergyUIModel.ubfuim" type="" />
+    <Item id="e20ab7db-baed-4bb9-805a-82724dd39b73" name="SynergyUIForm.ubfform" displayName="SynergyUIForm.ubfform" description="" help="" include="SynergyUIForm.ubfform" type="" />
+    <Item id="bbf5135c-4cd4-41e4-8f1e-13395e4c8b77" name="TrimUIForm.ubfform" displayName="TrimUIForm.ubfform" description="" help="" include="TrimUIForm.ubfform" type="" />
+    <Item id="230a9410-01f2-4e33-a0b7-18f19a2da4de" name="BillNoItemUIRef.ubfref" displayName="BillNoItemUIRef.ubfref" description="" help="" include="BillNoItemUIRef.ubfref" type="" />
+  </ItemGroup>
+</Project>

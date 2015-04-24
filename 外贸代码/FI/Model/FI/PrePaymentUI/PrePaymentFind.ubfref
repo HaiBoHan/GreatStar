@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="46bb3e82-1ef2-45d7-a9ff-51dee196f0de" name="PrePaymentFind" displayName="预付款通知单" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FI.PrePaymentUI.PrePaymentFind" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="b158eec4-28bb-4e04-8e8e-34edfb4d8c47" name="cRef" displayName="cRef" description="" help="预付款通知单" refEntityId="0cb18012-2f76-4a47-86bb-52fa04474216" refEntityName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="8fee9bd1-dab5-4666-b5d0-af9cfd23f2bb" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:ID" displayNameIndexStr="2" />
+        <RefField id="1554dc48-78f7-4cc5-b9cf-37f7a2db5cf0" name="DocumentType_Name" displayName="单据类型" description="" help="单据类型基类.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:DocumentType.Name" displayNameIndexStr="" />
+        <RefField id="898f6bd0-e4ae-4663-88e4-f688c585fb0f" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:DocNo" displayNameIndexStr="2" />
+        <RefField id="5dea9771-2e8a-4260-9739-a29787659871" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="6ad36604-4d9c-409a-a7ba-6bb929ae14c7" name="Status" displayName="单据状态" description="" help="预付款通知单.Misc.单据状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:Status" displayNameIndexStr="2" />
+        <RefField id="33342919-69cc-4d80-92d7-2623a808f3da" name="Currency_Name" displayName="币种名称" description="" help="币种.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:Currency.Name" displayNameIndexStr="" />
+        <RefField id="b54e0c4f-e223-4db6-8fa5-f2f1f838b6d3" name="Supplier_Name" displayName="供应商名称" description="" help="供应商.供应商.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:Supplier.Name" displayNameIndexStr="" />
+        <RefField id="c6a573ab-b9ce-4910-8c3b-66b56beadb72" name="POOrg_Name" displayName="采购组织" description="" help="组织机构.行政组织.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment:POOrg.Name" displayNameIndexStr="" />
+      </RefFields>
+      <Filter>UFIDA::U9::Cust::GS::FI::PrePaymentBE::PrePayment.Org.ID='#Context.OrgID#'</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

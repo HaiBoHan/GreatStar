@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="b7801c05-45b5-4791-af6c-cedd908cb701" name="BonusPackagingFindRef" displayName="包装业务员奖金" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FI.OperatorBonusUI.BonusPackagingFindRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="a62c2547-35a2-4798-aa65-1f5e582d9edd" name="cRef" displayName="cRef" description="" help="包装业务员奖金" refEntityId="b4f288f8-8469-42b9-8657-be39d436a66f" refEntityName="UFIDA.U9.Cust.GS.FI.BonusPackagingDocBE.BonusPackagingDoc" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="97e1db78-f433-4301-af97-fc55fdd22bfa" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusPackagingDocBE.BonusPackagingDoc:ID" displayNameIndexStr="2" />
+        <RefField id="28699ef3-fe6e-48e4-beff-7ba1f365efb0" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusPackagingDocBE.BonusPackagingDoc:DocNo" displayNameIndexStr="2" />
+        <RefField id="cbdad147-3815-4a4d-8383-e8502e787f90" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusPackagingDocBE.BonusPackagingDoc:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="4c028878-b3e1-4b7a-91fa-2d659e08779c" name="Status" displayName="状态" description="" help="包装业务员奖金.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusPackagingDocBE.BonusPackagingDoc:Status" displayNameIndexStr="2" />
+        <RefField id="2c053197-2c31-4179-8946-787bc3b486a7" name="Oprator" displayName="制单人" description="" help="包装业务员奖金.Misc.制单人" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusPackagingDocBE.BonusPackagingDoc:Oprator" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

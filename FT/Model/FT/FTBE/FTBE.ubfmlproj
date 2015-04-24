@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="d5f38b6f-bd81-4f81-83c7-f44bc3018259" name="FTBE" displayName="FTBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FT.FTBE" mapProject=".\..\FTBE_DB\FTBE_DB.ubfdbproj" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="977260be-93f9-48d8-ac83-6f10577052cd" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="6ce0fefa-f858-4520-8f52-b2da4aa9432a" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="383c6c0e-92a3-4fc9-a29d-0e0d97b14517" name="MFGBE" displayName="MFGBE" description="" help="" componentid="1c5ab6f3-ecaf-4a36-9a4b-184a5527a650" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.MFGBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="6d1a9a66-7ff4-4a40-89c1-f5bc850f7e39" name="SMBE" displayName="SMBE" description="" help="" componentid="c901c367-9f35-425c-812e-9a9966cb21a3" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="7972354d-ef7f-47f9-a2e0-875f88e6125a" name="CBO_SCMBE" displayName="CBO_SCMBE" description="" help="" componentid="b6f24ded-125b-492b-8292-c000f06ad453" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.SCMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="d669ee75-7008-477a-b3e6-7af4b2492d49" name="UFIDA.U9.GeneralEvents" displayName="UFIDA.U9.GeneralEvents" description="" help="" componentid="23e8c972-ec63-412b-bf38-7ce8babf8c91" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.GeneralEvents.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="01f6ddbf-31a4-4f3d-be0a-476f29f445c5" name="BillNoRuleBE.ubfbe" displayName="BillNoRuleBE.ubfbe" description="" help="" include="BillNoRuleBE.ubfbe" type="BE" />
+    <Item id="c48a05ec-a486-441a-af22-23fb5825bceb" name="AllEnumBE.ubfbe" displayName="AllEnumBE.ubfbe" description="" help="" include="AllEnumBE.ubfbe" type="BE" />
+    <Item id="154cd349-c6df-4a49-bd93-401c22645224" name="BillNoBE.ubfbe" displayName="BillNoBE.ubfbe" description="" help="" include="BillNoBE.ubfbe" type="BE" />
+    <Item id="f153c6ee-2363-4699-a5e3-6ed7544e3e55" name="BrokerageBE.ubfbe" displayName="BrokerageBE.ubfbe" description="" help="" include="BrokerageBE.ubfbe" type="BE" />
+    <Item id="23ba113f-9e29-458e-a2f2-6fff683d2bd1" name="BillNoItemBE.ubfbe" displayName="BillNoItemBE.ubfbe" description="" help="" include="BillNoItemBE.ubfbe" type="BE" />
+    <Item id="ef45ced2-26c9-4cc2-b4f1-a93ca504f084" name="MarginBE.ubfbe" displayName="MarginBE.ubfbe" description="" help="" include="MarginBE.ubfbe" type="BE" />
+    <Item id="fabaee2e-34f6-4d34-ad60-2e87296ea5c7" name="SalesManBE.ubfbe" displayName="SalesManBE.ubfbe" description="" help="" include="SalesManBE.ubfbe" type="BE" />
+    <Item id="3688663e-dfdb-4ab8-9312-7f01059ddd1f" name="AllFormTypeBE.ubfbe" displayName="AllFormTypeBE.ubfbe" description="" help="" include="AllFormTypeBE.ubfbe" type="BE" />
+    <Item id="b28d08e7-a8bc-4385-a840-d72110589d8d" name="DiscountBE.ubfbe" displayName="DiscountBE.ubfbe" description="" help="" include="DiscountBE.ubfbe" type="BE" />
+    <Item id="7b522022-989b-459c-8713-f7c2e7da2345" name="AssessTypeBE.ubfbe" displayName="AssessTypeBE.ubfbe" description="" help="" include="AssessTypeBE.ubfbe" type="BE" />
+    <Item id="7d3f28b3-d42f-4298-a841-9a2de8239036" name="OrderLineBrokerageBE.ubfbe" displayName="OrderLineBrokerageBE.ubfbe" description="" help="" include="OrderLineBrokerageBE.ubfbe" type="BE" />
+    <Item id="a8c6130c-ec53-4337-92cb-9271f2e3fc97" name="OrderBomBE.ubfbe" displayName="OrderBomBE.ubfbe" description="" help="" include="OrderBomBE.ubfbe" type="BE" />
+    <Item id="c0e3e627-922a-4766-8537-696b43c75a20" name="OrderCostBE.ubfbe" displayName="OrderCostBE.ubfbe" description="" help="" include="OrderCostBE.ubfbe" type="BE" />
+    <Item id="59c3410e-8fd0-4e47-8723-2bd0d07796f2" name="ItemSublistBE.ubfbe" displayName="ItemSublistBE.ubfbe" description="" help="" include="ItemSublistBE.ubfbe" type="BE" />
+    <Item id="9197f790-e69b-4ff7-b935-33731b864d17" name="OrderBomChangeBE.ubfbe" displayName="OrderBomChangeBE.ubfbe" description="" help="" include="OrderBomChangeBE.ubfbe" type="BE" />
+    <Item id="7737f600-d636-40c0-8666-31d08c5a035f" name="ShipPlanDetailBE.ubfbe" displayName="ShipPlanDetailBE.ubfbe" description="" help="" include="ShipPlanDetailBE.ubfbe" type="BE" />
+    <Item id="f2270d5a-5036-4eb7-a983-6b9213dbae83" name="ShipPlanDetailFeeBE.ubfbe" displayName="ShipPlanDetailFeeBE.ubfbe" description="" help="" include="ShipPlanDetailFeeBE.ubfbe" type="BE" />
+    <Item id="925f676f-8541-4aeb-9705-510efceb8865" name="CostForecastBE.ubfbe" displayName="CostForecastBE.ubfbe" description="" help="" include="CostForecastBE.ubfbe" type="BE" />
+    <Item id="f1bece9a-f82a-4cb7-a7aa-76fa5640ed80" name="SynergyBE.ubfbe" displayName="SynergyBE.ubfbe" description="" help="" include="SynergyBE.ubfbe" type="BE" />
+    <Item id="3be6fa83-c120-4dfb-8838-8a2f7eeed532" name="CustomsDetailBE.ubfbe" displayName="CustomsDetailBE.ubfbe" description="" help="" include="CustomsDetailBE.ubfbe" type="BE" />
+    <Item id="29176f77-f8f5-4305-ae62-7767661cc10d" name="ShipPlanDifferenceBE.ubfbe" displayName="ShipPlanDifferenceBE.ubfbe" description="" help="" include="ShipPlanDifferenceBE.ubfbe" type="BE" />
+    <Item id="f20ed27d-47fc-42ff-99d9-4d11150ffad4" name="InstalledArkBE.ubfbe" displayName="InstalledArkBE.ubfbe" description="" help="" include="InstalledArkBE.ubfbe" type="BE" />
+    <Item id="fcb49c1b-2aba-4f46-b71d-d583030e0fd0" name="SoOrderSaleBE.ubfbe" displayName="SoOrderSaleBE.ubfbe" description="" help="" include="SoOrderSaleBE.ubfbe" type="BE" />
+    <Item id="a195af79-50f3-45ce-9309-711813cc2a87" name="ShipDetailTypeBE.ubfbe" displayName="ShipDetailTypeBE.ubfbe" description="" help="" include="ShipDetailTypeBE.ubfbe" type="BE" />
+    <Item id="0890c5b0-0e9e-4424-85ad-1f619d3b9ac3" name="ItemSubTableBE.ubfbe" displayName="ItemSubTableBE.ubfbe" description="" help="" include="ItemSubTableBE.ubfbe" type="BE" />
+    <Item id="1ad811ee-f4c7-4964-995f-6072acef2d9a" name="ShipCostForecastBE.ubfbe" displayName="ShipCostForecastBE.ubfbe" description="" help="" include="ShipCostForecastBE.ubfbe" type="BE" />
+    <Item id="98d490bd-065c-4898-a9b0-ad7e9a99e8c5" name="SODiscountBE.ubfbe" displayName="SODiscountBE.ubfbe" description="" help="" include="SODiscountBE.ubfbe" type="BE" />
+  </ItemGroup>
+</Project>

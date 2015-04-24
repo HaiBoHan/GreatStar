@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="3f19dea0-4e75-4537-b16b-768c0b306a30" name="CreateShipPlanBP" displayName="CreateShipPlanBP" description="" help="" type="BP" assemblyName="UFIDA.U9.Cust.GS.FT.FTBP">
+  <Namespace id="921020f1-f365-4486-9200-ad9a692fb910" name="UFIDA.U9.Cust.GS.FT.CreateShipPlanBP" displayName="UFIDA.U9.Cust.GS.FT.CreateShipPlanBP" description="" help="">
+    <PropertyType id="c599180c-46e1-4643-8f96-67037703507c" name="SOLineIDDTO" displayName="传入销售订单行数据" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="a5de3a58-8cc5-4527-8bf7-a9ec02b55a96" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="ec441861-2f69-4815-8e0c-965f0fb5a94e" name="SOLine" displayName="销售订单行ID" description="" help="传入销售订单行数据.Misc.销售订单行ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="7065b016-dcaa-4d00-9682-3d2464f49a42" name="ShipQty" displayName="本次出运数量" description="" help="传入销售订单行数据.Misc.本次出运数量" dataTypeID="91031687-94bb-4988-a939-df7bf999ef4f" isKey="False" defaultValue="0" length="9" precise="24" scale="9" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <PropertyType id="21dd726e-3aed-4dcc-a596-99706e21ace4" name="ShipPlanIDDTO" displayName="生成的出运明细单" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="992671dd-b5c2-4a45-89b7-731bc20404fd" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="765a095c-0561-4b3d-95b1-83ae3de64ca7" name="ShipPlan" displayName="出运明细单ID" description="" help="生成的出运明细单.Misc.出运明细单ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="0d744691-4fb6-468a-98d0-5146caeb5737" name="DocNo" displayName="出运明细单号" description="" help="生成的出运明细单.Misc.出运明细单号" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <Operation id="b765ecb1-582e-4b4e-9ce3-7ff47d0c3040" name="CreatShipPlan" displayName="创建出运明细单" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="21dd726e-3aed-4dcc-a596-99706e21ace4" isService="False" isDefault="False" isReturnCollection="True" isEntityKey="False" transactionType="0" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="c3954264-7667-47a9-b03a-39ffb783ada8" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="a2bf8b86-9be2-4954-b2ee-7e9eaa82c9dd" name="SOLineIDDTO" displayName="传入销售订单行数据" description="" help="创建出运明细单.Misc.传入销售订单行数据" isCollection="True" dataTypeID="c599180c-46e1-4643-8f96-67037703507c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="b6d742d1-3bc3-47cc-aaf0-15d52e5fe905" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="21dd726e-3aed-4dcc-a596-99706e21ace4" isService="False" isDefault="True" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="9b9c6d0b-d556-466e-bab2-8203ee8141c6" name="CreateShipPlanBP" displayName="CreateShipPlanBP">
+      <Class Editable="True" ID="7f1306e1-c06e-4776-bbb4-7fd5310a45ad" Type="Operation" ADID="b765ecb1-582e-4b4e-9ce3-7ff47d0c3040">
+        <Location X="93" Y="50" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="e0c881dc-391c-4a30-b195-02776607ac60" Type="PropertyType" ADID="c599180c-46e1-4643-8f96-67037703507c">
+        <Location X="250" Y="46" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="4c391513-84a0-482c-b154-93c7dd90bea2" Type="PropertyType" ADID="21dd726e-3aed-4dcc-a596-99706e21ace4">
+        <Location X="433" Y="70" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

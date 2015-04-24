@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="0dcdb949-8bc7-4aad-b554-c76e06797855" name="DeductionRegisterDocTypeBE" displayName="DeductionRegisterDocTypeBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FI.FIBE">
+  <Namespace id="33b95fac-3100-490a-8b5b-ced0b219d6f0" name="UFIDA.U9.Cust.GS.FI.DeductionRegisterDocTypeBE" displayName="UFIDA.U9.Cust.GS.FI.DeductionRegisterDocTypeBE" description="" help="">
+    <Entity id="fe1d0d26-239f-434b-bf73-c7064991a2dc" name="DeductionRegisterDocType" displayName="扣款登记单据类型" description="" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="GS_FI_DeductionRegisterDocType" isMain="True" inheritanceMapKind="0" discriminator="DeductionRegisterDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="False">
+      <BEIndecs>
+        <BEIndex id="b3e8256a-96dd-433a-9bc0-e00df266899f" name="UFIDA_U9_Cust_GS_FI_DeductionRegisterDocTypeBE_DeductionRegisterDocType_BusinessKey_Index" displayName="UFIDA_U9_Cust_GS_FI_DeductionRegisterDocTypeBE_DeductionRegisterDocType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="39b28cc0-92b1-45dc-8c18-5d02d928c46f" name="Code" displayName="编码" description="" help="" isAscend="True" attributeID="af88133a-092b-4d68-bb36-9e3909bc1f20" sequence="0" attributeFullName="Code" />
+            <BEIndexAttribute id="35c59670-d834-4e75-8dbc-e6a829f9a05d" name="Org" displayName="组织" description="" help="" isAscend="True" attributeID="1b2b4b47-1271-4282-b9e5-dc55e227f12c" sequence="0" attributeFullName="Org" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
+    </Entity>
+    <Diagram id="61ba2ea4-fd47-4c02-8c3d-b2c25d6da84b" name="DeductionRegisterDocTypeBE" displayName="DeductionRegisterDocTypeBE">
+      <Class Editable="False" ID="db8c5bf9-90d1-49d3-89d5-9e0bab62f78f" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
+        <Location X="75" Y="59" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="b7fccaa6-1d51-4048-9cde-1a159746788b" Type="Entity" ADID="fe1d0d26-239f-434b-bf73-c7064991a2dc">
+        <Location X="101" Y="194" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

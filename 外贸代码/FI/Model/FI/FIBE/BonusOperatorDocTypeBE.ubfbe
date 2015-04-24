@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="a4e17ac3-dee8-4822-92d7-303d073af77e" name="BonusOperatorDocTypeBE" displayName="BonusOperatorDocTypeBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FI.FIBE">
+  <Namespace id="0c31cd12-4624-4365-b2cd-da2277925502" name="UFIDA.U9.Cust.GS.FI.BonusOperatorDocTypeBE" displayName="UFIDA.U9.Cust.GS.FI.BonusOperatorDocTypeBE" description="" help="">
+    <Entity id="8b2cf615-a26b-4c13-8896-fb591462d186" name="BonusOperatorDocType" displayName="业务员奖金单据类型" description="" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="GS_FI_BonusOperatorDocType" isMain="True" inheritanceMapKind="0" discriminator="BonusOperatorDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="False">
+      <Groups>
+        <Group id="ae7aedb0-aa13-4b1a-a88a-466f41aeac21" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="63404661-ff27-4d75-aed7-83dec0b37e48" name="BuzType" displayName="业务类型" description="" help="业务员奖金单据类型.Misc.业务类型" dataTypeID="54df3b9e-4afa-4821-850e-487cd1686ba4" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+      </Attributes>
+      <BEIndecs>
+        <BEIndex id="0af33ddc-c151-46f3-92f2-29154759add0" name="UFIDA_U9_Cust_GS_FI_BonusOperatorDocTypeBE_BonusOperatorDocType_BusinessKey_Index" displayName="UFIDA_U9_Cust_GS_FI_BonusOperatorDocTypeBE_BonusOperatorDocType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="0d3d2f48-a765-4c8b-be9c-288ec50920dc" name="Code" displayName="编码" description="" help="" isAscend="True" attributeID="af88133a-092b-4d68-bb36-9e3909bc1f20" sequence="0" attributeFullName="Code" />
+            <BEIndexAttribute id="877c6732-358d-411c-939b-973fe2bbbdd8" name="Org" displayName="组织" description="" help="" isAscend="True" attributeID="1b2b4b47-1271-4282-b9e5-dc55e227f12c" sequence="0" attributeFullName="Org" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
+    </Entity>
+    <Diagram id="79524aec-0969-4dd7-8619-e9b6f5162019" name="BonusOperatorDocTypeBE" displayName="BonusOperatorDocTypeBE">
+      <Class Editable="True" ID="2bdee796-6da1-41c4-8645-2ad2630ac537" Type="Entity" ADID="8b2cf615-a26b-4c13-8896-fb591462d186">
+        <Location X="107" Y="172" />
+        <Size width="174" height="58" />
+      </Class>
+      <Class Editable="False" ID="ab9418aa-7a5e-4752-9a4e-c71b8b7de0b4" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
+        <Location X="119" Y="73" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

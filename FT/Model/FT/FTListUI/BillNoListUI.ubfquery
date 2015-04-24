@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="f091a76f-0142-4c16-8f51-aee42233448e" name="BillNoListUI" displayName="BillNoListUI" description="" help="" QueryType="List" QueryURI="c18c9261-f652-4b9a-beaa-0d9bd1536124" QuerySourceFullName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="71878615-f808-4b8e-b593-35f2ba2c9f78" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="e7a5034f-fb03-47a6-beae-3e4cb988c2ed" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="3c5c66f9-e474-451e-943f-7d4c3c13dfb7" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="965e1ba4-46f4-49b0-850e-29d00b41560e" UIFormItemID="38696128-f7c7-4477-aa6c-329fe0b5d716" UIModelID="34225c4d-85d6-4086-a7a4-d5036ef31c27" />
+  <FilterDefines>
+    <FilterDefine id="06197527-9c1f-4929-ab9b-6f6597d8362b" name="CreatedOn" displayName="CreatedOn" description="" help="" ParentName="" Alias="CreatedOn" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="860a2562-8dee-43cb-9602-decbde7426e7" name="CreatedBy" displayName="CreatedBy" description="" help="" ParentName="" Alias="CreatedBy" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="bc961f5b-bfee-4d90-aafb-8aa7aa28d7a4" name="ModifiedOn" displayName="ModifiedOn" description="" help="" ParentName="" Alias="ModifiedOn" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="ac764704-fa6b-46c4-bf88-ece81c2d47d1" name="ModifiedBy" displayName="ModifiedBy" description="" help="" ParentName="" Alias="ModifiedBy" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="1ba93bd1-7136-453a-abce-c4c4f28f271a" name="BillNoID" displayName="BillNoID" description="" help="" ParentName="" Alias="BillNoID" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="23297fd1-3dbe-4958-bb40-b6e2d8920d09" name="BillNoState" displayName="BillNoState" description="" help="" ParentName="" Alias="BillNoState" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="c6dbf456-2737-4188-ac31-7a1c4102eb84" name="UsedDate" displayName="UsedDate" description="" help="" ParentName="" Alias="UsedDate" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="fe53c11d-c491-4f4a-b120-e86b44105115" name="UsedPerson" displayName="UsedPerson" description="" help="" ParentName="" Alias="UsedPerson" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="679816ec-4ea7-426f-aab8-ece880f5f17b" name="BillNoRuleID" displayName="BillNoRuleID" description="" help="" ParentName="" Alias="BillNoRuleID" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="fec88cae-7758-433a-91cc-42e91bef8c32" name="CreatedOn" displayName="CreatedOn" description="" help="" ParentName="" Alias="CreatedOn" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="DateTime" Point="2" />
+    <ColumnDefine id="d08f032c-e123-4a1e-aee8-f7ae589ffbe0" name="CreatedBy" displayName="CreatedBy" description="" help="" ParentName="" Alias="CreatedBy" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="35254a38-82d3-4bbb-ad28-d633ba113885" name="ModifiedOn" displayName="ModifiedOn" description="" help="" ParentName="" Alias="ModifiedOn" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="DateTime" Point="2" />
+    <ColumnDefine id="aea5912e-1d6b-425a-a3b0-48fd760746fa" name="ModifiedBy" displayName="ModifiedBy" description="" help="" ParentName="" Alias="ModifiedBy" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="60b57fcc-643b-4adc-aa1e-29ad2ea300b6" name="BillNoID" displayName="BillNoID" description="" help="" ParentName="" Alias="BillNoID" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="d855b707-6735-4691-ab81-8492c4f7a31c" name="BillNoState" displayName="BillNoState" description="" help="" ParentName="" Alias="BillNoState" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="43b9eb6d-0cd7-4f8a-946c-59a3a45dffaa" name="UsedDate" displayName="UsedDate" description="" help="" ParentName="" Alias="UsedDate" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="a6254d18-ffc4-4b6b-80a2-dbe6c036cac2" name="UsedPerson" displayName="UsedPerson" description="" help="" ParentName="" Alias="UsedPerson" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="70620dee-62c5-4e0f-8576-8c49a6b59744" name="BillNoRuleID" displayName="BillNoRuleID" description="" help="" ParentName="" Alias="BillNoRuleID" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="612188f2-f888-4a57-9883-25a15f9c303a" name="CreatedOn" displayName="" description="" help="" ParentName="" Alias="CreatedOn" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="0b1ec03d-3efc-41a2-b887-3fa1f59d7327" name="CreatedBy" displayName="" description="" help="" ParentName="" Alias="CreatedBy" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="7545c498-009c-4474-945e-4a23c0d13765" name="ModifiedOn" displayName="" description="" help="" ParentName="" Alias="ModifiedOn" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="1f6e1fcd-a09f-4500-b369-688aad80a42e" name="ModifiedBy" displayName="" description="" help="" ParentName="" Alias="ModifiedBy" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="1c5659c0-6c58-4acb-bf1f-ac1d3cba5e29" name="BillNoID" displayName="" description="" help="" ParentName="" Alias="BillNoID" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="97a392a1-6e5d-4e42-88a7-5dea3191ce4e" name="BillNoState" displayName="" description="" help="" ParentName="" Alias="BillNoState" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="9b462cc9-d57c-4b77-8695-215f06c6dd5b" name="UsedDate" displayName="" description="" help="" ParentName="" Alias="UsedDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="dc6ae45b-f1ea-49e7-8744-c30747d10649" name="UsedPerson" displayName="" description="" help="" ParentName="" Alias="UsedPerson" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="9fd4abc2-99a4-4b73-b35c-36b9d981678e" name="BillNoRuleID" displayName="" description="" help="" ParentName="" Alias="BillNoRuleID" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="2c8fec94-ce81-4947-a064-ea9cf1406ca4" name="BillNoID" displayName="发票号" description="" help="" />
+      <BasicFilter id="adb3d454-8083-4c20-9b46-2cc3f874b3a1" name="BillNoState" displayName="状态" description="" help="" />
+      <BasicFilter id="7c77ae9d-7022-464c-81b0-2697237e1b53" name="UsedDate" displayName="使用日期" description="" help="" />
+      <BasicFilter id="d66f1e89-d4b6-4b95-9233-31a14a3466e0" name="UsedPerson" displayName="使用人" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="a0cae964-c1cc-46da-96d7-cff5fc85bbb1" name="BillNoID" displayName="发票号" description="" help="" />
+      <Column id="9b6ea0fd-6220-4ddd-9bba-bd550128c0fe" name="BillNoState" displayName="状态" description="" help="" />
+      <Column id="eee79bfa-9a1f-4d64-9113-d7b429e12115" name="UsedDate" displayName="使用日期" description="" help="" />
+      <Column id="0a6cd7ca-9368-4f63-94ea-d115cab95fb9" name="UsedPerson" displayName="使用人" description="" help="" />
+    </DefaultColumns>
+  </DefaultCase>
+</QueryComponent>

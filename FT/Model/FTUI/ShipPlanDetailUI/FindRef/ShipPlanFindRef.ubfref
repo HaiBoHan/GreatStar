@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="6179d64a-88cc-483a-8a6c-d4c9ccea8fdb" name="ShipPlanFindRef" displayName="出运明细单头" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.ShipPlanDetailUI.ShipPlanFindRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="ef40ce0c-aa4c-4b49-9d8b-4526e2b38226" name="cRef" displayName="cRef" description="" help="出运明细单行" refEntityId="4c70f28c-150e-4907-9661-e770ac4ca676" refEntityName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="c76e3d52-2a5b-49c2-9b5c-e092129847a5" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead:ID" displayNameIndexStr="2" />
+        <RefField id="51cf2bb8-c5c0-4565-87db-90be0a3e1d86" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead:DocNo" displayNameIndexStr="2" />
+        <RefField id="84fb85fb-826b-4992-8fe3-62ef9fe2ebf4" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="3c69ccbd-fcd9-4806-b03b-e57483a8d841" name="Status" displayName="状态" description="" help="出运明细单头.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead:Status" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="961aabf1-debc-4281-8b69-71fc6597669b" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" direction="1" sequence="0" refAttributeName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead:DocNo" />
+      </OrderFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

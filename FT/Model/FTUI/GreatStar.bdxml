@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppPackage id="585b2294-7687-40f3-8f0b-9a620bca2da2" code="AppPackCode01" name="应用组装包" shortName="" displayName="应用组装包" description="" version="">
+    <Apps>
+        <App id="3110" code="01" shortName="CBO" name="基础设置" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3000" code="0101" shortName="CBO" name="基础设置" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3001" code="02" shortName="FI" name="财务" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3002" code="0201" shortName="GL" name="总账" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3003" code="0202" shortName="AR" name="应收管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3004" code="0203" shortName="AP" name="应付管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3005" code="0204" shortName="NM" name="票据管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3006" code="0205" shortName="TI" name="税务发票" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3007" code="0206" shortName="CM" name="现金银行" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3008" code="0207" shortName="CFP" name="现金流监控" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3009" code="0208" shortName="FA" name="固定资产" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3010" code="0209" shortName="ER" name="费用报销" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3201" code="0210" shortName="GC" name="全球合并" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3202" code="0211" shortName="RET" name="关系企业交易" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3203" code="0212" shortName="FN" name="资金结算" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3301" code="0213" shortName="TB" name="全面预算" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3011" code="03" shortName="HR" name="人力资源" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3041" code="0301" shortName="HM" name="人事管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3034" code="0302" shortName="PA" name="薪资管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3035" code="0303" shortName="BEN" name="福利保险" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3012" code="05" shortName="SCM" name="供应链" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3015" code="0503" shortName="SD" name="销售管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3016" code="0504" shortName="PM" name="采购管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3017" code="0505" shortName="INV" name="库存管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3081" code="0508" shortName="DM" name="分销渠道" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3020" code="06" shortName="MFG" name="生产制造" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3021" code="0601" shortName="BOM" name="工程数据" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3023" code="0603" shortName="CRP" name="细能力" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3024" code="0604" shortName="ECN" name="工程变更" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3025" code="0605" shortName="MO" name="生产管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3027" code="0607" shortName="SFC" name="车间管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3028" code="0608" shortName="MRP" name="需求计划" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3030" code="0610" shortName="MOOS" name="可视化排程" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3060" code="07" shortName="QC" name="质量管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3061" code="0701" shortName="QC" name="质量管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3031" code="09" shortName="COST" name="成本管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3032" code="0901" shortName="CA" name="成本会计" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3033" code="0902" shortName="IC" name="料品成本" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3050" code="10" shortName="SP" name="自助门户" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3051" code="1001" shortName="CP" name="客户门户" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3052" code="1002" shortName="VP" name="供应商门户" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3100" code="11" shortName="SM" name="系统管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3101" code="1101" shortName="SM" name="系统管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3070" code="12" shortName="CS" name="协同" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3071" code="1201" shortName="CS" name="协同" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3401" code="13" shortName="ETO" name="项目制造" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3402" code="1301" shortName="PMM" name="项目计划控制" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3403" code="1302" shortName="CBS" name="项目成本" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="80004" code="80004" shortName="FTPar" name="外贸管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="80005" code="80005" shortName="FT" name="外贸管理" uri="">
+                <Pages>
+                    <Page id="1a53761f-5769-4ac6-a476-4b4135ff4121" code="1a53761f-5769-4ac6-a476-4b4135ff4121" name="报关协同" shortName="" displayName="报关协同" description="" title="报关协同" uri="Cust.GS.FT.SynergyUIURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="fd2fd069-935c-494e-ac6b-6d82846dec65" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>629e7456-7681-4a19-b260-43c6cb5f4b01</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="629e7456-7681-4a19-b260-43c6cb5f4b01" code="629e7456-7681-4a19-b260-43c6cb5f4b01" name="报关协同" shortName="报关协同" displayName="报关协同" description="报关协同" title="报关协同" bindedFormID="7ee37de9-056d-4bb1-981c-34a94b608abe" bindedFormName="SynergyUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="179215f7-d9dd-4727-99b2-406c5c65bf71" code="179215f7-d9dd-4727-99b2-406c5c65bf71" name="理单" shortName="" displayName="理单" description="" title="理单" uri="Cust.GS.FT.TrimUIURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="571a9dc9-645e-4386-95d3-62163459c2df" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>00ee40d4-92e0-4412-b69f-8a4bb4188a2c</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="00ee40d4-92e0-4412-b69f-8a4bb4188a2c" code="00ee40d4-92e0-4412-b69f-8a4bb4188a2c" name="理单" shortName="理单" displayName="理单" description="理单" title="理单" bindedFormID="0a2a4f12-3d8d-4855-83c7-a8f00267a070" bindedFormName="TrimUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="071bf612-a7ee-40fe-abc3-9a84b8c895ae" code="071bf612-a7ee-40fe-abc3-9a84b8c895ae" name="报关协同单" shortName="" displayName="报关协同单" description="" title="报关协同单" uri="Cust.GS.FT.SynergyDocUIURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="3a33ef74-6eea-4e4f-a65b-a9b9f89580f4" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>e9c2628b-8b50-41be-90e5-5224e383e7f4</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="e9c2628b-8b50-41be-90e5-5224e383e7f4" code="e9c2628b-8b50-41be-90e5-5224e383e7f4" name="报关协同单" shortName="报关协同单" displayName="报关协同单" description="报关协同单" title="报关协同单" bindedFormID="9df05885-601c-4764-a4b4-6e83ad9722f2" bindedFormName="SynergyDocUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="126cfbf5-d620-440c-8148-0a7fba1fb61d" code="126cfbf5-d620-440c-8148-0a7fba1fb61d" name="报关协同单列表" shortName="" displayName="报关协同单列表" description="" title="报关协同单列表" uri="Cust.GS.FT.SynergyDocListURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="893bd5c4-36e6-4b69-8e33-95e30328cfcf" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>9a234489-be3e-49ad-b8e1-9461facc6a96</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="9a234489-be3e-49ad-b8e1-9461facc6a96" code="9a234489-be3e-49ad-b8e1-9461facc6a96" name="报关协同单列表" shortName="报关协同单列表" displayName="报关协同单列表" description="报关协同单列表" title="报关协同单列表" bindedFormID="23f0e137-1edd-4e87-a694-fc758f924f3c" bindedFormName="SynergyDocListBListUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="43dacc6f-dcb6-456c-b826-64670787ec99" code="43dacc6f-dcb6-456c-b826-64670787ec99" name="报关明细单" shortName="" displayName="报关明细单" description="" title="报关明细单" uri="Cust.GS.FT.SynergyDetailUIURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="4bc40bd5-c9b3-42eb-95d2-c82e65bcc380" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>9eca6ad7-68cf-49a6-a2c0-20af9ecbe391</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="9eca6ad7-68cf-49a6-a2c0-20af9ecbe391" code="9eca6ad7-68cf-49a6-a2c0-20af9ecbe391" name="报关明细单" shortName="报关明细单" displayName="报关明细单" description="报关明细单" title="报关明细单" bindedFormID="f4223fb0-904f-4bbe-9b55-c4751d8c21a2" bindedFormName="SynergyDetailUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="4ef1c18e-9370-45fd-bf89-bdf02c2a377a" code="4ef1c18e-9370-45fd-bf89-bdf02c2a377a" name="报关明细单列表" shortName="" displayName="报关明细单列表" description="" title="报关明细单列表" uri="Cust.GS.FT.SynergyDetailListUIURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="424b0601-ac8f-4679-ad64-0bd759b4f353" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>83631da0-59a2-450b-969e-ba388769d0ab</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="83631da0-59a2-450b-969e-ba388769d0ab" code="83631da0-59a2-450b-969e-ba388769d0ab" name="报关明细单列表" shortName="报关明细单列表" displayName="报关明细单列表" description="报关明细单列表" title="报关明细单列表" bindedFormID="050db9e6-a4a8-4ea1-8099-8b49a85958a1" bindedFormName="SynergyDetailBListUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                </Pages>
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents>
+                    <UIComponent assemblyName="UFIDA.U9.Cust.GS.FT.SynergyDocUI.WebPart.dll" assemblyID="df560f6b-b7ff-4950-b185-cff5f8f766a8" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.GS.FT.SynergyUI.WebPart.dll" assemblyID="df64b906-2521-40ea-8cf4-e3a2558478a7" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.GS.FT.SynergyDetailUI.WebPart.dll" assemblyID="84f79f8a-d8c3-48be-8250-d7fe11741788" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.GS.FT.SynergyDocList.WebPart.dll" assemblyID="0f728484-b179-4af5-8502-606f0de34acd" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.GS.FT.SynergyDetailList.WebPart.dll" assemblyID="5ae58f27-2325-4905-b1b8-36b9bbb45b6a" />
+                </UIComponents>
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu>
+                    <Menu id="a034243b-d36a-44e9-8882-eece58d366dd" code="a034243b-d36a-44e9-8882-eece58d366dd" name="报关" shortName="new menu" displayName="报关" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="0" kind="Task" theApp="">
+                        <Menu id="5c5e2277-e808-458f-865f-1ac3785d0507" code="5c5e2277-e808-458f-865f-1ac3785d0507" name="报关协同" shortName="new menu" displayName="报关协同" description="new menu" image="" isDialog="False" pageURI="Cust.GS.FT.SynergyUIURI" pageParameter="" sequence="0" kind="Task" theApp="" />
+                        <Menu id="33dcc898-ca9c-455b-bdc8-5c29dd521177" code="33dcc898-ca9c-455b-bdc8-5c29dd521177" name="报关协同单" shortName="new menu" displayName="报关协同单" description="new menu" image="" isDialog="False" pageURI="Cust.GS.FT.SynergyDocUIURI" pageParameter="" sequence="1" kind="Task" theApp="" />
+                        <Menu id="613af2b9-6a4d-4ef0-bdd6-9aa43c8684d1" code="613af2b9-6a4d-4ef0-bdd6-9aa43c8684d1" name="理单" shortName="new menu" displayName="理单" description="new menu" image="" isDialog="False" pageURI="Cust.GS.FT.TrimUIURI" pageParameter="" sequence="2" kind="Task" theApp="" />
+                        <Menu id="31ab5aed-6c1f-4f87-aca2-c11a7cd087e6" code="31ab5aed-6c1f-4f87-aca2-c11a7cd087e6" name="报关明细单" shortName="new menu" displayName="报关明细单" description="new menu" image="" isDialog="False" pageURI="Cust.GS.FT.SynergyDetailUIURI" pageParameter="" sequence="3" kind="Task" theApp="" />
+                    </Menu>
+                </PrePlacedMenu>
+            </App>
+        </App>
+    </Apps>
+</AppPackage>

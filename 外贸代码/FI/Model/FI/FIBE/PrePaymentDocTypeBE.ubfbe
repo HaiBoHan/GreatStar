@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="1d5b3265-340f-42b8-b33a-2de4afa0b56c" name="PrePaymentDocTypeBE" displayName="PrePaymentDocTypeBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FI.FIBE">
+  <Namespace id="c516eea7-4c9e-4b69-875b-90c29383a265" name="UFIDA.U9.Cust.GS.FI.PrePaymentDocTypeBE" displayName="UFIDA.U9.Cust.GS.FI.PrePaymentDocTypeBE" description="" help="">
+    <Entity id="1d6741a3-f7f0-4013-9089-d161e943d7ee" name="PrePaymentDocType" displayName="预付款通知单单据类型" description="" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="GS_FI_PrePaymentDocType" isMain="True" inheritanceMapKind="0" discriminator="PrePaymentDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="False">
+      <Groups>
+        <Group id="44ba4a5e-1fc4-49e9-b115-3793289cf9dc" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="bc703c85-086d-48a2-bcdf-bff018141ade" name="BusType" displayName="业务类型" description="" help="预付款通知单单据类型.Misc.业务类型" dataTypeID="d18f74e2-24a5-4de9-8d79-ab372286e481" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+        <Attribute id="3bea7f5e-9db0-4936-bd68-ee3ed0ad4487" name="PayReqDocType" displayName="请款单单据类型" description="" help="预付款通知单单据类型.Misc.请款单单据类型" dataTypeID="e5c26e92-d21d-4961-8554-3c4f3fffeaf6" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+      </Attributes>
+      <Associations>
+        <Association id="0c9fbcd2-e454-41b4-a75d-6bd79f551310" name="PrePaymentDocType_3bea7f5e-9db0-4936-bd68-ee3ed0ad4487_PayReqFundDocType" displayName="预付款通知单单据类型.请款单单据类型--&gt;付款请款单据类型设置" description="" help="" parent_Class_ID="1d6741a3-f7f0-4013-9089-d161e943d7ee" parent_Attribute_ID="3bea7f5e-9db0-4936-bd68-ee3ed0ad4487" child_Class_ID="e5c26e92-d21d-4961-8554-3c4f3fffeaf6" child_Attribute_ID="00000000-0000-0000-0000-000000000000" parentCardinality="1" childCardinality="0" kind="0" direction="0" isCascadeDelete="False" cascadeDeleteRule="0" isCascadeUpdate="False" isEnableCascadeValidation="True" cascadeUpdateRule="0" />
+      </Associations>
+      <BEIndecs>
+        <BEIndex id="1b5d3084-b18e-4c39-aa4a-8c832336f8d7" name="UFIDA_U9_Cust_GS_FI_PrePaymentDocTypeBE_PrePaymentDocType_BusinessKey_Index" displayName="UFIDA_U9_Cust_GS_FI_PrePaymentDocTypeBE_PrePaymentDocType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="0437bd3a-c053-492a-959d-0a585c7d5fa4" name="Code" displayName="编码" description="" help="" isAscend="True" attributeID="af88133a-092b-4d68-bb36-9e3909bc1f20" sequence="0" attributeFullName="Code" />
+            <BEIndexAttribute id="c1f44e07-201b-4f90-8287-d669e70f8b45" name="Org" displayName="组织" description="" help="" isAscend="True" attributeID="1b2b4b47-1271-4282-b9e5-dc55e227f12c" sequence="0" attributeFullName="Org" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
+    </Entity>
+    <Diagram id="8ff694cb-39f1-44b4-8f74-284db869005e" name="PrePaymentDocTypeBE" displayName="PrePaymentDocTypeBE">
+      <Class Editable="False" ID="29f0ae27-3a04-4411-aedf-42dc03cfe6c1" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
+        <Location X="101" Y="29" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="1f1dc57d-2444-4d48-8f4e-fd18476be4de" Type="Entity" ADID="1d6741a3-f7f0-4013-9089-d161e943d7ee">
+        <Location X="98" Y="148" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

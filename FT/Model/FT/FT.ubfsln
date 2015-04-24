@@ -1,0 +1,17 @@
+<Solution>
+  <SourceControl>
+  </SourceControl>
+  <ItemGroup>
+    <Item id="4159ecb2-56fb-44bd-b18b-6f37fa832a0e" include="FTBE\FTBE.ubfmlproj" />
+    <Item id="475c7789-3cb1-43d2-9d03-7019cdee2b90" include="FTUI\FTUI.ubfuiproj" />
+    <Item id="766a5b4d-970a-49d0-a964-5861a7fc6f83" include="FTListUI\FTListUI.ubfuiproj" />
+    <Item id="735c18a1-30a2-4a18-83dc-533ff64daf11" include="FTListBP\FTListBP.ubfbpproj" />
+    <Item id="4e4f798c-6c76-4cae-bb75-c79689bc34d7" include="FTListUI\FTListUI.ubfqueryproj" />
+    <Item id="ce26276d-6b47-440b-8095-d19b7d752ccd" include="FTBP\FTBP.ubfbpproj" />
+    <Item id="8f9addfb-d95c-4fa9-b501-8787b1774184" include="ShipPlanUI\ShipPlanUI.ubfuiproj" />
+    <Item id="c7258650-f068-42f2-babc-d883d8c5c076" include="SOListUI\SOListUI.ubfuiproj" />
+    <Item id="a155cfa0-6221-45f9-8c99-5db50d5ecaf9" include="SOListBP\SOListBP.ubfbpproj" />
+    <Item id="2eb2911d-0ec3-4bc7-a890-7542575eec81" include="SOListUI\SOListUI.ubfqueryproj" />
+  </ItemGroup>
+  <ServiceGroupInfo id="34e6c310-e566-4c19-97ff-2458deb52e58" name="UFIDA.U9.Cust.GS.FT" displayName="FT" description="" help="" fullPath="D:\UFIDA\UBFDocs\GS\FT\FT.ubfsln" applicationID="" />
+</Solution>

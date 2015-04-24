@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppPackage id="75ee0987-e9d5-440f-8f4a-8a1b9b5beae2" code="AppPackCode01" name="应用组装包" shortName="" displayName="应用组装包" description="" version="">
+    <Apps>
+        <App id="3001" code="02" shortName="FI" name="财务" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3002" code="0201" shortName="GL" name="总账" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3003" code="0202" shortName="AR" name="应收管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3004" code="0203" shortName="AP" name="应付管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3005" code="0204" shortName="NM" name="票据管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3006" code="0205" shortName="TI" name="税务发票" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3007" code="0206" shortName="CM" name="现金银行" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3008" code="0207" shortName="CFP" name="现金流监控" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3009" code="0208" shortName="FA" name="固定资产" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3010" code="0209" shortName="ER" name="费用报销" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3201" code="0210" shortName="GC" name="全球合并" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3202" code="0211" shortName="RET" name="关系企业交易" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3203" code="0212" shortName="FN" name="资金结算" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3301" code="0213" shortName="TB" name="全面预算" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3011" code="03" shortName="HR" name="人力资源" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3041" code="0301" shortName="HM" name="人员管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3034" code="0302" shortName="PA" name="薪资管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3035" code="0303" shortName="BEN" name="福利保险" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3012" code="05" shortName="SCM" name="供应链" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3015" code="0503" shortName="SD" name="销售管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3016" code="0504" shortName="PM" name="采购管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3017" code="0505" shortName="INV" name="库存管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3081" code="0508" shortName="DM" name="分销渠道" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3020" code="06" shortName="MFG" name="生产制造" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3021" code="0601" shortName="BOM" name="工程数据" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3023" code="0603" shortName="CRP" name="细能力" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3024" code="0604" shortName="ECN" name="工程变更" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3025" code="0605" shortName="MO" name="生产管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3027" code="0607" shortName="SFC" name="车间管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3028" code="0608" shortName="MRP" name="需求计划" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3030" code="0610" shortName="MOOS" name="可视化排程" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3031" code="09" shortName="COST" name="成本管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3032" code="0901" shortName="CA" name="成本会计" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3033" code="0902" shortName="IC" name="料品成本" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3050" code="10" shortName="SP" name="自助门户" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3051" code="1001" shortName="CP" name="客户门户" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3052" code="1002" shortName="VP" name="供应商门户" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3060" code="07" shortName="QC" name="质量管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3061" code="0701" shortName="QC" name="质量管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3070" code="12" shortName="CS" name="协同" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3071" code="1201" shortName="CS" name="协同" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3100" code="11" shortName="SM" name="系统管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3101" code="1101" shortName="SM" name="系统管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3110" code="01" shortName="CBO" name="基础设置" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3000" code="0101" shortName="CBO" name="基础设置" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3401" code="13" shortName="ETO" name="项目制造" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3402" code="1301" shortName="PMM" name="项目计划控制" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3403" code="1302" shortName="CBS" name="项目成本" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3510" code="3510" shortName="EM" name="设备管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3511" code="3511" shortName="EM" name="设备管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3800" code="14" shortName="Kanban" name="看板管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3801" code="1401" shortName="Kanban" name="看板管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3900" code="3900" shortName="ES" name="员工自助" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3901" code="3901" shortName="ES" name="员工自助" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="80004" code="80004" shortName="FTPar" name="外贸管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="80005" code="80005" shortName="FT" name="外贸管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="80010" code="80010" shortName="FIPar" name="外贸财务" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="80011" code="80011" shortName="FI" name="外贸财务" uri="">
+                <Pages>
+                    <Page id="4ceb444c-d909-4186-8956-bd8d57b7e542" code="4ceb444c-d909-4186-8956-bd8d57b7e542" name="新产品系数" shortName="" displayName="新产品系数" description="" title="新产品系数" uri="Cust.GS.FI.ProductCoefficientURL" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="14ee0b83-f304-4d34-81a5-764023a19083" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>c9ecbfa9-12a3-4da5-9781-0b55b778f3b1</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="c9ecbfa9-12a3-4da5-9781-0b55b778f3b1" code="c9ecbfa9-12a3-4da5-9781-0b55b778f3b1" name="新产品系数" shortName="新产品系数" displayName="新产品系数" description="新产品系数" title="新产品系数" bindedFormID="318c012b-36fb-4509-9a90-a3e6d60def9c" bindedFormName="ProductCoefficientUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="668e3c27-1969-47b8-b36f-6e1e80bdafaa" code="668e3c27-1969-47b8-b36f-6e1e80bdafaa" name="产品降价档案" shortName="" displayName="产品降价档案" description="" title="产品降价档案" uri="Cust.GS.FI.ProductDepreciateURL" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="ebd44ce7-2451-47fa-bcee-7f3de3c765e5" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>666cbd32-44b7-4993-8a39-4b6d205a9d91</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="666cbd32-44b7-4993-8a39-4b6d205a9d91" code="666cbd32-44b7-4993-8a39-4b6d205a9d91" name="产品降价档案" shortName="产品降价档案" displayName="产品降价档案" description="产品降价档案" title="产品降价档案" bindedFormID="96a884fb-0bcc-4b45-8307-145b5f897280" bindedFormName="ProductDepreciateUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                </Pages>
+                <BEComponents>
+                    <BEComponent assemblyName="UFIDA.U9.Cust.GS.FI.FIBE.dll" assemblyID="daa708bc-fde6-441c-a362-cf5087c6d7b4" />
+                </BEComponents>
+                <BPComponents>
+                    <BPComponent assemblyName="UFIDA.U9.Cust.GS.FI.FIBP.dll" assemblyID="ec0d9ee5-5674-4417-8f7d-accf6aa2456c" />
+                </BPComponents>
+                <ServiceComponents />
+                <UIComponents>
+                    <UIComponent assemblyName="UFIDA.U9.Cust.GS.FI.FIUI.WebPart.dll" assemblyID="2f44ba22-9fca-45bc-b452-da1c755c0849" />
+                </UIComponents>
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu>
+                    <Menu id="51b23732-eaa8-489d-b38c-338c27f08acb" code="51b23732-eaa8-489d-b38c-338c27f08acb" name="基础设置" shortName="new menu" displayName="基础设置" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="0" kind="Task" theApp="">
+                        <Menu id="bba8c96c-5ef1-4b95-8b01-f7ecc5e37583" code="bba8c96c-5ef1-4b95-8b01-f7ecc5e37583" name="预置参数" shortName="new menu" displayName="预置参数" description="new menu" image="" isDialog="False" pageURI="CBO.Base.Profile.Profile" pageParameter="ApplicationId=80011" sequence="0" kind="Task" theApp="80011" />
+                        <Menu id="fbd86d03-4705-4467-8315-0017b1aa330a" code="fbd86d03-4705-4467-8315-0017b1aa330a" name="新产品系数" shortName="new menu" displayName="新产品系数" description="new menu" image="" isDialog="False" pageURI="Cust.GS.FI.ProductCoefficientURL" pageParameter="" sequence="1" kind="Task" theApp="" />
+                        <Menu id="78a7ce34-ff99-4998-ac42-e4c4853cc913" code="78a7ce34-ff99-4998-ac42-e4c4853cc913" name="产品降价档案" shortName="new menu" displayName="产品降价档案" description="new menu" image="" isDialog="False" pageURI="Cust.GS.FI.ProductDepreciateURL" pageParameter="" sequence="2" kind="Task" theApp="" />
+                    </Menu>
+                </PrePlacedMenu>
+            </App>
+        </App>
+    </Apps>
+</AppPackage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="97448199-3fa7-44e8-9f1a-a90e2c830a41" name="DiscountFindUIref" displayName="产品客户折扣关系单头" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.FTUI.DiscountFindUIref" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="f0d0410e-04e0-4847-985a-16b8c86ed5f9" name="cRef" displayName="cRef" description="" help="产品客户折扣关系单头" refEntityId="63f8c619-256b-45ae-bc0a-4c683b0050d7" refEntityName="UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountHead" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="b8f9b94b-7821-4fe2-a759-4357474f0767" name="ID" displayName="ID" description="" help="产品客户折扣关系单头.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountHead:ID" displayNameIndexStr="2" />
+        <RefField id="d5a563d1-adc5-4a16-8ebe-27be44357575" name="Product_Name" displayName="料品" description="" help="料品.料品.品名" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="81" refAttributeName="UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountHead:Product.Name" displayNameIndexStr="0" />
+        <RefField id="8ecfb0e5-14a1-4013-920a-fd296216e591" name="Custmor_Name" displayName="客户名称" description="" help="客户.客户.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="92" refAttributeName="UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountHead:Custmor.Name" displayNameIndexStr="" />
+        <RefField id="1c44bf55-b79e-431d-878f-0b9b586a26de" name="CustmorAdress_Name" displayName="客户位置" description="" help="客户位置.位置属性.位置名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="115" refAttributeName="UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountHead:CustmorAdress.Name" displayNameIndexStr="0" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

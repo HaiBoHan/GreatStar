@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="351e70bf-3dd9-4337-8616-fa888f5790ca" name="SynergyDetailList" displayName="SynergyDetailList" description="" help="" QueryType="List" QueryURI="f7efb4d4-f706-4773-aeae-d52a39249d52" QuerySourceFullName="UFIDA.U9.Cust.GS.FT.CustomsDetailBE.CustomsDetailHead" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="21d067fc-8eaa-4097-8c9b-5610b63b946c" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="262fef04-e42c-41a4-b3d6-411f394bd76a" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="b8b99d17-37d7-44da-9e83-1989266381c7" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="dad6f494-ea6e-4ce0-aca9-6635b66c01c6" UIFormItemID="ad0efea4-6238-4488-8ccc-92f13bdff12a" UIModelID="296f889a-f2ce-497d-9477-fab6341d8820" />
+  <FilterDefines>
+    <FilterDefine id="97b892ff-cb4d-4913-9229-2bfe9e8858a9" name="BillNoItem.BillNoItemID" displayName="BillNoItem.BillNoItemID" description="" help="" ParentName="BillNoItem" Alias="BillNoItem_BillNoItemID" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="04375483-90ef-4ba0-aa58-934c1fcd1617" name="Client.Code" displayName="Client.Code" description="" help="" ParentName="Client" Alias="Client_Code" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="8cf4419e-66b2-4f8e-8d06-07a214129ec0" name="Client.Name" displayName="Client.Name" description="" help="" ParentName="Client" Alias="Client_Name" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="02876154-11a5-41b8-8357-62ba2d2b9338" name="ShipPlanDate" displayName="ShipPlanDate" description="" help="" ParentName="" Alias="ShipPlanDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="6e460088-edae-44e8-9072-ba3bd46a8f53" name="State" displayName="State" description="" help="" ParentName="" Alias="State" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="f4b40869-25bc-43bb-b598-aa1c23b3d7df" name="LiOderDate" displayName="LiOderDate" description="" help="" ParentName="" Alias="LiOderDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="14ac013e-6f75-442d-aca8-261d5134e0ce" name="Memo" displayName="Memo" description="" help="" ParentName="" Alias="Memo" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="9beb33e1-3655-4535-a9af-1291398a33b9" name="BillNoItem.BillNoItemID" displayName="BillNoItem.BillNoItemID" description="" help="" ParentName="BillNoItem" Alias="BillNoItem_BillNoItemID" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="6de7cdff-64b1-4acf-b510-4af1f5f50654" name="ShipPlanDate" displayName="ShipPlanDate" description="" help="" ParentName="" Alias="ShipPlanDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="0d4d36c7-4df7-486d-9625-82deba540286" name="State" displayName="State" description="" help="" ParentName="" Alias="State" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="c945a888-eade-45b9-a4c4-4280a5d93af8" name="LiOderDate" displayName="LiOderDate" description="" help="" ParentName="" Alias="LiOderDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="e8f2df88-b3e9-49eb-841e-16933a6ba23f" name="Memo" displayName="Memo" description="" help="" ParentName="" Alias="Memo" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="712a52d4-6a78-4441-b8e9-ea43e1f54f03" name="Client.Code" displayName="Client.Code" description="" help="" ParentName="Client" Alias="Client_Code" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="a317d153-8402-438a-bc7a-af6e5daf5fd1" name="Client.Name" displayName="Client.Name" description="" help="" ParentName="Client" Alias="Client_Name" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="1233ab8b-03da-4da2-b485-4d43cfc033af" name="BillNoItem.BillNoItemID" displayName="" description="" help="" ParentName="BillNoItem" Alias="BillNoItem_BillNoItemID" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="98367a79-f726-4644-a2e8-f9b80a6fa5d8" name="ShipPlanDate" displayName="" description="" help="" ParentName="" Alias="ShipPlanDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="40c9a269-ead4-41c8-92bc-65e7f10918b1" name="BillNoItem.BillNoItemID" displayName="发票号组.发票号组ID" description="" help="" />
+      <BasicFilter id="31e5b751-d289-491a-be70-808e16502a52" name="Client.Code" displayName="客户.编码" description="" help="" />
+      <BasicFilter id="1b165dd8-df51-4415-bb19-e2a7a90d5009" name="Client.Name" displayName="客户.名称" description="" help="" />
+      <BasicFilter id="c3dd3402-267b-4fa2-a846-81450f5a08c0" name="ShipPlanDate" displayName="出运日期" description="" help="" />
+      <BasicFilter id="5968811d-0367-4879-add1-a9d592f472b6" name="State" displayName="状态" description="" help="" />
+      <BasicFilter id="deb57618-35b0-458d-8578-99600daba9c9" name="LiOderDate" displayName="理单日期" description="" help="" />
+      <BasicFilter id="1912bc11-af52-4ce1-8c48-893ba9e5a61d" name="Memo" displayName="备注" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="fdc9e40c-9b7c-4498-8caa-7ced80b3dce9" name="BillNoItem.BillNoItemID" displayName="发票号组.发票号组ID" description="" help="" />
+      <Column id="77b45b04-b891-4353-9cea-caf87108c520" name="Client.Code" displayName="客户.编码" description="" help="" />
+      <Column id="e2bd79b1-dcb4-4d31-81aa-e4552d62838b" name="Client.Name" displayName="客户.名称" description="" help="" />
+      <Column id="2c3bbb71-86a2-44eb-a0dd-e9914a22c6ca" name="ShipPlanDate" displayName="出运日期" description="" help="" />
+      <Column id="48fb8b7d-36c4-497b-ac3f-deba2a86d74b" name="State" displayName="状态" description="" help="" />
+      <Column id="56243fc2-2378-4bb1-b72d-0740b641be42" name="LiOderDate" displayName="理单日期" description="" help="" />
+      <Column id="ebb5970d-5ea8-4723-b763-88c93fe2ca75" name="Memo" displayName="备注" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="346926e5-7fb2-48f9-a92b-ec9bc4afe62d" name="BillNoItem.BillNoItemID" displayName="" description="" help="" SortType="ASC" />
+      <Sort id="bef0a021-e634-4ffd-ab84-cc3c77e7f05a" name="ShipPlanDate" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

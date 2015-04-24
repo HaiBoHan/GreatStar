@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <services>
+                  
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.ApprovedPrePaymentBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IApprovedPrePaymentBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.GetPurchaseOrderBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IGetPurchaseOrderBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.BatchCreatePrePaymentBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IBatchCreatePrePaymentBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.BatchCreatePrePaymentDRDetailBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IBatchCreatePrePaymentDRDetailBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.UpdatePrePaymentStatusBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IUpdatePrePaymentStatusBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.GetPrePaymentDocTypeBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IGetPrePaymentDocTypeBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentMoveBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IPrePaymentMoveBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PrePaymentBP.RedFlushPrePaymentBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PrePaymentBP.IRedFlushPrePaymentBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+         
+	<service name="UFIDA.U9.Cust.GS.FI.DeductionRegisterBP.ApprovedDeductionRegisterBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.DeductionRegisterBP.IApprovedDeductionRegisterBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.DeductionRegisterBP.CalculationDRMoneyBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.DeductionRegisterBP.ICalculationDRMoneyBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.DeductionRegisterBP.CreateDeductionRegisterBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.DeductionRegisterBP.ICreateDeductionRegisterBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+            
+	<service name="UFIDA.U9.Cust.GS.FI.PubBP.GetDefaultOrgBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PubBP.IGetDefaultOrgBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PubBP.GetCurrencyBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PubBP.IGetCurrencyBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FI.PaymentBP.GetPaymentSrcDocBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PaymentBP.IGetPaymentSrcDocBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.PaymentBP.ApprovedPaymentBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.PaymentBP.IApprovedPaymentBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FI.OperatorBonusBP.SelectOperatorBonusStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.OperatorBonusBP.ISelectOperatorBonus"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.OperatorBonusBP.ApproveOperatorBonusStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.OperatorBonusBP.IApproveOperatorBonus"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FI.OperatorBonusBP.CalculateOperatorBonusStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FI.OperatorBonusBP.ICalculateOperatorBonus"
+                  binding="basicHttpBinding" />
+
+	</service>
+ 
+    </services>
+</system.serviceModel>
+</configuration>

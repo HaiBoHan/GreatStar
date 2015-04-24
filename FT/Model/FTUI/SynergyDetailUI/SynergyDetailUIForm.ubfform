@@ -1,0 +1,1020 @@
+<View ID="f4223fb0-904f-4bbe-9b55-c4751d8c21a2" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="报关明细单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="SynergyDetailUIForm" Namespace="UFIDA.U9.Cust.GS.FT.SynergyDetailUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="769092f2-78b1-4bff-a307-b6e5cb7d4a80" URI=".UI_多卡多表WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="386" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Toolbar ID="6970e343-f973-463b-b536-518f84250eb7" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
+    <Button ID="7275f432-7d7f-4b11-8618-f91d10e2818d" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="92afb6d3-a9d4-46c3-af6e-26db82f40885" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="ae9068bb-0033-408a-bec3-345b2e61ab6f" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="e69169ae-4308-4009-881d-e2ab4eea71b4" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="582af858-d9cb-4dac-9a46-0e1e229a396c" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="d133f9f6-fe5a-4ca8-8613-f68ea94f6a78" AccessKey="C" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="bc989476-e34c-4d0e-a9a9-73bccfeff3f9" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
+    <Button ID="93f0255a-591e-4593-8dd3-2143d42db9bb" AccessKey="T" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="SubmitClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SubmitClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="7cc3f88b-cae7-4e3e-876f-2f80e090fe72" AccessKey="Y" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="c2c5cefb-326a-4623-a8e7-6aecbee893a2" AccessKey="" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event ActionName="UnApprovedClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Separator ID="a4c33dca-4e1c-4744-8857-63cacc5a0ce6" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="296" Y="0" />
+    <Button ID="3a95e92a-8a15-498a-be7e-57aa38801252" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="304" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="5ff9ca4b-9a84-4b5c-a28b-35b3aaf77d5e" AccessKey="L" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="339" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="950b9da2-7654-442b-bead-92ef88122a50" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="374" Y="0" />
+    <Button ID="b43000a2-678d-4785-804e-db798bafd1f5" AccessKey="[" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="382" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="f601de06-b10e-4182-b9b6-bbcc010f2c85" AccessKey="," DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="417" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="bfe9466a-9e7c-4f1c-8fc9-7ccf9f47530f" AccessKey="." DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="452" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="75bec1b3-2bb7-4e65-880b-92bd893c6a78" AccessKey="]" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="487" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="97e0842e-8381-40ad-97bc-aec1fb4e69a8" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="522" Y="0" />
+    <Button ID="0e334055-1920-4c92-a240-6a7bee8e2fe1" AccessKey="A" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="530" Y="0">
+      <Events>
+        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="99e916ec-b0db-4756-a740-827e8a751633" AccessKey="F" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="565" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="62b3d8f0-5f0c-494b-aad1-15173dc174a6" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="600" Y="0" />
+  </Toolbar>
+  <Card ID="95043c2f-1509-47bc-a109-39884d97027d" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="434">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="6b791f49-d175-4553-bed7-ca0a04c04c87" AccessKey="" DisplayName="汇总" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="BtnCollect" TabIndex="0" TabStop="True" Width="80" X="10" Y="3">
+      <Events>
+        <Event ActionName="CollectClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="fd8b1f36-bc03-4e67-adcb-483e2237feb1" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="386" LayoutType="GridBag" Name="Card3" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="971" />
+      <Column Fixed="False" Name="Column7" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="111" Name="Row0" />
+      <Row Fixed="True" Height="245" Name="Row3" />
+      <Row Fixed="False" Height="1" Name="Row4" />
+    </Rows>
+    <TabControl ID="2db99da7-63a8-4fdb-a006-49559f8d2011" GridHeight="1" GridWidth="2" GridX="0" GridY="0" Height="111" Name="TabControl0" TabIndex="1" TabStop="True" Width="972" X="10" Y="0">
+      <TabPage ID="0987ab53-e129-4787-9241-e3e8221b503d" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="ad16c26a-0bfe-4b1c-91a5-b0c6bf17491a" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="TabPage0" DisplaySrcUIViewID="ResourceView" GridBottomMargin="5" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="3" GridRowSpace="5" GridTopMargin="5" Height="81" LayoutType="GridBag" Name="TabPage0" TabIndex="1" TabStop="False" Width="964" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
+          <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column1" Width="115" />
+          <Column Fixed="True" Name="Column2" Type="Spacing" Width="14" />
+          <Column Fixed="True" Name="Column3" Type="Title" Width="110" />
+          <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column4" Width="115" />
+          <Column Fixed="True" Name="Column5" Type="Spacing" Width="14" />
+          <Column Fixed="True" Name="Column6" Type="Title" Width="110" />
+          <Column Fixed="True" Name="Column10" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column7" Width="115" />
+          <Column Fixed="False" Name="Column11" Type="Spacing" Width="14" />
+          <Column Fixed="True" Name="Column12" Width="110" />
+          <Column Fixed="True" Name="Column13" Width="5" />
+          <Column Fixed="True" Name="Column14" Width="115" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="20" Name="Row0" />
+          <Row Fixed="True" Height="20" Name="Row1" />
+          <Row Fixed="True" Height="20" Name="Row2" />
+        </Rows>
+        <Label ID="77e02202-00ac-4429-9669-d86cce7cd324" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID130" RelationControl="ID130" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="100" X="5" Y="5">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <NumberControl ID="0c18e34c-e5cc-4eca-92b2-53926b133ace" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID130" RelationControl="lblID130" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="CustomsDetailHead" Visible="False" Width="115" X="110" Y="5">
+          <Events />
+          <RelationControls />
+          <PrecisionBind Name="PrecisionBind0" />
+          <RoundRuleBind Name="RoundRuleBind0" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+          <CurrencyType Name="CurrencyType0" />
+        </NumberControl>
+        <Label ID="01c788b4-8802-405c-8cc5-9dff3d544ef1" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion136" RelationControl="SysVersion136" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="100" X="5" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <NumberControl ID="493ca767-b597-445b-8bb0-c14d54781996" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion136" RelationControl="lblSysVersion136" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="CustomsDetailHead" Visible="False" Width="115" X="110" Y="30">
+          <Events />
+          <RelationControls />
+          <PrecisionBind Name="PrecisionBind1" />
+          <RoundRuleBind Name="RoundRuleBind1" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+          <CurrencyType Name="CurrencyType1" />
+        </NumberControl>
+        <Label ID="e18e9cae-64d6-4279-9909-64c102b47126" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblBillNoItem80" RelationControl="BillNoItem80" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="5" Y="5">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Reference ID="65d02ea8-b68b-4806-8979-253346a7b7fa" CodeAttributeName="BillNoItemID" CodeField="BillNoItemID" CodeFieldUIFieldID="BillNoItem_BillNoItemID" CodeFieldUIViewID="CustomsDetailHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="BillNoItem80" NameAttributeName="BillNoItemID" NameFieldUIFieldID="BillNoItem_BillNoItemID" NameFieldUIViewID="CustomsDetailHead" PkeyField="ID" RefType="ca69a4a4-1ce9-4be4-9e47-caf284483995" RelationControl="lblBillNoItem80" TabIndex="5" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="BillNoItem" UIViewID="CustomsDetailHead" Visible="True" Width="115" WindowHeight="408" WindowWidth="580" X="110" Y="5">
+          <Events />
+          <RelationControls />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceModel" TargetID="BillNoItem80" TargetProperty="Key" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="发票号组" ColumnID="BillNoItemID" TargetControlType="ReferenceModel" TargetID="BillNoItem80" TargetProperty="Text" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员名称" ColumnID="UsedPerson_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="状态" ColumnID="BillNoItemStates" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="BillNoItemID" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </Reference>
+        <Label ID="c5e2970e-b04f-4b36-b11a-8425555a4b5e" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblSalesStaff178" RelationControl="SalesStaff178" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="5" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Reference ID="a5ac45e5-326b-4d7d-b552-ba39afba18c7" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="SalesStaff_Code" CodeFieldUIViewID="CustomsDetailHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="SalesStaff178" NameAttributeName="Name" NameFieldUIFieldID="SalesStaff_Name" NameFieldUIViewID="CustomsDetailHead" PkeyField="ID" RefType="bb70ff35-2ff8-4384-b766-7f49779888c8" RelationControl="lblSalesStaff178" TabIndex="7" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SalesStaff" UIViewID="CustomsDetailHead" Visible="True" Width="115" WindowHeight="408" WindowWidth="580" X="110" Y="30">
+          <Events />
+          <RelationControls />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门编码" ColumnID="Dept_Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门名称" ColumnID="Dept_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门ID" ColumnID="Dept_ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter">
+            <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+            <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+          </UIFilterBar>
+          <Events />
+        </Reference>
+        <Label ID="12853a6b-84e5-4dc3-94e7-7efee2725b66" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblGetOrderOrg154" RelationControl="GetOrderOrg154" TabIndex="8" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="5" Y="55">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Reference ID="d11180ff-21b6-4b74-8979-5dfea9b0414c" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="GetOrderOrg_Code" CodeFieldUIViewID="CustomsDetailHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="GetOrderOrg154" NameAttributeName="Name" NameFieldUIFieldID="GetOrderOrg_Name" NameFieldUIViewID="CustomsDetailHead" PkeyField="ID" RefType="cb4dda17-7cb5-4927-b1bb-b5facf1cfa19" RelationControl="lblGetOrderOrg154" TabIndex="9" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="GetOrderOrg" UIViewID="CustomsDetailHead" Visible="True" Width="115" WindowHeight="408" WindowWidth="580" X="110" Y="55">
+          <Events />
+          <RelationControls />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </Reference>
+        <Label ID="a475a2dd-bfaf-4579-8e6c-1cabd821250a" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblClient167" RelationControl="Client167" TabIndex="10" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="239" Y="5">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Reference ID="221ec4aa-0af7-4af7-959c-826493078a06" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Client_Code" CodeFieldUIViewID="CustomsDetailHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Client167" NameAttributeName="Name" NameFieldUIFieldID="Client_Name" NameFieldUIViewID="CustomsDetailHead" PkeyField="ID" RefType="d6428416-2436-4ab4-af0f-1464119d76e7" RelationControl="lblClient167" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Client" UIViewID="CustomsDetailHead" Visible="True" Width="115" WindowHeight="408" WindowWidth="580" X="354" Y="5">
+          <Events />
+          <RelationControls />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门ID" ColumnID="Department_ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门编码" ColumnID="Department_Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门名称" ColumnID="Department_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="销售员ID" ColumnID="Saleser_ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="销售员编码" ColumnID="Saleser_Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="销售员名称" ColumnID="Saleser_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种ID" ColumnID="TradeCurrency_ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种编码" ColumnID="TradeCurrency_Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种名称" ColumnID="TradeCurrency_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="精度1" ColumnID="TradeCurrency_MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值1" ColumnID="TradeCurrency_MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </Reference>
+        <Label ID="d9f0fc8e-959d-4c8b-a7b1-66b79a59a018" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency138" RelationControl="Currency138" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="239" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Reference ID="cf1a9e04-50e6-42f0-8180-5808af6174e4" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Currency_Code" CodeFieldUIViewID="CustomsDetailHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Currency138" NameAttributeName="Name" NameFieldUIFieldID="Currency_Name" NameFieldUIViewID="CustomsDetailHead" PkeyField="ID" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" RelationControl="lblCurrency138" TabIndex="13" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency" UIViewID="CustomsDetailHead" Visible="True" Width="115" WindowHeight="408" WindowWidth="580" X="354" Y="30">
+          <Events />
+          <RelationControls />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ISO代码" ColumnID="ISOCode" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="货币符号" ColumnID="Symbol" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter">
+            <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime1" />
+            <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime2" />
+          </UIFilterBar>
+          <Events />
+        </Reference>
+        <Label ID="93303149-10af-4994-a70e-bf04bf12cf72" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblShipPlanDate174" RelationControl="ShipPlanDate174" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="483" Y="5">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <DatePicker ID="a40b73ff-d6a0-4c09-9147-617b8d0d9ebb" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipPlanDate174" RelationControl="lblShipPlanDate174" TabIndex="15" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ShipPlanDate" UIViewID="CustomsDetailHead" Visible="True" Width="115" X="598" Y="5">
+          <Events />
+          <RelationControls />
+        </DatePicker>
+        <Label ID="acc78f07-4cf1-492b-8099-3240735db80b" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblLiOderDate183" RelationControl="LiOderDate183" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="483" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <DatePicker ID="3de07417-a6e7-43d1-a65a-3e3e4c32ce26" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="LiOderDate183" RelationControl="lblLiOderDate183" TabIndex="17" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="LiOderDate" UIViewID="CustomsDetailHead" Visible="True" Width="115" X="598" Y="30">
+          <Events />
+          <RelationControls />
+        </DatePicker>
+        <Label ID="d2658524-c4c7-4577-9006-5ab3e7fc56c1" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblMemo207" RelationControl="Memo207" TabIndex="20" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="727" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="3c0b888f-f340-4eb7-9586-336a36f7c5f1" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Memo207" RelationControl="lblMemo207" TabIndex="21" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="CustomsDetailHead" Visible="True" Width="115" X="842" Y="30">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="c720c124-9b02-43e9-b103-67651f75f73b" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblStatus162" RelationControl="Status162" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="727" Y="5">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <DropDownList ID="8f99a10a-c1d8-4b68-ba82-e37ff23ff49a" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FT.AllEnumBE.DocumnetSate" EnumID="597c5524-c318-4e55-87b7-a70255890a87" GridHeight="1" GridWidth="1" GridX="14" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Status162" RelationControl="lblStatus162" TabIndex="23" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Status" UIViewID="CustomsDetailHead" Visible="True" Width="115" X="842" Y="5">
+          <Events />
+          <RelationControls />
+        </DropDownList>
+      </TabPage>
+      <Events />
+    </TabControl>
+    <TabControl ID="c4a12915-a5ae-41d8-8c1a-875babee0f00" GridHeight="2" GridWidth="2" GridX="0" GridY="1" Height="256" Name="TabControl1" TabIndex="2" TabStop="True" Width="972" X="10" Y="121">
+      <TabPage ID="6f12ae71-e98d-482d-95d4-3a1a03821805" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="明细单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="0" GridColumnCount="12" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="9" GridRowSpace="5" GridTopMargin="5" Height="226" LayoutType="GridBag" Name="TabPage2" TabIndex="2" TabStop="False" Width="964" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column1" Width="150" />
+          <Column Fixed="True" Name="Column2" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column3" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column4" Width="150" />
+          <Column Fixed="True" Name="Column5" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column6" Type="Title" Width="149" />
+          <Column Fixed="True" Name="Column10" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column7" Width="149" />
+          <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="20" Name="Row0" />
+          <Row Fixed="True" Height="20" Name="Row1" />
+          <Row Fixed="True" Height="20" Name="Row2" />
+          <Row Fixed="True" Height="20" Name="Row3" />
+          <Row Fixed="True" Height="20" Name="Row4" />
+          <Row Fixed="True" Height="20" Name="Row5" />
+          <Row Fixed="True" Height="20" Name="Row6" />
+          <Row Fixed="True" Height="20" Name="Row7" />
+          <Row Fixed="False" Height="21" Name="Row8" />
+        </Rows>
+        <DataGrid ID="9a474087-9e98-493c-b7d8-2020fd16d5eb" EditStatus="edit" Enabled="True" GridHeight="9" GridWidth="11" GridX="0" GridY="0" HasSum="False" Height="221" Name="DataGrid10" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="953" X="5" Y="5">
+          <Events>
+            <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="GridRowDbClicked" Parameter="" Template="" />
+          </Events>
+          <Header ID="9d1d50ef-56f3-4836-abc9-10b59e164a52" Name="Header10">
+            <HeaderRow ID="1fc49842-64bd-4e0c-b9fb-cda86956d43e" Name="DefaultRow">
+              <HeaderCell ID="60ddeb59-8523-4cc4-88d6-3dd5231822e7" ColSpan="1" Name="HeaderCell1" OwnerColName="ID131" RowSpan="1" />
+              <HeaderCell ID="44d3ca49-8e38-444d-9193-c537fa254cec" ColSpan="1" Name="HeaderCell2" OwnerColName="SysVersion137" RowSpan="1" />
+              <HeaderCell ID="7c4f94ce-39fe-4653-a422-01b14bec2ace" ColSpan="1" Name="HeaderCell3" OwnerColName="RowNo0" RowSpan="1" />
+              <HeaderCell ID="eda531a8-15e3-46ab-a1a0-8de245fe2a22" ColSpan="1" Name="HeaderCell4" OwnerColName="ShipPlanDetail0" RowSpan="1" />
+              <HeaderCell ID="72a4d725-400a-4f93-ad34-427607d166ca" ColSpan="1" Name="HeaderCell5" OwnerColName="SourceRowNo0" RowSpan="1" />
+              <HeaderCell ID="333c57d8-e09f-441a-a2ea-5664468be256" ColSpan="1" Name="HeaderCell6" OwnerColName="OrderNo0" RowSpan="1" />
+              <HeaderCell ID="d6d7be62-ff34-48bd-8680-411a6d5a0406" ColSpan="1" Name="HeaderCell7" OwnerColName="ClassMark0" RowSpan="1" />
+              <HeaderCell ID="f2b0663a-604e-4a4e-81ff-4d9894fdc622" ColSpan="1" Name="HeaderCell8" OwnerColName="HSCode0" RowSpan="1" />
+              <HeaderCell ID="1b7011a4-9b1c-4e6f-b64d-cbdae4c718fd" ColSpan="1" Name="HeaderCell10" OwnerColName="Qty0" RowSpan="1" />
+              <HeaderCell ID="1f3b1e9b-00ae-42db-8359-9fa37aaa7d8a" ColSpan="1" Name="HeaderCell11" OwnerColName="Price0" RowSpan="1" />
+              <HeaderCell ID="6fe79ba1-aa70-40c2-b76b-bd57df1f48fe" ColSpan="1" Name="HeaderCell12" OwnerColName="Amount0" RowSpan="1" />
+              <HeaderCell ID="77dfd82f-6615-49d2-b3f5-23e0e2882141" ColSpan="1" Name="HeaderCell13" OwnerColName="DiscountAmount0" RowSpan="1" />
+              <HeaderCell ID="cf45d33a-bc76-43a3-8bff-4221d26599e4" ColSpan="1" Name="HeaderCell14" OwnerColName="OutPickAmount0" RowSpan="1" />
+              <HeaderCell ID="f696606c-a457-4b94-9a8b-72cb448d7a82" ColSpan="1" Name="HeaderCell15" OwnerColName="InPickAmount0" RowSpan="1" />
+              <HeaderCell ID="16fdbeb2-b4ac-4b8e-8e46-80bebcb2ead4" ColSpan="1" Name="HeaderCell16" OwnerColName="PredictAmount0" RowSpan="1" />
+              <HeaderCell ID="64118054-d33e-4020-ae0b-9696c0769d97" ColSpan="1" Name="HeaderCell17" OwnerColName="FactAmount0" RowSpan="1" />
+              <HeaderCell ID="1c545b29-14a5-454b-95fe-8ce1a796b77f" ColSpan="1" Name="HeaderCell18" OwnerColName="DifferenceQuoteAmount0" RowSpan="1" />
+              <HeaderCell ID="c5e5e026-6ba1-426a-bf6c-f9332f49d0b5" ColSpan="1" Name="HeaderCell19" OwnerColName="DifferenceAmount0" RowSpan="1" />
+            </HeaderRow>
+          </Header>
+          <UIFilterBar Name="LocateBar" />
+          <Columns>
+            <NumberColumn ID="96f3219a-c092-4905-b759-2906d45549ca" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="报关明细单行.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID131" NPos="1" Point="0" UIFieldID="ID" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="False">
+              <PrecisionBind Name="PrecisionBind2" />
+              <RoundRuleBind Name="RoundRuleBind2" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+              <CurrencyType Name="CurrencyType2" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="cf501c52-3a1b-4242-ab2c-0901b88c20e6" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="报关明细单行.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion137" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="False">
+              <PrecisionBind Name="PrecisionBind3" />
+              <RoundRuleBind Name="RoundRuleBind3" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+              <CurrencyType Name="CurrencyType3" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="fd4e4d7d-5065-4942-80c8-242b01ea5a02" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="报关明细单行.Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" Name="RowNo0" NPos="3" Point="0" UIFieldID="RowNo" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind4" />
+              <RoundRuleBind Name="RoundRuleBind4" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+              <CurrencyType Name="CurrencyType4" />
+              <Events />
+            </NumberColumn>
+            <TextBoxColumn ID="4bae690a-ee82-453c-84fc-3e0fdbae2bfb" DefaultValue="" DisplayFormat="50" Enabled="True" Help="报关明细单行.Misc.出运明细单" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipPlanDetail0" NPos="4" Point="0" TextAlign="Left" UIFieldID="ShipPlanDetail" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <NumberColumn ID="dd3fdcfb-0fd0-40b6-b221-8cc3d2c60219" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="报关明细单行.Misc.来源行号" IsNull="True" IsProperty="False" IsSequence="False" Name="SourceRowNo0" NPos="5" Point="0" UIFieldID="SourceRowNo" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind5" />
+              <RoundRuleBind Name="RoundRuleBind5" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
+              <CurrencyType Name="CurrencyType5" />
+              <Events />
+            </NumberColumn>
+            <TextBoxColumn ID="7b5789f2-7c61-4835-bd83-99ec91353ad7" DefaultValue="" DisplayFormat="50" Enabled="True" Help="报关明细单行.Misc.订单号" IsNull="True" IsProperty="False" IsSequence="False" Name="OrderNo0" NPos="6" Point="0" TextAlign="Left" UIFieldID="OrderNo" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <ReferenceColumn ID="c4544a53-cfc6-466f-8fce-5509234043db" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ClassMark_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关明细单行.Misc.中类号" IsNull="True" IsProperty="False" IsSequence="False" Name="ClassMark0" NameAttributeName="Name" NameFieldUIFieldID="ClassMark_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine" NPos="7" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="ClassMark" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation156" TargetControlType="ReferenceColumnModel" TargetID="ClassMark" TargetProperty="Key" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" Name="ReferenceRelation157" TargetControlType="ReferenceColumnModel" TargetID="ClassMark" TargetProperty="Value" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" Name="ReferenceRelation158" TargetControlType="ReferenceColumnModel" TargetID="ClassMark" TargetProperty="Text" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" Name="ReferenceRelation159" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" Name="ReferenceRelation160" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation161" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" Name="ReferenceRelation162" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" Name="ReferenceRelation163" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" Name="ReferenceRelation164" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" Name="ReferenceRelation165" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" Name="ReferenceRelation166" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" Name="ReferenceRelation167" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" Name="ReferenceRelation168" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" Name="ReferenceRelation169" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="1c0269b0-d2ba-446d-8d59-38140056fe27" CodeAttributeName="HSCode" CodeField="HSCode" CodeFieldUIFieldID="HSCode" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关明细单行.Misc.HS编码" IsNull="True" IsProperty="False" IsSequence="False" Name="HSCode0" NameAttributeName="Name" NameFieldUIFieldID="HSCode_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine" NPos="8" PkeyField="ID" Point="0" RefType="579e5a23-9609-4b84-bf2f-ab96ce886878" TextAlign="Right" UIFieldID="HSCode" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation145" TargetControlType="ReferenceColumnModel" TargetID="HSCode" TargetProperty="Key" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="HS编码" ColumnID="HSCode" Name="ReferenceRelation146" TargetControlType="ReferenceColumnModel" TargetID="HSCode" TargetProperty="Value" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation147" TargetControlType="ReferenceColumnModel" TargetID="HSCode" TargetProperty="Text" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="关税" ColumnID="Tariff" Name="ReferenceRelation148" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="退税率" ColumnID="DrawbackRate" Name="ReferenceRelation149" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <NumberColumn ID="fd872c7a-cea5-41a7-aba8-7b91b6c321c3" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="Qty0" NPos="9" Point="0" UIFieldID="Qty" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind6" />
+              <RoundRuleBind Name="RoundRuleBind6" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
+              <CurrencyType Name="CurrencyType6" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="e892bb0a-ed8c-41a8-9229-7598d038abdb" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.单价" IsNull="True" IsProperty="False" IsSequence="False" Name="Price0" NPos="10" Point="0" UIFieldID="Price" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind7" />
+              <RoundRuleBind Name="RoundRuleBind7" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind7" />
+              <CurrencyType Name="CurrencyType7" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="daca09d5-0ed6-4e00-be1b-2c89e35c5b75" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.金额" IsNull="True" IsProperty="False" IsSequence="False" Name="Amount0" NPos="11" Point="0" UIFieldID="Amount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind8" />
+              <RoundRuleBind Name="RoundRuleBind8" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
+              <CurrencyType Name="CurrencyType8" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="ec107966-dcce-49c3-a230-3df9b1a306df" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.折扣金额" IsNull="True" IsProperty="False" IsSequence="False" Name="DiscountAmount0" NPos="12" Point="0" UIFieldID="DiscountAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind9" />
+              <RoundRuleBind Name="RoundRuleBind9" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind9" />
+              <CurrencyType Name="CurrencyType9" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="60f3d4e9-343e-4bca-9ff4-75cb21f34e04" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.外采金额" IsNull="True" IsProperty="False" IsSequence="False" Name="OutPickAmount0" NPos="13" Point="0" UIFieldID="OutPickAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind10" />
+              <RoundRuleBind Name="RoundRuleBind10" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind10" />
+              <CurrencyType Name="CurrencyType10" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="da1862ec-f13f-47a7-96ad-c0c8b177dbe5" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.内采金额" IsNull="True" IsProperty="False" IsSequence="False" Name="InPickAmount0" NPos="14" Point="0" UIFieldID="InPickAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind11" />
+              <RoundRuleBind Name="RoundRuleBind11" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind11" />
+              <CurrencyType Name="CurrencyType11" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="72c97876-74dd-4a3a-8058-895393a27f93" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.预计报关金额" IsNull="True" IsProperty="False" IsSequence="False" Name="PredictAmount0" NPos="15" Point="0" UIFieldID="PredictAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind12" />
+              <RoundRuleBind Name="RoundRuleBind12" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind12" />
+              <CurrencyType Name="CurrencyType12" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="f3813396-1f4d-435f-a9c0-0ba29cae9979" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.实际报关金额" IsNull="True" IsProperty="False" IsSequence="False" Name="FactAmount0" NPos="16" Point="0" UIFieldID="FactAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind13" />
+              <RoundRuleBind Name="RoundRuleBind13" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind13" />
+              <CurrencyType Name="CurrencyType13" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="e673e54d-fdb3-4a98-80a6-bd04a8635b20" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.报关差异引用金额" IsNull="True" IsProperty="False" IsSequence="False" Name="DifferenceQuoteAmount0" NPos="17" Point="0" UIFieldID="DifferenceQuoteAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind14" />
+              <RoundRuleBind Name="RoundRuleBind14" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind14" />
+              <CurrencyType Name="CurrencyType14" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="b0e873d8-2fb4-4cc8-bf32-9d679f33bbcb" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关明细单行.Misc.报关差异金额" IsNull="True" IsProperty="False" IsSequence="False" Name="DifferenceAmount0" NPos="18" Point="0" UIFieldID="DifferenceAmount" UIViewID="CustomsDetailHead_CustomsDetailLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind15" />
+              <RoundRuleBind Name="RoundRuleBind15" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind15" />
+              <CurrencyType Name="CurrencyType15" />
+              <Events />
+            </NumberColumn>
+          </Columns>
+        </DataGrid>
+      </TabPage>
+      <TabPage ID="e792311d-f2bb-43a5-a14d-55032db685f4" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="理单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="12" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="9" GridRowSpace="5" GridTopMargin="5" Height="226" LayoutType="GridBag" Name="TabPage10" TabIndex="3" TabStop="False" Width="964" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column1" Width="150" />
+          <Column Fixed="True" Name="Column2" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column3" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column4" Width="150" />
+          <Column Fixed="True" Name="Column5" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column10" Type="Title" Width="149" />
+          <Column Fixed="True" Name="Column6" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column7" Width="149" />
+          <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="20" Name="Row0" />
+          <Row Fixed="True" Height="20" Name="Row1" />
+          <Row Fixed="True" Height="20" Name="Row2" />
+          <Row Fixed="True" Height="20" Name="Row3" />
+          <Row Fixed="True" Height="20" Name="Row4" />
+          <Row Fixed="True" Height="20" Name="Row5" />
+          <Row Fixed="True" Height="20" Name="Row6" />
+          <Row Fixed="True" Height="20" Name="Row7" />
+          <Row Fixed="False" Height="21" Name="Row8" />
+        </Rows>
+        <DataGrid ID="2737bb8a-84f9-418d-bc84-c8c92b6dbee0" EditStatus="edit" Enabled="True" GridHeight="9" GridWidth="11" GridX="0" GridY="0" HasSum="False" Height="221" Name="DataGrid11" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="953" X="5" Y="5">
+          <Events />
+          <Header ID="73a693b3-b168-424e-a9d8-2a26fb47832e" Name="Header11">
+            <HeaderRow ID="5993859f-4a2b-4dca-bee6-4d012a82dfc1" Name="DefaultRow">
+              <HeaderCell ID="f3b10274-2a8d-4678-97ed-3549040acd8a" ColSpan="1" Name="HeaderCell21" OwnerColName="ID132" RowSpan="1" />
+              <HeaderCell ID="d9705af6-7b3e-48ab-b258-0484136f3705" ColSpan="1" Name="HeaderCell22" OwnerColName="SysVersion138" RowSpan="1" />
+              <HeaderCell ID="ea5296c1-cd34-4ada-a045-b177f61b87c7" ColSpan="1" Name="HeaderCell23" OwnerColName="BillNo0" RowSpan="1" />
+              <HeaderCell ID="2df089f1-2fce-44c5-b12e-4f6c64d4a5ec" ColSpan="1" DisplayName="HS编码" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell62" OwnerColName="HSCode1" RowSpan="1" />
+              <HeaderCell ID="20aa8b6c-72ab-44ae-8511-acb730e2a4da" ColSpan="1" Name="HeaderCell24" OwnerColName="ShipPlanDetail1" RowSpan="1" />
+              <HeaderCell ID="92623a4f-aac6-4a93-95b6-6a133fe7ba56" ColSpan="1" Name="HeaderCell25" OwnerColName="SourceLineNo0" RowSpan="1" />
+              <HeaderCell ID="bfed1a40-fa20-4a79-b1bc-e5013282dc7f" ColSpan="1" Name="HeaderCell26" OwnerColName="OrderNo1" RowSpan="1" />
+              <HeaderCell ID="5431f7d3-b2ab-407f-afbc-ce4858505327" ColSpan="1" Name="HeaderCell27" OwnerColName="ItemType0" RowSpan="1" />
+              <HeaderCell ID="f06d8242-35e9-4f3a-ba1b-c59da7c7f28e" ColSpan="1" Name="HeaderCell28" OwnerColName="ClassMark1" RowSpan="1" />
+              <HeaderCell ID="227b2fe2-a796-41f9-a555-3d883f51816a" ColSpan="1" Name="HeaderCell30" OwnerColName="Subclass0" RowSpan="1" />
+              <HeaderCell ID="07a6a465-12fd-4a4c-bcd1-62dbcc7c755c" ColSpan="1" Name="HeaderCell31" OwnerColName="Supplier0" RowSpan="1" />
+              <HeaderCell ID="b8aaa23f-4b52-4079-a5c0-65a0dfabdf2e" ColSpan="1" Name="HeaderCell32" OwnerColName="PurchaseContract0" RowSpan="1" />
+              <HeaderCell ID="82546bb5-d488-4d52-844c-e92c5ad339df" ColSpan="1" Name="HeaderCell34" OwnerColName="CustomsGoods0" RowSpan="1" />
+              <HeaderCell ID="d9baa108-2ab1-4d52-82d5-ac4073357bb6" ColSpan="1" Name="HeaderCell35" OwnerColName="Qty1" RowSpan="1" />
+              <HeaderCell ID="3c9476b8-065e-43f8-818b-1bf7c6d5ef09" ColSpan="1" Name="HeaderCell36" OwnerColName="Uom0" RowSpan="1" />
+              <HeaderCell ID="db614b9c-ab18-438c-b16a-a4763a6b5a05" ColSpan="1" Name="HeaderCell37" OwnerColName="PurchasePrice0" RowSpan="1" />
+              <HeaderCell ID="b9240567-97d0-448e-b6c4-81e45b2428c8" ColSpan="1" Name="HeaderCell38" OwnerColName="Amount1" RowSpan="1" />
+              <HeaderCell ID="22008f8d-94f6-4fee-919f-12c45ca6bc79" ColSpan="1" Name="HeaderCell39" OwnerColName="PredictAmount1" RowSpan="1" />
+              <HeaderCell ID="1062a694-55c7-4e43-9530-bb9fbdebe9f8" ColSpan="1" Name="HeaderCell40" OwnerColName="FactAmount1" RowSpan="1" />
+              <HeaderCell ID="f2978261-d1bd-4680-8a93-458cfad5cda6" ColSpan="1" Name="HeaderCell41" OwnerColName="DifferenceQuoteAmount1" RowSpan="1" />
+              <HeaderCell ID="2fbda4ce-2ecd-49b4-9e87-0d816cc990ac" ColSpan="1" Name="HeaderCell42" OwnerColName="IsCustoms0" RowSpan="1" />
+            </HeaderRow>
+          </Header>
+          <UIFilterBar Name="LocateBar" />
+          <Columns>
+            <NumberColumn ID="195bc51d-4bbc-4eaf-b8e5-90b2501e3d91" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="理单页签.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID132" NPos="1" Point="0" UIFieldID="ID" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="False">
+              <PrecisionBind Name="PrecisionBind16" />
+              <RoundRuleBind Name="RoundRuleBind16" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind16" />
+              <CurrencyType Name="CurrencyType16" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="6287aa13-b9ae-4279-9395-10e1f1ffb8ba" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="理单页签.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion138" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="False">
+              <PrecisionBind Name="PrecisionBind17" />
+              <RoundRuleBind Name="RoundRuleBind17" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind17" />
+              <CurrencyType Name="CurrencyType17" />
+              <Events />
+            </NumberColumn>
+            <ReferenceColumn ID="529e0645-a03b-48c4-8c86-f1a0a0f0e1f6" CodeAttributeName="BillNoID" CodeField="BillNoID" CodeFieldUIFieldID="BillNo_BillNoID" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.发票号" IsNull="True" IsProperty="False" IsSequence="False" Name="BillNo0" NameAttributeName="BillNoID" NameFieldUIFieldID="BillNo_BillNoID" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="3" PkeyField="ID" Point="0" RefType="2373f96a-fdc8-46df-a24f-3b3c17b4b748" TextAlign="Right" UIFieldID="BillNo" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation150" TargetControlType="ReferenceColumnModel" TargetID="BillNo" TargetProperty="Key" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="发票号ID" ColumnID="BillNoID" Name="ReferenceRelation151" TargetControlType="ReferenceColumnModel" TargetID="BillNo" TargetProperty="Text" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="发票号" ColumnID="BillNoName" Name="ReferenceRelation152" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="BillNoID" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="c63f233f-2f59-460f-99d1-663d17e6bee8" CodeAttributeName="HSCode" CodeField="HSCode" CodeFieldUIFieldID="HSCode" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.HS编码" IsNull="True" IsProperty="False" IsSequence="False" Name="HSCode1" NameAttributeName="Name" NameFieldUIFieldID="HSCode_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="4" PkeyField="ID" Point="0" RefType="579e5a23-9609-4b84-bf2f-ab96ce886878" TextAlign="Right" UIFieldID="HSCode" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation61" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="HS编码" ColumnID="HSCode" Name="ReferenceRelation62" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation63" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="关税" ColumnID="Tariff" Name="ReferenceRelation64" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="退税率" ColumnID="DrawbackRate" Name="ReferenceRelation65" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <TextBoxColumn ID="d12d79f7-69d1-4510-a6f6-01827ec0afa2" DefaultValue="" DisplayFormat="50" Enabled="True" Help="理单页签.Misc.出运明细单" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipPlanDetail1" NPos="5" Point="0" TextAlign="Left" UIFieldID="ShipPlanDetail" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <NumberColumn ID="12bb004b-5edb-4bf2-8737-a07945a3524a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="理单页签.Misc.来源行号" IsNull="True" IsProperty="False" IsSequence="False" Name="SourceLineNo0" NPos="6" Point="0" UIFieldID="SourceLineNo" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind18" />
+              <RoundRuleBind Name="RoundRuleBind18" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind18" />
+              <CurrencyType Name="CurrencyType18" />
+              <Events />
+            </NumberColumn>
+            <TextBoxColumn ID="efaaf8ac-a462-4950-8ea0-d30cbbae408f" DefaultValue="" DisplayFormat="50" Enabled="True" Help="理单页签.Misc.订单号" IsNull="True" IsProperty="False" IsSequence="False" Name="OrderNo1" NPos="7" Point="0" TextAlign="Left" UIFieldID="OrderNo" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <ReferenceColumn ID="3d7d5c45-306b-47ad-b202-582b61b8592e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemType_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.料品分类" IsNull="True" IsProperty="False" IsSequence="False" Name="ItemType0" NameAttributeName="Name" NameFieldUIFieldID="ItemType_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="8" PkeyField="ID" Point="0" RefType="337436b5-2d13-49b2-9520-43cea36f177a" TextAlign="Right" UIFieldID="ItemType" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation24" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation25" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation26" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="d32036a1-5c6a-4bc8-ac7d-bc5df8abac30" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ClassMark_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.中类号" IsNull="True" IsProperty="False" IsSequence="False" Name="ClassMark1" NameAttributeName="Name" NameFieldUIFieldID="ClassMark_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="9" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="ClassMark" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation170" TargetControlType="ReferenceColumnModel" TargetID="ClassMark" TargetProperty="Key" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" Name="ReferenceRelation171" TargetControlType="ReferenceColumnModel" TargetID="ClassMark" TargetProperty="Value" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" Name="ReferenceRelation172" TargetControlType="ReferenceColumnModel" TargetID="ClassMark" TargetProperty="Text" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" Name="ReferenceRelation173" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" Name="ReferenceRelation174" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation175" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" Name="ReferenceRelation176" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" Name="ReferenceRelation177" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" Name="ReferenceRelation178" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" Name="ReferenceRelation179" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" Name="ReferenceRelation180" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" Name="ReferenceRelation181" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" Name="ReferenceRelation182" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" Name="ReferenceRelation183" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="72dc137c-e74f-4368-9e41-78bdd79ff5f7" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Subclass_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.小类" IsNull="True" IsProperty="False" IsSequence="False" Name="Subclass0" NameAttributeName="Name" NameFieldUIFieldID="Subclass_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="10" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="Subclass" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation41" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" Name="ReferenceRelation42" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" Name="ReferenceRelation43" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" Name="ReferenceRelation44" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" Name="ReferenceRelation45" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation46" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" Name="ReferenceRelation47" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" Name="ReferenceRelation48" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" Name="ReferenceRelation49" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" Name="ReferenceRelation50" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" Name="ReferenceRelation51" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" Name="ReferenceRelation52" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" Name="ReferenceRelation53" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" Name="ReferenceRelation54" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="4ec4d3e0-6dc1-4977-8a88-fc999d80d24d" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.供应商" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier0" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="11" PkeyField="ID" Point="0" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" TextAlign="Right" UIFieldID="Supplier" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation55" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation56" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation57" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" Name="ReferenceRelation58" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="分类" ColumnID="Category_Name" Name="ReferenceRelation59" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" Name="ReferenceRelation60" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <TextBoxColumn ID="ee46b214-70a4-4dc0-b20e-a759f18b69b3" DefaultValue="" DisplayFormat="50" Enabled="True" Help="理单页签.Misc.采购合同" IsNull="True" IsProperty="False" IsSequence="False" Name="PurchaseContract0" NPos="12" Point="0" TextAlign="Left" UIFieldID="PurchaseContract" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <TextBoxColumn ID="d2743411-7873-4855-bc45-46ddd57e71f0" DefaultValue="" DisplayFormat="50" Enabled="True" Help="理单页签.Misc.报关品名" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomsGoods0" NPos="13" Point="0" TextAlign="Left" UIFieldID="CustomsGoods" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <NumberColumn ID="cc14191d-9cd1-48b5-b3b1-9cc97a4d2cd7" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="理单页签.Misc.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="Qty1" NPos="14" Point="0" UIFieldID="Qty" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind19" />
+              <RoundRuleBind Name="RoundRuleBind19" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind19" />
+              <CurrencyType Name="CurrencyType19" />
+              <Events />
+            </NumberColumn>
+            <ReferenceColumn ID="b32540cc-728f-4fbc-9dd5-dbf84fba707a" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Uom_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="理单页签.Misc.计量单位" IsNull="True" IsProperty="False" IsSequence="False" Name="Uom0" NameAttributeName="Name" NameFieldUIFieldID="Uom_Name" NameFieldUIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" NPos="15" PkeyField="ID" Point="0" RefType="2cb04e9c-44df-44e8-b518-f1ce0ba1e2cd" TextAlign="Right" UIFieldID="Uom" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation117" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="单位组" ColumnID="UOMClass" Name="ReferenceRelation118" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation119" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation120" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="Round_Precision" Name="ReferenceRelation121" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="Round_RoundType" Name="ReferenceRelation122" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="Round_RoundValue" Name="ReferenceRelation123" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="副单位ID" ColumnID="BaseUOM_ID" Name="ReferenceRelation124" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="副单位编码" ColumnID="BaseUOM_Code" Name="ReferenceRelation125" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="副单位名称" ColumnID="BaseUOM_Name" Name="ReferenceRelation126" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="主副单位转换率" ColumnID="RatioToBase" Name="ReferenceRelation127" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter">
+                <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime1" />
+                <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime2" />
+              </UIFilterBar>
+              <Events />
+            </ReferenceColumn>
+            <NumberColumn ID="07544618-9087-4eca-a81d-a942f44462d1" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="理单页签.Misc.采购价 " IsNull="True" IsProperty="False" IsSequence="False" Name="PurchasePrice0" NPos="16" Point="0" UIFieldID="PurchasePrice" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind20" />
+              <RoundRuleBind Name="RoundRuleBind20" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind20" />
+              <CurrencyType Name="CurrencyType20" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="c64c91d5-b81f-4e23-80bc-dc9e7700a7ea" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="理单页签.Misc.金额" IsNull="True" IsProperty="False" IsSequence="False" Name="Amount1" NPos="17" Point="0" UIFieldID="Amount" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind21" />
+              <RoundRuleBind Name="RoundRuleBind21" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind21" />
+              <CurrencyType Name="CurrencyType21" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="86b67cee-4a9b-41c6-bb07-9bb5910f2dc4" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="理单页签.Misc.预计报关金额" IsNull="True" IsProperty="False" IsSequence="False" Name="PredictAmount1" NPos="18" Point="0" UIFieldID="PredictAmount" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind22" />
+              <RoundRuleBind Name="RoundRuleBind22" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind22" />
+              <CurrencyType Name="CurrencyType22" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="8e83a3b1-f0eb-4187-90b8-82734eec5d01" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="理单页签.Misc.实际报关金额" IsNull="True" IsProperty="False" IsSequence="False" Name="FactAmount1" NPos="19" Point="0" UIFieldID="FactAmount" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind23" />
+              <RoundRuleBind Name="RoundRuleBind23" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind23" />
+              <CurrencyType Name="CurrencyType23" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="ed2d2493-b1c6-442c-9591-800298f74c62" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="理单页签.Misc.报关差异引用金额" IsNull="True" IsProperty="False" IsSequence="False" Name="DifferenceQuoteAmount1" NPos="20" Point="0" UIFieldID="DifferenceQuoteAmount" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind24" />
+              <RoundRuleBind Name="RoundRuleBind24" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind24" />
+              <CurrencyType Name="CurrencyType24" />
+              <Events />
+            </NumberColumn>
+            <CheckBoxColumn ID="b4c9345c-b06a-4a74-9e6f-0e9804b55518" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="理单页签.Misc.是否报关" IsNull="True" IsProperty="False" IsSequence="False" Name="IsCustoms0" NPos="21" Point="0" UIFieldID="IsCustoms" UIViewID="CustomsDetailHead_CustomsDetailLine_LiOrderLine" Visible="True" Width="110">
+              <Events />
+            </CheckBoxColumn>
+          </Columns>
+        </DataGrid>
+      </TabPage>
+      <TabPage ID="3412679d-97bc-4f54-9fc2-7574add63f3c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="报关行" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="12" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="9" GridRowSpace="5" GridTopMargin="5" Height="226" LayoutType="GridBag" Name="TabPage11" TabIndex="4" TabStop="False" Width="964" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column1" Width="150" />
+          <Column Fixed="True" Name="Column2" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column3" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column4" Width="150" />
+          <Column Fixed="True" Name="Column5" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column6" Type="Title" Width="149" />
+          <Column Fixed="True" Name="Column10" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column7" Width="149" />
+          <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="20" Name="Row0" />
+          <Row Fixed="True" Height="20" Name="Row1" />
+          <Row Fixed="True" Height="20" Name="Row2" />
+          <Row Fixed="True" Height="20" Name="Row3" />
+          <Row Fixed="True" Height="20" Name="Row4" />
+          <Row Fixed="True" Height="20" Name="Row5" />
+          <Row Fixed="True" Height="20" Name="Row6" />
+          <Row Fixed="True" Height="20" Name="Row7" />
+          <Row Fixed="False" Height="21" Name="Row8" />
+        </Rows>
+        <DataGrid ID="6494a345-9be2-4b6a-a3dc-f6d212d5897c" EditStatus="edit" Enabled="True" GridHeight="9" GridWidth="11" GridX="0" GridY="0" HasSum="False" Height="221" Name="DataGrid12" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="953" X="5" Y="5">
+          <Events />
+          <Header ID="74b51b26-a767-4e74-b646-634695140d21" Name="Header12">
+            <HeaderRow ID="3c3422c9-46eb-4799-aec3-2bada636d309" Name="DefaultRow">
+              <HeaderCell ID="81ea2388-7a58-4524-9925-f12f8b495def" ColSpan="1" Name="HeaderCell44" OwnerColName="ID133" RowSpan="1" />
+              <HeaderCell ID="69e55b47-e91c-4358-9531-9ad3c8dc9c34" ColSpan="1" Name="HeaderCell45" OwnerColName="SysVersion139" RowSpan="1" />
+              <HeaderCell ID="6fbf0142-66a3-488f-a90d-a804904387ff" ColSpan="1" Name="HeaderCell46" OwnerColName="BillNo1" RowSpan="1" />
+              <HeaderCell ID="c72399a5-5f46-4c36-b89f-d5440146f2f9" ColSpan="1" Name="HeaderCell47" OwnerColName="HSCode2" RowSpan="1" />
+              <HeaderCell ID="179e673e-9b8a-4150-8d01-ea1d6a703d0a" ColSpan="1" Name="HeaderCell48" OwnerColName="Subclass1" RowSpan="1" />
+              <HeaderCell ID="074b5b01-588d-4a0e-a307-bc52cb8eabbe" ColSpan="1" Name="HeaderCell49" OwnerColName="Qty2" RowSpan="1" />
+              <HeaderCell ID="35fa269b-b004-4754-81fa-b489d3b6d0d4" ColSpan="1" Name="HeaderCell50" OwnerColName="PurchasePrice1" RowSpan="1" />
+              <HeaderCell ID="b1d8d1fa-2cc0-4633-adff-3e77592312d9" ColSpan="1" Name="HeaderCell51" OwnerColName="Amount2" RowSpan="1" />
+              <HeaderCell ID="269d4da4-8c8a-420c-92be-d4653e6fbe27" ColSpan="1" Name="HeaderCell52" OwnerColName="Uom1" RowSpan="1" />
+              <HeaderCell ID="b2cbc0b2-240b-4821-bb57-c214c33d4224" ColSpan="1" Name="HeaderCell53" OwnerColName="CustomsQty0" RowSpan="1" />
+              <HeaderCell ID="dc2e0867-66c2-4e57-b762-9622dca90c27" ColSpan="1" Name="HeaderCell54" OwnerColName="CustomsUom0" RowSpan="1" />
+              <HeaderCell ID="9b33eafa-bb91-4aaa-b10b-866fb1291b0c" ColSpan="1" Name="HeaderCell55" OwnerColName="GrossWeight0" RowSpan="1" />
+              <HeaderCell ID="496d9255-5d2e-408d-882b-02510d90dc45" ColSpan="1" Name="HeaderCell56" OwnerColName="NetWeight0" RowSpan="1" />
+              <HeaderCell ID="3547130b-9f7d-4d78-a153-cf93fd55428c" ColSpan="1" Name="HeaderCell57" OwnerColName="BoxNumber0" RowSpan="1" />
+              <HeaderCell ID="d042a65b-9c95-4586-aaae-6197df59a3ff" ColSpan="1" Name="HeaderCell58" OwnerColName="Bulks0" RowSpan="1" />
+              <HeaderCell ID="f7e44c89-3aaf-4e5f-8c27-16a2c6ba9cfb" ColSpan="1" Name="HeaderCell59" OwnerColName="CustomsProduct0" RowSpan="1" />
+              <HeaderCell ID="b2f2def9-8725-4a39-90e7-5674fbb87ee7" ColSpan="1" Name="HeaderCell60" OwnerColName="CustomsPrice0" RowSpan="1" />
+              <HeaderCell ID="a2006519-d06b-4d5e-973e-52dab489d99e" ColSpan="1" Name="HeaderCell61" OwnerColName="CustomsAmount0" RowSpan="1" />
+            </HeaderRow>
+          </Header>
+          <UIFilterBar Name="LocateBar" />
+          <Columns>
+            <NumberColumn ID="e12addeb-db87-41b7-876f-c59af0bcb581" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="报关行页签.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID133" NPos="1" Point="0" UIFieldID="ID" UIViewID="CustomsDetailHead_CustomsLine" Visible="False">
+              <PrecisionBind Name="PrecisionBind25" />
+              <RoundRuleBind Name="RoundRuleBind25" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind25" />
+              <CurrencyType Name="CurrencyType25" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="2ab2193a-5f8d-4f25-b4f2-f6587fe04749" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="报关行页签.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion139" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="CustomsDetailHead_CustomsLine" Visible="False">
+              <PrecisionBind Name="PrecisionBind26" />
+              <RoundRuleBind Name="RoundRuleBind26" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind26" />
+              <CurrencyType Name="CurrencyType26" />
+              <Events />
+            </NumberColumn>
+            <ReferenceColumn ID="8601d3b6-1cf9-43f2-b881-2d4df849e604" CodeAttributeName="BillNoID" CodeField="BillNoID" CodeFieldUIFieldID="BillNo_BillNoID" CodeFieldUIViewID="CustomsDetailHead_CustomsLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关行页签.Misc.发票号" IsNull="True" IsProperty="False" IsSequence="False" Name="BillNo1" NameAttributeName="BillNoID" NameFieldUIFieldID="BillNo_BillNoID" NameFieldUIViewID="CustomsDetailHead_CustomsLine" NPos="3" PkeyField="ID" Point="0" RefType="2373f96a-fdc8-46df-a24f-3b3c17b4b748" TextAlign="Right" UIFieldID="BillNo" UIViewID="CustomsDetailHead_CustomsLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation153" TargetControlType="ReferenceColumnModel" TargetID="BillNo" TargetProperty="Key" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="发票号ID" ColumnID="BillNoID" Name="ReferenceRelation154" TargetControlType="ReferenceColumnModel" TargetID="BillNo" TargetProperty="Text" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="发票号" ColumnID="BillNoName" Name="ReferenceRelation155" TargetControlType="ReferenceColumnModel" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="BillNoID" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="5a9adce1-c0d7-4b52-b6e0-bcd83a164800" CodeAttributeName="HSCode" CodeField="HSCode" CodeFieldUIFieldID="HSCode" CodeFieldUIViewID="CustomsDetailHead_CustomsLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关行页签.Misc.HS编码" IsNull="True" IsProperty="False" IsSequence="False" Name="HSCode2" NameAttributeName="Name" NameFieldUIFieldID="HSCode_Name" NameFieldUIViewID="CustomsDetailHead_CustomsLine" NPos="4" PkeyField="ID" Point="0" RefType="579e5a23-9609-4b84-bf2f-ab96ce886878" TextAlign="Right" UIFieldID="HSCode" UIViewID="CustomsDetailHead_CustomsLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation80" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="HS编码" ColumnID="HSCode" Name="ReferenceRelation81" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation82" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="关税" ColumnID="Tariff" Name="ReferenceRelation83" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="退税率" ColumnID="DrawbackRate" Name="ReferenceRelation84" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <ReferenceColumn ID="80fcdf08-c27a-46fb-a9bf-013ee4629b85" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Subclass_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关行页签.Misc.小类" IsNull="True" IsProperty="False" IsSequence="False" Name="Subclass1" NameAttributeName="Name" NameFieldUIFieldID="Subclass_Name" NameFieldUIViewID="CustomsDetailHead_CustomsLine" NPos="5" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="Subclass" UIViewID="CustomsDetailHead_CustomsLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation85" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" Name="ReferenceRelation86" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" Name="ReferenceRelation87" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" Name="ReferenceRelation88" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" Name="ReferenceRelation89" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation90" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" Name="ReferenceRelation91" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" Name="ReferenceRelation92" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" Name="ReferenceRelation93" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" Name="ReferenceRelation94" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" Name="ReferenceRelation95" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" Name="ReferenceRelation96" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" Name="ReferenceRelation97" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" Name="ReferenceRelation98" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <NumberColumn ID="f12885b2-5645-4b59-858b-41a4798270a5" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="Qty2" NPos="6" Point="0" UIFieldID="Qty" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind27" />
+              <RoundRuleBind Name="RoundRuleBind27" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind27" />
+              <CurrencyType Name="CurrencyType27" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="76b32c24-1dbb-4eaa-b452-deb1a67d846b" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.采购价" IsNull="True" IsProperty="False" IsSequence="False" Name="PurchasePrice1" NPos="7" Point="0" UIFieldID="PurchasePrice" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind28" />
+              <RoundRuleBind Name="RoundRuleBind28" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind28" />
+              <CurrencyType Name="CurrencyType28" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="a44c84ca-a53b-4bca-aeda-50c5ca9ed80b" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.金额" IsNull="True" IsProperty="False" IsSequence="False" Name="Amount2" NPos="8" Point="0" UIFieldID="Amount" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind29" />
+              <RoundRuleBind Name="RoundRuleBind29" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind29" />
+              <CurrencyType Name="CurrencyType29" />
+              <Events />
+            </NumberColumn>
+            <ReferenceColumn ID="f4f0530c-555a-4ddd-9b90-ed87218851da" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Uom_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关行页签.Misc.计量单位" IsNull="True" IsProperty="False" IsSequence="False" Name="Uom1" NameAttributeName="Name" NameFieldUIFieldID="Uom_Name" NameFieldUIViewID="CustomsDetailHead_CustomsLine" NPos="9" PkeyField="ID" Point="0" RefType="2cb04e9c-44df-44e8-b518-f1ce0ba1e2cd" TextAlign="Right" UIFieldID="Uom" UIViewID="CustomsDetailHead_CustomsLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation128" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="单位组" ColumnID="UOMClass" Name="ReferenceRelation129" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation130" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation131" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="Round_Precision" Name="ReferenceRelation132" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="Round_RoundType" Name="ReferenceRelation133" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="Round_RoundValue" Name="ReferenceRelation134" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="副单位ID" ColumnID="BaseUOM_ID" Name="ReferenceRelation135" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="副单位编码" ColumnID="BaseUOM_Code" Name="ReferenceRelation136" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="副单位名称" ColumnID="BaseUOM_Name" Name="ReferenceRelation137" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="主副单位转换率" ColumnID="RatioToBase" Name="ReferenceRelation138" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter">
+                <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime1" />
+                <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime2" />
+              </UIFilterBar>
+              <Events />
+            </ReferenceColumn>
+            <NumberColumn ID="e8832c8c-8570-44f8-9518-7dd751a01d76" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.报关数量" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomsQty0" NPos="10" Point="0" UIFieldID="CustomsQty" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind30" />
+              <RoundRuleBind Name="RoundRuleBind30" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind30" />
+              <CurrencyType Name="CurrencyType30" />
+              <Events />
+            </NumberColumn>
+            <ReferenceColumn ID="e0583b62-ad7c-45d4-acc8-e75e0538a3b1" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="CustomsUom_Code" CodeFieldUIViewID="CustomsDetailHead_CustomsLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="报关行页签.Misc.报关单位" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomsUom0" NameAttributeName="Name" NameFieldUIFieldID="CustomsUom_Name" NameFieldUIViewID="CustomsDetailHead_CustomsLine" NPos="11" PkeyField="ID" Point="0" RefType="f60347ca-0114-4396-891f-efd65b825db1" TextAlign="Right" UIFieldID="CustomsUom" UIViewID="CustomsDetailHead_CustomsLine" Visible="True" WindowHeight="408" WindowWidth="580">
+              <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation108" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation109" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation110" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="单位组" ColumnID="UOMClass" Name="ReferenceRelation111" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="状态生效" ColumnID="Effective_IsEffective" Name="ReferenceRelation112" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="计量单位描述" ColumnID="Description" Name="ReferenceRelation113" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="精度精度" ColumnID="Round_Precision" Name="ReferenceRelation114" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="Round_RoundType" Name="ReferenceRelation115" TargetControlType="" TargetID="" TargetProperty="" />
+              <ReferenceRelation Action="Clear" ColumnDisplayName="精度舍入值" ColumnID="Round_RoundValue" Name="ReferenceRelation116" TargetControlType="" TargetID="" TargetProperty="" />
+              <RefNameFields>
+                <RefNameField UIFieldID="Name" />
+              </RefNameFields>
+              <UIFilterBar Name="ReferenceFilter" />
+              <Events />
+            </ReferenceColumn>
+            <NumberColumn ID="3285ed63-03d8-4ba6-93cf-67968ec1ac98" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.毛重" IsNull="True" IsProperty="False" IsSequence="False" Name="GrossWeight0" NPos="12" Point="0" UIFieldID="GrossWeight" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind31" />
+              <RoundRuleBind Name="RoundRuleBind31" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind31" />
+              <CurrencyType Name="CurrencyType31" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="a90ed089-4150-45e3-849c-02339ee0a8db" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.净重" IsNull="True" IsProperty="False" IsSequence="False" Name="NetWeight0" NPos="13" Point="0" UIFieldID="NetWeight" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind32" />
+              <RoundRuleBind Name="RoundRuleBind32" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind32" />
+              <CurrencyType Name="CurrencyType32" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="a82a492e-be60-4bc8-bc57-743cec6cfbdd" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.箱数" IsNull="True" IsProperty="False" IsSequence="False" Name="BoxNumber0" NPos="14" Point="0" UIFieldID="BoxNumber" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind33" />
+              <RoundRuleBind Name="RoundRuleBind33" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind33" />
+              <CurrencyType Name="CurrencyType33" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="ebecd7ad-3204-4a24-a196-218f51407b58" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.体积" IsNull="True" IsProperty="False" IsSequence="False" Name="Bulks0" NPos="15" Point="0" UIFieldID="Bulks" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind34" />
+              <RoundRuleBind Name="RoundRuleBind34" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind34" />
+              <CurrencyType Name="CurrencyType34" />
+              <Events />
+            </NumberColumn>
+            <TextBoxColumn ID="6efac764-ff37-4bca-a215-a98329775648" DefaultValue="" DisplayFormat="50" Enabled="True" Help="报关行页签.Misc.报关品名" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomsProduct0" NPos="16" Point="0" TextAlign="Left" UIFieldID="CustomsProduct" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <Events />
+            </TextBoxColumn>
+            <NumberColumn ID="a6f47a39-2b3b-4036-a0a4-7baa5aac7add" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.报关价格" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomsPrice0" NPos="17" Point="0" UIFieldID="CustomsPrice" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind35" />
+              <RoundRuleBind Name="RoundRuleBind35" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind35" />
+              <CurrencyType Name="CurrencyType35" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="e38b2359-f066-4c7e-bcaa-e0a1c2ff0830" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="报关行页签.Misc.报关金额" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomsAmount0" NPos="18" Point="0" UIFieldID="CustomsAmount" UIViewID="CustomsDetailHead_CustomsLine" Visible="True">
+              <PrecisionBind Name="PrecisionBind36" />
+              <RoundRuleBind Name="RoundRuleBind36" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind36" />
+              <CurrencyType Name="CurrencyType36" />
+              <Events />
+            </NumberColumn>
+          </Columns>
+        </DataGrid>
+      </TabPage>
+      <Events />
+    </TabControl>
+  </Card>
+  <Events />
+</View>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="f96d792b-bd98-4cb8-b82c-3a2a9fbe4121" name="SoUI" displayName="SoUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.SoUI" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="f9917cd9-54be-4b28-b8e4-e97d3bfa944b" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="b057972b-8ce7-4240-aba1-001671bb09f3" name="SequenceUI" displayName="SequenceUI" description="" help="" componentid="f663e7e5-cd93-43ac-af56-4ead76774953" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.Base.Sequence.SequenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="fc6ddba2-6282-4e05-ade7-56fbe42a0753" name="FIReferenceUI" displayName="FIReferenceUI" description="" help="" componentid="13ef8b81-9e14-40c2-91a3-64f89aeedacf" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.FIReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="b7a5f926-dd9c-4cc9-ab21-031c6edacf32" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="90afa708-acc9-486c-9b01-5fffc1524c53" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="4109363e-89da-48e9-9e11-4b9776ebf165" name="FTUI" displayName="FTUI" description="" help="" componentid="8d3e40fc-5aef-4d3f-9531-2fdad262cb78" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.Cust.GS.FT.FTUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="c2e4efe2-cc6c-4347-83f5-3a5412bb0794" name="SDDocTypeUI" displayName="SDDocTypeUI" description="" help="" componentid="08cce241-5666-4807-8828-7c58f1967ee0" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.SD.SDDocTypeUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="3a683758-668e-4243-a3bc-6f8023e241fe" name="SMBE" displayName="SMBE" description="" help="" componentid="d41d7cf6-291f-4834-9322-63f3c52bf470" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="2d7776e2-534d-4f3d-8cb7-4d402359cc57" name="ItemUI" displayName="ItemUI" description="" help="" componentid="7b6cc2cc-7a33-4e83-b812-0dd14acf4570" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Item.ItemUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="0d51ec66-7e80-45bf-88e8-e6b66a1dbae9" name="ExpenseItemUI" displayName="ExpenseItemUI" description="" help="" componentid="af9fe3a3-d6fa-45a4-be1b-b397b654b3ce" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.ExpenseItem.ExpenseItemUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="60bd22c3-8e18-4950-a596-d27deed7f2af" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="eda5692d-2c14-486f-885b-4e3fc620ed81" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="12ee5e48-d922-4d4a-8706-595df748eb67" name="SOUI" displayName="SOUI" description="" help="" componentid="4a9af9fc-24bc-4f86-943b-e064d04c8976" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.SD.SOUI.MetaData.dll" type="UI" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="7e0d2650-8080-4cc6-91ff-a59c6c7a932d" name="SoOrderSaleUIModel.ubfuim" displayName="SoOrderSaleUIModel.ubfuim" description="" help="" include="SoOrderSaleUIModel.ubfuim" type="" />
+    <Item id="9dd16ba1-a96f-4a92-9ba1-5d2dcd3ae515" name="SoOrderSaleUIForm.ubfform" displayName="SoOrderSaleUIForm.ubfform" description="" help="" include="SoOrderSaleUIForm.ubfform" type="" />
+    <Item id="1ae32bbd-fc4b-4c26-84c0-527523b71482" name="SourceOrderRef.ubfref" displayName="SourceOrderRef.ubfref" description="" help="" include="SourceOrderRef.ubfref" type="" />
+    <Item id="0caf1cce-40a1-43b9-8327-331eadf8d61a" name="SoOrderSaleUIFindRef.ubfref" displayName="SoOrderSaleUIFindRef.ubfref" description="" help="" include="SoOrderSaleUIFindRef.ubfref" type="" />
+    <Item id="d8b64217-32d5-4160-9242-a7278f794028" name="SoOrderTypeUIModel.ubfuim" displayName="SoOrderTypeUIModel.ubfuim" description="" help="" include="SoOrderTypeUIModel.ubfuim" type="" />
+    <Item id="fdc9b56e-9995-4476-bf54-604b5903c28e" name="SoOrderTypeUIForm.ubfform" displayName="SoOrderUIForm.ubfform" description="" help="" include="SoOrderTypeUIForm.ubfform" type="" />
+    <Item id="d04b18b8-91b1-4845-87d4-3cff595eada7" name="SoOrderTypeUIFindRef.ubfref" displayName="SoOrderTypeUIFindRef.ubfref" description="" help="" include="SoOrderTypeUIFindRef.ubfref" type="" />
+    <Item id="a09e35ee-9fdf-41f0-90e6-013ead1364eb" name="OrderLineBrokerageUIModel.ubfuim" displayName="OrderLineBrokerageUIModel.ubfuim" description="" help="" include="OrderLineBrokerageUIModel.ubfuim" type="" />
+    <Item id="f82d7f5a-6efe-49bb-9d63-239d4c8e1dd0" name="OrderBomUIModel.ubfuim" displayName="OrderBomUIModel.ubfuim" description="" help="" include="OrderBomUIModel.ubfuim" type="" />
+    <Item id="232a444c-48a7-4192-b32f-6dd85f70d898" name="OrderBomUIForm.ubfform" displayName="OrderBomUIForm.ubfform" description="" help="" include="OrderBomUIForm.ubfform" type="" />
+    <Item id="7869f689-b69c-4ef6-9200-221c8b925fb9" name="OrderCostUIModel.ubfuim" displayName="OrderCostUIModel.ubfuim" description="" help="" include="OrderCostUIModel.ubfuim" type="" />
+    <Item id="4b054c93-9efb-4a34-b91a-436081383ff5" name="OrderCostUIForm.ubfform" displayName="OrderCostUIForm.ubfform" description="" help="" include="OrderCostUIForm.ubfform" type="" />
+    <Item id="905bce5f-ea8f-4aea-9116-ab2396db46f2" name="OrderLineBrokerageUIForm.ubfform" displayName="OrderLineBrokerageUIForm.ubfform" description="" help="" include="OrderLineBrokerageUIForm.ubfform" type="" />
+    <Item id="e69281bc-e934-4190-8015-d78de6dc0ace" name="AssessTypeUIModel.ubfuim" displayName="AssessTypeUIModel.ubfuim" description="" help="" include="AssessTypeUIModel.ubfuim" type="" />
+    <Item id="385e11ff-fcd4-47d6-b096-43e86c95b338" name="AssessTypeUIForm.ubfform" displayName="AssessTypeUIForm.ubfform" description="" help="" include="AssessTypeUIForm.ubfform" type="" />
+    <Item id="9933d4b1-e949-4e7d-ab3d-4cd04b499cda" name="OrderCancelUIModel.ubfuim" displayName="OrderCancelUIModel.ubfuim" description="" help="" include="OrderCancelUIModel.ubfuim" type="" />
+    <Item id="2810c56a-2692-481d-8e81-3ed457123b32" name="OrderCancelUIForm.ubfform" displayName="OrderCancelUIForm.ubfform" description="" help="" include="OrderCancelUIForm.ubfform" type="" />
+    <Item id="152c62af-656e-4a66-b8a2-6a97d0c4fe64" name="SoBatchPullUIModel.ubfuim" displayName="SoBatchPullUIModel.ubfuim" description="" help="" include="SoBatchPullUIModel.ubfuim" type="" />
+    <Item id="50952ac6-2084-4123-927b-0c9bd6cfb615" name="SoBatchPullUIForm.ubfform" displayName="SoBatchPullUIForm.ubfform" description="" help="" include="SoBatchPullUIForm.ubfform" type="" />
+    <Item id="065b2460-3fea-4ddb-ba7f-792084de2711" name="OrderBomChangeUIModel.ubfuim" displayName="OrderBomChangeUIModel.ubfuim" description="" help="" include="OrderBomChangeUIModel.ubfuim" type="" />
+    <Item id="a903e20a-69af-47cf-87dd-397287f092f1" name="OrderBomChangeUIForm.ubfform" displayName="OrderBomChangeUIForm.ubfform" description="" help="" include="OrderBomChangeUIForm.ubfform" type="" />
+    <Item id="36190d19-4202-4570-93bf-c48002838e80" name="OrderBomChangeUIFindRef.ubfref" displayName="OrderBomChangeUIFindRef.ubfref" description="" help="" include="OrderBomChangeUIFindRef.ubfref" type="" />
+    <Item id="55c0ed9b-6dc2-4172-8887-b71d17eb059e" name="OrderBomChangeUIItemRef.ubfref" displayName="OrderBomChangeUIItemRef.ubfref" description="" help="" include="OrderBomChangeUIItemRef.ubfref" type="" />
+    <Item id="e797ed79-a116-41bd-b2df-d7bb6a1ed1fa" name="DocTypeRef.ubfref" displayName="DocTypeRef.ubfref" description="" help="" include="DocTypeRef.ubfref" type="" />
+  </ItemGroup>
+</Project>

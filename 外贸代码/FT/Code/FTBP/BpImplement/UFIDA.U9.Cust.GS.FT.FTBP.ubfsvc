@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <services>
+            
+	<service name="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.CreateBillNoRuleStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.ICreateBillNoRule"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.GetBillNoRuleIStrueStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.IGetBillNoRuleIStrue"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.GetEnumNameStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.IGetEnumName"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.DeleteBillNoStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.IDeleteBillNo"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.GetIsRepeatBillNoRuleStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.IGetIsRepeatBillNoRule"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.IsDeleteBillNoStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.BillNoRuleBP.IIsDeleteBillNo"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FT.SalesManBP.CreateSalesManStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SalesManBP.ICreateSalesMan"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SalesManBP.GetSalesManStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SalesManBP.IGetSalesMan"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SynergyStatusBP.SynergyStatusBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SynergyStatusBP.ISynergyStatusBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoOrderSaleBP.StateOperationStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoOrderSaleBP.IStateOperation"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoOrderSaleBP.CreateSoOrderSaleStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoOrderSaleBP.ICreateSoOrderSale"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.CostForcastBP.CostForcastFromSoStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.CostForcastBP.ICostForcastFromSo"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.CostForcastBP.CostForcastFromShipStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.CostForcastBP.ICostForcastFromShip"
+                  binding="basicHttpBinding" />
+
+	</service>
+                              
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.GetBomMasterStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IGetBomMaster"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.ModifyBomSateStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IModifyBomSate"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.ModifySOPricesStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IModifySOPrices"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.GetDiscountStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IGetDiscount"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.CreateOrderCostStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.ICreateOrderCost"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.DeleteOrderCostFeeStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IDeleteOrderCostFee"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.CreateProjectStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.ICreateProject"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.ModitySoLineProjectCodeStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IModitySoLineProjectCode"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.GetSupplierModeStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IGetSupplierMode"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.GetSOBCurrencyStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IGetSOBCurrency"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.ModitySoFeeStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IModitySoFee"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.ModifyDiscount_BrokerageStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IModifyDiscount_Brokerage"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.GetIsProjectStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IGetIsProject"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBP.GetOrderOrgByCustomerBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBP.IGetOrderOrgByCustomerBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FT.SoBomBP.DeleteSoLineBomStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBomBP.IDeleteSoLineBom"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBomBP.UpDownLineBomStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBomBP.IUpDownLineBom"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBomBP.CreateSOBomBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBomBP.ICreateSOBomBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBomBP.ConfirmSuItemBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBomBP.IConfirmSuItemBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBomBP.SOBomAddOrRemoveBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBomBP.ISOBomAddOrRemoveBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SoBomBP.OperationStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SoBomBP.IOperation"
+                  binding="basicHttpBinding" />
+
+	</service>
+            
+	<service name="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.GteBrokerageStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.IGteBrokerage"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.CreateBrokerageStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.ICreateBrokerage"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.DeleteBrokerageStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.IDeleteBrokerage"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.UpDownLineBrokerageStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.IUpDownLineBrokerage"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.CreateSOBrokerageBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.ICreateSOBrokerageBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FT.AssessTypeBP.CreateAssessTypeStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.AssessTypeBP.ICreateAssessType"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.AssessTypeBP.GetRateStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.AssessTypeBP.IGetRate"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.AssessTypeBP.DelectAssessTypeStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.AssessTypeBP.IDelectAssessType"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.AssessTypeBP.UpDownLineAssessStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.AssessTypeBP.IUpDownLineAssess"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.AssessTypeBP.IsNewGoodStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.AssessTypeBP.IIsNewGood"
+                  binding="basicHttpBinding" />
+
+	</service>
+         
+	<service name="UFIDA.U9.Cust.GS.FT.OrderCancelBP.GetOrderCancelStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OrderCancelBP.IGetOrderCancel"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.OrderCancelBP.ModityOrderCancelQtyStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OrderCancelBP.IModityOrderCancelQty"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FT.SelectSOLineForShipBP.SelectSOLineStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SelectSOLineForShipBP.ISelectSOLine"
+                  binding="basicHttpBinding" />
+
+	</service>
+         
+	<service name="UFIDA.U9.Cust.GS.FT.CreateShipPlanBP.CreatShipPlanStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.CreateShipPlanBP.ICreatShipPlan"
+                  binding="basicHttpBinding" />
+
+	</service>
+         
+	<service name="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.ShipPlanCloseStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.IShipPlanClose"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.GetShipPlanDocStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.IGetShipPlanDoc"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.AllocationBillNoStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.IAllocationBillNo"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.ShipFeeGetTaxBySupplierStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OperateShipPlanBP.IShipFeeGetTaxBySupplier"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.DocStatusUpdateBP.FTDocStatusUpdateStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.DocStatusUpdateBP.IFTDocStatusUpdate"
+                  binding="basicHttpBinding" />
+
+	</service>
+         
+	<service name="UFIDA.U9.Cust.GS.FT.OrderBomChangeBP.GetOrderBomChangeHeadStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OrderBomChangeBP.IGetOrderBomChangeHead"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.OrderBomChangeBP.GetOrderBomStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OrderBomChangeBP.IGetOrderBom"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.OrderBomChangeBP.StateOperationStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.OrderBomChangeBP.IStateOperation"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FT.SynergyFindBP.SynergyFindStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SynergyFindBP.ISynergyFind"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SynergyFindBP.GetTrimInfoStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SynergyFindBP.IGetTrimInfo"
+                  binding="basicHttpBinding" />
+
+	</service>
+   
+	<service name="UFIDA.U9.Cust.GS.FT.SynergySplitBP.SynergySplitStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.SynergySplitBP.ISynergySplit"
+                  binding="basicHttpBinding" />
+
+	</service>
+      
+	<service name="UFIDA.U9.Cust.GS.FT.FTPubBP.GetCurrencyBPStub">
+        <endpoint contract="UFIDA.U9.Cust.GS.FT.FTPubBP.IGetCurrencyBP"
+                  binding="basicHttpBinding" />
+
+	</service>
+ 
+    </services>
+</system.serviceModel>
+</configuration>

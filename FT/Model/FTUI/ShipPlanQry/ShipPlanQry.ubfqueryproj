@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="ddb0b2e1-2d62-455a-9d9a-30700f46a100" name="ShipPlanQry" displayName="ShipPlanQry" description="" help="" type="" assemblyName="ShipPlanQry" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="b5ca60ca-bdbd-4fd1-adeb-5cf9ce5ae456" name="ShipPlanPullFromSoUI" displayName="ShipPlanPullFromSoUI" description="" help="" componentid="7547df5f-708c-4da3-847e-1325bba74eeb" path="..\ShipPlanPullFromSoUI\ShipPlanPullFromSoUI.ubfuiproj" type="UI" isRuntime="False" />
+    <Import id="d2af04e2-04a2-48a1-9d51-b77c69169e07" name="ShipPlanPullFromSoBP" displayName="ShipPlanPullFromSoBP" description="" help="" componentid="4ce2c21c-2188-4552-9d0f-90b3d3d12b4f" path="..\ShipPlanPullFromSoBP\ShipPlanPullFromSoBP.ubfbpproj" type="" isRuntime="False" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="2d6c37f4-bbd0-4b05-b491-c02e7bac8bbc" name="ShipPlanQry.ubfquery" displayName="ShipPlanQry.ubfquery" description="" help="" include="ShipPlanQry.ubfquery" type="" />
+    <Item id="2263820b-7f88-453f-b58c-ca35df73f9e2" name="ShipPlanListQry.ubfquery" displayName="ShipPlanListQry.ubfquery" description="" help="" include="ShipPlanListQry.ubfquery" type="" />
+    <Item id="4c7bf7eb-19cb-471f-b878-833432dbf1a6" name="ShipPlanSpanceListQty.ubfquery" displayName="ShipPlanSpanceListQty.ubfquery" description="" help="" include="ShipPlanSpanceListQty.ubfquery" type="" />
+    <Item id="d13df21d-c5de-4a8d-8903-48876397f565" name="ShipPlanFeeQry.ubfquery" displayName="ShipPlanFeeQry.ubfquery" description="" help="" include="ShipPlanFeeQry.ubfquery" type="" />
+    <Item id="8295934c-6cf5-40d9-845a-010923d86074" name="ShipPlanDifferenceQry.ubfquery" displayName="ShipPlanDifferenceQry.ubfquery" description="" help="" include="ShipPlanDifferenceQry.ubfquery" type="" />
+  </ItemGroup>
+</Project>

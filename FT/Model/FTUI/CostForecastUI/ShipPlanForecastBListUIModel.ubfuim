@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UIModelComponent id="f2d990e2-beaa-4ec4-99b2-c53bc4556aa6" name="ShipPlanForecastBListUIModel" displayName="ShipPlanForecastBListUIModel" description="" help="">
+  <UIModels>
+    <UIModel id="c66d3041-bb22-449a-b488-a6f80d3277c9" name="ShipPlanForecastBListUIModel" displayName="ShipPlanForecastBListUIModel" description="" help="" Namespace="UFIDA.U9.Cust.GS.FT.ShipPlanForecastBListUIModel" QueryInfo="7b0HYBxJliUmL23Ke39K9UrX4HShCIBgEyTYkEAQ7MGIzeaS7B1pRyMpqyqBymVWZV1mFkDM7Z28
+995777333nvvvfe6O51OJ/ff/z9cZmQBbPbOStrJniGAqsgfP358Hz8ifo1f89f4NX6N/5se/MTz
+6+GXP+4XPv493i3K9DKvm6JafvbR7njnozRfTqtZsbz47KN1e7598NHvcfT4J9Z5fX1SLVbVMl+2
+aTH77KN8ujPJzu9/up3vfXqwvZ/ff7D9cP9Bvr1znmWfHkwn5weT84/SZbbIP/voZN20r+fF6mWZ
+LZ8XTfsT9fVH6axoVmV2/WJDi7yZ1sWqZdQ+Sud5ucJPRubN9YpeQ1P94KtXZ599dP/gIMv2Z+fb
++XSfkJrOJtsPM/pn+mDyIN958OBBtjPV9q+rdT3Nn63LUjD46tnZ0+PxVw/HQGX8+evxszdjg9HT
+vM2K8slp54Nv59nso/Srs58s8qundXYhOOG3p9XV8qP0VX5+tjyvnlfZTL46yabz/KOjx0+yppji
+K6bkdGfn/iS/9wD4nm/v78yy7WxnN9s+2N+fHkxm9/Kd2b6hZIdsgzSirt9Ub3P+7FVVtU+p2Um1
+bPN37U9m5ZpffVaUbV6/ySY/WTTFpKTP3tTr/KP0pCrXi2X/89dV3fY/FSin71bZcvY8v8zLzz66
+Z2B0PwWE7md3iRwvlVJCjnv38oP7k53t7NN7U2Ksvd3th7v5dJtm9MG96e79vb08f19yvKyrn86n
+7dlT74+XWTvHn09enrX5Qr568vLLVV5neF0+ePrmS/PN8QWx/tOy9P4iSO+u8TcN4qszfxD7e7MH
+k71sZ/v+7pQm9tPZdPtgtpdvn9+bfvpwmp8/PL/3jQ7iq7MvqllempF8mu3c358++HT70we7s+39
++/f2tx9+OjvYnt6bPMz3D2b3d2YP8NKzql6Ydw5mu+f3H34KYdm/t72/n93ffvhwMtt+cHA+ubf/
+8N792d6O64hemH766ezezv7u9mSyt0cvPMy2J/sHBzRv5wc7s3t7Dx5MHzJphEWe5ufFMm/CP5lY
+O3k2eTjZnWzv7x1kJAUEMvt058H23oPJwcPz2cHu7IFTJWVBhO9qD/PhAOGymr421D0ui6xx75w1
+z4p3OWHxLCubHH8fl2V19YSk/K3h8Q7LQ5ieFXk5i0vUCyKQyDtIS82zNn8q6MrHJJJZ0eQn82x5
+kc9OLwkPr/sn66KcfXee1/nrtjZdCltWNRQeATh6TMxGLZZToeDuZLp/n+hOKjj/dHv/4cGn9NvO
+p9v3Hk7PD84/zWYP8ux92Q3sTLO8mx3s7e+TJO7sZCSOk4Pp9uThdGd7N9/99OCc9On+ZI8bswL+
+KP298mumDX5nwuhfJ0SVj9I3RC79AN3jxXZdL/sNvc+FaEQMskkfpc/zc+iQOm/EZJl5JAy+W8wg
+DfcPdvjPb+fFxZyotb9zwGx412e8CBvuzrIH92bn97Z39vZJaHZ297ezg3sPt2fZNKdvsvNPd60e
+fpqvsrpd9Fkx+OI92NF/7/+TLNkVdCbpvfvkHGR75CR8+oDU4P45SfaD83z7/vTB7NMHB7sP8pmV
+7M/z9st6ltdf1hcdmobfvAdRgxf/P0nVrqDfv/fpdDJ5sENa+eD+9v7Bp2QcSZ+Tw/DpzsOdvb3p
+Xv51fAUW9IeTT3OyTwQre0ig7xPo+59+up3tfpo/zO7ff3CQPfi5FPRgMt9b2oM/yQiJgxL9Uwx4
+NiXN9mC2Pd3b2SdqPNjbfvjg0+n2g/yAnJGDnXx3OrXKoJq+qLp6QD97D27VV7p8elue/Km8rs6a
+08WqvbbvRjjyZVWAC/eESB0y0C/ZumxPsiZXL1XI1gR/iWh/er7/6flkf/vT3U+JQPvk4WQk1tvk
+Epx/ep7t7u6f72wi0H/+x//p/8Uf/zf8l3/fn/Gf/4l/5yCd7vb7PZ9N8ukDmph7E/SbT+DiTx5s
+3z8g5+MeeSQH009Nv0/WDcbVgAyd7v+zv+vP+c//mL/4v/gz//L/4s/7C9+n+/1P7336YG9/b3v3
+/n6+vT97cJ80GrlX+w/2d2eT3enuw9n9jb7Kf/43/CX/xR/1XiP+dOdg99O92d52RgqUfCQyvuTF
+zbb3Hj58sJc/uE+8+OBGu/Rf/6F/1X/9Z/5V79Pt/Ul2f+f8fLL96f596pa4n3zI+1MKrT59+HAn
+29ufTmY36+7/4k/4y2mm/8u/9w/7L//eP3JT73dDbjOMyOxp5VPig9ks38nILlOktC++TnY+u7f9
+kKIxmn1iv2zvBsa7geW8ziiKne5nD4m97uXkFO/k97cns7372zv3pg8nk51PyTe1BmwDt93MZ16f
+Dz7dfXA+JYVzb/8+6fjJ+Yzm+/7e9v3JOYnczr2dB9muN0B6LW8h3WNRtDEp+5v/3v/8L/hjb9k9
+9TW59/DBve3de/Als3sTcvApIviUfKGHkwcPD/Kppa9weLTjG9nc63IfjJwTb+1MEUmcP9jfPnh4
+sLN9b5dosU+BVL5jrdqTgiL2CgZ37H49e9rt/k/8k//Lv/yvonkmzrslEjskvxP6Z/velELO/Yfn
+59uTe3v3tu/NKArZR+pg3yq0123WrptOn//lH/N3/Bd/0B98y96m04c7pEI+FeW1n+9PtrP8/P72
+waf3P31IntHuvU+dHlnX8ACuY3T+z/6ev+y/+LP+1P/87/qD/8u/8o+/Zdf392YPH5Ia284pLqWB
+0miz/b0HNMG793fPP31AgYPVoJ5gx3q/rXR7vWez+zmp7nNi53ukQPMpxY97FGY+vHdA8efkfrb7
+YOK0WVZ+wV5C2Osf9Sdh2H/G3/2f/31/4kad0tUi9gO2b3fDrNbRb/hr/Oj50fOj50fPj54fPT96
+fvT86PnR86PnR8//95//Bw==" UseType="ForQuery">
+      <UIModelInfos>
+        <UIModelInfo id="5ccae82f-e329-410c-894b-a90b8ef489cd" name="ShipPlanForecastBListUIModel" displayName="ShipPlanForecastBListUIModel" description="" help="" FullName="ShipPlanForecastBListUIModel" DataTypeID="" MappingID="" MappingName="" IsMap="False">
+          <UIModelInfo id="ba660127-b6bc-41bc-b019-ce05035bf0ad" name="QueryView" displayName="QueryView" description="" help="" FullName="ShipPlanForecastBListUIModel.QueryView" DataTypeID="6fdffc79-8cdf-4943-aa8c-05ca3c29d88f" MappingID="" MappingName="" IsMap="False">
+            <UIModelInfo id="82d2fcc5-586d-4013-9821-657eaebe5d5e" name="ID" displayName="ID" description="" help="" FullName="ShipPlanForecastBListUIModel.QueryView.ID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" MappingID="" MappingName="" IsMap="False" />
+          </UIModelInfo>
+          <UIModelInfo id="2c9637da-42d4-4bf6-af24-07695051ea83" name="ShipPlanDetailHead" displayName="ShipPlanDetailHead" description="" help="" FullName="ShipPlanForecastBListUIModel.ShipPlanDetailHead" DataTypeID="4c70f28c-150e-4907-9661-e770ac4ca676" MappingID="" MappingName="UFIDA::U9::Cust::GS::FT::ShipPlanDetailBE::ShipPlanDetailHead" IsMap="True">
+            <UIModelInfo id="60d725ab-d5ac-4ef0-95a5-2f033a0cff98" name="ID" displayName="ID" description="" help="" FullName="ShipPlanForecastBListUIModel.ShipPlanDetailHead.ID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" MappingID="a566a901-7150-45c5-bb4b-e3982743a036" MappingName="ID" IsMap="True" />
+          </UIModelInfo>
+        </UIModelInfo>
+      </UIModelInfos>
+      <Views>
+        <UIViewInfo id="7a39d7f0-c298-471e-a6a6-8188e63c24b2" name="ShipPlanDetailHead" displayName="出运明细单头" description="" RootFullName="ShipPlanForecastBListUIModel.ShipPlanDetailHead">
+          <Groups>
+            <Group id="299d2cb7-2343-4aff-a59c-e9b231ba95f3" name="Key" displayName="Key" description="" help="" />
+            <Group id="6ffd40f9-b22b-4e41-ae8d-8e541e4d4149" name="Misc" displayName="Misc" description="" help="" />
+          </Groups>
+          <Fields>
+            <UIFieldInfo id="a636e8c3-3e34-41de-9469-a9f4de248394" name="ID" displayName="ID" description="ID" DefaultValue="" GroupName="Key" DisplayRule="8.0" IsNullable="False" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095607-50d1-4296-a35a-623b21d654f1" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" EnumTypeID="" BindingFullName="ShipPlanForecastBListUIModel.ShipPlanDetailHead.ID" Expression="" Sequence="0" Length="8" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
+          </Fields>
+        </UIViewInfo>
+      </Views>
+      <ActionGroups>
+        <Group id="4f4fcd5b-5216-4d76-b233-08d85bc192ad" name="Case" displayName="Case" description="" help="" />
+      </ActionGroups>
+      <Actions>
+        <UIActionInfo id="60c4303c-c882-4171-81be-79052fbcdacd" name="OnLookCase" displayName="查询" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="QryClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="3d02efa2-956f-4270-bc59-8f2884a51a7b" name="OnCaseChanged" displayName="改变方案" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="b58ebe2e-db82-402a-a94d-b1cc7bffb552" name="OnOutPut" displayName="输出" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="OnOutPut" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="41ca103e-4472-454e-9b50-c2e92f0233e0" name="OnGridRowDbClick" displayName="双击网格行" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="d8e44390-0cda-4736-812b-2801ae6babe0" name="OnNew" displayName="新增" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="b0753729-e8bf-4263-96ab-4a39c74ac62c" name="OnPrint" displayName="打印" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="OnPrint" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="737a12fe-5b01-4b9a-801a-6f64b0d32772" name="OnDelete" displayName="删除" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="ListDeleteClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="bfe326f0-6599-48fe-b814-a1fffc770d15" name="OnRealTime" displayName="即时运算" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="RealTimeClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="d4e0c460-495b-4601-8531-291682da35d3" name="OnDispatch" displayName="调度运算" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="DispatchClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="c44ee765-9f01-4cb7-9f17-ea307b4d2995" name="OnSaveCase" displayName="保存列宽" description="" help="" CodeTemplate="" TemplateParameter="SaveCaseClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+      </Actions>
+    </UIModel>
+  </UIModels>
+</UIModelComponent>

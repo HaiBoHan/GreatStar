@@ -1,0 +1,488 @@
+<View ID="96a884fb-0bcc-4b45-8307-145b5f897280" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="产品降价档案" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="ProductDepreciateUIForm" Namespace="UFIDA.U9.Cust.GS.FI.ProductDepreciateUIModel" TabStop="False" TemplateCode="UI_SingleCard" TemplateType="CustomTemplate" UIModelID="f8b134aa-5dd7-4aa6-a3c1-4b51b402e902" URI=".UI_单卡片WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Value" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Toolbar ID="3c4212cd-802b-4038-8702-38397512b437" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
+    <Button ID="fc5dff4e-d58e-4982-be92-7859af7c6357" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="12ac5d64-49d9-4a37-aa67-e91b74615635" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="44411542-44da-498e-9ed7-a990f3fb22f8" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="ff701434-2b16-4e39-b8d9-cb5dd469ab24" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="2acf1a2f-41e6-46c2-b78d-e9f2fa3ba7b1" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="925ac81b-4ce0-4c2d-84c0-d2060784ecd4" AccessKey="C" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="6c8b0632-1858-4dee-8ce7-9accd363429d" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
+    <Button ID="8b4065fc-6e47-47d8-a4e0-c0fcfca94f08" AccessKey="T" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="SubmitClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SubmitClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="8c40778d-2568-46d6-955a-189c62d64c29" AccessKey="Y" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="ce172cac-e04c-4c1b-bd3d-60e8ea27e3bc" AccessKey="" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="UnApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="b73d7091-9815-4660-a3b4-5fb89a8d6aec" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="296" Y="0" />
+    <Button ID="83dcd6c7-afdd-459a-aed0-6e370b0fa0e3" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="304" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="0a1a5128-7b08-4a62-a208-e1d18f1f106d" AccessKey="L" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="339" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="152aedd6-9a39-4eb4-ba45-5d751a1e1034" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="374" Y="0" />
+    <Button ID="b0a80d6a-0a73-4943-8ed5-c1e78334fe85" AccessKey="[" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="382" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="f2cbd820-fdc4-405b-a06a-ac9b9242d448" AccessKey="," DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="417" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="0c7d4587-0859-487a-bce6-e264742f7357" AccessKey="." DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="452" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="b576d19b-7f0c-4b18-8c63-1e1dc64c1a90" AccessKey="]" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="487" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="3743c703-bf81-4b19-a6d7-f6e3c8c5853c" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="522" Y="0" />
+    <Button ID="d2389aed-257a-47b5-ae35-08f3281ea6b0" AccessKey="A" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="530" Y="0">
+      <Events>
+        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="651f40ea-6180-4bba-b994-9d88f1d9c7d5" AccessKey="F" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="565" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="3ebd1ac9-272c-4bdd-a3ed-1700bf421970" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="600" Y="0" />
+    <Button ID="de59dee8-ab8f-420b-a74d-98cbed3e7843" AccessKey="O" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Visible="False" Width="35" X="608" Y="0">
+      <Events>
+        <Event ActionName="OutputClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="8b2c5b36-e374-49a4-8e8c-65e7dfeef937" AccessKey="P" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Visible="False" Width="35" X="643" Y="0">
+      <Events>
+        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrintClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="f8e880d4-2d5d-4552-8535-48c413f5c516" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="68135708-ef87-45f7-b4fe-9d32f004b650" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOk" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="1f4a2b03-9d88-41b4-8de8-acfbd7fed1f9" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnClose" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="ed4cb4e9-aff2-4b08-ab8d-594fecdbca69" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="12" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="17" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card2" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="153" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="153" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="152" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column10" Type="Value" Width="152" />
+      <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+      <Row Fixed="True" Height="20" Name="Row1" />
+      <Row Fixed="True" Height="20" Name="Row2" />
+      <Row Fixed="True" Height="20" Name="Row3" />
+      <Row Fixed="True" Height="20" Name="Row4" />
+      <Row Fixed="True" Height="20" Name="Row5" />
+      <Row Fixed="True" Height="20" Name="Row6" />
+      <Row Fixed="True" Height="20" Name="Row7" />
+      <Row Fixed="True" Height="20" Name="Row8" />
+      <Row Fixed="True" Height="20" Name="Row9" />
+      <Row Fixed="True" Height="20" Name="Row10" />
+      <Row Fixed="True" Height="20" Name="Row11" />
+      <Row Fixed="True" Height="20" Name="Row12" />
+      <Row Fixed="True" Height="20" Name="Row13" />
+      <Row Fixed="True" Height="20" Name="Row14" />
+      <Row Fixed="True" Height="20" Name="Row15" />
+      <Row Fixed="False" Height="19" Name="Row16" />
+    </Rows>
+    <Label ID="14177113-470c-497f-8725-f28809593f66" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID52" RelationControl="ID52" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="153" X="10" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="8c645232-692c-4395-bbf0-95ab2bfb6dfd" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID52" RelationControl="lblID52" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="ProductDepreciate" Visible="False" Width="153" X="168" Y="0">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
+    </NumberControl>
+    <Label ID="06ae7bfa-65fd-412f-a7e5-6456e20141b2" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion88" RelationControl="SysVersion88" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="153" X="10" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="3e4ed527-49d5-4afc-9289-f3e451daeec1" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion88" RelationControl="lblSysVersion88" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="ProductDepreciate" Visible="False" Width="153" X="168" Y="25">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind1" />
+      <RoundRuleBind Name="RoundRuleBind1" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+      <CurrencyType Name="CurrencyType1" />
+    </NumberControl>
+    <Label ID="59d1bd3b-8834-4488-9659-87836344e930" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblApplyBy97" RelationControl="ApplyBy97" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="cb1e900f-ad09-4cd0-a8c1-35d6c6942466" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="ApplyBy97" RelationControl="lblApplyBy97" TabIndex="5" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyBy" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="0">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="41e8aca8-3c58-4ac6-92a7-9ee5646955ec" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblStatus70" RelationControl="Status70" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="9b20fb5d-cd9a-4efa-bba8-9d36886fed6d" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum" EnumID="67d4c713-68bf-433b-a082-9c9cf81fa96c" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Status70" RelationControl="lblStatus70" TabIndex="7" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Status" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="25">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="57275db0-c1f1-40c7-9412-9b7c584f5f02" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblCalcBy106" RelationControl="CalcBy106" TabIndex="8" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="13455107-99a9-486f-bb73-307db04b4648" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="CalcBy_Code" CodeFieldUIViewID="ProductDepreciate" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="CalcBy106" NameAttributeName="Name" NameFieldUIFieldID="CalcBy_Name" NameFieldUIViewID="ProductDepreciate" PkeyField="ID" RefType="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RelationControl="lblCalcBy106" TabIndex="9" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="CalcBy" UIViewID="ProductDepreciate" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="50">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="645a2acf-92e4-4729-a2af-cf3ddd4e87f6" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblCalcDept97" RelationControl="CalcDept97" TabIndex="10" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="2426a8d1-00e1-4662-a0db-b64aeb782e45" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="CalcDept_Code" CodeFieldUIViewID="ProductDepreciate" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="CalcDept97" NameAttributeName="Name" NameFieldUIFieldID="CalcDept_Name" NameFieldUIViewID="ProductDepreciate" PkeyField="ID" RefType="82a8f09a-6081-4b12-8735-10ffcaddca48" RelationControl="lblCalcDept97" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="CalcDept" UIViewID="ProductDepreciate" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="75">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="来源组织" ColumnID="MasterOrg_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点ID" ColumnID="Warehouse_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点编码" ColumnID="Warehouse_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点名称" ColumnID="Warehouse_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位ID" ColumnID="Bin_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位编码" ColumnID="Bin_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位名称" ColumnID="Bin_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="84f936e1-fac9-400e-aa8a-6e4fa9b26574" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblApplyDate70" RelationControl="ApplyDate70" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="100">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="e38b6b32-65c4-4a3b-b8ac-675b03671bad" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDate70" RelationControl="lblApplyDate70" TabIndex="13" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDate" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="100">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="02dbb91f-44cb-4582-8ead-f55dd094018e" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblItemMaster82" RelationControl="ItemMaster82" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="125">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="427f42fd-d03b-4c12-9aa9-cbce4472e69e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemMaster_Code" CodeFieldUIViewID="ProductDepreciate" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster82" NameAttributeName="Name" NameFieldUIFieldID="ItemMaster_Name" NameFieldUIViewID="ProductDepreciate" PkeyField="ID" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" RelationControl="lblItemMaster82" TabIndex="15" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ItemMaster" UIViewID="ProductDepreciate" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="125">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="d85cd661-c3c2-4df3-8182-c46fe70ccd04" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblSimilarItemMaster82" RelationControl="SimilarItemMaster82" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="150">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="41e3fb83-ede9-4709-a8ad-e775f95da809" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="SimilarItemMaster_Code" CodeFieldUIViewID="ProductDepreciate" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="SimilarItemMaster82" NameAttributeName="Name" NameFieldUIFieldID="SimilarItemMaster_Name" NameFieldUIViewID="ProductDepreciate" PkeyField="ID" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" RelationControl="lblSimilarItemMaster82" TabIndex="17" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SimilarItemMaster" UIViewID="ProductDepreciate" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="150">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="b6bf4f63-fae3-4a22-80ac-5c30a29de772" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency109" RelationControl="Currency109" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="175">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="51bc9bd7-4804-4c44-82cb-6ba3bbe82555" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Currency_Code" CodeFieldUIViewID="ProductDepreciate" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Currency109" NameAttributeName="Name" NameFieldUIFieldID="Currency_Name" NameFieldUIViewID="ProductDepreciate" PkeyField="ID" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" RelationControl="lblCurrency109" TabIndex="19" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency" UIViewID="ProductDepreciate" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="175">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ISO代码" ColumnID="ISOCode" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="货币符号" ColumnID="Symbol" TargetControlType="TextBoxModel" TargetID="Currency_Symbol97" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="PriceRound_Precision" TargetControlType="NumberControlModel" TargetID="Currency_PriceRound_Precision115" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="PriceRound_RoundType" TargetControlType="DropDownListModel" TargetID="Currency_PriceRound_RoundType109" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="PriceRound_RoundValue" TargetControlType="NumberControlModel" TargetID="Currency_PriceRound_RoundValue100" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="edaa03e6-8946-489b-9759-b478e957bd9e" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="8" Height="20" IsNull="True" IsSequence="False" Name="lblOldPrice170" RelationControl="OldPrice170" TabIndex="20" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="200">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="d83657e3-f73d-47b8-b181-6c2945ebeaee" DisplayFormat="24.9" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="8" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" MultiLine="False" Name="OldPrice170" RelationControl="lblOldPrice170" TabIndex="21" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="OldPrice" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="200">
+      <Events />
+      <RelationControls />
+      <PrecisionBind BindType="UIField" UIFieldID="Currency_PriceRound_Precision" UIViewID="ProductDepreciate" />
+      <RoundRuleBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundType" UIViewID="ProductDepreciate" />
+      <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundValue" UIViewID="ProductDepreciate" />
+      <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="ProductDepreciate" />
+    </NumberControl>
+    <Label ID="dd3c6ef6-d8d0-4345-ba99-f7e18b8a1ef0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="9" Height="20" IsNull="True" IsSequence="False" Name="lblNewPrice34" RelationControl="NewPrice34" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="225">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="b557e86e-962f-4b76-a197-f9facc0833f2" DisplayFormat="24.9" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="9" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" MultiLine="False" Name="NewPrice34" RelationControl="lblNewPrice34" TabIndex="23" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="NewPrice" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="225">
+      <Events />
+      <RelationControls />
+      <PrecisionBind BindType="UIField" UIFieldID="Currency_PriceRound_Precision" UIViewID="ProductDepreciate" />
+      <RoundRuleBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundType" UIViewID="ProductDepreciate" />
+      <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundValue" UIViewID="ProductDepreciate" />
+      <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="ProductDepreciate" />
+    </NumberControl>
+    <Label ID="45f909b8-c1b4-4d34-b888-a13e7b3cd3ea" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblCanPrice58" RelationControl="CanPrice58" TabIndex="24" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="250">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="5afa76a9-d2fc-4f3f-a80e-d38d882b59eb" DisplayFormat="24.9" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" MultiLine="False" Name="CanPrice58" RelationControl="lblCanPrice58" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="CanPrice" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="250">
+      <Events />
+      <RelationControls />
+      <PrecisionBind BindType="UIField" UIFieldID="Currency_PriceRound_Precision" UIViewID="ProductDepreciate" />
+      <RoundRuleBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundType" UIViewID="ProductDepreciate" />
+      <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundValue" UIViewID="ProductDepreciate" />
+      <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="ProductDepreciate" />
+    </NumberControl>
+    <Label ID="d00d4be5-fa3c-4a22-82c1-a2f77008fc79" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblFirstRcvDate52" RelationControl="FirstRcvDate52" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="275">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="e06de2b5-5c60-456c-bea4-216c4154915d" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="11" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="FirstRcvDate52" RelationControl="lblFirstRcvDate52" TabIndex="27" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="FirstRcvDate" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="275">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="72cc2fa4-77f0-4141-904c-a5ffcc4ae2de" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblBonusEndDate67" RelationControl="BonusEndDate67" TabIndex="28" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="300">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="8bf460db-e669-4ea9-a9f9-076945383b5f" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="12" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="BonusEndDate67" RelationControl="lblBonusEndDate67" TabIndex="29" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BonusEndDate" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="300">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="f3462337-6aba-431f-a1e0-d390f63f0b70" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="13" Height="20" IsNull="True" IsSequence="False" Name="lblOutPutEndDate34" RelationControl="OutPutEndDate34" TabIndex="30" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="325">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="ee95a55d-383b-49ee-9438-438ee995889b" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="13" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="OutPutEndDate34" RelationControl="lblOutPutEndDate34" TabIndex="31" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="OutPutEndDate" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="325">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="04d0787b-b269-4a1d-bd97-3d7bb17c3d85" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="14" Height="20" IsNull="True" IsSequence="False" Name="lblMeno25" RelationControl="Meno25" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="350">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="93eab7ff-1e57-4d25-824a-66a45d5fe606" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="14" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Meno25" RelationControl="lblMeno25" TabIndex="33" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="350">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <FlexFieldPicker ID="2058e83c-dfae-4be5-88b5-d8c2558a92bb" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="15" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="34" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="153" X="168" Y="375">
+      <Events />
+      <RelationControls />
+    </FlexFieldPicker>
+    <Label ID="97e8cd96-aff9-4da5-8e2d-36fc3fce21ef" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_Symbol97" RelationControl="Currency_Symbol97" TabIndex="35" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="341" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="c0e91ed8-4332-41be-afb2-d96b194614c2" DisplayFormat="10" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="Currency_Symbol97" RelationControl="lblCurrency_Symbol97" TabIndex="36" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_Symbol" UIViewID="ProductDepreciate" Visible="False" Width="152" X="498" Y="0">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="f0e9a158-d4d7-4834-8ffd-228f2d09ef4d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_PriceRound_Precision115" RelationControl="Currency_PriceRound_Precision115" TabIndex="37" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="341" Y="375">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="2bad7b1e-7ac5-48a5-b21e-a9a4c3ff365e" DisplayFormat="10.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="Currency_PriceRound_Precision115" RelationControl="lblCurrency_PriceRound_Precision115" TabIndex="38" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_PriceRound_Precision" UIViewID="ProductDepreciate" Visible="False" Width="152" X="498" Y="375">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind2" />
+      <RoundRuleBind Name="RoundRuleBind2" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+      <CurrencyType Name="CurrencyType2" />
+    </NumberControl>
+    <Label ID="6d827127-bdcc-45e5-be35-1deac0f5356a" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_PriceRound_RoundType109" RelationControl="Currency_PriceRound_RoundType109" TabIndex="39" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="341" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="5ab904f4-10cb-40bb-81be-9153e68c34ac" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="Currency_PriceRound_RoundType109" RelationControl="lblCurrency_PriceRound_RoundType109" TabIndex="40" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_PriceRound_RoundType" UIViewID="ProductDepreciate" Visible="False" Width="152" X="498" Y="50">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="bb92b0c8-21d2-4aa5-9de1-0351c8a9cfeb" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_PriceRound_RoundValue100" RelationControl="Currency_PriceRound_RoundValue100" TabIndex="41" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="341" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="f8d78bf0-142e-4052-8b68-d0c9dd42e18c" DisplayFormat="10.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Currency_PriceRound_RoundValue100" RelationControl="lblCurrency_PriceRound_RoundValue100" TabIndex="42" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_PriceRound_RoundValue" UIViewID="ProductDepreciate" Visible="False" Width="152" X="498" Y="75">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind3" />
+      <RoundRuleBind Name="RoundRuleBind3" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+      <CurrencyType Name="CurrencyType3" />
+    </NumberControl>
+  </Card>
+  <Events />
+</View>

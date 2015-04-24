@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="2373f96a-fdc8-46df-a24f-3b3c17b4b748" name="BillNoRef" displayName="发票号分配" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.SynergyDocUI.BillNoRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="b5cd1094-de3c-4c16-8b34-347cc70c2451" name="cRef" displayName="cRef" description="" help="发票号分配" refEntityId="00312915-b79c-4707-ad84-3923c8a1b523" refEntityName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="18cd784d-3032-41e7-a255-913aaae35d6a" name="ID" displayName="ID" description="" help="发票号分配.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:ID" displayNameIndexStr="2" />
+        <RefField id="4b3b66c2-f126-442f-8037-2f8bde157834" name="BillNoID" displayName="发票号ID" description="" help="发票号分配.Misc.发票号ID" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:BillNoID" displayNameIndexStr="2" />
+        <RefField id="cb623769-cff8-4bf3-b41e-5965013b0191" name="BillNoName" displayName="发票号" description="" help="发票号分配.Misc.发票号" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:BillNoName" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

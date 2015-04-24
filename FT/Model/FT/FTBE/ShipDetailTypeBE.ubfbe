@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="e2e0fe04-3fd2-461b-b32f-c810c775d771" name="ShipDetailTypeBE" displayName="ShipDetailTypeBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FT.FTBE">
+  <Namespace id="3680ff16-af19-4f01-93d5-a298743ac899" name="UFIDA.U9.Cust.GS.FT.ShipDetailTypeBE" displayName="UFIDA.U9.Cust.GS.FT.ShipDetailTypeBE" description="" help="">
+    <Entity id="1586f8fa-bd40-4e4d-8d84-68ab19ec2f12" name="ShipDetailType" displayName="出运明细单单据类型" description="" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="GS_FT_ShipDetailType" isMain="True" inheritanceMapKind="0" discriminator="ShipDetailType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="False">
+      <BEIndecs>
+        <BEIndex id="fbe78e9d-abe4-466c-b564-1d6a6e3858cd" name="UFIDA_U9_Cust_GS_FT_ShipDetailTypeBE_ShipDetailType_BusinessKey_Index" displayName="UFIDA_U9_Cust_GS_FT_ShipDetailTypeBE_ShipDetailType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="c6bab0b5-cf62-4007-9247-ad3129466257" name="Code" displayName="编码" description="" help="" isAscend="True" attributeID="af88133a-092b-4d68-bb36-9e3909bc1f20" sequence="0" attributeFullName="Code" />
+            <BEIndexAttribute id="3e1a5cc9-71ae-47ff-afae-5f492d84555f" name="Org" displayName="组织" description="" help="" isAscend="True" attributeID="1b2b4b47-1271-4282-b9e5-dc55e227f12c" sequence="0" attributeFullName="Org" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
+    </Entity>
+    <Diagram id="ece71f83-3071-4818-89eb-30cf6600d530" name="ShipDetailTypeBE" displayName="ShipDetailTypeBE">
+      <Class Editable="True" ID="38a01f9a-4287-47ec-af46-cbf868d50ab1" Type="Entity" ADID="1586f8fa-bd40-4e4d-8d84-68ab19ec2f12">
+        <Location X="115" Y="138" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="e7d0f043-9d26-44ef-b430-776646e11ea0" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
+        <Location X="112" Y="41" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

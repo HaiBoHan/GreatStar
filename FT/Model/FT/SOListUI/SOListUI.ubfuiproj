@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="0d1ccafc-f3ec-4780-9178-eadeecd2e480" name="SOListUI" displayName="SOListUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.SOListUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="9d8329f4-40a9-4670-8876-497cee868916" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="8db1a07f-6d83-4443-bb79-ef52e1e1c66a" name="SoOrderSaleBListUIModel.ubfuim" displayName="SoOrderSaleBListUIModel.ubfuim" description="" help="" include="SoOrderSaleBListUIModel.ubfuim" type="" />
+    <Item id="da582d39-c55c-404a-bf96-855597b150a6" name="SoOrderSaleBListUIForm.ubfform" displayName="SoOrderSaleBListUIForm.ubfform" description="" help="" include="SoOrderSaleBListUIForm.ubfform" type="" />
+    <Item id="3eea338b-a178-4a46-88ee-edd0832c4bd1" name="SoOrderTypeBListUIModel.ubfuim" displayName="SoOrderTypeBListUIModel.ubfuim" description="" help="" include="SoOrderTypeBListUIModel.ubfuim" type="" />
+    <Item id="5317a444-b0c8-4da8-8568-a4723d5db384" name="SoOrderTypeBListUIForm.ubfform" displayName="SoOrderTypeBListUIForm.ubfform" description="" help="" include="SoOrderTypeBListUIForm.ubfform" type="" />
+    <Item id="bc767906-9d07-4a18-b444-81bbe5bc893d" name="OrderBomChangeBListUIModel.ubfuim" displayName="OrderBomChangeBListUIModel.ubfuim" description="" help="" include="OrderBomChangeBListUIModel.ubfuim" type="" />
+    <Item id="bbad2de2-883d-454a-b1af-7fbb5c5a4887" name="OrderBomChangeBListUIForm.ubfform" displayName="OrderBomChangeBListUIForm.ubfform" description="" help="" include="OrderBomChangeBListUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>
