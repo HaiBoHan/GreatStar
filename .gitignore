@@ -245,12 +245,14 @@ _UpgradeReport_Files/
 # u9 File
 *.sln.cache
 *.target
-*AutoBuild.bat
 *Wrap.sln
 *Wrap.csproj
 *.UI.sln
 *UBFAssebmlyInfo.cs
-*.bat
+#*.bat
+*AutoBuild.bat
+!FT/Code/FTPlugIn/PlugInBE/AutoBuild.bat
+!FT/Code/FTPlugIn/PlugInUI/AutoBuild.bat
 
 
 */WebPart/*WebPart.cs
@@ -258,7 +260,6 @@ _UpgradeReport_Files/
 */WebPart/*WebPartConnection.cs
 */Action/*Action.cs
 */Model/*Model.cs
-*/Model/*Model.csproj
 */Model/*Model.target
 
 */Entity/*/*
@@ -266,6 +267,8 @@ _UpgradeReport_Files/
 
 */Entity/*.*
 !*/Entity/*.csproj
+#public method maybe
+!*/Entity/*.cs
 
 
 
@@ -273,9 +276,13 @@ _UpgradeReport_Files/
 #*/Code/*/*.*
 */Code/*/*.*
 !*/Code/*/*.csproj
+#public method maybe
+!*/Code/*/*.cs
 
 */Code/*/Entity/*.*
 !*/Code/*/Entity/*.csproj
+#public method maybe
+!*/Code/*/Entity/*.cs
 !*/Code/*/BpImplement/*.cs
 */Code/*/Entity/*/*
 !*/Code/*/Entity/*/*Extend.cs
@@ -283,6 +290,8 @@ _UpgradeReport_Files/
 
 */Code/*/BpImplement/*.*
 !*/Code/*/BpImplement/*.csproj
+#public method maybe
+!*/Code/*/BpImplement/*.cs
 !*/Code/*/BpImplement/*.cs
 */Code/*/BpImplement/*/*
 !*/Code/*/BpImplement/*/*Extend.cs
@@ -292,11 +301,16 @@ _UpgradeReport_Files/
 !*/Code/*/WebPart/*Extend.cs
 */Code/*/Model/*
 !*/Code/*/Model/*Extend.cs
+#YuNeng have ,so have too .
+!*/Code/*/Model/*.Model.csproj
 */Code/*/Action/*
 !*/Code/*/Action/*Extend.cs
 
 
 
+!FT/Code/FTPlugIn/FTPlugIn.sln
+!FT/Code/FTPlugIn/PlugInUI/Properties*
+!FT/Code/FTPlugIn/PlugInBE/Properties*
 
 
 
