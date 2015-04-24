@@ -248,7 +248,6 @@ _UpgradeReport_Files/
 *Wrap.sln
 *Wrap.csproj
 *.UI.sln
-*UBFAssebmlyInfo.cs
 #*.bat
 *AutoBuild.bat
 !FT/Code/FTPlugIn/PlugInBE/AutoBuild.bat
@@ -267,8 +266,8 @@ _UpgradeReport_Files/
 
 */Entity/*.*
 !*/Entity/*.csproj
-#public method maybe
-!*/Entity/*.cs
+#public method maybe  but ... UBFAssebmly.cs 
+#!*/Entity/*.cs
 
 
 
@@ -276,13 +275,13 @@ _UpgradeReport_Files/
 #*/Code/*/*.*
 */Code/*/*.*
 !*/Code/*/*.csproj
-#public method maybe
-!*/Code/*/*.cs
+#public method maybe  but ... UBFAssebmly.cs 
+#!*/Code/*/*.cs
 
 */Code/*/Entity/*.*
 !*/Code/*/Entity/*.csproj
-#public method maybe
-!*/Code/*/Entity/*.cs
+#public method maybe  but ... UBFAssebmly.cs 
+# !*/Code/*/Entity/*.cs
 !*/Code/*/BpImplement/*.cs
 */Code/*/Entity/*/*
 !*/Code/*/Entity/*/*Extend.cs
@@ -290,8 +289,8 @@ _UpgradeReport_Files/
 
 */Code/*/BpImplement/*.*
 !*/Code/*/BpImplement/*.csproj
-#public method maybe
-!*/Code/*/BpImplement/*.cs
+#public method maybe  but ... UBFAssebmly.cs 
+#!*/Code/*/BpImplement/*.cs
 !*/Code/*/BpImplement/*.cs
 */Code/*/BpImplement/*/*
 !*/Code/*/BpImplement/*/*Extend.cs
@@ -313,4 +312,5 @@ _UpgradeReport_Files/
 !FT/Code/FTPlugIn/PlugInBE/Properties*
 
 
+UBFAssebmly.cs
 
