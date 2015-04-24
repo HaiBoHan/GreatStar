@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="eab0a8ee-bf19-448b-8160-e845a36cce09" name="ShipPlanQry" displayName="ShipPlanQry" description="" help="" QueryType="List" QueryURI="0b7ee6a2-0233-4f1f-bf38-c7809d9722bf" QuerySourceFullName="UFIDA.U9.SM.SO.SOLine" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="733561c8-9627-4877-a961-539c51983560" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="a5778d56-f974-49c0-b718-0af5040b61cc" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="9d5ba0e2-116c-4c50-8519-d1884c24092d" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="3a617809-d776-4bdd-bcd1-d3f9c51cdf12" UIFormItemID="083992b7-c26b-4495-b210-ba3b96c3a3cf" UIModelID="3dda1f8c-6ced-490e-bb3e-84c1589d82a1" />
+  <ColumnDefines>
+    <ColumnDefine id="a6028634-0825-4686-81ea-d797b12772d4" name="ShipQty" displayName="ShipQty" description="" help="" ParentName="" Alias="ShipQty" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" CustomAttr="0" DateDisplayType="" CustomAttrDisplayName="UserDefine.Contexts!ShipQty" Point="2" />
+    <ColumnDefine id="d3a24072-8567-4721-b791-cac0353bd33c" name="SO.DocumentType" displayName="SO.DocumentType" description="" help="" ParentName="" Alias="SO_DocumentType" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2">
+      <VisibleChildrenList id="337fe013-6a84-4123-9d97-0759b19632b5" name="" displayName="" description="" help="" Type="Visible" List="SO.DocumentType.CreatedOn,SO.DocumentType.CreatedBy,SO.DocumentType.ModifiedOn,SO.DocumentType.ModifiedBy,SO.DocumentType.ConfirmType,SO.DocumentType.WorkFlowCode,SO.DocumentType.IsRAMADoc,SO.DocumentType.IsAMADoc,SO.DocumentType.IsRMADoc,SO.DocumentType.DocHeaderSequenceStyle,SO.DocumentType.DocHeaderSequence,SO.DocumentType.PrintStyle,SO.DocumentType.MaxAmountOfPrint,SO.DocumentType.IsCopyPrinted,SO.DocumentType.PrintTemplate,SO.DocumentType.BusinessType,SO.DocumentType.Code,SO.DocumentType.Name,SO.DocumentType.ShortName,SO.DocumentType.Description,SO.DocumentType.Effective,SO.DocumentType.Org,SO.DocumentType.IsCreatedByPush,SO.DocumentType.IsDocNoEditable,SO.DocumentType.IsSaveSubmit,SO.DocumentType.PrintMode,SO.DocumentType.NetPrinterCode,SO.DocumentType.NetPrinterName,SO.DocumentType.MasterSite,SO.DocumentType.ApproveType,SO.DocumentType.IsApprovingCanModify,SO.DocumentType.IsNeedSaleContract,SO.DocumentType.IsNeedQuotation,SO.DocumentType.IsNeedPO,SO.DocumentType.LCCheckMode,SO.DocumentType.ConfirmAccording,SO.DocumentType.InvoiceAccording,SO.DocumentType.IsNeedShipPlan,SO.DocumentType.IsNeedBusinessInvoice,SO.DocumentType.IsNeedPreRec,SO.DocumentType.IsPriceCompensation,SO.DocumentType.IsProfitReturn,SO.DocumentType.IsInSaleAchievement,SO.DocumentType.IsInSalePlan,SO.DocumentType.MasterOrg,SO.DocumentType.MasterEntity,SO.DocumentType.CustomerConfirmStrategy,SO.DocumentType.ConfirmMode,SO.DocumentType.IsCheckGoodsQty,SO.DocumentType.IsCheckBail,SO.DocumentType.ShowNewCheckPoint,SO.DocumentType.NewShowCheckControl,SO.DocumentType.CreditCheckTime,SO.DocumentType.IsConsign,SO.DocumentType.IsDefault,SO.DocumentType.IncomeConfirmRule,SO.DocumentType.IsIncomeConfirmRuleAlterable,SO.DocumentType.IncomeConfirmConditionMain,SO.DocumentType.IsIncomeConfirmConditionAlterable,SO.DocumentType.DemandCategory,SO.DocumentType.ShipTermCheck,SO.DocumentType.PreRecCheckTime,SO.DocumentType.IsShipmentCheckInvoiceNum,SO.DocumentType.IsExport,SO.DocumentType.IsFillDoc,SO.DocumentType.IsAllowOpen,SO.DocumentType.PreShipBy,SO.DocumentType.AutoMaintainCustItem,SO.DocumentType.AutoUpdateCustItem,SO.DocumentType.IsEditableAfterToMO,SO.DocumentType.CostSumUpMode,SO.DocumentType.DefaultLockTime,SO.DocumentType.TimeUnit,SO.DocumentType.IsToPOModify" />
+    </ColumnDefine>
+    <ColumnDefine id="c0688ff4-7c76-449f-b8f5-235899b85160" name="ShipCanQty" displayName="ShipCanQty" description="" help="" ParentName="" Alias="ShipCanQty" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" CustomAttr="0" DateDisplayType="" CustomAttrDisplayName="UserDefine.Contexts!ShipCanQty" Point="2" />
+    <ColumnDefine id="08541969-274e-43f1-ae4c-85111277910b" name="SO.DocNo" displayName="SO.DocNo" description="" help="" ParentName="" Alias="SO_DocNo" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="9978ffb6-e6c3-48ce-be60-3db2c6b9f4de" name="SO.DocNo" displayName="销售订单.单据编号" description="" help="" />
+      <BasicFilter id="961ee1bc-5c57-493b-823d-ae0dfe223f43" name="SO.BusinessDate" displayName="销售订单.业务日期" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="4d6a36b5-0fe6-45e9-970f-f4867659bc87" name="SO.DocumentType.Code" displayName="销售订单.单据类型.编码" description="" help="" />
+      <Column id="0f959ce7-ceb2-4c5a-8fa3-d5dc251df39f" name="SO.DocumentType.Name" displayName="销售订单.单据类型.名称" description="" help="" />
+      <Column id="d1c8dcaf-3b89-4d74-a6d0-1a23ec323a46" name="SO.DocNo" displayName="销售订单.单号" description="" help="" />
+      <Column id="1696df0b-e073-447e-b263-e4863ab444ff" name="ItemInfo.ItemID.Code" displayName="料品.料品.料号" description="" help="" />
+      <Column id="5f806b3f-1c35-4236-b863-afd00380d7ff" name="ItemInfo.ItemID.Name" displayName="料品.料品.品名" description="" help="" />
+      <Column id="86ab39ad-aa5f-4fc9-ae41-66370232982a" name="ShipQty" displayName="UserDefine.Contexts!ShipQty" description="" help="" />
+      <Column id="40d27405-1012-4228-96a1-6173b5162598" name="ShipCanQty" displayName="UserDefine.Contexts!ShipCanQty" description="" help="" />
+    </DefaultColumns>
+  </DefaultCase>
+  <UserContexts>
+    <UserContext id="e94d823f-80ca-478d-b16f-dbb194e8ff04" name="UserDefine.Contexts!ShipQty" displayName="可出运数量" description="" help="" />
+    <UserContext id="3126b16c-eefc-4126-ab4f-4854125da06e" name="UserDefine.Contexts!ShipCanQty" displayName="本次可出运数量" description="" help="" />
+  </UserContexts>
+</QueryComponent>

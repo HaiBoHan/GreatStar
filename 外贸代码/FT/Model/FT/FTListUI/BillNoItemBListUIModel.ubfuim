@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UIModelComponent id="138045ba-4829-4161-a29e-6c456aca545f" name="BillNoItemBListUIModel" displayName="BillNoItemBListUIModel" description="" help="">
+  <UIModels>
+    <UIModel id="9d36d4fd-cb22-41d4-ae6b-0653749dddc7" name="BillNoItemBListUIModel" displayName="BillNoItemBListUIModel" description="" help="" Namespace="UFIDA.U9.Cust.GS.FT.BillNoItemBListUIModel" QueryInfo="7b0HYBxJliUmL23Ke39K9UrX4HShCIBgEyTYkEAQ7MGIzeaS7B1pRyMpqyqBymVWZV1mFkDM7Z28
+995777333nvvvfe6O51OJ/ff/z9cZmQBbPbOStrJniGAqsgfP358Hz8ifo1f89f4NX6N/5se/MTz
+6+GXf/FP/jUf/x7vFmV6mddNUS0/+2h3vPNRmi+n1axYXnz20bo93z746Pc4evwT67y+PqkWq2qZ
+L9u0mH320fT+w3uznZ397Xv5fra9P518up1Ns9l2tpNP7z/IPp2ezx58lC6zRf7ZR0+Ksnzx5Vmb
+L54XTfvV2UfprGhWZXb9YujrvJnWxaplpD5K53m5wk9G4831it5BS/3gq1dnn330YG96MNvdf7g9
+O5/e397fuXdvO9u7d7B9/mB3mu1Nsge7u/va/nW1rqf5szV1yt1/9ezs6fH4q4fjk3XTjj9/PX72
+ZswoVUDpyan3x7fzbPZR+tXZTxb51dM6uxBc8NvT6mr5UfoqPz9bnlfPq2wmX51k03n+0dHjJ1lT
+TPEV0+7h3mTnwcNsd/t8L98lZLP97YP9/fPtT/f2ZrvnOw8P9vKHhnYdWg3Shrp+U73N+bNXVdU+
+pWYn1bLN37U/mZVrfvVZUbZ5/Sab/GTRFJOSPntTr/OP0pOqXC+W/c9fV3Xb/1SgnL5bZcvZ8/wy
+Lz/76J6B0f0UELqf3SVyvFRKMTn2s3sPP53s3dvO7z/Y2d6/t5NtT6YP9rezyXSyt7d7/2ByL39f
+crysq5/Op+3ZU++Pl1k7x59PXmIu5asnL79c5XWG1+WDp2++NN8cXxCzPy1L7y+C9O4af9Mgvjrz
+B/Egzyf3p3uTbRoDDWL/3u725Dybbj/4dGf/wd7OAc3twTc5iK/OvqhmeWlGMru/tzednpO8zh4S
+Sx3k+fbDycGn27N72U6W5fnBp/kULz2r6oV55yDLdw+mDybbO9MZycw+/fPwfC/b3pmdf3p/d5bt
+7d87cB3RCw9n9z6d7Z/PtjEv2/u7M5qj/FN6/9P79x7sP5zNZtMHTBphkaf5ebHMm/BPJtb9B/dp
+gnfvbe/tTB4SoJ1Ptx9OSQqyg/3Jvd1dotjBriHWSZ1nbT77ctmhmv/5APmymqbM0Pi4LLImeO2s
+eVa8ywmdZ1nZ5Pj7uCyrqydltnxrmL3D+5CqZ0VezuKi9YIoJYIPGlNz6uqpIK2qgj54UywI0qus
+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
+gMK4+zGhHwzkYuz1x/wd/8Uf9AdvwuluqJeMymKnvzGxlExvdv/ewT1yV/IJEpC0/EKrtOe0ar37
+8NN70x1axItNb897ub2K8vp+MNmjXieUfD/IKA1//x4tid6Djtx/8CCnDNUB8dc3o538AU9IwGYH
+lAPbQTizP52QS5DvbO9SjHOwu7vzYH8y+eEoJg+phztTyjPl97en9zLy6ifTPRKy/SmxEEWypKY/
+pRTKD0kn+VhNaTluQtmv6XRKK7j7SFPvZvvb9yYPSE1OyYOKebbfrDry0JnQmtdBhkB0RvHP/g7l
+yieTe59u38sn5GM/ON+ZzoYE65vSRB429/LZg/1859727myf0g85WZAsI520u/dw5+D+wcH9ycT6
+Zz/7SshD7HwfQkVG5F42Jama7lGE+ODTfRjiT2mRdYq19591/dPVOPYD9pru/sQ6r69PqsWK2GTZ
+Hv2Gv8aPnh89P3p+9Pzo+dHzo+dHz4+eHz0/en70/Oj50fOj50fPj54fPT96fvT86PnR8/Pn+dFI
+f/T86PnR86PnR8+Pnh89P3p+9Pzo+dHzo+dHz4+eHz0/en70/Oj50fOj50fPj54fPT96fvT86PnR
+86PnR8+Pnv/vP/8P" UseType="ForQuery">
+      <UIModelInfos>
+        <UIModelInfo id="14563b27-6d50-4a78-a8a8-079daa5fc31f" name="BillNoItemBListUIModel" displayName="BillNoItemBListUIModel" description="" help="" FullName="BillNoItemBListUIModel" DataTypeID="" MappingID="" MappingName="" IsMap="False">
+          <UIModelInfo id="22afddd1-7339-4fcd-accd-8fe6aa8753a8" name="QueryView" displayName="QueryView" description="" help="" FullName="BillNoItemBListUIModel.QueryView" DataTypeID="8c131851-6da9-4bd8-9192-a456735ac9a5" MappingID="" MappingName="" IsMap="False">
+            <UIModelInfo id="c37a9906-ecfa-432a-8652-c50629712446" name="ID" displayName="ID" description="" help="" FullName="BillNoItemBListUIModel.QueryView.ID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" MappingID="" MappingName="" IsMap="False" />
+          </UIModelInfo>
+          <UIModelInfo id="84f8aea8-1651-44af-b168-f65802a86ef6" name="BillNoItemHead" displayName="BillNoItemHead" description="" help="" FullName="BillNoItemBListUIModel.BillNoItemHead" DataTypeID="62a62a27-03a7-4e17-9cf4-7a44032d69f5" MappingID="" MappingName="UFIDA::U9::Cust::GS::FT::BillNoItemBE::BillNoItemHead" IsMap="True">
+            <UIModelInfo id="69a507e9-95df-48f2-9137-dfe7938bf5a9" name="ID" displayName="ID" description="" help="" FullName="BillNoItemBListUIModel.BillNoItemHead.ID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" MappingID="e855fa85-9fa0-44e1-aa0d-8d54cbfbaf9a" MappingName="ID" IsMap="True" />
+          </UIModelInfo>
+        </UIModelInfo>
+      </UIModelInfos>
+      <Views>
+        <UIViewInfo id="30c26284-5fed-451b-8750-6db6dfda6e82" name="BillNoItemHead" displayName="发票号组表头" description="" RootFullName="BillNoItemBListUIModel.BillNoItemHead">
+          <Groups>
+            <Group id="7d5f06f4-b9ae-4e16-b261-e28bf8800fb8" name="Key" displayName="Key" description="" help="" />
+            <Group id="072c59e4-bfda-410a-ade9-f72c12bce239" name="Misc" displayName="Misc" description="" help="" />
+          </Groups>
+          <Fields>
+            <UIFieldInfo id="4d3bd3ad-59fc-4617-81ff-92103ab434ec" name="ID" displayName="ID" description="" DefaultValue="" GroupName="Key" DisplayRule="19.0" IsNullable="False" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095607-50d1-4296-a35a-623b21d654f1" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" EnumTypeID="" BindingFullName="BillNoItemBListUIModel.BillNoItemHead.ID" Expression="" Sequence="0" Length="8" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
+          </Fields>
+        </UIViewInfo>
+      </Views>
+      <ActionGroups>
+        <Group id="718f025d-f3c2-4d37-b66f-5fff0352d9db" name="Case" displayName="Case" description="" help="" />
+      </ActionGroups>
+      <Actions>
+        <UIActionInfo id="5fc904ce-7718-49f8-94d4-a219363f7e48" name="OnLookCase" displayName="查询" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="QryClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="0746a345-6132-4ea2-83d3-74a3cc4a58e7" name="OnCaseChanged" displayName="改变方案" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="9efa324a-47e0-49d4-b9db-5a23cd8c7991" name="OnOutPut" displayName="输出" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="OnOutPut" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="5e2d453d-c98d-480d-8718-a391a43d657a" name="OnGridRowDbClick" displayName="双击网格行" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="943bb082-a629-4e46-a87e-b4893b327cbe" name="OnNew" displayName="新增" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="40fea9bf-5462-4bd8-b3ce-f4243bd136cc" name="OnPrint" displayName="打印" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="OnPrint" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="d18901e5-5946-49fc-94a0-3fdb9fe5fb2b" name="OnDelete" displayName="删除" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="ListDeleteClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+      </Actions>
+    </UIModel>
+  </UIModels>
+</UIModelComponent>

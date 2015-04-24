@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="fb03a2fe-a855-462a-bf87-e250f05a474b" name="BillNoRef" displayName="发票号分配" description="" help="" refType="1" isMultiSelect="True" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.BillNoAllocationUI.BillNoRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="21f2c679-e5c8-4468-b925-8751e0feda87" name="cRef" displayName="cRef" description="" help="发票号分配" refEntityId="00312915-b79c-4707-ad84-3923c8a1b523" refEntityName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="6870e223-c084-4f49-af9c-ba6b4d2a3f19" name="ID" displayName="ID" description="" help="发票号分配.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:ID" displayNameIndexStr="2" />
+        <RefField id="0b8f7bd3-b4a0-4043-8bf9-17f0104c99ef" name="BillNoID" displayName="发票号" description="" help="发票号分配.Misc.发票号ID" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:BillNoID" displayNameIndexStr="" />
+        <RefField id="75fc7818-2b49-4fb4-a3c6-f9883a12fb39" name="BillNoState" displayName="状态" description="" help="发票号分配.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:BillNoState" displayNameIndexStr="2" />
+        <RefField id="2a380b07-c1a2-461b-a0aa-92ff02a147df" name="UsedDate" displayName="使用日期" description="" help="发票号分配.Misc.使用日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo:UsedDate" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

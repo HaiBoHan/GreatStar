@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="99c3023a-ee81-485b-a906-6b95f3d4fc40" name="FTListUI" displayName="FTListUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.FTListUI" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="2b0f5973-1aa3-49b3-9ea8-87c2012c1a25" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="5092da0b-714f-447b-aabf-a13d62922fb3" name="BillNoRuleBListUIModel.ubfuim" displayName="BillNoRuleBListUIModel.ubfuim" description="" help="" include="BillNoRuleBListUIModel.ubfuim" type="" />
+    <Item id="df1e1c2c-b702-49e7-9ba8-a17ef030d9dc" name="BillNoRuleBListUIForm.ubfform" displayName="BillNoRuleBListUIForm.ubfform" description="" help="" include="BillNoRuleBListUIForm.ubfform" type="" />
+    <Item id="965e1ba4-46f4-49b0-850e-29d00b41560e" name="BillNoBListUIModel.ubfuim" displayName="BillNoBListUIModel.ubfuim" description="" help="" include="BillNoBListUIModel.ubfuim" type="" />
+    <Item id="38696128-f7c7-4477-aa6c-329fe0b5d716" name="BillNoBListUIForm.ubfform" displayName="BillNoBListUIForm.ubfform" description="" help="" include="BillNoBListUIForm.ubfform" type="" />
+    <Item id="d522ccff-8d91-48ee-9b86-d3a0aaee86ec" name="BillNoItemBListUIModel.ubfuim" displayName="BillNoItemBListUIModel.ubfuim" description="" help="" include="BillNoItemBListUIModel.ubfuim" type="" />
+    <Item id="8ae18c7b-0cd5-44d5-9f2a-0df651da2438" name="BillNoItemBListUIForm.ubfform" displayName="BillNoItemBListUIForm.ubfform" description="" help="" include="BillNoItemBListUIForm.ubfform" type="" />
+    <Item id="cfc40e5b-d2d1-468f-8ea6-030534724279" name="BrokerageBListUIModel.ubfuim" displayName="BrokerageBListUIModel.ubfuim" description="" help="" include="BrokerageBListUIModel.ubfuim" type="" />
+    <Item id="9c627d22-54c3-42d9-a965-c50a54a21bad" name="BrokerageBListUIForm.ubfform" displayName="BrokerageBListUIForm.ubfform" description="" help="" include="BrokerageBListUIForm.ubfform" type="" />
+    <Item id="1c3b71a1-b30e-4455-912e-b0ce31748b5b" name="MarginBListUIModel.ubfuim" displayName="MarginBListUIModel.ubfuim" description="" help="" include="MarginBListUIModel.ubfuim" type="" />
+    <Item id="e9384aff-83b4-4d19-9301-9f507f1fe3b1" name="MarginBListUIForm.ubfform" displayName="MarginBListUIForm.ubfform" description="" help="" include="MarginBListUIForm.ubfform" type="" />
+    <Item id="7fb181ac-8a6b-4edb-ad25-5051b6ef113e" name="SalesManUIModel.ubfuim" displayName="SalesManUIModel.ubfuim" description="" help="" include="SalesManUIModel.ubfuim" type="" />
+    <Item id="23828dab-73de-4cc6-9788-ab19c6b443a5" name="SalesManUIForm.ubfform" displayName="SalesManUIForm.ubfform" description="" help="" include="SalesManUIForm.ubfform" type="" />
+    <Item id="503366dc-f090-4a51-9fbc-af3b9131aa19" name="AllFormTypeBListUIModel.ubfuim" displayName="AllFormTypeBListUIModel.ubfuim" description="" help="" include="AllFormTypeBListUIModel.ubfuim" type="" />
+    <Item id="ae98e4db-f1a2-449a-b710-3a69f2ac5a98" name="AllFormTypeBListUIForm.ubfform" displayName="AllFormTypeBListUIForm.ubfform" description="" help="" include="AllFormTypeBListUIForm.ubfform" type="" />
+    <Item id="01a56008-da14-47e3-a11e-d2a495fd4602" name="DiscountBListUIModel.ubfuim" displayName="DiscountBListUIModel.ubfuim" description="" help="" include="DiscountBListUIModel.ubfuim" type="" />
+    <Item id="49bcf42a-dd70-4ad5-a7c4-59fd3fb35e3a" name="DiscountBListUIForm.ubfform" displayName="DiscountBListUIForm.ubfform" description="" help="" include="DiscountBListUIForm.ubfform" type="" />
+    <Item id="8120831a-1b95-4399-93d5-bf2a7529c92c" name="BillNoQryBListUIModel.ubfuim" displayName="BillNoQryBListUIModel.ubfuim" description="" help="" include="BillNoQryBListUIModel.ubfuim" type="" />
+    <Item id="c10f8913-a290-4751-9e9c-c713d503b67b" name="BillNoQryBListUIForm.ubfform" displayName="BillNoQryBListUIForm.ubfform" description="" help="" include="BillNoQryBListUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>

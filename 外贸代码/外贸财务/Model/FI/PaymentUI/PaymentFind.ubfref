@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="6f4f342a-ab17-4c7c-869f-ae08c010f1a7" name="PaymentFind" displayName="付款通知单" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FI.PaymentUI.PaymentFind" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="7fbd3b8b-d34d-4112-b092-2a922e14db44" name="cRef" displayName="cRef" description="" help="付款通知单" refEntityId="b8b7c637-c225-492c-912f-de8850fed133" refEntityName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="6112968e-d10c-4d6b-8026-7e7713567aa0" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:ID" displayNameIndexStr="2" />
+        <RefField id="51cecb73-e5f3-42b9-a6df-8ba55a8dd0e7" name="DocumentType_Name" displayName="单据类型" description="" help="单据类型基类.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:DocumentType.Name" displayNameIndexStr="" />
+        <RefField id="8fb0cee7-ea5b-4135-921a-e5f8667016a3" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:DocNo" displayNameIndexStr="2" />
+        <RefField id="d9c5aa49-fc37-4aac-9c41-4fdc055f53ec" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="85e7aaa3-5566-4852-bf51-8862460b6aa9" name="Currency_Name" displayName="币种" description="" help="币种.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:Currency.Name" displayNameIndexStr="0" />
+        <RefField id="352ed64c-9d71-4e81-8a68-e7e2775df78e" name="Status" displayName="单据状态" description="" help="付款通知单.Misc.单据状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:Status" displayNameIndexStr="2" />
+        <RefField id="eece851d-258a-43e2-bfe4-e48f02852378" name="Supplier_Name" displayName="供应商" description="" help="供应商.供应商.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:Supplier.Name" displayNameIndexStr="0" />
+        <RefField id="bc41d263-e7a8-4e70-ac50-4ca9127cc5a3" name="POType" displayName="内/外采" description="" help="付款通知单.Misc.内/外采" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.PaymentBE.Payment:POType" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter>UFIDA::U9::Cust::GS::FI::PaymentBE::Payment.Org.ID=='#Context.OrgID#'</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

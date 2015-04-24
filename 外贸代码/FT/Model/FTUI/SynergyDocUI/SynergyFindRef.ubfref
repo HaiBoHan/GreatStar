@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="a2f29de0-1d94-41b0-b1ef-f2e8ca2d6f0d" name="SynergyFindRef" displayName="报关协同单头" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.SynergyDocUI.SynergyFindRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="382fc1f3-6c7a-4d8c-8a3c-3b65a48baa1f" name="cRef" displayName="cRef" description="" help="报关协同单头" refEntityId="4da5c487-9e1c-4dfb-acbb-1b5073950d7c" refEntityName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="6a6c3ac7-b371-45b2-ae17-12ee25eca2d9" name="ID" displayName="ID" description="" help="报关协同单头.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:ID" displayNameIndexStr="2" />
+        <RefField id="dc65b6c5-94ce-4427-b084-92c2dfca01dd" name="BillNoItem_BillNoItemID" displayName="发票号组ID" description="" help="发票号组表头.Misc.发票号组ID" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:BillNoItem.BillNoItemID" displayNameIndexStr="2" />
+        <RefField id="af269ce9-2cd1-4692-af6d-12d403ba6361" name="BillNoItem_BillNoItemStates" displayName="状态" description="" help="发票号组表头.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:BillNoItem.BillNoItemStates" displayNameIndexStr="2" />
+        <RefField id="d3854c54-f74c-4ac9-8819-afe5b922ae97" name="Client_Name" displayName="客户名称" description="" help="客户.客户.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="74" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:Client.Name" displayNameIndexStr="" />
+        <RefField id="5db46025-c788-4499-b09c-60644e099756" name="ShipPlanDate" displayName="出运日期" description="" help="报关协同单头.Misc.出运日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:ShipPlanDate" displayNameIndexStr="2" />
+        <RefField id="7cb97daa-17a0-4500-992e-dcb97d65bf50" name="SalesStaff_Name" displayName="外销员名称" description="" help="业务员.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:SalesStaff.Name" displayNameIndexStr="" />
+        <RefField id="9e1f7728-9c56-46f1-8b9f-c1e302a0f101" name="LiOrderDate" displayName="理单日期" description="" help="报关协同单头.Misc.理单日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:LiOrderDate" displayNameIndexStr="2" />
+        <RefField id="7545fe02-9476-496c-99bc-6a16fe66c27f" name="Memo" displayName="备注" description="" help="报关协同单头.Misc.备注" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.SynergyBE.SynergyHead:Memo" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

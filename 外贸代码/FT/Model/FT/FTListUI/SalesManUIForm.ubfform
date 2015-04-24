@@ -1,0 +1,109 @@
+<View ID="5f2519bd-a9d2-48a9-a1ed-f7d6a81929e7" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="业务员分配" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="SalesManUIForm" Namespace="UFIDA.U9.Cust.GS.FT.SalesManUIModel" TabStop="False" TemplateCode="UI_SingleGrid" TemplateType="CustomTemplate" UIModelID="58b79d3e-eccf-4c7d-8506-b06fea873fbf" URI=".UI_单列表WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+    <Row Fixed="False" Height="20" Name="Row4" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="9fab20c4-d30b-483b-8afe-7d3de4180753" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="94221e18-9cb9-4957-90fe-9961c49c52b3" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOk" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+      <Events />
+    </Button>
+    <Button ID="e3063445-e089-453e-9530-a408346c1224" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnClose" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+      <Events />
+    </Button>
+  </Card>
+  <Card ID="89269a70-3dd5-4189-abd9-64f3884a35cc" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card3" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="971" />
+      <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="415" Name="Row0" />
+      <Row Fixed="False" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="4f9b9abd-bd4c-44f1-955a-22dffa07cc29" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="False" Height="421" Name="DataGrid1" PageSize="20" Paging="True" TabIndex="1" TabStop="True" Width="972" X="10" Y="0">
+      <Events />
+      <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
+        <HeaderRow Name="DefaultRow">
+          <HeaderCell ID="c05e8024-d697-425f-bbad-f50aeebbfba4" ColSpan="1" Name="HeaderCell0" OwnerColName="ID0" RowSpan="1" />
+          <HeaderCell ID="b623ba8b-6c00-43a4-b947-cf95e2273f8d" ColSpan="1" Name="HeaderCell1" OwnerColName="SysVersion0" RowSpan="1" />
+          <HeaderCell ID="1e484c21-5aa9-4667-9919-c549d8e26b43" ColSpan="1" Name="HeaderCell2" OwnerColName="RowID1" RowSpan="1" />
+          <HeaderCell ID="68cf1a7e-9cbb-4098-a736-c8a73bffb569" ColSpan="1" Name="HeaderCell3" OwnerColName="Sales0" RowSpan="1" />
+          <HeaderCell ID="59e8d95a-4b55-4805-9bf7-21ac2ba40d2a" ColSpan="1" Name="HeaderCell4" OwnerColName="Deparment0" RowSpan="1" />
+          <HeaderCell ID="523c6964-00e9-414b-9445-7995e8a77941" ColSpan="1" Name="HeaderCell5" OwnerColName="Remark0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <NumberColumn ID="4a44feab-793f-4037-b675-b6fa6e8f49d6" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="业务员分配.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="SalesMan" Visible="False">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="2dc44151-7d8e-48e1-8388-7da20af8e7fc" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="业务员分配.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion0" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="SalesMan" Visible="False">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="02b177c5-2d36-4e04-9542-1c031441538c" DefaultValue="" DisplayFormat="10.0" Enabled="True" Help="Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" Name="RowID1" NPos="3" Point="0" UIFieldID="RowID" UIViewID="SalesMan" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <ReferenceColumn ID="6ff7d8d6-2a65-44c2-a20e-2393c387b21f" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="业务员分配.Misc.业务员" IsNull="True" IsProperty="False" IsSequence="False" Name="Sales0" NPos="4" Point="0" TextAlign="Right" UIFieldID="Sales" UIViewID="SalesMan" Visible="True">
+          <RefNameFields />
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <ReferenceColumn ID="ab574cfb-0a4a-4fbb-b45d-859b800daf2b" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="业务员分配.Misc.部门" IsNull="True" IsProperty="False" IsSequence="False" Name="Deparment0" NPos="5" Point="0" TextAlign="Right" UIFieldID="Deparment" UIViewID="SalesMan" Visible="True">
+          <RefNameFields />
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <TextBoxColumn ID="1deff20a-ede1-4093-b90a-d3a9c394a1c6" DefaultValue="" DisplayFormat="50" Enabled="True" Help="业务员分配.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Remark0" NPos="6" Point="0" TextAlign="Left" UIFieldID="Remark" UIViewID="SalesMan" Visible="True">
+          <Events />
+        </TextBoxColumn>
+      </Columns>
+    </DataGrid>
+  </Card>
+  <Events />
+</View>

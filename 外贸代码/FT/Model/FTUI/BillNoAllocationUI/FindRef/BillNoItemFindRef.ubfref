@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="59cf5637-8f99-49a7-9e14-6a0283928395" name="BillNoItemFindRef" displayName="发票号组表头" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.BillNoAllocationUI.BillNoItemFindRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="b661cdb4-aeda-4776-b4e7-fe78174e8666" name="cRef" displayName="cRef" description="" help="发票号组表头" refEntityId="62a62a27-03a7-4e17-9cf4-7a44032d69f5" refEntityName="UFIDA.U9.Cust.GS.FT.BillNoItemBE.BillNoItemHead" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="408ad9e7-cf53-4c3e-8b4b-d0025ab87a2a" name="ID" displayName="ID" description="" help="发票号组表头.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoItemBE.BillNoItemHead:ID" displayNameIndexStr="2" />
+        <RefField id="1d300b7d-3e5b-4e71-b1a2-f3a32edcf254" name="BillNoItemID" displayName="发票号组" description="" help="发票号组表头.Misc.发票号组" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoItemBE.BillNoItemHead:BillNoItemID" displayNameIndexStr="2" />
+        <RefField id="fbc51dd3-1df3-400e-89ac-4afed8e09be8" name="BillNoItemStates" displayName="状态" description="" help="发票号组表头.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoItemBE.BillNoItemHead:BillNoItemStates" displayNameIndexStr="2" />
+        <RefField id="a670af9f-21fe-44b9-b361-f7718a98f887" name="UsedPerson_Name" displayName="领用人" description="" help="业务员.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.BillNoItemBE.BillNoItemHead:UsedPerson.Name" displayNameIndexStr="" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

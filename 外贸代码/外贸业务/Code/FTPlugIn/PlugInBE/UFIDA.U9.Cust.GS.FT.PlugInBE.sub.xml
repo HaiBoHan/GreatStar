@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<pub-sub>
+  <subcription event="UFIDA.U9.SM.SO.SO.BeforeValidate">
+    <subscriber type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOBeforeValidateExtend,UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterValidate">
+    <subscriber type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOAfterValidateExtend,UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+
+  <subcription event="UFIDA.U9.SM.SO.SO.SetDefaultValue">
+    <subscriber type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOSetDefaultValueExtend,UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+  
+  <subcription event="UFIDA.U9.SM.SO.SO.Updating">
+    <subscriber  type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOUpdatePlugBEExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+  <subcription event="UFIDA.U9.SM.SO.SO.Deleting">
+    <subscriber  type="UFIDA.U9.Cust.GS.FT.PlugInBE.SoDeleteIngBEExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+  <subcription event="UFIDA.U9.SM.SO.SOLine.Deleting">
+    <subscriber  type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOLineDeletePlugBEExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+  <subcription event="UFIDA.U9.SM.SO.SOLine.Deleting">
+    <subscriber  type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOLineDeletePlugBEExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
+  <subcription event="UFIDA.U9.CBO.SCM.Item.ItemMaster.AfterDeleted">
+    <subscriber type="UFIDA.U9.Cust.GS.FT.PlugInBE.ItemMasterDeletedBEExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll"/>
+  </subcription>
+</pub-sub>

@@ -1,0 +1,772 @@
+<View ID="743519b3-893e-4433-b667-d166b98f4161" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="扣款登记" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="DeductionRegisterUIForm" Namespace="UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel" TabStop="False" TemplateCode="UI_SingleCard" TemplateType="CustomTemplate" UIModelID="04b8f4e7-0bc5-4ffe-8cca-93b6825b8dc5" URI=".UI_单卡片WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Value" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters>
+    <Parameter DataType="" IsConsumer="True" IsPersoner="False" Name="ID" UIModelParameterName="" UIViewID="" />
+  </InParameters>
+  <Toolbar ID="79234686-0354-4a03-8588-993f86eda364" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
+    <Button ID="1359f884-0cc8-46e6-a746-f64f541b829d" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="3432c856-dec9-440d-b497-28950599d89f" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="70912e79-273d-4e80-bc82-90f8b8c5e49c" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="4304561e-381b-4426-9df2-e38d600a519c" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="cfbd44ef-d5ae-4963-8e53-8ec8e1414eee" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="953b1d6f-ff08-4981-b30d-ea17c12d01dd" AccessKey="C" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="d38e5e51-41f2-4a8c-85c2-b9543cc94717" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
+    <Button ID="95fb1ce7-861f-480c-9dec-29089bddc290" AccessKey="T" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="SubmitClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SubmitClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="15dae15e-12f2-4449-bf6a-2ae06cd0c28b" AccessKey="Y" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="6fc6070f-285d-4593-9285-a3525ab7ddc1" AccessKey="" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="UnApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="95097ebe-b423-4951-b429-3ecd2909e6f2" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="296" Y="0" />
+    <Button ID="d8d4d382-3136-4a14-93ef-e7205159d3c2" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="304" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="21450676-9824-470a-856a-f23a366ae5e0" AccessKey="L" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="339" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="ad26d3ed-906b-4698-bba3-ae36503f77f9" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="374" Y="0" />
+    <Button ID="bf83531c-19ff-4b4c-92c4-41355f37a8bc" AccessKey="[" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="382" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="67c29b56-66d5-484b-a2d0-cca636886ef4" AccessKey="," DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="417" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="e5ac661b-4058-4054-a8a6-1e792e97edac" AccessKey="." DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="452" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="77999ebe-0b56-4584-919b-d8e8cb8fa68b" AccessKey="]" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="487" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="5c65b1d1-2458-4114-87dd-61be4c572b4a" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="522" Y="0" />
+    <Button ID="3963eccd-25a3-43bb-b845-109cbc4deca0" AccessKey="A" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="530" Y="0">
+      <Events>
+        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="34d53e49-515f-4f7b-ba8e-e582b8c217b8" AccessKey="F" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="565" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="eb93c6ba-509e-464c-9e72-176c73d27563" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="600" Y="0" />
+    <Button ID="6b45875c-c4b5-426d-a88a-9d9a43e9b01b" AccessKey="O" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Width="35" X="608" Y="0">
+      <Events>
+        <Event ActionName="OutputClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="fa306dda-d355-41d0-9324-1a4870f95eb2" AccessKey="P" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="643" Y="0">
+      <Events>
+        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrintClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="dc6c1d9c-87e5-466d-8eb8-90358e71cd0e" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="91d320ab-88bb-4774-b13d-5ed8a3203baf" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOk" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="f7ca0e28-b488-4a4f-ac52-7ed1fae51152" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnClose" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="c65eb879-3a17-4a41-942b-1c68adfc871f" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="12" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="17" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card2" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="153" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="153" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="152" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column10" Type="Value" Width="152" />
+      <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+      <Row Fixed="True" Height="20" Name="Row1" />
+      <Row Fixed="True" Height="20" Name="Row2" />
+      <Row Fixed="True" Height="20" Name="Row3" />
+      <Row Fixed="True" Height="20" Name="Row4" />
+      <Row Fixed="True" Height="20" Name="Row5" />
+      <Row Fixed="True" Height="20" Name="Row6" />
+      <Row Fixed="True" Height="20" Name="Row7" />
+      <Row Fixed="True" Height="20" Name="Row8" />
+      <Row Fixed="True" Height="20" Name="Row9" />
+      <Row Fixed="True" Height="20" Name="Row10" />
+      <Row Fixed="True" Height="20" Name="Row11" />
+      <Row Fixed="True" Height="20" Name="Row12" />
+      <Row Fixed="True" Height="20" Name="Row13" />
+      <Row Fixed="True" Height="20" Name="Row14" />
+      <Row Fixed="True" Height="20" Name="Row15" />
+      <Row Fixed="False" Height="19" Name="Row16" />
+    </Rows>
+    <Label ID="416a0a36-c64c-442b-a6bf-a1c89c425741" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID73" RelationControl="ID73" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="153" X="10" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="b053cbc1-b988-4ed4-bc16-f1cd90101d77" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID73" RelationControl="lblID73" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="DeductionRegister" Visible="False" Width="153" X="168" Y="0">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
+    </NumberControl>
+    <Label ID="e0f01dc1-0bfa-4ba1-9263-ba329010556f" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion34" RelationControl="SysVersion34" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="153" X="10" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="41062937-bd90-4fe4-bf71-e76d84492917" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion34" RelationControl="lblSysVersion34" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="DeductionRegister" Visible="False" Width="153" X="168" Y="25">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind1" />
+      <RoundRuleBind Name="RoundRuleBind1" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+      <CurrencyType Name="CurrencyType1" />
+    </NumberControl>
+    <Line ID="dd97660e-54d6-4685-bc2a-d99905c86938" DisplayName="基本" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="0" Height="20" Name="Line0" TabIndex="4" TabStop="True" Width="311" X="10" Y="0" />
+    <Label ID="6f10996b-44fd-47af-b755-3ce1f1758d40" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblDocumentType67" RelationControl="DocumentType67" TabIndex="5" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="4bc4702b-2401-4e3d-ad79-5a09fec1c90d" FormRefName="DeductionRegisterDocTypeUIForm.ubfform" FormRefPath="DeductionRegisterDocTypeUIForm.ubfform" FormRefProjectPath="DeductionRegisterUI.ubfuiproj" Height="504" IsShowStateBar="True" Name="FormLink0" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="56be33a6-149f-4f06-ad2d-9065e8d49607" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DocumentType_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DocumentType67" NameAttributeName="Name" NameFieldUIFieldID="DocumentType_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="fac142e2-01d3-4cfa-a1c6-b01867440a0e" RelationControl="lblDocumentType67" TabIndex="6" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="25">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编号方式" ColumnID="DocHeaderSequenceStyle" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="审批方式" ColumnID="ApproveType" TargetControlType="DropDownListModel" TargetID="DocumentType_ApproveType43" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="确认方式" ColumnID="ConfirmType" TargetControlType="DropDownListModel" TargetID="DocumentType_ConfirmType52" TargetProperty="Value" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="fb35ea44-d242-4885-beb8-29d41270a432" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblDocNo94" RelationControl="DocNo94" TabIndex="7" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="6ef0f4bb-c79e-4355-83fb-3acdfb9722c3" DisplayFormat="50" Enabled="False" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="DocNo94" RelationControl="lblDocNo94" TabIndex="8" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocNo" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="50">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="a05af0f6-9338-46ac-9451-fc144cfd1cef" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblBusinessDate88" RelationControl="BusinessDate88" TabIndex="9" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="2ff46b8a-a1ba-48bf-b327-5202cc40718d" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="3" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="BusinessDate88" RelationControl="lblBusinessDate88" TabIndex="10" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusinessDate" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="75">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="e1b8a0ec-2ed6-437d-a239-3cae13b6638d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblSrcOrg109" RelationControl="SrcOrg109" TabIndex="11" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="125">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="1835328e-e793-4823-9a8b-c0ad3a9cbd23" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="SrcOrg_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="False" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcOrg109" NameAttributeName="Name" NameFieldUIFieldID="SrcOrg_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="038046a3-cfb5-4cea-9af1-c0c5195fe2aa" RelationControl="lblSrcOrg109" TabIndex="12" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcOrg" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="125">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="组织形态" ColumnID="OrgClassify" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="90a7020f-a074-4f9e-bff4-814bf4e32e34" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblSrcDocType49" RelationControl="SrcDocType49" TabIndex="13" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="100">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="8cff435f-cdac-4e42-b981-88740f510210" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.DRSrcDocTypeEnum" EnumID="bceba2f9-1941-4477-a5f2-96d8046c24fc" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcDocType49" RelationControl="lblSrcDocType49" TabIndex="14" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcDocType" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="100">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="49ef5c8b-b338-4ff5-b138-0321c737a9da" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblSrcDocNo52" RelationControl="SrcDocNo52" TabIndex="15" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="150">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TitleClick" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="01c9e4c4-aee0-4bb3-986f-14a01d1edf46" DisplayFormat="50" Enabled="False" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SrcDocNo52" RelationControl="lblSrcDocNo52" TabIndex="16" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcDocNo" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="150">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="011e416d-9f69-4bba-b571-a687c38517ad" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSrcDocID292" RelationControl="SrcDocID292" TabIndex="17" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="341" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="10ac5ed1-7323-4259-82b5-ecc6a89a5672" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SrcDocID292" RelationControl="lblSrcDocID292" TabIndex="18" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcDocID" UIViewID="DeductionRegister" Visible="False" Width="152" X="498" Y="0">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind2" />
+      <RoundRuleBind Name="RoundRuleBind2" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+      <CurrencyType Name="CurrencyType2" />
+    </NumberControl>
+    <Label ID="2b1567cf-eef9-4c19-9978-362844dfd906" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency70" RelationControl="Currency70" TabIndex="19" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="175">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="e6a3ab28-74b0-421d-8b90-f1d3410b114b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Currency_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Currency70" NameAttributeName="Name" NameFieldUIFieldID="Currency_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" RelationControl="lblCurrency70" TabIndex="20" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="175">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ISO代码" ColumnID="ISOCode" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="货币符号" ColumnID="Symbol" TargetControlType="TextBoxModel" TargetID="Currency_Symbol100" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="MoneyRound_Precision" TargetControlType="NumberControlModel" TargetID="Currency_MoneyRound_Precision86" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="MoneyRound_RoundType" TargetControlType="DropDownListModel" TargetID="Currency_MoneyRound_RoundType109" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="MoneyRound_RoundValue" TargetControlType="NumberControlModel" TargetID="Currency_MoneyRound_RoundValue118" TargetProperty="Value" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Line ID="a4c909fd-284c-432f-b6c1-990f6ac33316" DisplayName="对象" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="8" Height="20" Name="Line1" TabIndex="21" TabStop="True" Width="311" X="10" Y="200" />
+    <Label ID="40cbe554-a4f5-4e10-8d94-34ea8f081072" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="9" Height="20" IsNull="True" IsSequence="False" Name="lblDRObject52" RelationControl="DRObject52" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="225">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="c9567053-9d73-4275-a0cd-f1141c6ef956" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.DRObjectEnum" EnumID="ecd6f398-f623-4dfc-834c-a7bfe4ae73e7" GridHeight="1" GridWidth="1" GridX="2" GridY="9" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DRObject52" RelationControl="lblDRObject52" TabIndex="23" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DRObject" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="225">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+    </DropDownList>
+    <Label ID="28fceb9f-4737-4da8-8c87-d82403d66124" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblSupplier52" RelationControl="Supplier52" TabIndex="24" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="250">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="a75ec3fa-0408-4482-b8b2-a32e6a78d8a7" FormRefName="SupplierMainUIForm.ubfform" FormRefPath="SupplierMainUIForm.ubfform" FormRefProjectPath="D:\UFIDA\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Supplier.SupplierUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink1" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Supplier52" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplierSiteID" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="Supplier52" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Supplier52" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Supplier52" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficialLocationID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficialLocationCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficialLocationName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ContactObjectID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ContactObjectCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ContactObjectName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplierSiteID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplierSiteCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplierSiteName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ShortName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMISC" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="cfeadd36-030d-4251-82f9-fd35292f758e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier52" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" RelationControl="lblSupplier52" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Supplier" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="250">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="分类" ColumnID="Category_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="ada25f37-be01-4e9d-8b2b-13579585d26d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblCustomer77" RelationControl="Customer77" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="275">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="c60a3c61-932c-45f9-9745-162e0807d1c9" FormRefName="CustomerMainUIForm.ubfform" FormRefPath="CustomerMainUIForm.ubfform" FormRefProjectPath="D:\UFIDA\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Customer.CustomerUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink2" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Customer77" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteID" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="Customer77" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Customer77" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Customer77" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ShortName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DepartmentID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DepartmentCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DepartmentName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SaleserID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SaleserCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SaleserName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultBillToID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultBillToCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultBillToName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultShipToID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultShipToCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultShipToName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultGatheringID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultGatheringCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultGatheringName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceListID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceListCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceListName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPriceListModify" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsUseAppPortal" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficeLocation" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficeLocationCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficeLocationName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bargain" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="ee9a56d9-20f7-43fd-b9cc-621e27fab732" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Customer_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="11" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Customer77" NameAttributeName="Name" NameFieldUIFieldID="Customer_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="d6428416-2436-4ab4-af0f-1464119d76e7" RelationControl="lblCustomer77" TabIndex="27" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Customer" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="275">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门ID" ColumnID="Department_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门编码" ColumnID="Department_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门名称" ColumnID="Department_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="销售员ID" ColumnID="Saleser_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="销售员编码" ColumnID="Saleser_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="销售员名称" ColumnID="Saleser_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种ID" ColumnID="TradeCurrency_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种编码" ColumnID="TradeCurrency_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种名称" ColumnID="TradeCurrency_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度1" ColumnID="TradeCurrency_MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值1" ColumnID="TradeCurrency_MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="8416fe04-0acb-4a13-950e-772357326aa0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblDROrg43" RelationControl="DROrg43" TabIndex="28" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="300">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="8e103647-d51d-431c-b3d7-f9973ed0bbe6" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DROrg_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="12" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DROrg43" NameAttributeName="Name" NameFieldUIFieldID="DROrg_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="038046a3-cfb5-4cea-9af1-c0c5195fe2aa" RelationControl="lblDROrg43" TabIndex="29" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DROrg" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="300">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="组织形态" ColumnID="OrgClassify" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime1" />
+        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DateTime2" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="0b43581e-857b-4d62-a4f5-118a19ac35c9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="14" Height="20" IsNull="True" IsSequence="False" Name="lblDRReason37" RelationControl="DRReason37" TabIndex="30" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="350">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="5e06264d-61f7-400b-b5ff-caf2a08eec54" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.DRReasonEnum" EnumID="7148a1ed-2b1e-4c3f-905e-d4fd407e32bf" GridHeight="1" GridWidth="1" GridX="2" GridY="14" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DRReason37" RelationControl="lblDRReason37" TabIndex="31" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DRReason" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="350">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="f1071d63-9a65-4897-b0e7-67a88b655df2" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="13" Height="20" IsNull="True" IsSequence="False" Name="lblDRMoney59" RelationControl="DRMoney59" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="325">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="c6d32408-2e4c-4d51-b535-d5ef67212db6" DisplayFormat="24.9" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="13" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="DRMoney59" RelationControl="lblDRMoney59" TabIndex="33" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DRMoney" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="325">
+      <Events />
+      <RelationControls />
+      <PrecisionBind BindType="UIField" UIFieldID="Currency_MoneyRound_Precision" UIViewID="DeductionRegister" />
+      <RoundRuleBind BindType="UIField" UIFieldID="Currency_MoneyRound_RoundType" UIViewID="DeductionRegister" />
+      <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_MoneyRound_RoundValue" UIViewID="DeductionRegister" />
+      <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="DeductionRegister" />
+    </NumberControl>
+    <Label ID="ca9a15fd-8cca-4b43-9494-233aad6b753a" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="15" Height="20" IsNull="True" IsSequence="False" Name="lblDRAssess80" RelationControl="DRAssess80" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="375">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="5f28af0a-35b0-480b-910b-1d4c1ea71c49" DisplayFormat="2000" Enabled="True" GridHeight="2" GridWidth="1" GridX="2" GridY="15" Height="44" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="DRAssess80" RelationControl="lblDRAssess80" TabIndex="35" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="DRAssess" UIViewID="DeductionRegister" Visible="True" Width="153" X="168" Y="375">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Line ID="788f4e30-6393-4bc9-872c-afd883081979" DisplayName="开单信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="0" Height="20" Name="Line2" TabIndex="36" TabStop="True" Width="309" X="341" Y="0" />
+    <Label ID="c5fcd06c-e541-4780-bad1-65b17e36be05" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblRegisterOrg109" RelationControl="RegisterOrg109" TabIndex="37" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="4f666b4e-5783-4644-9131-edb15a416d1f" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="RegisterOrg_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RegisterOrg109" NameAttributeName="Name" NameFieldUIFieldID="RegisterOrg_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="038046a3-cfb5-4cea-9af1-c0c5195fe2aa" RelationControl="lblRegisterOrg109" TabIndex="38" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterOrg" UIViewID="DeductionRegister" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="498" Y="25">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="组织形态" ColumnID="OrgClassify" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="73cd1853-4de6-4d66-a7f5-e2002ef3fa6c" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblRegisterDept106" RelationControl="RegisterDept106" TabIndex="39" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="beee4a9d-0556-4787-a7f9-38d775f0c4f6" FormRefName="DepartmentMainUIForm.ubfform" FormRefPath="DepartmentMainUIForm.ubfform" FormRefProjectPath="D:\UFIDA\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Department.DepartmentUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink3" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="RegisterDept106" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="RegisterDept106" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="RegisterDept106" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="RegisterDept106" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WorkCalendar" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WorkCalendarName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WorkCalendarCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Warehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinName" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="b7c9fb9c-b562-4b03-9f93-8411f8a636bd" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="RegisterDept_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RegisterDept106" NameAttributeName="Name" NameFieldUIFieldID="RegisterDept_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="82a8f09a-6081-4b12-8735-10ffcaddca48" RelationControl="lblRegisterDept106" TabIndex="40" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterDept" UIViewID="DeductionRegister" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="498" Y="50">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="来源组织" ColumnID="MasterOrg_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点ID" ColumnID="Warehouse_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点编码" ColumnID="Warehouse_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点名称" ColumnID="Warehouse_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位ID" ColumnID="Bin_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位编码" ColumnID="Bin_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位名称" ColumnID="Bin_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="5dcb5112-4851-4ea9-a057-3bc4c306bb5b" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblRegisterBy94" RelationControl="RegisterBy94" TabIndex="41" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="ccf6f8d5-bd44-4bff-9fe8-96caa0cc18c9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="RegisterBy94" RelationControl="lblRegisterBy94" TabIndex="42" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterBy" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="75">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="627c2feb-15bc-42be-a1b8-1b462f78bcde" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblRegisterDate88" RelationControl="RegisterDate88" TabIndex="43" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="100">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="14af2f82-17bb-4b87-9d0f-ebf06e77f5de" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RegisterDate88" RelationControl="lblRegisterDate88" TabIndex="44" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterDate" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="100">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="3519e5fd-e2c5-414d-9c57-638303b1284e" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblBuyer127" RelationControl="Buyer127" TabIndex="45" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="125">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="28c124ba-9e0d-4248-a4c7-58b9e3fe0ea0" FormRefName="OperatorMainUIForm.ubfform" FormRefPath="OperatorMainUIForm.ubfform" FormRefProjectPath="D:\UFIDA\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Operator.OperatorUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink4" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Buyer127" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="Buyer127" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Buyer127" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Buyer127" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DeptID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DeptCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DeptName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OrgID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OrgCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OrgName" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="c17299ec-9446-4cfa-8566-24c8895d2166" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Buyer_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Buyer127" NameAttributeName="Name" NameFieldUIFieldID="Buyer_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RelationControl="lblBuyer127" TabIndex="46" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Buyer" UIViewID="DeductionRegister" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="498" Y="125">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Line ID="c3a9ba38-8c37-4027-b360-8bee2ae4b56d" DisplayName="状态" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="6" Height="20" Name="Line3" TabIndex="47" TabStop="True" Width="309" X="341" Y="150" />
+    <Label ID="c708c48c-8c4d-44ab-8c4b-c1d452fd8540" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblStatus67" RelationControl="Status67" TabIndex="48" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="175">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="c0542e3b-2868-46d4-b5b8-0a8835b55456" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum" EnumID="67d4c713-68bf-433b-a082-9c9cf81fa96c" GridHeight="1" GridWidth="1" GridX="6" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Status67" RelationControl="lblStatus67" TabIndex="49" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Status" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="175">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="31b1a22d-4db0-4706-91bd-cca711c3cf48" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="8" Height="20" IsNull="True" IsSequence="False" Name="lblDRStatus88" RelationControl="DRStatus88" TabIndex="50" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="200">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="0dc8c9e5-88fc-4a3e-9d28-86639e84ef79" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.DRStatusEnum" EnumID="af427c8c-84bf-485c-b43d-bd6e9b90985c" GridHeight="1" GridWidth="1" GridX="6" GridY="8" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DRStatus88" RelationControl="lblDRStatus88" TabIndex="51" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DRStatus" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="200">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="b230f707-c12f-4264-9dda-66f8c5072281" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="9" Height="20" IsNull="True" IsSequence="False" Name="lblLastDRDate149" RelationControl="LastDRDate149" TabIndex="52" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="225">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="55f7d0a6-8a1e-4543-984f-f149834ba076" DisplayFormat="8" Enabled="False" GridHeight="1" GridWidth="1" GridX="6" GridY="9" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="LastDRDate149" RelationControl="lblLastDRDate149" TabIndex="53" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="LastDRDate" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="225">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="70d9b2ed-4a12-45d6-80ab-80f1567f07cd" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblSumDRMoney82" RelationControl="SumDRMoney82" TabIndex="54" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="250">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TitleClick" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="4602ee85-2cc2-4e3e-a48b-6c1d519953c5" DisplayFormat="24.9" Enabled="False" GridHeight="1" GridWidth="1" GridX="6" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SumDRMoney82" RelationControl="lblSumDRMoney82" TabIndex="55" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SumDRMoney" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="250">
+      <Events />
+      <RelationControls />
+      <PrecisionBind BindType="UIField" UIFieldID="Currency_MoneyRound_Precision" UIViewID="DeductionRegister" />
+      <RoundRuleBind BindType="UIField" UIFieldID="Currency_MoneyRound_RoundType" UIViewID="DeductionRegister" />
+      <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_MoneyRound_RoundValue" UIViewID="DeductionRegister" />
+      <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="DeductionRegister" />
+    </NumberControl>
+    <Line ID="9b73dfe7-3e0a-4508-bf94-59ffdfb79405" DisplayName="备注" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="11" Height="20" Name="Line4" TabIndex="56" TabStop="True" Width="309" X="341" Y="275" />
+    <Label ID="9403edf4-bf24-4029-82be-2f50c7393587" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblMeno95" RelationControl="Meno95" TabIndex="57" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="300">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="ba7ca62f-9677-4884-a848-7865dbb6b476" DisplayFormat="2000" Enabled="True" GridHeight="3" GridWidth="1" GridX="6" GridY="12" Height="70" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Meno95" RelationControl="lblMeno95" TabIndex="58" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="300">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="a99af7d7-6245-4fec-856c-424535379099" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_Symbol100" RelationControl="Currency_Symbol100" TabIndex="59" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="d273f892-8a33-4a4c-b53f-d93ace9dfb99" DisplayFormat="10" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="Currency_Symbol100" RelationControl="lblCurrency_Symbol100" TabIndex="60" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_Symbol" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="0">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="b67e33c2-0b26-4353-934d-434699b9c4a3" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_MoneyRound_Precision86" RelationControl="Currency_MoneyRound_Precision86" TabIndex="61" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="f8b7d877-bafd-4c4e-ab02-6dd8581d19ed" DisplayFormat="10.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="Currency_MoneyRound_Precision86" RelationControl="lblCurrency_MoneyRound_Precision86" TabIndex="62" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_MoneyRound_Precision" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="25">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind3" />
+      <RoundRuleBind Name="RoundRuleBind3" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+      <CurrencyType Name="CurrencyType3" />
+    </NumberControl>
+    <Label ID="6004a3d2-5832-48d7-b772-0b6efe10759d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_MoneyRound_RoundType109" RelationControl="Currency_MoneyRound_RoundType109" TabIndex="63" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="9c486568-abfb-44d8-bfd4-439d9138b775" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="Currency_MoneyRound_RoundType109" RelationControl="lblCurrency_MoneyRound_RoundType109" TabIndex="64" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_MoneyRound_RoundType" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="50">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="62bebcf5-59d7-43fb-a6d8-a197bc0c1005" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency_MoneyRound_RoundValue118" RelationControl="Currency_MoneyRound_RoundValue118" TabIndex="65" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="4cf8424d-45e8-4022-b773-932e27b03f81" DisplayFormat="10.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Currency_MoneyRound_RoundValue118" RelationControl="lblCurrency_MoneyRound_RoundValue118" TabIndex="66" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency_MoneyRound_RoundValue" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="75">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind4" />
+      <RoundRuleBind Name="RoundRuleBind4" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+      <CurrencyType Name="CurrencyType4" />
+    </NumberControl>
+    <FlexFieldPicker ID="925304f8-6252-4502-84fb-9ac6c5b4960a" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="15" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="67" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="152" X="498" Y="375">
+      <Events />
+      <RelationControls />
+    </FlexFieldPicker>
+    <Label ID="29bc60aa-27f8-4915-97a4-2bab5968268a" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDocumentType_ApproveType43" RelationControl="DocumentType_ApproveType43" TabIndex="68" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="d623ad98-c409-4aa0-b05a-2558c0baaaae" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ApproveTypeEnum" EnumID="d4b6e1a9-d80d-4516-8316-4b1d436cd449" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DocumentType_ApproveType43" RelationControl="lblDocumentType_ApproveType43" TabIndex="69" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType_ApproveType" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="25">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="417c45a6-0c49-4bf9-bb1f-1724b9f98983" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDocumentType_ConfirmType52" RelationControl="DocumentType_ConfirmType52" TabIndex="70" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="e4e9bfb2-3316-4190-b436-626f64009aa0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ConfirmTypeEnum" EnumID="d232b8fb-1938-4ebe-a90c-41c911c0bc10" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocumentType_ConfirmType52" RelationControl="lblDocumentType_ConfirmType52" TabIndex="71" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType_ConfirmType" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="50">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+  </Card>
+  <Events />
+</View>

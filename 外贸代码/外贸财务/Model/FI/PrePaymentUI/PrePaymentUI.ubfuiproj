@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="59dbc5e2-ca4c-4656-ae5e-f42eda503869" name="PrePaymentUI" displayName="PrePaymentUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FI.PrePaymentUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="269cd991-da5a-4425-84eb-0d6cfd9d3226" name="FIBE" displayName="FIBE" description="" help="" componentid="daa708bc-fde6-441c-a362-cf5087c6d7b4" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FI.FIBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="694dfb4a-e733-48cd-acf9-f65930709fe8" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="d4c52f21-4000-4b77-868f-c6ffb360f594" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="7b32bb66-69ec-4521-a3f1-7eb8e90fcd19" name="APReferenceUI" displayName="APReferenceUI" description="" help="" componentid="bba055f2-9917-4447-8551-aff231367414" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.FI.Ref.APReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="eca54e7b-d29a-49b3-a7fa-04a18b0b2c2d" name="SequenceUI" displayName="SequenceUI" description="" help="" componentid="f663e7e5-cd93-43ac-af56-4ead76774953" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.Base.Sequence.SequenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="65f79fac-e04a-406f-a041-20df86526a07" name="PMBE" displayName="PMBE" description="" help="" componentid="2f0e19b5-1149-4a7a-8c25-3f6bd79b2ce5" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\App\UFIDA.U9.PM.PMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="eaf3a7e1-fc2a-4942-a357-6d953b2fb0c3" name="SupplierUI" displayName="SupplierUI" description="" help="" componentid="493cbbe9-979f-4607-a2d4-b4e409c79e84" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Supplier.SupplierUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="11d0696b-53dc-4cc4-a133-8165eeda4033" name="DepartmentUI" displayName="DepartmentUI" description="" help="" componentid="c35ffee1-7bc3-41fc-a51f-fb5f0dcdfae0" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Department.DepartmentUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="8fd7de2b-a676-48c4-a376-55b24eb129d7" name="PurchaseOrderUI" displayName="PurchaseOrderUI" description="" help="" componentid="1c089360-38ef-45ce-91c8-0fc6346141f5" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.PM.PurchaseOrderUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="a9fa07b5-d443-4bb1-a70d-da123a81c27d" name="OperatorUI" displayName="OperatorUI" description="" help="" componentid="7b57b553-0671-4319-9f13-f22c4e5ada23" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Operator.OperatorUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="b2757a92-5e59-49d7-a614-f46d7583da05" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="5b8d5697-ef7e-4a72-8d8d-8aa0d29d6418" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="8d8bca6f-3b21-4aea-9586-eb2b59f575c4" name="PrePaymentDocTypeUIModel.ubfuim" displayName="PrePaymentDocTypeUIModel.ubfuim" description="" help="" include="PrePaymentDocTypeUIModel.ubfuim" type="" />
+    <Item id="83e08678-aceb-455c-95ec-fe346fd6e0cb" name="PrePaymentUIModel.ubfuim" displayName="PrePaymentUIModel.ubfuim" description="" help="" include="PrePaymentUIModel.ubfuim" type="" />
+    <Item id="77ffd07c-b4e2-4c8e-8bdd-35bfbd7659cc" name="PrePaymentDocTypeUIForm.ubfform" displayName="PrePaymentDocTypeUIForm.ubfform" description="" help="" include="PrePaymentDocTypeUIForm.ubfform" type="" />
+    <Item id="7433a4b9-a088-483f-925f-8672455c3eda" name="PrePaymentDocTypeFind.ubfref" displayName="PrePaymentDocTypeFind.ubfref" description="" help="" include="PrePaymentDocTypeFind.ubfref" type="" />
+    <Item id="35b9a5e1-783e-4621-8759-4943e8d221b1" name="PrePaymentDocTypeRef.ubfref" displayName="PrePaymentDocTypeRef.ubfref" description="" help="" include="PrePaymentDocTypeRef.ubfref" type="" />
+    <Item id="33efaa7c-6420-47f5-af26-dfb13c6c1898" name="PrePaymentFind.ubfref" displayName="PrePaymentFind.ubfref" description="" help="" include="PrePaymentFind.ubfref" type="" />
+    <Item id="7b3c11f4-b3b1-4991-bcfd-94bd568c986a" name="PrePaymentUIForm.ubfform" displayName="PrePaymentUIForm.ubfform" description="" help="" include="PrePaymentUIForm.ubfform" type="" />
+    <Item id="9ff0ebe4-d4f8-43ea-bbdf-d755d6fd1b11" name="PrePayForPORef.ubfref" displayName="PrePayForPORef.ubfref" description="" help="" include="PrePayForPORef.ubfref" type="" />
+    <Item id="d85f6337-4a7a-40dd-97a6-b6ff4b5a8402" name="BatchPaymentForPOUIModel.ubfuim" displayName="BatchPaymentForPOUIModel.ubfuim" description="" help="" include="BatchPaymentForPOUIModel.ubfuim" type="" />
+    <Item id="d068bd79-b835-48f6-9a6a-3dd08b67263f" name="BatchPaymentForPOUIForm.ubfform" displayName="BatchPaymentForPOUIForm.ubfform" description="" help="" include="BatchPaymentForPOUIForm.ubfform" type="" />
+    <Item id="ea71f60d-356e-42e1-b278-465ed5c4206a" name="ShowBatchPrePaymentUIForm.ubfform" displayName="ShowBatchPrePaymentUIForm.ubfform" description="" help="" include="ShowBatchPrePaymentUIForm.ubfform" type="" />
+    <Item id="5e89038f-c898-4abe-8adb-674a8a2b4047" name="PrePayDeductionRegisterUIModel.ubfuim" displayName="PrePayDeductionRegisterUIModel.ubfuim" description="" help="" include="PrePayDeductionRegisterUIModel.ubfuim" type="" />
+    <Item id="aa761ebe-f6c7-492b-a0f1-e7a542de152c" name="PrePayDeductionRegisterUIForm.ubfform" displayName="PrePayDeductionRegisterUIForm.ubfform" description="" help="" include="PrePayDeductionRegisterUIForm.ubfform" type="" />
+    <Item id="ee41c21a-60bc-4568-9150-6f968b863601" name="DocStatusInfoUIForm.ubfform" displayName="DocStatusInfoUIForm.ubfform" description="" help="" include="DocStatusInfoUIForm.ubfform" type="" />
+    <Item id="4fff66f3-cd66-489c-8982-c1326971f9af" name="MoveMoneyUIModel.ubfuim" displayName="MoveMoneyUIModel.ubfuim" description="" help="" include="MoveMoneyUIModel.ubfuim" type="" />
+    <Item id="f0cf604b-62cf-41b8-ab72-0f8fa8bb6b1a" name="MoveMoneyUIForm.ubfform" displayName="MoveMoneyUIForm.ubfform" description="" help="" include="MoveMoneyUIForm.ubfform" type="" />
+    <Item id="d47b6dbe-b35d-47ff-ad29-dbc6753d1b92" name="RedFlushPrePayUIModel.ubfuim" displayName="RedFlushPrePayUIModel.ubfuim" description="" help="" include="RedFlushPrePayUIModel.ubfuim" type="" />
+    <Item id="903e23b3-de04-4c25-9b79-549739884e12" name="RedFlushPrePayUIForm.ubfform" displayName="RedFlushPrePayUIForm.ubfform" description="" help="" include="RedFlushPrePayUIForm.ubfform" type="" />
+    <Item id="9dee31e9-1dbe-427d-96a3-90c51108cb80" name="PrePayDocTypeForFlushRef.ubfref" displayName="PrePayDocTypeForFlushRef.ubfref" description="" help="" include="PrePayDocTypeForFlushRef.ubfref" type="" />
+  </ItemGroup>
+</Project>

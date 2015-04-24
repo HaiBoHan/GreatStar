@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="131acf95-aff4-44c5-986c-f62ea56cf8a3" name="ShipPlanListQry" displayName="ShipPlanListQry" description="" help="" QueryType="List" QueryURI="3659b22c-25f7-4c92-9aec-9b3b11caf09f" QuerySourceFullName="UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="d7ca8c3c-97e0-4f49-a21d-dac258f32822" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="25b54478-96ff-4f89-8ded-7b8c6e6f3983" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="23ef1c74-c561-4d14-9dac-6667bc5d41e7" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="f4a1582c-d01d-4ed0-9bb5-9a7a22c5f062" UIFormItemID="4f65cf80-a4df-4c2d-9b52-63d04987eac8" UIModelID="ee5dc9c8-6f10-49da-be60-dc11b43737a7" />
+  <FilterDefines>
+    <FilterDefine id="7200d141-deb3-463f-9fca-39a0e7cd7ead" name="DocNo" displayName="DocNo" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="c51f8b74-64cf-44e7-b475-154be2e0b0bc" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="fccb167d-34d4-4de8-b1bf-0b4124d99861" name="Client" displayName="Client" description="" help="" ParentName="" Alias="Client" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="73e15bf4-3961-4093-b873-32073101a19a" name="" displayName="" description="" help="" RefID="1a82443c-00ac-4b8c-b9c0-1e168fa0c4b2" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="Code" ReturnValueType="String" LeftExpression="Client" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="690aab56-ba5f-40f3-82b0-bdb0fc61f2fa" name="GetOrderOrg" displayName="GetOrderOrg" description="" help="" ParentName="" Alias="GetOrderOrg" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="3fce4f61-ff30-4202-8e21-647a91f8db35" name="DocNo" displayName="DocNo" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="b9e8c2ac-4cfa-4f12-8c29-2e6641c02929" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="c0a40470-f339-401a-819f-3b61d0ab4704" name="Client" displayName="Client" description="" help="" ParentName="" Alias="Client" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="2aa55154-7d5f-4b0d-922d-f5333896848d" name="BillNoItem" displayName="BillNoItem" description="" help="" ParentName="" Alias="BillNoItem" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="f3cc746a-3d2e-4fb9-a2f4-fba3c71ded27" name="DocNo" displayName="单据编号" description="" help="" />
+      <BasicFilter id="863c7e5d-36c0-409c-b3a1-86ed741e6146" name="BusinessDate" displayName="业务日期" description="" help="" />
+      <BasicFilter id="59da972d-b0c2-4e93-bc9c-a932ce0cf39b" name="Client" displayName="客户" description="" help="" />
+      <BasicFilter id="edbfd663-4b6d-4145-8e06-1139de95e8c4" name="GetOrderOrg" displayName="接单组织" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="86250ed8-6a25-4f64-bbde-914290cfd78a" name="DocNo" displayName="单据编号" description="" help="" />
+      <Column id="fdbf1c59-472a-4434-b5db-5f85409abb72" name="BusinessDate" displayName="业务日期" description="" help="" />
+      <Column id="090607f6-0f33-41f0-b8ca-dc06b98235dd" name="Client.Name" displayName="客户.名称" description="" help="" />
+      <Column id="41cfd1c9-8f7e-4a73-86ec-c158da5366b2" name="GetOrderOrg.Name" displayName="接单组织.名称" description="" help="" />
+      <Column id="0ef6da82-70c9-4c31-b78c-48d1e0fabdeb" name="OutwardNo" displayName="外运编号" description="" help="" />
+      <Column id="98e34916-f933-45c4-a3d1-536b10e46ae0" name="ShipPlanDate" displayName="出运日期" description="" help="" />
+      <Column id="9e69b790-54de-453d-a44d-9be305a7dd60" name="SaleMan.Name" displayName="业务员.名称" description="" help="" />
+      <Column id="68a7b0a3-bbc4-4232-a87d-9c5b803861d5" name="Department.Name" displayName="部门.名称" description="" help="" />
+      <Column id="f8c66017-169c-4be5-9120-ec3a98f8c932" name="SumBulk" displayName="总体积" description="" help="" />
+      <Column id="817e0971-a1cf-4cc8-b9ee-d546a87777ce" name="SumNumber" displayName="总件数" description="" help="" />
+      <Column id="f4e4b2c9-c479-4a02-a6b3-191469641777" name="SumGross" displayName="总毛量" description="" help="" />
+      <Column id="4870ffc6-d99b-4e2b-a2eb-52dff9f8182b" name="SumSuttle" displayName="总净重" description="" help="" />
+      <Column id="b8d00b3b-73ea-4032-9e1f-122c46c44f89" name="ExportPort.Name" displayName="出口口岸" description="" help="" />
+      <Column id="4381bae4-11b3-4483-ace5-57f0a166bef8" name="DestinationPort.Name" displayName="目的口岸" description="" help="" />
+      <Column id="3ef9f493-08d4-4033-a2ea-f056bb3f53b4" name="BillNoItem.BillNoItemID" displayName="发票号组" description="" help="" />
+      <Column id="a4b8b6a2-8bed-47e7-97cc-6895024eb534" name="Memo" displayName="备注" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="d1e925ff-76ab-4b46-817b-810a51d5ac47" name="DocNo" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

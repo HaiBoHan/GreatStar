@@ -1,0 +1,340 @@
+<View ID="f2512433-c1ca-41cf-9c1e-fc932562ea0b" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="预付款单单据类型" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="PrePaymentDocTypeUIForm" Namespace="UFIDA.U9.Cust.GS.FI.PrePaymentDocTypeUIModel" TabStop="False" TemplateCode="UI_SingleCard" TemplateType="CustomTemplate" UIModelID="1d242d27-8d5d-41d3-a433-8f3609e4d707" URI=".UI_单卡片WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Value" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers>
+    <Parameter IsProvider="True" Name="ID" UIFieldID="ID" UIViewID="PrePaymentDocType" />
+    <Parameter IsProvider="True" Name="Code" UIFieldID="Code" UIViewID="PrePaymentDocType" />
+    <Parameter IsProvider="True" Name="Name" UIFieldID="Name" UIViewID="PrePaymentDocType" />
+  </Providers>
+  <InParameters>
+    <Parameter DataType="" IsConsumer="True" IsPersoner="False" Name="ID" UIModelParameterName="" UIViewID="" />
+  </InParameters>
+  <Toolbar ID="bd57814e-e80f-42c5-bd14-087f811f0e50" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
+    <Button ID="8ec236ce-a36e-4019-ba48-a90fe326431f" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="a0aaded8-f8f8-47ed-94f3-d501a50d4dcd" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="34ce2043-422f-4b55-b757-e65a59bfa88a" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="171f812c-e2b7-4f52-b427-60c4bc4f5435" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="6d237809-a1f0-4275-9967-e73498fea71e" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="f031d995-2ac3-4a9f-9cb3-1c4de63b37e9" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="0b56a27a-07fb-4512-9c16-aa6ee2e247b7" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="183" Y="0" />
+    <Button ID="d5e2ce3d-5782-4c3a-97bb-c7e759e60504" AccessKey="[" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="9dfb0444-f51e-4c2c-8c6f-788479728e8f" AccessKey="," DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="3aaee98d-fa07-42e2-a897-c4c4398dbbdc" AccessKey="." DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="6a019188-445e-4029-b2c0-0509653322e5" AccessKey="]" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="296" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="ad9221fb-ecea-44bf-898b-66989ff2e262" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="6f0a4959-da1a-4807-9d78-38b7be978e53" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOk" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="54480b8b-9a1d-4da0-a4da-36881ba8df06" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnClose" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="3b077aba-d2fd-4dff-bb62-de0a90a27165" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="12" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="17" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card2" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="153" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="153" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="152" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column10" Type="Value" Width="152" />
+      <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+      <Row Fixed="True" Height="20" Name="Row1" />
+      <Row Fixed="True" Height="20" Name="Row2" />
+      <Row Fixed="True" Height="20" Name="Row3" />
+      <Row Fixed="True" Height="20" Name="Row4" />
+      <Row Fixed="True" Height="20" Name="Row5" />
+      <Row Fixed="True" Height="20" Name="Row6" />
+      <Row Fixed="True" Height="20" Name="Row7" />
+      <Row Fixed="True" Height="20" Name="Row8" />
+      <Row Fixed="True" Height="20" Name="Row9" />
+      <Row Fixed="True" Height="20" Name="Row10" />
+      <Row Fixed="True" Height="20" Name="Row11" />
+      <Row Fixed="True" Height="20" Name="Row12" />
+      <Row Fixed="True" Height="20" Name="Row13" />
+      <Row Fixed="True" Height="20" Name="Row14" />
+      <Row Fixed="True" Height="20" Name="Row15" />
+      <Row Fixed="False" Height="19" Name="Row16" />
+    </Rows>
+    <Label ID="d0a3f506-3689-4d80-81ff-57dc9eb8dea3" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID61" RelationControl="ID61" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="153" X="10" Y="0">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="1c1994ac-cc46-43a9-a0db-46897a9c5a2d" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID61" RelationControl="lblID61" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="PrePaymentDocType" Visible="False" Width="153" X="168" Y="0">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
+    </NumberControl>
+    <Label ID="bca972a6-1915-4d1d-9034-a9bd9c5b3f1f" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion58" RelationControl="SysVersion58" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="153" X="10" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="5da7eb27-31aa-4430-a4d3-f28293c4dc21" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion58" RelationControl="lblSysVersion58" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="PrePaymentDocType" Visible="False" Width="153" X="168" Y="25">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind1" />
+      <RoundRuleBind Name="RoundRuleBind1" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+      <CurrencyType Name="CurrencyType1" />
+    </NumberControl>
+    <Line ID="37238d42-7e6f-4236-bca7-b96839ffbbdd" DisplayName="基本" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="0" Height="20" Name="Line0" TabIndex="4" TabStop="True" Width="311" X="10" Y="0" />
+    <Line ID="356e9f47-2edc-49c1-a146-179e61b65584" DisplayName="流程" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="7" Height="20" Name="Line1" TabIndex="5" TabStop="True" Width="311" X="10" Y="175" />
+    <Line ID="13bf8823-e6b6-488f-b5e9-453005ac8842" DisplayName="编号" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="11" Height="20" Name="Line2" TabIndex="6" TabStop="True" Width="311" X="10" Y="275" />
+    <Line ID="614c283f-b6f2-4195-8fb0-e4f0495461d8" DisplayName="有效性" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="0" Height="20" Name="Line3" TabIndex="7" TabStop="True" Width="309" X="341" Y="0" />
+    <Label ID="14dd6339-1261-4802-af6d-0cd30d3dd7ce" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblCode64" RelationControl="Code64" TabIndex="8" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="41f9f775-246b-4456-a6c6-383873b42d5f" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="Code64" RelationControl="lblCode64" TabIndex="9" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Code" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="25">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="7c1f5072-30bd-4b28-86e9-7891bbf0864d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblName103" RelationControl="Name103" TabIndex="10" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="042fe14f-3b05-4788-8aa6-86090728dc09" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Name103" RelationControl="lblName103" TabIndex="11" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Name" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="50">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="1866e79d-b819-41fa-a10c-f784dc381222" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblShortName58" RelationControl="ShortName58" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="9a371324-b41f-4bbf-9d1e-fdb1823b77cb" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="ShortName58" RelationControl="lblShortName58" TabIndex="13" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="ShortName" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="75">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="5cb0a33a-f75c-4b50-91ac-991d52e8d561" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblDescription64" RelationControl="Description64" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="100">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="7a86f30e-1218-4b9d-b887-01e4a1afab91" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Description64" RelationControl="lblDescription64" TabIndex="15" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Description" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="100">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="752efed7-8895-471b-b594-b7206576e384" DisplayName="" DisplayNameIndexStr="2" DisplayNameResourceID="00000000-0000-0000-0000-000000000000" DisplaySrcUIFieldID="Effective_IsEffective" DisplaySrcUIViewID="PrePaymentDocType" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblEffective_IsEffective103" RelationControl="Effective_IsEffective103" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <CheckBox ID="0ac71fc1-f423-427c-9ad1-d5f4a98a61f2" DisplayFormat="1" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Effective_IsEffective103" RelationControl="lblEffective_IsEffective103" TabIndex="17" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Effective_IsEffective" UIViewID="PrePaymentDocType" Visible="True" Width="152" X="498" Y="25">
+      <Events />
+      <RelationControls />
+    </CheckBox>
+    <Label ID="9b69795a-7293-4700-bcd5-a5c931a3c9c5" DisplayName="" DisplayNameIndexStr="5" DisplayNameResourceID="00000000-0000-0000-0000-000000000000" DisplaySrcUIFieldID="Effective_EffectiveDate" DisplaySrcUIViewID="PrePaymentDocType" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblEffective_EffectiveDate116" RelationControl="Effective_EffectiveDate116" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="e7b4f439-6aa0-4cdd-9ae5-26af3cf1aef9" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Effective_EffectiveDate116" RelationControl="lblEffective_EffectiveDate116" TabIndex="19" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Effective_EffectiveDate" UIViewID="PrePaymentDocType" Visible="True" Width="152" X="498" Y="50">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="27e77751-8fa6-4bd9-9e21-54f3c88b0f87" DisplayName="" DisplayNameIndexStr="5" DisplayNameResourceID="00000000-0000-0000-0000-000000000000" DisplaySrcUIFieldID="Effective_DisableDate" DisplaySrcUIViewID="PrePaymentDocType" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblEffective_DisableDate103" RelationControl="Effective_DisableDate103" TabIndex="20" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="a7cfa26f-b4ee-4c94-963b-a7f0a77fc2e2" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Effective_DisableDate103" RelationControl="lblEffective_DisableDate103" TabIndex="21" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Effective_DisableDate" UIViewID="PrePaymentDocType" Visible="True" Width="152" X="498" Y="75">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="1c0b7dea-863d-4dcd-abe8-55c601564556" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblBusType64" RelationControl="BusType64" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="125">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="fa289229-aa1b-4c97-aa18-3e45fc7aff0e" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FIBusTypeEnum" EnumID="d18f74e2-24a5-4de9-8d79-ab372286e481" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="BusType64" RelationControl="lblBusType64" TabIndex="23" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="125">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="e9c15c4f-4bb8-4061-8e5e-4ca68d33ddc0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblPayReqDocType172" RelationControl="PayReqDocType172" TabIndex="24" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="150">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="0033f54f-8d49-47fa-8b38-8365488f3b26" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="PayReqDocType_Code" CodeFieldUIViewID="PrePaymentDocType" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PayReqDocType172" NameAttributeName="Name" NameFieldUIFieldID="PayReqDocType_Name" NameFieldUIViewID="PrePaymentDocType" PkeyField="ID" RefType="be71e814-ad2d-48d7-81dc-474dc00f535d" RelationControl="lblPayReqDocType172" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PayReqDocType" UIViewID="PrePaymentDocType" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="150">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="业务类型" ColumnID="BusinessType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="确认方式" ColumnID="ConfirmType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编号方式" ColumnID="DocHeaderSequenceStyle" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码方案" ColumnID="DocHeaderSequence_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="单据类型基类自动生成编号是否可改" ColumnID="IsDocNoEditable" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="请款用途" ColumnID="ReqFundUse" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="预付款类型" ColumnID="PrePayType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="结算中心自动确认" ColumnID="IsAutoConfirm" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DocDate" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="59e09c75-3da0-4055-817c-3e8f6887f9e7" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="8" Height="20" IsNull="True" IsSequence="False" Name="lblIsCreatedByPush73" RelationControl="IsCreatedByPush73" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="200">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <CheckBox ID="6baeeb0e-0451-4448-81eb-94040aa7ceb5" DisplayFormat="1" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="8" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="IsCreatedByPush73" RelationControl="lblIsCreatedByPush73" TabIndex="27" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="IsCreatedByPush" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="200">
+      <Events />
+      <RelationControls />
+    </CheckBox>
+    <Label ID="b3c03856-08b6-4c6b-b699-4bb8976c2618" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblApproveType97" RelationControl="ApproveType97" TabIndex="28" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="250">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="ef71eb09-02c6-4a50-9148-86c72b7b1369" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ApproveTypeEnum" EnumID="d4b6e1a9-d80d-4516-8316-4b1d436cd449" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApproveType97" RelationControl="lblApproveType97" TabIndex="29" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApproveType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="250">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="6df58072-059b-4b83-a8ca-0efaa48be94f" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="9" Height="20" IsNull="True" IsSequence="False" Name="lblConfirmType79" RelationControl="ConfirmType79" TabIndex="30" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="225">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="07cb6272-8e16-455e-b052-15355af6aff7" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ConfirmTypeEnum" EnumID="d232b8fb-1938-4ebe-a90c-41c911c0bc10" GridHeight="1" GridWidth="1" GridX="2" GridY="9" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ConfirmType79" RelationControl="lblConfirmType79" TabIndex="31" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ConfirmType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="225">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="4e3e1dcb-6456-4be4-ad5f-83de645d06e9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblDocHeaderSequenceStyle55" RelationControl="DocHeaderSequenceStyle55" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="300">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="c5852592-83bc-4780-924f-8f81a540fa06" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.DocHeaderSequenceStyleEnum" EnumID="dcf65e0a-1554-447b-b4c6-b3ec2951d965" GridHeight="1" GridWidth="1" GridX="2" GridY="12" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocHeaderSequenceStyle55" RelationControl="lblDocHeaderSequenceStyle55" TabIndex="33" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocHeaderSequenceStyle" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="300">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="aaa47e15-4f0c-44fd-bd0e-32dca01c9fb9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="13" Height="20" IsNull="True" IsSequence="False" Name="lblDocHeaderSequence52" RelationControl="DocHeaderSequence52" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="325">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="922bef2b-1cd8-4d51-9413-82d72bebcee7" FormRefName="SequenceMainUIForm.ubfform" FormRefPath="SequenceMainUIForm.ubfform" FormRefProjectPath="D:\UFIDA\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.Base.Sequence.SequenceUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink0" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="DocHeaderSequence52" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EntityFullName" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="DocHeaderSequence52" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="DocHeaderSequence52" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="DocHeaderSequence52" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EntityFullName" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="1d28f318-f926-483f-929a-370b95525f9e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DocHeaderSequence_Code" CodeFieldUIViewID="PrePaymentDocType" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="13" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DocHeaderSequence52" NameAttributeName="Name" NameFieldUIFieldID="DocHeaderSequence_Name" NameFieldUIViewID="PrePaymentDocType" PkeyField="ID" RefType="49cbe5e1-ec15-48b7-9368-04ea95e1f948" RelationControl="lblDocHeaderSequence52" TabIndex="35" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocHeaderSequence" UIViewID="PrePaymentDocType" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="325">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="" ControlID="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment" ControlProperty="Value" ControlType="" Name="EntityFullName" ParameterBindType="Bind2Const" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+  </Card>
+  <Events />
+</View>

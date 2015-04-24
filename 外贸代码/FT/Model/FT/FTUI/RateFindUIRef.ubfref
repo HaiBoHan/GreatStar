@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="20c7184a-cbe8-456a-a04a-7009ff19ae3f" name="RateFindUIRef" displayName="成本预测汇率单头" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.FTUI.RateFindUIRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="e9344693-126a-49f9-848d-8054174afed7" name="cRef" displayName="cRef" description="" help="成本预测汇率单头" refEntityId="5ddd5e50-d6ff-47f6-a31f-aedd0f9dc97e" refEntityName="UFIDA.U9.Cust.GS.FT.RateBE.RateHead" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="19a7e091-1bb3-496f-9251-6f77e47597a3" name="ID" displayName="ID" description="" help="成本预测汇率单头.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.RateBE.RateHead:ID" displayNameIndexStr="2" />
+        <RefField id="c783c795-22a7-43e4-872d-9abefa95e281" name="IsCurrency_Name" displayName="原币" description="" help="币种.基本.名称" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.RateBE.RateHead:IsCurrency.Name" displayNameIndexStr="" />
+        <RefField id="f0f2f34d-e87e-41d4-a178-18b873349761" name="NotCurrency_Name" displayName="目标币" description="" help="币种.基本.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FT.RateBE.RateHead:NotCurrency.Name" displayNameIndexStr="" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

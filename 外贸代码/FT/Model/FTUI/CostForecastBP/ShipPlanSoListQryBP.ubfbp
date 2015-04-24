@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="45b10a17-1a00-426a-a3dc-54bb8d4e5d25" name="ShipPlanSoListQryBP" displayName="ShipPlanSoListQryBP" description="" help="" type="BP" assemblyName="CostForecastBP">
+  <Namespace id="d1c37a88-dcae-4ca6-a9fe-420118562d0f" name="ShipPlanSoListQryBP" displayName="ShipPlanSoListQryBP" description="" help="">
+    <PropertyType id="3153713d-c282-47cb-b3d7-700b4653d166" name="ShipPlanSoListQryDTO" displayName="ShipPlanSoListQryDTO" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="True" isPersistence="False" />
+    <Operation id="5023de27-ac7d-445c-bf88-45b011db1a7f" name="QueryBP" displayName="查询BP" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="3153713d-c282-47cb-b3d7-700b4653d166" isService="False" isDefault="False" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Stereotypes>
+        <Stereotype id="d3b8935b-12bb-496d-96f3-2b629c5b283e" name="QueryBP" displayName="查询BP版型" description="" help="" template="templates\QueryBP.tpl" classify="" isForRuntime="False" />
+      </Stereotypes>
+      <Groups>
+        <Group id="eee3a785-7f82-4518-8e62-d00cd214c3b1" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="aaf4b039-865b-4381-82c2-48862409df5e" name="QryInParameter" displayName="查询入口参数" description="" help="查询BP.Misc.查询入口参数" dataTypeID="272ecd00-8140-4e22-a5a7-ad7119590fd6" isKey="False" defaultValue="" length="0" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="dcb10f5e-9097-43cc-a9a1-a059b41220b1" name="Impement" displayName="缺省实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="00000000-0000-0000-0000-000000000000" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+  </Namespace>
+</Component>

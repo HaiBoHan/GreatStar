@@ -1,0 +1,347 @@
+<View ID="09954ca9-8b2b-4ce4-b8c9-c1c48c242acf" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="付款通知单拉单查询界面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="10" Height="410" LayoutType="GridBag" Name="QueryConditionUIForm" Namespace="UFIDA.U9.Cust.GS.FI.BatchCreatePaymentUIModel" TabStop="False" TemplateCode="UI_ModalFormThreeColumns" TemplateType="CustomTemplate" UIModelID="450f98c6-823a-4648-aa30-56df66655876" URI=".UI_弹出Form_3列WebPart" ViewID="4983" Width="730" X="10" Y="10">
+  <Columns>
+    <Column Fixed="True" Name="Column0" Type="Title" Width="710" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="355" Name="Row0" />
+    <Row Fixed="True" Height="25" Name="Row1" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="8def16a6-ecd6-4473-be5a-864cad40edd5" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="0" GridRowCount="14" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="0" Height="355" LayoutType="GridBag" Name="Card0" TabIndex="1" TabStop="False" Width="710" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="90" />
+      <Column Fixed="True" Name="Column1" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="100" />
+      <Column Fixed="True" Name="Column3" Width="20" />
+      <Column Fixed="True" Name="Column4" Width="100" />
+      <Column Fixed="True" Name="Column5" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Width="20" />
+      <Column Fixed="True" Name="Column8" Width="100" />
+      <Column Fixed="True" Name="Column9" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="100" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+      <Row Fixed="True" Height="20" Name="Row1" />
+      <Row Fixed="True" Height="20" Name="Row2" />
+      <Row Fixed="True" Height="20" Name="Row3" />
+      <Row Fixed="True" Height="20" Name="Row4" />
+      <Row Fixed="True" Height="20" Name="Row5" />
+      <Row Fixed="True" Height="20" Name="Row6" />
+      <Row Fixed="True" Height="20" Name="Row7" />
+      <Row Fixed="True" Height="20" Name="Row8" />
+      <Row Fixed="True" Height="20" Name="Row9" />
+      <Row Fixed="True" Height="20" Name="Row10" />
+      <Row Fixed="True" Height="20" Name="Row11" />
+      <Row Fixed="True" Height="20" Name="Row12" />
+      <Row Fixed="False" Height="20" Name="Row13" />
+    </Rows>
+    <Line ID="536f3f0a-716a-45c6-a410-37c08d92487f" DisplayName="来源信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="0" Height="20" Name="Line0" TabIndex="0" TabStop="True" Width="200" />
+    <Label ID="49af645f-fd74-4415-ad71-c8b12b5a3a2a" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblSrcDocNoFrom68" RelationControl="SrcDocNoFrom68" TabIndex="1" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="7db8ec68-d494-457c-938e-c68d4132cbe2" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SrcDocNoFrom68" RelationControl="lblSrcDocNoFrom68" TabIndex="2" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcDocNoFrom" UIViewID="QueryConditionView" Visible="True" Width="100" X="100" Y="25">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="7398a1a4-1785-4991-9a45-a47ab7671aa5" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblSrcDocNoTo86" RelationControl="SrcDocNoTo86" TabIndex="3" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="03d41b2b-8f8f-4368-9278-1290a675d6e7" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SrcDocNoTo86" RelationControl="lblSrcDocNoTo86" TabIndex="4" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcDocNoTo" UIViewID="QueryConditionView" Visible="True" Width="100" X="100" Y="50">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="7a021d14-7031-4c1f-a0d7-3ec9d053b499" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblPODocNo92" RelationControl="PODocNo92" TabIndex="5" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="75">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="eb153fb7-c8ca-4df1-b222-37c17b9ef151" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="PODocNo92" RelationControl="lblPODocNo92" TabIndex="6" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="PODocNo" UIViewID="QueryConditionView" Visible="True" Width="100" X="100" Y="75">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="2ebb8c7c-1e12-425f-afd1-04fdb3eeaa35" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblPODocNoTo50" RelationControl="PODocNoTo50" TabIndex="7" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="100">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="df44d79b-383c-4f12-aa60-bd64e36f9e80" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="PODocNoTo50" RelationControl="lblPODocNoTo50" TabIndex="8" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="PODocNoTo" UIViewID="QueryConditionView" Visible="True" Width="100" X="100" Y="100">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="3962ba00-8178-403c-a6ea-f5b14aff5d61" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblDateFrom68" RelationControl="DateFrom68" TabIndex="9" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="125">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="bbaaffd9-36d0-4b02-9a26-3be3377e61ac" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DateFrom68" RelationControl="lblDateFrom68" TabIndex="10" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DateFrom" UIViewID="QueryConditionView" Visible="True" Width="100" X="100" Y="125">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="5f844887-1327-49ef-813c-4c3947d7d39a" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblDateTo101" RelationControl="DateTo101" TabIndex="11" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="150">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="80b6328b-9bc7-49db-bb8b-9973840b7c4d" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DateTo101" RelationControl="lblDateTo101" TabIndex="12" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DateTo" UIViewID="QueryConditionView" Visible="True" Width="100" X="100" Y="150">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="44e2a7aa-e00b-4f64-9bae-2b9e4bfdf785" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblInvocieGroup104" RelationControl="InvocieGroup104" TabIndex="13" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="175">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="61adb859-1f03-4bb7-bf62-62a3000b7417" CodeAttributeName="BillNoItemID" CodeField="BillNoItemID" CodeFieldUIFieldID="InvocieGroup_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="InvocieGroup104" NameAttributeName="BillNoItemID" NameFieldUIFieldID="InvocieGroup_Code" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="f0431e4b-63be-4b7c-b4d2-ba870842dca9" RelationControl="lblInvocieGroup104" TabIndex="14" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="InvocieGroup" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="100" Y="175">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="发票号组" ColumnID="BillNoItemID" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="BillNoItemID" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Line ID="5c79c595-a0a0-43e5-8ccf-81dd007f1998" DisplayName="交易" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="0" GridY="8" Height="20" Name="Line1" TabIndex="15" TabStop="True" Width="200" X="0" Y="200" />
+    <Label ID="564e1e78-07c3-49ea-8cc2-ec5b4015289f" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="9" Height="20" IsNull="True" IsSequence="False" Name="lblCurrency104" RelationControl="Currency104" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="225">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="9fd022d9-8c73-4b7f-a90d-2f29ea6e5020" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Currency_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="9" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Currency104" NameAttributeName="Name" NameFieldUIFieldID="Currency_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" RelationControl="lblCurrency104" TabIndex="17" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Currency" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="100" Y="225">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ISO代码" ColumnID="ISOCode" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="货币符号" ColumnID="Symbol" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="422a26ca-6bdd-4807-a90c-bfbe69492aae" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblOperators47" RelationControl="Operators47" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="250">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="850fcef4-146d-4067-b852-022e9aeb8913" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Operators_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Operators47" NameAttributeName="Name" NameFieldUIFieldID="Operators_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RelationControl="lblOperators47" TabIndex="19" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Operators" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="100" Y="250">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="7a8158db-d857-47ed-a813-48efa0f16254" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblProject104" RelationControl="Project104" TabIndex="20" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="275">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="3b6624b3-3642-44a5-82e2-c5735651052b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Project_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="11" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Project104" NameAttributeName="Name" NameFieldUIFieldID="Project_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="6d9ff12b-86a7-4d8b-b6f8-eaca0d5d83b7" RelationControl="lblProject104" TabIndex="21" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Project" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="100" Y="275">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="项目名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="OrgID" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="OrgID" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DocDateTime" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Line ID="31ae4edc-c34b-4011-899e-bf18675b375f" DisplayName="供应商" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="0" Height="20" Name="Line2" TabIndex="22" TabStop="True" Width="210" X="220" Y="0" />
+    <Label ID="f09da798-e2d4-4082-849c-aa7bc3c4de55" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblSupplier162" RelationControl="Supplier162" TabIndex="23" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="220" Y="50">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="c70f5139-1059-49a2-8a75-5335f29c5c70" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier162" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" RelationControl="lblSupplier162" TabIndex="24" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Supplier" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="330" Y="50">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="分类" ColumnID="Category_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="7fbd7675-0ae9-4a9e-8448-b8154f64829b" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblPayOrg122" RelationControl="PayOrg122" TabIndex="25" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="220" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="8237bbda-b43e-4db4-9d81-b267db787ab4" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="PayOrg_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="PayOrg122" NameAttributeName="Name" NameFieldUIFieldID="PayOrg_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="038046a3-cfb5-4cea-9af1-c0c5195fe2aa" RelationControl="lblPayOrg122" TabIndex="26" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PayOrg" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="330" Y="25">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="组织形态" ColumnID="OrgClassify" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime1" ParameterBindType="Bind2Context" />
+        <Parameter ContextID="DateTime" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="DateTime2" ParameterBindType="Bind2Context" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Line ID="4758fae6-88e7-442f-8595-ecb0aae3151e" DisplayName="料品" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="3" Height="20" Name="Line3" TabIndex="27" TabStop="True" Width="210" X="220" Y="75" />
+    <Label ID="1a5513e5-9018-4ce8-a28b-5819413498e6" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblItem106" RelationControl="Item106" TabIndex="28" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="220" Y="100">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="1650c96a-820d-4c17-b816-1579a0152143" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Item_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Item106" NameAttributeName="Name" NameFieldUIFieldID="Item_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" RelationControl="lblItem106" TabIndex="29" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Item" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="330" Y="100">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="e46ab3a7-cded-42b8-8461-89d0de9c350f" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblItemCate112" RelationControl="ItemCate112" TabIndex="30" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="220" Y="125">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="a039aa3f-3f5f-4e77-9c8d-35787cf41b2b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemCate_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ItemCate112" NameAttributeName="Name" NameFieldUIFieldID="ItemCate_Name" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="337436b5-2d13-49b2-9520-43cea36f177a" RelationControl="lblItemCate112" TabIndex="31" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ItemCate" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="330" Y="125">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="3b6c4c24-65b9-4813-9888-a64c8dc1eca5" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblLot109" RelationControl="Lot109" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="220" Y="150">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="b7b5576f-c659-4ddc-865f-01dc44af7a49" CodeAttributeName="LotCode" CodeField="LotCode" CodeFieldUIFieldID="Lot_Code" CodeFieldUIViewID="QueryConditionView" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Lot109" NameAttributeName="LotCode" NameFieldUIFieldID="Lot_Code" NameFieldUIViewID="QueryConditionView" PkeyField="ID" RefType="43feea30-6b3a-4295-bd78-75f8401adf51" RelationControl="lblLot109" TabIndex="33" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Lot" UIViewID="QueryConditionView" Visible="True" Width="100" WindowHeight="408" WindowWidth="580" X="330" Y="150">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="批号" ColumnID="LotCode" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="ItemCode" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="ItemName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="生效日期" ColumnID="EffectiveDatetime" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="失效日期" ColumnID="InvalidTime" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="LotCode" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="88d027f8-c75f-48a3-a8d0-94953f46839e" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID103" RelationControl="ID103" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="100" X="220" Y="175">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="33bf2f7b-83e3-4aa5-b262-e07b2caaf1ec" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID103" RelationControl="lblID103" TabIndex="35" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="QueryConditionView" Visible="False" Width="100" X="330" Y="175">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
+    </NumberControl>
+    <Label ID="49908a08-1f2e-4046-a1bd-8965af68cb1d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion46" RelationControl="SysVersion46" TabIndex="36" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="100" X="220" Y="200">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="8613054e-d70f-49ce-856d-36355e4f4c85" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion46" RelationControl="lblSysVersion46" TabIndex="37" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="QueryConditionView" Visible="False" Width="100" X="330" Y="200">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind1" />
+      <RoundRuleBind Name="RoundRuleBind1" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+      <CurrencyType Name="CurrencyType1" />
+    </NumberControl>
+  </Card>
+  <Card ID="1ca83480-2755-48d1-bfe0-0594a04f7021" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="0" GridColumnCount="13" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="10" GridRowCount="1" GridRowSpace="0" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="25" LayoutType="GridBag" Name="Card1" TabIndex="2" TabStop="False" Width="710" X="10" Y="375">
+    <Columns>
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column0" Type="Value" Width="60" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="30" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Width="10" />
+      <Column Fixed="True" Name="Column12" Width="80" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="37b73779-2554-4f9d-ac44-40dfc260983b" AccessKey="Z" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="OnBtnClose" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" Name="BtnClose" TabIndex="6" TabStop="True" Width="80" X="610" Y="0">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="a6abc18f-c2b0-4d0f-abed-1fc51df79f8d" AccessKey="" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="OnBtnOk" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" Name="BtnOk" TabIndex="5" TabStop="True" Width="80" X="520" Y="0">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Card>
+  <Events />
+</View>

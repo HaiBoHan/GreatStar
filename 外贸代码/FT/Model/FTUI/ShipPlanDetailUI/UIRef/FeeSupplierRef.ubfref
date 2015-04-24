@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="0ead0d38-0da0-4e9e-9923-5e2e5a4726a0" name="FeeSupplierRef" displayName="供应商" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.ShipPlanDetailUI.FeeSupplierRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="736f8517-4647-4634-8f0e-2d9eef60d214" name="cRef" displayName="cRef" description="" help="供应商" refEntityId="ac3510e5-3337-46d4-b41c-46ac40f343e1" refEntityName="UFIDA.U9.CBO.SCM.Supplier.Supplier" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="99cc6877-994e-42c2-8f40-85a8e3df58e6" name="ID" displayName="ID" description="" help="供应商.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:ID" displayNameIndexStr="2" />
+        <RefField id="8caab775-d008-4dd9-ad55-6ccd287755fe" name="Code" displayName="编码" description="" help="供应商.供应商.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Code" displayNameIndexStr="2" />
+        <RefField id="629524c2-69eb-40c2-8fed-8a558020cea2" name="Name" displayName="名称" description="" help="供应商.供应商.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Name" displayNameIndexStr="2" />
+        <RefField id="86b6c2b7-e095-4a89-b4e8-2ebec95c797c" name="Description" displayName="描述" description="" help="供应商.供应商.描述" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="129" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Description" displayNameIndexStr="2" />
+        <RefField id="f178ebf6-54ba-4859-90b9-bcb22b8320eb" name="Category_Code" displayName="供应商分类编码" description="" help="供应商分类.基本.编码" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Category.Code" displayNameIndexStr="" />
+        <RefField id="299e7c61-0efc-47d4-a171-264e9a31742b" name="Category_Name" displayName="供应商分类名称" description="" help="供应商分类.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Category.Name" displayNameIndexStr="" />
+        <RefField id="65df0876-c10c-44f8-b5e0-c2a9e2da2348" name="Territory_Code" displayName="地区编码" description="" help="地区.地区.编码" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Territory.Code" displayNameIndexStr="" />
+        <RefField id="98e72679-72a1-4adf-832d-33868d73afc9" name="Territory_Name" displayName="地区名称" description="" help="地区.地区.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:Territory.Name" displayNameIndexStr="" />
+        <RefField id="44dc5e7d-7b38-4156-8044-701191b38fa3" name="TaxSchedule_ID" displayName="税组合ID" description="" help="税组合.Key.ID" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:TaxSchedule.ID" displayNameIndexStr="" />
+        <RefField id="5c75dd83-2ec1-4c91-b95c-0b53ced1a879" name="TaxSchedule_Code" displayName="税组合编码" description="" help="税组合.Misc.编码" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:TaxSchedule.Code" displayNameIndexStr="" />
+        <RefField id="22aa1041-358a-412d-8f13-7b70f7dc8081" name="TaxSchedule_Name" displayName="税组合名称" description="" help="税组合.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.SCM.Supplier.Supplier:TaxSchedule.Name" displayNameIndexStr="" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="efbfcdce-a460-4a19-8104-602365057993" name="CostForecastBP" displayName="CostForecastBP" description="" help="" type="BP" assemblyName="CostForecastBP" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="ec3ab5d7-4b6a-4d98-9878-63da4d91ef00" name="QueryCaseBP" displayName="QueryCaseBP" description="" help="" componentid="7f4facd1-d9e9-4c3f-a210-c482d3d9cd38" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Query.QueryCaseBP.MetaData.dll" type="BP" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="5f4cfb2d-be26-41af-b12b-7162da5999d8" name="ShipPlanSoListQryBP.ubfbp" displayName="ShipPlanSoListQryBP.ubfbp" description="" help="" include="ShipPlanSoListQryBP.ubfbp" type="BE" />
+  </ItemGroup>
+</Project>

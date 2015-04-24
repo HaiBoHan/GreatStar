@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="5068f766-f2ed-4345-a666-478a071eba74" name="CostForecastUI" displayName="CostForecastUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.CostForecastUI" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="7d2c6e21-ab10-41a4-882f-b900204abb4d" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="72bcc09c-7267-4f52-9676-1eb6501495a0" name="SMBE" displayName="SMBE" description="" help="" componentid="c901c367-9f35-425c-812e-9a9966cb21a3" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="4c3762c7-4174-42e0-928a-7704c74b42d5" name="FTBP" displayName="FTBP" description="" help="" componentid="64c2a57c-cf4b-420c-a635-34c21f79ca06" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBP.MetaData.dll" type="BP" isRuntime="True" />
+    <Import id="bf95c9d5-7c8f-4416-8ecf-69b98c26a0ea" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="15f263e6-290d-4a9d-8d54-d371fea18c8c" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="f2e2f3a6-c450-4cd6-8924-dfd01391cd84" name="SOUI" displayName="SOUI" description="" help="" componentid="4a9af9fc-24bc-4f86-943b-e064d04c8976" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.SD.SOUI.MetaData.dll" type="UI" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="bce12d72-8787-4532-ab4b-35350edc7fee" name="FTCostSOBListUIModel.ubfuim" displayName="FTCostSOBListUIModel.ubfuim" description="" help="" include="FTCostSOBListUIModel.ubfuim" type="" />
+    <Item id="016afe7d-92d8-4a35-bea3-dd68c82567b9" name="FTCostSOBListUIForm.ubfform" displayName="FTCostSOBListUIForm.ubfform" description="" help="" include="FTCostSOBListUIForm.ubfform" type="" />
+    <Item id="47c72a37-c4b3-481f-9316-57e1b2014e61" name="CostForecastBListUIModel.ubfuim" displayName="CostForecastBListUIModel.ubfuim" description="" help="" include="CostForecastBListUIModel.ubfuim" type="" />
+    <Item id="47049855-74ab-4422-a399-4ebae1f67a04" name="CostForecastBListUIForm.ubfform" displayName="CostForecastBListUIForm.ubfform" description="" help="" include="CostForecastBListUIForm.ubfform" type="" />
+    <Item id="9e7ef443-ab77-447b-9ac5-69ad7549757f" name="ShipCostForecastBListUIModel.ubfuim" displayName="ShipCostForecastBListUIModel.ubfuim" description="" help="" include="ShipCostForecastBListUIModel.ubfuim" type="" />
+    <Item id="5effdb29-7c0d-4158-9ee1-f5b4255c774a" name="ShipCostForecastBListUIForm.ubfform" displayName="ShipCostForecastBListUIForm.ubfform" description="" help="" include="ShipCostForecastBListUIForm.ubfform" type="" />
+    <Item id="6a054c76-671d-4534-96d8-c3b9e48d50d7" name="ShipPlanForecastBListUIModel.ubfuim" displayName="ShipPlanForecastBListUIModel.ubfuim" description="" help="" include="ShipPlanForecastBListUIModel.ubfuim" type="" />
+    <Item id="8d1f596b-c743-44a5-99bd-78fb34935d20" name="ShipPlanForecastBListUIForm.ubfform" displayName="ShipPlanForecastBListUIForm.ubfform" description="" help="" include="ShipPlanForecastBListUIForm.ubfform" type="" />
+    <Item id="893faa85-c04e-4ad1-95da-eaa59117b25b" name="CostForecastDetailUIModel.ubfuim" displayName="CostForecastDetailUIModel.ubfuim" description="" help="" include="CostForecastDetailUIModel.ubfuim" type="" />
+    <Item id="82bcec3b-630c-43de-ad2e-3236eba4ca54" name="CostForecastDetailUIForm.ubfform" displayName="CostForecastDetailUIForm.ubfform" description="" help="" include="CostForecastDetailUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>

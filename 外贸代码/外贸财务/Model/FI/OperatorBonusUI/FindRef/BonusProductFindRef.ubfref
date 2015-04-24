@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="a025947e-95f9-44fc-9c92-54069032b856" name="BonusProductFindRef" displayName="产品采购业务员奖金" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FI.OperatorBonusUI.BonusProductFindRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="61d192b7-53a9-4950-a662-2522db93e675" name="cRef" displayName="cRef" description="" help="产品采购业务员奖金" refEntityId="130005a6-2c73-4876-be3e-cc3177dd0f65" refEntityName="UFIDA.U9.Cust.GS.FI.BonusProductDocBE.BonusProductDoc" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="9f7f4133-1781-4ce0-b687-3c47dff75fed" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusProductDocBE.BonusProductDoc:ID" displayNameIndexStr="2" />
+        <RefField id="f94541f5-2593-4c73-80ee-0eb29409879b" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusProductDocBE.BonusProductDoc:DocNo" displayNameIndexStr="2" />
+        <RefField id="d6bbbdad-6133-4601-b154-90458e5e9639" name="Status" displayName="状态" description="" help="产品采购业务员奖金.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusProductDocBE.BonusProductDoc:Status" displayNameIndexStr="2" />
+        <RefField id="de3fd64e-d377-4570-95a1-f13ef99320f2" name="Oprator" displayName="制单人" description="" help="产品采购业务员奖金.Misc.制单人" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusProductDocBE.BonusProductDoc:Oprator" displayNameIndexStr="2" />
+        <RefField id="bd2ba001-7dc6-4345-9ac0-22673c9235d2" name="BusinessDate" displayName="制单日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.BonusProductDocBE.BonusProductDoc:BusinessDate" displayNameIndexStr="" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="ea5b8f9a-8fdc-4f8c-8ceb-9ecb8ae8b61f" name="DeductionRegisterRef" displayName="扣款登记" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FI.PaymentUI.DeductionRegisterRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="8b66efa0-2abd-435f-9369-291c74c7bbe0" name="cRef" displayName="cRef" description="" help="扣款登记" refEntityId="b788c285-41e5-413a-80bf-e0003d03e6eb" refEntityName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="af6d787f-4a01-4c44-be25-412c828a8c37" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:ID" displayNameIndexStr="2" />
+        <RefField id="5d464b2b-d3a9-4ced-bee8-0369a6c95e65" name="DocumentType_Name" displayName="单据类型" description="" help="单据类型基类.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:DocumentType.Name" displayNameIndexStr="" />
+        <RefField id="bd5c68cf-2868-4c3f-8dd2-b9f61ce18839" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:DocNo" displayNameIndexStr="2" />
+        <RefField id="26737201-338b-400d-884f-e8174aee9b10" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="8424a6c7-5822-407e-a24b-fbe6159a60cd" name="Currency_Name" displayName="币种" description="" help="币种.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:Currency.Name" displayNameIndexStr="0" />
+        <RefField id="5ec94f1b-35c0-4a25-88cd-e00fa679c87f" name="DRMoney" displayName="扣款金额" description="" help="扣款登记.Misc.扣款金额" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:DRMoney" displayNameIndexStr="2" />
+        <RefField id="0a6ed2c4-d81a-47e8-9f24-da3a58ecc6f5" name="SumDRMoney" displayName="累计扣款金额" description="" help="扣款登记.Misc.累计扣款金额" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.GS.FI.DeductionRegisterBE.DeductionRegister:SumDRMoney" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

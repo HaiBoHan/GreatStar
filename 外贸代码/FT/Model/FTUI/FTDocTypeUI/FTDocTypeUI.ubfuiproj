@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="1749fb37-6c55-4d67-9fd3-9a6185031841" name="FTDocTypeUI" displayName="FTDocTypeUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.FTDocTypeUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="70f58dd7-4625-48a7-81ea-fd9bf82e3967" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\UBFV28\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="58b9906e-e2a0-4705-8d30-7b8e7a4575d8" name="FTDocTypeUIModel.ubfuim" displayName="FTDocTypeUIModel.ubfuim" description="" help="" include="FTDocTypeUIModel.ubfuim" type="" />
+    <Item id="0986c326-a213-4f58-8437-16f518f40ca7" name="FTDocTypeUIForm.ubfform" displayName="FTDocTypeUIForm.ubfform" description="" help="" include="FTDocTypeUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>

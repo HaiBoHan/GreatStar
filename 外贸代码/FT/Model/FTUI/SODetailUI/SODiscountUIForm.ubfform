@@ -1,0 +1,229 @@
+<View ID="7913c4b1-fead-41dd-9f86-6924ee29158c" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="销售订单行折扣" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="10" Height="375" LayoutType="GridBag" Name="SODiscountUIForm" Namespace="UFIDA.U9.Cust.GS.FT.SODiscountUIModel" TabStop="False" TemplateCode="UI_ModalFormThreeColumns" TemplateType="CustomTemplate" UIModelID="8955731f-8705-4f7a-80b7-80b5cd78e607" URI=".UI_弹出Form_3列WebPart" ViewID="4983" Width="730" X="10" Y="10">
+  <Columns>
+    <Column Fixed="True" Name="Column0" Type="Title" Width="710" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="320" Name="Row0" />
+    <Row Fixed="True" Height="25" Name="Row1" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="05a3b317-b001-4af7-9db9-38b6e42ae13f" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="1" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="0" GridRowCount="1" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="0" Height="320" LayoutType="GridBag" Name="Card0" TabIndex="1" TabStop="False" Width="710" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="710" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="320" Name="Row0" />
+    </Rows>
+    <DataGrid ID="c7c39e8e-58e0-4c8c-b445-6c24565850cf" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AllowSelectAllPage="True" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" HasSum="True" Height="320" IsMultiSelect="True" Name="DataGrid0" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="0" TabStop="True" Width="710">
+      <Events />
+      <Header ID="95824f14-f816-40a1-900c-bae29e4d6285" Name="Header0">
+        <HeaderRow Name="DefaultRow">
+          <HeaderCell ID="63e0d74a-2ea8-4ee2-8862-0cfe78cc9ddd" ColSpan="1" Name="HeaderCell0" OwnerColName="ID0" RowSpan="1" />
+          <HeaderCell ID="ccd97e5a-aa7e-47f0-b109-56d86a66de5d" ColSpan="1" Name="HeaderCell1" OwnerColName="SysVersion0" RowSpan="1" />
+          <HeaderCell ID="b384b15d-bad6-494c-b240-d31e1c9d9101" ColSpan="1" Name="HeaderCell2" OwnerColName="SOLine_DocLineNo0" RowSpan="1" />
+          <HeaderCell ID="cc97d71b-dea5-41f0-9112-8bc65726a3d0" ColSpan="1" Name="HeaderCell3" OwnerColName="DiscountType0" RowSpan="1" />
+          <HeaderCell ID="939f5b89-869d-4407-a9dc-978f5faf873e" ColSpan="1" DisplayName="数量1" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell24" OwnerColName="SOLine_OrderByQtyTU0" RowSpan="1" />
+          <HeaderCell ID="11436ea7-bc7c-4f07-a969-778b928c2a8c" ColSpan="1" Name="HeaderCell4" OwnerColName="ExportPrice0" RowSpan="1" />
+          <HeaderCell ID="fc1158cc-c440-435c-b7cc-f6e5f4ab875b" ColSpan="1" DisplayName="最终价" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell22" OwnerColName="SOLine_FinallyPriceTC0" RowSpan="1" />
+          <HeaderCell ID="043a2a65-45db-4cb3-b283-480b85ab4478" ColSpan="1" Name="HeaderCell5" OwnerColName="DiscountPrice0" RowSpan="1" />
+          <HeaderCell ID="9f94fbfb-5be4-4225-b34c-54a823ecdee8" ColSpan="1" DisplayName="折扣率" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell20" OwnerColName="DiscountRate0" RowSpan="1" />
+          <HeaderCell ID="91a471a1-0198-46fc-85c4-ddb32c244385" ColSpan="1" Name="HeaderCell6" OwnerColName="DiscountMoney0" RowSpan="1" />
+          <HeaderCell ID="a56cdcba-fa9e-4720-b2f5-765cb64af5fa" ColSpan="1" Name="HeaderCell7" OwnerColName="CalAmount0" RowSpan="1" />
+          <HeaderCell ID="28aa8e79-461c-4ec6-99d0-d31116f2a576" ColSpan="1" DisplayName="系统折扣单价" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell17" OwnerColName="BeforePrice0" RowSpan="1" />
+          <HeaderCell ID="21694a67-690b-4fe4-8a78-215e4615fc1c" ColSpan="1" DisplayName="系统折扣率" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell18" OwnerColName="BeforeRate0" RowSpan="1" />
+          <HeaderCell ID="d1b95198-dac3-48fb-a772-559052d6ddb1" ColSpan="1" Name="HeaderCell8" OwnerColName="SOLine_SO_TC_Symbol0" RowSpan="1" />
+          <HeaderCell ID="74d61696-3279-436f-ac00-cdf91dec3ebe" ColSpan="1" Name="HeaderCell9" OwnerColName="SOLine_SO_TC_PriceRound_Precision0" RowSpan="1" />
+          <HeaderCell ID="d3bf25d9-5430-448f-ae2f-380728ea9093" ColSpan="1" Name="HeaderCell10" OwnerColName="SOLine_SO_TC_PriceRound_RoundType0" RowSpan="1" />
+          <HeaderCell ID="0897bddc-11e2-4e9b-8ef3-5a331d275c45" ColSpan="1" Name="HeaderCell11" OwnerColName="SOLine_SO_TC_PriceRound_RoundValue0" RowSpan="1" />
+          <HeaderCell ID="7c523ff9-9d1a-4886-8e54-36cbb517869c" ColSpan="1" Name="HeaderCell12" OwnerColName="SOLine_SO_TC_MoneyRound_Precision0" RowSpan="1" />
+          <HeaderCell ID="032c3c1f-46ec-4553-9429-c0d0c5f0191a" ColSpan="1" Name="HeaderCell13" OwnerColName="SOLine_SO_TC_MoneyRound_RoundType0" RowSpan="1" />
+          <HeaderCell ID="b5de4283-e8e2-4451-abba-b10616bb7fca" ColSpan="1" Name="HeaderCell14" OwnerColName="SOLine_SO_TC_MoneyRound_RoundValue0" RowSpan="1" />
+          <HeaderCell ID="60720c1b-7490-4f23-b274-f0fdaa7e232c" ColSpan="1" Name="HeaderCell25" OwnerColName="SOLine_TU_Round_Precision0" RowSpan="1" />
+          <HeaderCell ID="d236a8e7-f8e0-4bf7-8c1d-31ed1e980e10" ColSpan="1" Name="HeaderCell26" OwnerColName="SOLine_TU_Round_RoundType0" RowSpan="1" />
+          <HeaderCell ID="c7e0119f-126f-4cb0-8d9c-d9e00826e504" ColSpan="1" Name="HeaderCell27" OwnerColName="SOLine_TU_Round_RoundValue0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <NumberColumn ID="25e29a5e-217d-4e12-9f57-d9a887c117ab" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="销售订单折扣.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind Name="PrecisionBind0" />
+          <RoundRuleBind Name="RoundRuleBind0" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+          <CurrencyType Name="CurrencyType0" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="2fb76d86-e6bd-4a8f-aa10-437d0cae6874" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="销售订单折扣.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion0" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind Name="PrecisionBind1" />
+          <RoundRuleBind Name="RoundRuleBind1" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+          <CurrencyType Name="CurrencyType1" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="ccceddbe-70dd-4e80-b785-036ed33217fd" DefaultValue="0" DisplayFormat="10.0" Enabled="False" Help="销售订单行.A_基本.行号" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_DocLineNo0" NPos="3" Point="0" UIFieldID="SOLine_DocLineNo" UIViewID="SODiscount" Visible="True" Width="50">
+          <PrecisionBind Name="PrecisionBind2" />
+          <RoundRuleBind Name="RoundRuleBind2" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+          <CurrencyType Name="CurrencyType2" />
+          <Events />
+        </NumberColumn>
+        <DropDownListColumn ID="6b89d4a1-54bf-4e9e-9462-a4f353b40f88" DefaultValue="0" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.GS.FT.AllEnumBE.DiscountTypeEnum" EnumID="277228bd-ebca-47c8-8de6-51ea219c7f59" Help="销售订单折扣.Misc.折扣方式" IsNull="True" IsProperty="False" IsSequence="False" Name="DiscountType0" NPos="4" Point="0" UIFieldID="DiscountType" UIViewID="SODiscount" Visible="True">
+          <Events />
+        </DropDownListColumn>
+        <NumberColumn ID="f411b396-2e26-4c7d-8d1d-ba09d233d3b4" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单行.B_交易.数量1" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_OrderByQtyTU0" NPos="5" Point="0" UIFieldID="SOLine_OrderByQtyTU" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_TU_Round_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_TU_Round_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_TU_Round_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="4e764c68-00a6-48dd-b684-86eec4513787" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单折扣.Misc.外销价" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" Name="ExportPrice0" NPos="6" NumberType="Currency" Point="0" UIFieldID="ExportPrice" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType BindType="UIField" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="9b995796-0ba0-4ebd-9fbc-ddaf09c04ea5" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单行.C_金额.最终价" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_FinallyPriceTC0" NPos="7" NumberType="Currency" Point="0" UIFieldID="SOLine_FinallyPriceTC" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType BindType="UIField" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="04e9a21c-d8c7-422a-a8bd-d8050620c340" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单折扣.Misc.折后单价" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" Name="DiscountPrice0" NPos="8" NumberType="Currency" Point="0" UIFieldID="DiscountPrice" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType BindType="UIField" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="55b7c665-87f4-4bda-9949-5220cc28337b" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单折扣.Misc.折扣率" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" Name="DiscountRate0" NPos="9" Point="4" UIFieldID="DiscountRate" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind Name="PrecisionBind3" />
+          <RoundRuleBind Name="RoundRuleBind3" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+          <CurrencyType Name="CurrencyType3" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="44c2e14c-562e-47df-bd7a-d7f4842d8761" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="销售订单折扣.Misc.折后金额" IsNull="True" IsProperty="False" IsSequence="False" Name="DiscountMoney0" NPos="10" NumberType="Currency" Point="0" UIFieldID="DiscountMoney" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_SO_TC_MoneyRound_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_SO_TC_MoneyRound_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_SO_TC_MoneyRound_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType BindType="UIField" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="e182e648-aebe-4637-b6c5-28c1a0f816eb" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="销售订单折扣.Misc.折扣额" IsNull="True" IsProperty="False" IsSequence="False" Name="CalAmount0" NPos="11" NumberType="Currency" Point="0" UIFieldID="CalAmount" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_SO_TC_MoneyRound_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_SO_TC_MoneyRound_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_SO_TC_MoneyRound_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType BindType="UIField" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="c53b8332-f894-442a-9f43-9dea920e7c9b" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单折扣.Misc.系统折扣单价" IsNull="True" IsProperty="False" IsSequence="False" Name="BeforePrice0" NPos="12" NumberType="Currency" Point="0" UIFieldID="BeforePrice" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_Precision" UIViewID="SODiscount" />
+          <RoundRuleBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundType" UIViewID="SODiscount" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_SO_TC_PriceRound_RoundValue" UIViewID="SODiscount" />
+          <CurrencyType BindType="UIField" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="1a1f836f-96fa-492d-b0a9-c08316b4dd07" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单折扣.Misc.系统折扣率" IsNull="True" IsProperty="False" IsSequence="False" Name="BeforeRate0" NPos="13" Point="4" UIFieldID="BeforeRate" UIViewID="SODiscount" Visible="True">
+          <PrecisionBind Name="PrecisionBind4" />
+          <RoundRuleBind Name="RoundRuleBind4" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+          <CurrencyType Name="CurrencyType4" />
+          <Events />
+        </NumberColumn>
+        <TextBoxColumn ID="07612893-6e53-48c9-9a88-e2c47dc71253" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_Symbol0" NPos="14" Point="0" TextAlign="Left" UIFieldID="SOLine_SO_TC_Symbol" UIViewID="SODiscount" Visible="False">
+          <Events />
+        </TextBoxColumn>
+        <NumberColumn ID="596e9631-a211-4f67-9833-7fd01acfc163" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.单价精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_PriceRound_Precision0" NPos="15" Point="0" UIFieldID="SOLine_SO_TC_PriceRound_Precision" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind Name="PrecisionBind5" />
+          <RoundRuleBind Name="RoundRuleBind5" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
+          <CurrencyType Name="CurrencyType5" />
+          <Events />
+        </NumberColumn>
+        <DropDownListColumn ID="2bd5c640-f898-4359-832c-bec5f0c0ff7b" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="币种.精度.单价精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_PriceRound_RoundType0" NPos="16" Point="0" UIFieldID="SOLine_SO_TC_PriceRound_RoundType" UIViewID="SODiscount" Visible="False">
+          <Events />
+        </DropDownListColumn>
+        <NumberColumn ID="d41881b7-e389-46a4-b546-da7e46d2e708" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.单价精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_PriceRound_RoundValue0" NPos="17" Point="0" UIFieldID="SOLine_SO_TC_PriceRound_RoundValue" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind Name="PrecisionBind6" />
+          <RoundRuleBind Name="RoundRuleBind6" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
+          <CurrencyType Name="CurrencyType6" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="285dd83c-cf92-495f-b375-85572b1c5274" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.金额精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_MoneyRound_Precision0" NPos="18" Point="0" UIFieldID="SOLine_SO_TC_MoneyRound_Precision" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind Name="PrecisionBind7" />
+          <RoundRuleBind Name="RoundRuleBind7" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind7" />
+          <CurrencyType Name="CurrencyType7" />
+          <Events />
+        </NumberColumn>
+        <DropDownListColumn ID="e19c223a-4e15-48a2-92d4-0583a0309886" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="币种.精度.金额精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_MoneyRound_RoundType0" NPos="19" Point="0" UIFieldID="SOLine_SO_TC_MoneyRound_RoundType" UIViewID="SODiscount" Visible="False">
+          <Events />
+        </DropDownListColumn>
+        <NumberColumn ID="69d10b20-8434-420e-a4c6-221adbd55bec" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.金额精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="SOLine_SO_TC_MoneyRound_RoundValue0" NPos="20" Point="0" UIFieldID="SOLine_SO_TC_MoneyRound_RoundValue" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind Name="PrecisionBind8" />
+          <RoundRuleBind Name="RoundRuleBind8" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
+          <CurrencyType Name="CurrencyType8" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="3cf1f761-f2ea-413f-8f50-4694dcb40b22" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="计量单位.Misc.精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_TU_Round_Precision0" NPos="21" Point="0" UIFieldID="SOLine_TU_Round_Precision" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <DropDownListColumn ID="aea2e0f6-9b09-4039-b9ad-0a2c539388f5" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="计量单位.Misc.精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_TU_Round_RoundType0" NPos="22" Point="0" UIFieldID="SOLine_TU_Round_RoundType" UIViewID="SODiscount" Visible="False">
+          <Events />
+        </DropDownListColumn>
+        <NumberColumn ID="960c3b4b-87fe-4b62-9cf6-4a8b7c629a9a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="计量单位.Misc.精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="SOLine_TU_Round_RoundValue0" NPos="23" Point="0" UIFieldID="SOLine_TU_Round_RoundValue" UIViewID="SODiscount" Visible="False">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+      </Columns>
+    </DataGrid>
+  </Card>
+  <Card ID="4078553b-5378-4b4f-9666-8b5afa4b98d6" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="0" GridColumnCount="13" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="10" GridRowCount="1" GridRowSpace="0" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="25" LayoutType="GridBag" Name="Card1" TabIndex="2" TabStop="False" Width="710" X="10" Y="340">
+    <Columns>
+      <Column Fixed="True" Name="Column10" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column0" Type="Value" Width="60" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="30" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Width="10" />
+      <Column Fixed="True" Name="Column12" Width="80" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="5dbb6135-48c0-4b9e-bfbc-30d6003125c1" AccessKey="Z" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="OnBtnClose" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" Name="BtnClose" TabIndex="6" TabStop="True" Width="80" X="610" Y="0">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="23df69d9-12fa-41e6-abf9-8f9790d23253" AccessKey="" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="OnBtnOk" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" Name="BtnOk" TabIndex="5" TabStop="True" Width="80" X="520" Y="0">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="6dfb6777-1422-4b47-97a0-21e71d17b031" AccessKey="" DisplayName="重新生成" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="BtnReset" TabIndex="7" TabStop="True" Width="80">
+      <Events>
+        <Event ActionName="ResetClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Events />
+</View>

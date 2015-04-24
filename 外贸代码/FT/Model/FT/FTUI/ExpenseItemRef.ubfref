@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="7f42a520-a02c-4dab-83c9-7be771c450c1" name="ExpenseItemRef" displayName="费用项目" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.FTUI.ExpenseItemRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="66ff1922-4629-43ad-979c-21af9c790f77" name="cRef" displayName="cRef" description="" help="费用项目" refEntityId="de8d2374-1ee3-40c8-99ca-1ad44c11522c" refEntityName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="1981af9e-fc90-4025-8b60-95f6176ecfa5" name="ID" displayName="ID" description="" help="费用项目.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:ID" displayNameIndexStr="2" />
+        <RefField id="bd9558a4-e4e1-4cb6-a5c2-197ee95d3e8a" name="Code" displayName="编码" description="" help="费用项目.Misc.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:Code" displayNameIndexStr="2" />
+        <RefField id="892328c9-c511-43aa-a67b-2f22a88ea196" name="Name" displayName="名称" description="" help="费用项目.Misc.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:Name" displayNameIndexStr="2" />
+        <RefField id="82a14e3d-7787-42ae-8330-1f0119531da7" name="TreeDisplayName" displayName="显示名称" description="" help="费用项目.Misc.显示名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:TreeDisplayName" displayNameIndexStr="2" />
+        <RefField id="1b97d1c6-f780-408a-b6dc-79e304a4d5bf" name="IsUsedByExpense" displayName="用于费用报销" description="" help="费用项目.Misc.用于费用报销" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:IsUsedByExpense" displayNameIndexStr="2" />
+        <RefField id="6e02b1c2-e048-4f98-ba1a-600325769ef2" name="OldIncExpItemID" displayName="原收支项目ID" description="" help="费用项目.Misc.原收支项目ID" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:OldIncExpItemID" displayNameIndexStr="2" />
+        <RefField id="31c056a7-e947-479d-b44a-a3109e5bff6b" name="IsLeaf" displayName="是否叶结点" description="" help="费用项目.Misc.是否叶结点" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem:IsLeaf" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

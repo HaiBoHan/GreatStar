@@ -1,0 +1,206 @@
+<View ID="d4921d1c-c87c-4dfc-949a-47724812620a" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="出运明细单费用查询" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" LayoutType="GridBag" Name="ShipPlanDDFeeQueryUIForm" Namespace="UFIDA.U9.Cust.GS.FT.ShipPlanDDFeeQueryUIModel" TabStop="False" TemplateCode="UI_SingleGrid810" TemplateType="CustomTemplate" UIModelID="3f14c34f-4e59-4e96-afe1-6d89dd8a7aaf" URI=".UI_单表_810_504WebPart" ViewID="4983" Width="810" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="810" />
+  </Columns>
+  <Rows>
+    <Row Fixed="False" Height="1" Name="Row4" />
+    <Row Fixed="False" Height="451" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="fadf48db-9b1f-4183-966d-2afa90257781" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="18" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="810" X="0" Y="472">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="69" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="1a828574-6a18-478d-9a6d-85376a27badb" AccessKey="" DisplayName="关闭" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="16" GridY="0" Height="20" Name="BtnClose" TabIndex="8" TabStop="True" Width="80" X="719" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="8d6a18b4-6b97-48ae-834d-350454bf5212" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="451" LayoutType="GridBag" Name="Card3" TabIndex="2" TabStop="False" Width="810" X="0" Y="11">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="789" />
+      <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="445" Name="Row0" />
+      <Row Fixed="False" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="611dc691-4c5c-418e-b75a-46966c40bd9f" EditStatus="browse" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="False" Height="451" IsSumSelectedData="False" Name="DataGrid1" PageSize="20" Paging="True" TabIndex="1" TabStop="True" Width="790" X="10" Y="0">
+      <Events />
+      <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
+        <HeaderRow Name="DefaultRow">
+          <HeaderCell ID="31ab4351-332d-4dda-b2de-5ffd93609d2f" ColSpan="1" Name="HeaderCell0" OwnerColName="ID0" RowSpan="1" />
+          <HeaderCell ID="c9b2eeba-fc68-4c4c-a34b-d4b71abf07a1" ColSpan="1" Name="HeaderCell1" OwnerColName="SysVersion0" RowSpan="1" />
+          <HeaderCell ID="b6b6bd54-5e81-4891-be8e-178f4f572d3c" ColSpan="1" Name="HeaderCell3" OwnerColName="ShipPlanDetailFeeHead1" RowSpan="1" />
+          <HeaderCell ID="5d96707f-30ca-495d-97c5-ce757c67c013" ColSpan="1" Name="HeaderCell4" OwnerColName="ShipPlanDetailFeeHead_BusinessDate0" RowSpan="1" />
+          <HeaderCell ID="6a9d14ba-5611-4cf7-8912-b209fe37ed4c" ColSpan="1" Name="HeaderCell5" OwnerColName="ShipPlanDetailFeeHead_ShipPlanOrderNo_BillNoItemID0" RowSpan="1" />
+          <HeaderCell ID="28bc649d-162f-42a5-9448-84a40807ebf4" ColSpan="1" Name="HeaderCell6" OwnerColName="ShipPlanDetailFeeHead_IsTax0" RowSpan="1" />
+          <HeaderCell ID="a8bf767c-f96e-4c87-bc3c-b040cf496f54" ColSpan="1" Name="HeaderCell7" OwnerColName="ShipPlanDetailFeeHead_AllocationWay0" RowSpan="1" />
+          <HeaderCell ID="935be17e-49f9-4c97-870d-b5e3ff9871ee" ColSpan="1" Name="HeaderCell8" OwnerColName="RowNo0" RowSpan="1" />
+          <HeaderCell ID="7143ea67-c27c-4634-b067-ae16e3459c3c" ColSpan="1" Name="HeaderCell9" OwnerColName="ShipItemFee0" RowSpan="1" />
+          <HeaderCell ID="067a0cea-433d-45d2-8ecb-aab290fee493" ColSpan="1" Name="HeaderCell10" OwnerColName="ShipItemFee_Code0" RowSpan="1" />
+          <HeaderCell ID="c7391ff7-f5e9-4abd-a1f7-ff330df69e8d" ColSpan="1" Name="HeaderCell11" OwnerColName="ShipFeeProject0" RowSpan="1" />
+          <HeaderCell ID="d1a78679-b2f6-4e45-928c-e7fdb6276123" ColSpan="1" Name="HeaderCell12" OwnerColName="Supplier0" RowSpan="1" />
+          <HeaderCell ID="4cde0e90-4cc2-4d16-8aa4-b12e385d2552" ColSpan="1" Name="HeaderCell13" OwnerColName="Prices0" RowSpan="1" />
+          <HeaderCell ID="bf783770-c476-4e67-b328-c729bc56978e" ColSpan="1" Name="HeaderCell14" OwnerColName="Qty0" RowSpan="1" />
+          <HeaderCell ID="33da337e-81b4-4884-b299-d2de3f056c5c" ColSpan="1" Name="HeaderCell15" OwnerColName="AmountPayable0" RowSpan="1" />
+          <HeaderCell ID="97d80b64-d68c-4d82-9a26-28d5e85ffda2" ColSpan="1" Name="HeaderCell16" OwnerColName="Payment0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <NumberColumn ID="5403dc06-b4c6-48f6-8d37-458d54a7b8cc" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="出运明细单费用单行.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="ShipPlanDetailFeeLine" Visible="False">
+          <PrecisionBind Name="PrecisionBind0" />
+          <RoundRuleBind Name="RoundRuleBind0" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+          <CurrencyType Name="CurrencyType0" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="18200be3-4a26-436f-aa0d-21b974c724a7" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="出运明细单费用单行.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion0" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="ShipPlanDetailFeeLine" Visible="False">
+          <PrecisionBind Name="PrecisionBind1" />
+          <RoundRuleBind Name="RoundRuleBind1" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+          <CurrencyType Name="CurrencyType1" />
+          <Events />
+        </NumberColumn>
+        <ReferenceColumn ID="ee154030-0e5d-40cc-9fda-19c8786ef153" CodeAttributeName="DocNo" CodeField="DocNo" CodeFieldUIFieldID="ShipPlanDetailFeeHead_DocNo" CodeFieldUIViewID="ShipPlanDetailFeeLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="出运明细单费用单行.Misc.出运明细单费用单头" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipPlanDetailFeeHead1" NameAttributeName="DocNo" NameFieldUIFieldID="ShipPlanDetailFeeHead_DocNo" NameFieldUIViewID="ShipPlanDetailFeeLine" NPos="3" PkeyField="ID" Point="0" RefType="ad9e1ff7-0b66-4fb1-9c18-c7d4c633e2a1" TextAlign="Right" UIFieldID="ShipPlanDetailFeeHead" UIViewID="ShipPlanDetailFeeLine" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceColumnModel" TargetID="ShipPlanDetailFeeHead" TargetProperty="Key" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="单号" ColumnID="DocNo" TargetControlType="ReferenceColumnModel" TargetID="ShipPlanDetailFeeHead" TargetProperty="Text" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="日期" ColumnID="BusinessDate" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="发票号组" ColumnID="ShipPlanOrderNo_BillNoItemID" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="DocNo" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <FormLink FormRefID="306956b1-5930-42f9-abde-7c35ebb4df97" FormRefName="ShipPlanFeeUIForm.ubfform" FormRefPath="ShipPlanFeeUIForm.ubfform" FormRefProjectPath="D:\UFIDA\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.Cust.GS.FT.ShipPlanDetailUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink0" Width="992">
+            <InParameters>
+              <Parameter ContextID="" ControlID="ShipPlanDetailFeeHead" ControlProperty="Key" ControlType="ReferenceColumnModel" Name="ID" ParameterBindType="Bind2Control" />
+            </InParameters>
+            <OutParameters>
+              <Parameter ContextID="" ControlID="ShipPlanDetailFeeHead" ControlProperty="Key" ControlType="ReferenceColumnModel" Name="ID" />
+              <Parameter ContextID="" ControlID="ShipPlanDetailFeeHead" ControlProperty="Value" ControlType="ReferenceColumnModel" Name="Code" />
+              <Parameter ContextID="" ControlID="ShipPlanDetailFeeHead" ControlProperty="Text" ControlType="ReferenceColumnModel" Name="Name" />
+            </OutParameters>
+          </FormLink>
+          <Events />
+        </ReferenceColumn>
+        <DatePickerColumn ID="a0fe686b-be20-4b1f-9966-a76968df7e90" DefaultValue="" DisplayFormat="8" Enabled="True" Help="单据基类.Misc.日期" IsNull="False" IsProperty="False" IsSequence="False" Name="ShipPlanDetailFeeHead_BusinessDate0" NPos="4" Point="0" UIFieldID="ShipPlanDetailFeeHead_BusinessDate" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <Events />
+        </DatePickerColumn>
+        <TextBoxColumn ID="a878c777-21b4-4a9c-bafe-8f6aad3aa7b4" DefaultValue="" DisplayFormat="50" Enabled="True" Help="发票号组表头.Misc.发票号组" IsNull="False" IsProperty="False" IsSequence="False" Name="ShipPlanDetailFeeHead_ShipPlanOrderNo_BillNoItemID0" NPos="5" Point="0" TextAlign="Left" UIFieldID="ShipPlanDetailFeeHead_ShipPlanOrderNo_BillNoItemID" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <Events />
+        </TextBoxColumn>
+        <CheckBoxColumn ID="6641b0c2-c417-43b7-8374-ee7b2f928860" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="出运明细单费用单头.Misc.是否含税" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipPlanDetailFeeHead_IsTax0" NPos="6" Point="0" UIFieldID="ShipPlanDetailFeeHead_IsTax" UIViewID="ShipPlanDetailFeeLine" Visible="True" Width="65">
+          <Events />
+        </CheckBoxColumn>
+        <DropDownListColumn ID="d57aa77b-7508-47be-8db8-9fb0acc54b4f" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FT.AllEnumBE.AllocationWayEnum" EnumID="93075d97-001a-4baa-934f-fa3e096ec534" Help="出运明细单费用单头.Misc.分摊方式" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipPlanDetailFeeHead_AllocationWay0" NPos="7" Point="0" UIFieldID="ShipPlanDetailFeeHead_AllocationWay" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <Events />
+        </DropDownListColumn>
+        <NumberColumn ID="cc040186-12f2-4abd-9338-338ee817183f" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="出运明细单费用单行.Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" Name="RowNo0" NPos="8" Point="0" UIFieldID="RowNo" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <PrecisionBind Name="PrecisionBind2" />
+          <RoundRuleBind Name="RoundRuleBind2" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+          <CurrencyType Name="CurrencyType2" />
+          <Events />
+        </NumberColumn>
+        <ReferenceColumn ID="0c37b00d-d2d3-4e8b-87df-88dde998803c" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ShipItemFee_Code" CodeFieldUIViewID="ShipPlanDetailFeeLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="出运明细单费用单行.Misc.费用明细项" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipItemFee0" NameAttributeName="Name" NameFieldUIFieldID="ShipItemFee_Name" NameFieldUIViewID="ShipPlanDetailFeeLine" NPos="9" PkeyField="ID" Point="0" RefType="b5b41f09-999f-453b-8224-5883c75a849e" TextAlign="Right" UIFieldID="ShipItemFee" UIViewID="ShipPlanDetailFeeLine" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation0" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" Name="ReferenceRelation1" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" Name="ReferenceRelation2" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="料品别名" ColumnID="AliasName" Name="ReferenceRelation3" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态属性" ColumnID="ItemFormAttribute" Name="ReferenceRelation4" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="VersionID" Name="ReferenceRelation5" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation6" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="计量单位ID" ColumnID="PurchaseUOM_ID" Name="ReferenceRelation7" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="计量单位" ColumnID="PurchaseUOM_Code" Name="ReferenceRelation8" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="计量单位名称" ColumnID="PurchaseUOM_Name" Name="ReferenceRelation9" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <TextBoxColumn ID="1cea7af6-4e10-4aa3-80d7-7bc59f6e743e" DefaultValue="" DisplayFormat="255" Enabled="True" Help="料品.料品.料号" IsNull="False" IsProperty="False" IsSequence="False" Name="ShipItemFee_Code0" NPos="10" Point="0" TextAlign="Left" UIFieldID="ShipItemFee_Code" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <Events />
+        </TextBoxColumn>
+        <ReferenceColumn ID="45acdab3-b71b-45f3-a015-9f1c9e81bb12" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ShipFeeProject_Code" CodeFieldUIViewID="ShipPlanDetailFeeLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="出运明细单费用单行.Misc.费用项目" IsNull="True" IsProperty="False" IsSequence="False" Name="ShipFeeProject0" NameAttributeName="Name" NameFieldUIFieldID="ShipFeeProject_Name" NameFieldUIViewID="ShipPlanDetailFeeLine" NPos="11" PkeyField="ID" Point="0" RefType="7ced9b0a-678e-4380-a2b1-c8803200cc00" TextAlign="Right" UIFieldID="ShipFeeProject" UIViewID="ShipPlanDetailFeeLine" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="用于费用报销" ColumnID="IsUsedByExpense" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <ReferenceColumn ID="e9719b6d-aac0-41ba-b702-b415c9dfc8cc" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="ShipPlanDetailFeeLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="出运明细单费用单行.Misc.供应商" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier0" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="ShipPlanDetailFeeLine" NPos="12" PkeyField="ID" Point="0" RefType="0ead0d38-0da0-4e9e-9923-5e2e5a4726a0" TextAlign="Right" UIFieldID="Supplier" UIViewID="ShipPlanDetailFeeLine" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation10" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation11" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation12" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation13" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="供应商分类编码" ColumnID="Category_Code" Name="ReferenceRelation14" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="供应商分类名称" ColumnID="Category_Name" Name="ReferenceRelation15" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="地区编码" ColumnID="Territory_Code" Name="ReferenceRelation16" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="地区名称" ColumnID="Territory_Name" Name="ReferenceRelation17" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="税组合ID" ColumnID="TaxSchedule_ID" Name="ReferenceRelation18" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="税组合编码" ColumnID="TaxSchedule_Code" Name="ReferenceRelation19" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="税组合名称" ColumnID="TaxSchedule_Name" Name="ReferenceRelation20" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <NumberColumn ID="c67465f0-6c12-4109-992c-b567e358c98f" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="出运明细单费用单行.Misc.单价" IsNull="True" IsProperty="False" IsSequence="False" Name="Prices0" NPos="13" Point="0" UIFieldID="Prices" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="Currency_PriceRound_Precision" UIViewID="ShipPlanDetailFeeLine" />
+          <RoundRuleBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundType" UIViewID="ShipPlanDetailFeeLine" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_PriceRound_RoundValue" UIViewID="ShipPlanDetailFeeLine" />
+          <CurrencyType Name="CurrencyType3" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="3caf5628-e8a6-475d-985e-6d110a74e274" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="出运明细单费用单行.Misc.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="Qty0" NPos="14" Point="0" UIFieldID="Qty" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="Uom_Round_Precision" UIViewID="ShipPlanDetailFeeLine" />
+          <RoundRuleBind BindType="UIField" UIFieldID="Uom_Round_RoundType" UIViewID="ShipPlanDetailFeeLine" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Uom_Round_RoundValue" UIViewID="ShipPlanDetailFeeLine" />
+          <CurrencyType Name="CurrencyType4" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="461bc0e1-220f-4c69-a432-e6c2b4f610e9" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="出运明细单费用单行.Misc.应付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="AmountPayable0" NPos="15" Point="0" UIFieldID="AmountPayable" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="Currency_MoneyRound_Precision" UIViewID="ShipPlanDetailFeeLine" />
+          <RoundRuleBind BindType="UIField" UIFieldID="Currency_MoneyRound_RoundType" UIViewID="ShipPlanDetailFeeLine" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Currency_MoneyRound_RoundValue" UIViewID="ShipPlanDetailFeeLine" />
+          <CurrencyType Name="CurrencyType5" />
+          <Events />
+        </NumberColumn>
+        <DropDownListColumn ID="847d30da-5283-4eb9-b6fb-208c3771c2cc" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FT.AllEnumBE.PaymentEnum" EnumID="33b4945c-f125-4f73-a331-d8f05e18ea07" Help="出运明细单费用单行.Misc.付款方式" IsNull="True" IsProperty="False" IsSequence="False" Name="Payment0" NPos="16" Point="0" UIFieldID="Payment" UIViewID="ShipPlanDetailFeeLine" Visible="True">
+          <Events />
+        </DropDownListColumn>
+      </Columns>
+    </DataGrid>
+  </Card>
+  <Events />
+</View>

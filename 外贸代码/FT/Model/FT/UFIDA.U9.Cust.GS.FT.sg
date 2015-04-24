@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceGroup>
+  <ServiceGroupInfo id="34e6c310-e566-4c19-97ff-2458deb52e58" name="UFIDA.U9.Cust.GS.FT" displayName="FT" description="" help="" fullPath="D:\UFIDA\UBFDocs\GS\FT\UFIDA.U9.Cust.GS.FT.sg" applicationID="" />
+  <AssemblyGroup>
+    <Assembly ID="d5f38b6f-bd81-4f81-83c7-f44bc3018259" name="UFIDA.U9.Cust.GS.FT.FTBE" type="BE" path="" />
+    <Assembly ID="8d3e40fc-5aef-4d3f-9531-2fdad262cb78" name="UFIDA.U9.Cust.GS.FT.FTUI" type="UI" path="" />
+    <Assembly ID="c3595fb5-65c7-49e2-bdb7-4a14c20885cb" name="UFIDA.U9.Cust.GS.FT.FTListBP" type="BP" path="" />
+    <Assembly ID="72a01431-3609-4171-8339-f4abf5a8b12e" name="UFIDA.U9.Cust.GS.FT.FTListUI" type="" path="" />
+    <Assembly ID="64c2a57c-cf4b-420c-a635-34c21f79ca06" name="UFIDA.U9.Cust.GS.FT.FTBP" type="BP" path="" />
+    <Assembly ID="0d1ccafc-f3ec-4780-9178-eadeecd2e480" name="UFIDA.U9.Cust.GS.FT.SOListUI" type="UI" path="" />
+    <Assembly ID="f1475ef9-9f69-4efa-bf8f-572ede377f8b" name="UFIDA.U9.Cust.GS.FT.SOListBP" type="BP" path="" />
+    <Assembly ID="ecbb4ebe-3e35-4d34-814d-16c6fca1809f" name="UFIDA.U9.Cust.GS.FT.SOListUI" type="" path="" />
+    <Assembly ID="f96d792b-bd98-4cb8-b82c-3a2a9fbe4121" name="UFIDA.U9.Cust.GS.FT.SoUI" type="UI" path="" />
+    <Assembly ID="99c3023a-ee81-485b-a906-6b95f3d4fc40" name="UFIDA.U9.Cust.GS.FT.FTListUI" type="UI" path="" />
+  </AssemblyGroup>
+</ServiceGroup>

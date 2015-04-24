@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="24d728bf-c1e8-4c06-81f1-e451d365251f" name="ProductCoefficientFind" displayName="新产品系数" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FI.FIUI.ProductCoefficientFind" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="e0a8cd61-47a3-4ba1-90d4-89f09a5c2421" name="cRef" displayName="cRef" description="" help="新产品系数" refEntityId="d926c133-949a-4a5d-ab85-48f2e1862f26" refEntityName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="eba5c78c-1ebb-4152-83b7-5d4467c38784" name="ID" displayName="ID" description="" help="新产品系数.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient:ID" displayNameIndexStr="2" />
+        <RefField id="986f646b-13d7-459b-bf53-e786a5e8ec46" name="ApplyBy" displayName="申请人" description="" help="新产品系数.Misc.申请人" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient:ApplyBy" displayNameIndexStr="2" />
+        <RefField id="df128c4b-7480-49ea-ba1d-82201c783c6e" name="ApplyDate" displayName="申报日期" description="" help="新产品系数.Misc.申报日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient:ApplyDate" displayNameIndexStr="2" />
+        <RefField id="3962335d-d3ce-4877-aaee-79a18a95ffa8" name="ItemMaster_Code" displayName="料品料号" description="" help="料品.料品.料号" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient:ItemMaster.Code" displayNameIndexStr="" />
+        <RefField id="00a665d8-0949-4ff1-9e46-6607c0b421e3" name="ItemMaster_Name" displayName="料品品名" description="" help="料品.料品.品名" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient:ItemMaster.Name" displayNameIndexStr="" />
+        <RefField id="f0385f18-89e7-404b-827e-6825acf78593" name="Status" displayName="状态" description="" help="新产品系数.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.GS.FI.ProductCoefficientBE.ProductCoefficient:Status" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter>UFIDA::U9::Cust::GS::FI::ProductCoefficientBE::ProductCoefficient.Org.ID='#Context.OrgID#'</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

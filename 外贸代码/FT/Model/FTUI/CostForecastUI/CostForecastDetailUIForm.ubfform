@@ -1,0 +1,225 @@
+<View ID="c17dee9d-ed0c-4dd0-b1b7-e1e34f381fc6" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="订单行预测结果" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" LayoutType="GridBag" Name="CostForecastDetailUIForm" Namespace="CostForecastDetailUIModel" TabStop="False" TemplateCode="UI_SingleGrid810" TemplateType="CustomTemplate" UIModelID="170e76a7-ea39-4307-9e47-6e3eb3eb930b" URI=".UI_单表_810_504WebPart" ViewID="4983" Width="810" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="810" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="1" Name="Row0" />
+    <Row Fixed="False" Height="477" Name="Row1" />
+    <Row Fixed="True" Height="1" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="953de1b8-6cac-4f41-a5e3-ffe2285d4af3" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="477" LayoutType="GridBag" Name="Card3" TabIndex="2" TabStop="False" Width="810" X="0" Y="11">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="789" />
+      <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="462" Name="Row0" />
+      <Row Fixed="False" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="91c2033a-da80-4495-8edb-41219c06de1a" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="False" Height="468" Name="DataGrid1" PageSize="20" Paging="True" TabIndex="1" TabStop="True" Width="790" X="10" Y="0">
+      <Events />
+      <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
+        <HeaderRow Name="DefaultRow">
+          <HeaderCell ID="7a1a16ec-f773-4af5-a61d-8c47fcebccd8" ColSpan="1" Name="HeaderCell0" OwnerColName="SONo0" RowSpan="1" />
+          <HeaderCell ID="87f02a48-aea3-4077-b32c-0cc4bd7d64de" ColSpan="1" Name="HeaderCell1" OwnerColName="SOLine0" RowSpan="1" />
+          <HeaderCell ID="9abdab8d-cb73-4e66-9f0e-f4ff324b8068" ColSpan="1" Name="HeaderCell2" OwnerColName="ForecastTime0" RowSpan="1" />
+          <HeaderCell ID="f475ed4f-3a52-4585-80d2-bc7feb3b16bf" ColSpan="1" Name="HeaderCell3" OwnerColName="ForecastMan0" RowSpan="1" />
+          <HeaderCell ID="f0ee9f3d-8844-4312-9150-9ab190cabab8" ColSpan="1" Name="HeaderCell4" OwnerColName="Brokerage0" RowSpan="1" />
+          <HeaderCell ID="b6f6049a-3bf1-45e3-a8cf-7e170a87233a" ColSpan="1" Name="HeaderCell5" OwnerColName="Discount0" RowSpan="1" />
+          <HeaderCell ID="b683342f-bc51-4cb8-bf4f-e00f328ce2a6" ColSpan="1" Name="HeaderCell6" OwnerColName="OceanFreight0" RowSpan="1" />
+          <HeaderCell ID="4fa3961d-fc4e-4abb-8c6d-ab5bf5999597" ColSpan="1" Name="HeaderCell7" OwnerColName="TaxCredits0" RowSpan="1" />
+          <HeaderCell ID="81baa4cf-d1df-4e71-94d4-46e41d40a655" ColSpan="1" Name="HeaderCell8" OwnerColName="ProcurementCost0" RowSpan="1" />
+          <HeaderCell ID="3ed19d75-f872-4698-93d5-df9c0dce15bd" ColSpan="1" Name="HeaderCell9" OwnerColName="LabourCharges0" RowSpan="1" />
+          <HeaderCell ID="f0c95437-7607-4869-b107-e8819a084b31" ColSpan="1" Name="HeaderCell10" OwnerColName="ProductCost0" RowSpan="1" />
+          <HeaderCell ID="8eee0908-03ed-49f0-8e14-4b052248de3e" ColSpan="1" Name="HeaderCell11" OwnerColName="AdministrativeFee0" RowSpan="1" />
+          <HeaderCell ID="7c2795a9-9181-4e8f-a88e-dc6712ab585d" ColSpan="1" Name="HeaderCell12" OwnerColName="Interest0" RowSpan="1" />
+          <HeaderCell ID="bac2f70d-3497-4cc2-bebb-e5a38a2acbb6" ColSpan="1" Name="HeaderCell13" OwnerColName="MouldFee0" RowSpan="1" />
+          <HeaderCell ID="6853c8da-f7e8-484f-861e-f198e3a0545f" ColSpan="1" Name="HeaderCell14" OwnerColName="Labelling0" RowSpan="1" />
+          <HeaderCell ID="c947f9ec-71d7-44e2-b0e9-703c3b6748d9" ColSpan="1" Name="HeaderCell15" OwnerColName="CreditInsurance0" RowSpan="1" />
+          <HeaderCell ID="dd296dca-804a-4d24-b477-4a059915a9de" ColSpan="1" Name="HeaderCell16" OwnerColName="BankCharge0" RowSpan="1" />
+          <HeaderCell ID="9d7b3c18-be2c-46bf-aeeb-889bb77d280f" ColSpan="1" Name="HeaderCell17" OwnerColName="ProductForecastRate0" RowSpan="1" />
+          <HeaderCell ID="a551ced4-a415-4490-86d3-1cef0301227a" ColSpan="1" Name="HeaderCell18" OwnerColName="ListForecastRate0" RowSpan="1" />
+          <HeaderCell ID="50d36130-fe04-4d33-b27f-d1e8814d1999" ColSpan="1" Name="HeaderCell19" OwnerColName="ProductRate0" RowSpan="1" />
+          <HeaderCell ID="f309f7eb-684c-48ab-9b67-cf1083e4668d" ColSpan="1" Name="HeaderCell20" OwnerColName="ListRate0" RowSpan="1" />
+          <HeaderCell ID="eb0d9093-36eb-4056-969a-203e027a70cc" ColSpan="1" Name="HeaderCell21" OwnerColName="ExchangeRate0" RowSpan="1" />
+          <HeaderCell ID="8d8522cd-4498-4dc9-a739-42624bbff333" ColSpan="1" Name="HeaderCell22" OwnerColName="DomesticFee0" RowSpan="1" />
+          <HeaderCell ID="d667de29-a265-4e24-8cb3-08b8d9bd3e9f" ColSpan="1" Name="HeaderCell23" OwnerColName="OtherDomesticFee0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <ReferenceColumn ID="ff14f476-77b8-469f-a1f3-1f2dedb761fb" CodeAttributeName="DocNo" CodeField="DocNo" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="销售订单成本预测.Misc.销售订单" IsNull="True" IsProperty="False" IsSequence="False" Name="SONo0" NameAttributeName="DocNo" NPos="1" PkeyField="ID" Point="0" RefType="3e4e3c3a-25e6-44fc-b418-992a54fb70be" TextAlign="Right" UIFieldID="SONo" UIViewID="CostForecast" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation0" TargetControlType="ReferenceColumnModel" TargetID="SONo" TargetProperty="Key" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="单号" ColumnID="DocNo" Name="ReferenceRelation1" TargetControlType="ReferenceColumnModel" TargetID="SONo" TargetProperty="Text" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="日期" ColumnID="BusinessDate" Name="ReferenceRelation2" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="单据类型" ColumnID="DocumentType_Name" Name="ReferenceRelation3" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="来源类别" ColumnID="SOSrcType" Name="ReferenceRelation4" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="订货客户" ColumnID="OrderBy_Name" Name="ReferenceRelation5" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员" ColumnID="Seller_Name" Name="ReferenceRelation6" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="销售部门" ColumnID="SaleDepartment_Name" Name="ReferenceRelation7" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="总金额" ColumnID="TotalMoneyTC" Name="ReferenceRelation8" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="状态" ColumnID="Status" Name="ReferenceRelation9" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="DocNo" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <ReferenceColumn ID="13360f93-eb61-40c9-b8b8-6f81565edcd4" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="销售订单成本预测.Misc.销售订单行" IsNull="True" IsProperty="False" IsSequence="False" Name="SOLine0" NPos="2" Point="0" TextAlign="Right" UIFieldID="SOLine" UIViewID="CostForecast" Visible="True">
+          <RefNameFields />
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <DatePickerColumn ID="f915e960-c637-4029-bafc-25789c10f2a7" DefaultValue="" DisplayFormat="8" Enabled="True" Help="销售订单成本预测.Misc.预测时间" IsNull="True" IsProperty="False" IsSequence="False" Name="ForecastTime0" NPos="3" Point="0" UIFieldID="ForecastTime" UIViewID="CostForecast" Visible="True">
+          <Events />
+        </DatePickerColumn>
+        <TextBoxColumn ID="44955550-835d-4ede-81ac-def9d0d9cfb8" DefaultValue="" DisplayFormat="50" Enabled="True" Help="销售订单成本预测.Misc.预测人" IsNull="True" IsProperty="False" IsSequence="False" Name="ForecastMan0" NPos="4" Point="0" TextAlign="Left" UIFieldID="ForecastMan" UIViewID="CostForecast" Visible="True">
+          <Events />
+        </TextBoxColumn>
+        <NumberColumn ID="b341c54e-a7fc-4919-a758-a16c8274e824" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.佣金" IsNull="True" IsProperty="False" IsSequence="False" Name="Brokerage0" NPos="5" Point="0" UIFieldID="Brokerage" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind0" />
+          <RoundRuleBind Name="RoundRuleBind0" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+          <CurrencyType Name="CurrencyType0" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="f64c2b48-3613-415a-ab8e-4ca966d541d0" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.折扣" IsNull="True" IsProperty="False" IsSequence="False" Name="Discount0" NPos="6" Point="0" UIFieldID="Discount" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind1" />
+          <RoundRuleBind Name="RoundRuleBind1" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+          <CurrencyType Name="CurrencyType1" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="a671afae-7808-491d-8cc9-40839ada6896" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.海运费" IsNull="True" IsProperty="False" IsSequence="False" Name="OceanFreight0" NPos="7" Point="0" UIFieldID="OceanFreight" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind2" />
+          <RoundRuleBind Name="RoundRuleBind2" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+          <CurrencyType Name="CurrencyType2" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="5109411c-45e1-4c9b-ac53-1dbc3e8b7148" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.退税额" IsNull="True" IsProperty="False" IsSequence="False" Name="TaxCredits0" NPos="8" Point="0" UIFieldID="TaxCredits" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind3" />
+          <RoundRuleBind Name="RoundRuleBind3" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+          <CurrencyType Name="CurrencyType3" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="76902217-b8de-4721-9e66-d77377fa7fc9" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.包装采购成本" IsNull="True" IsProperty="False" IsSequence="False" Name="ProcurementCost0" NPos="9" Point="0" UIFieldID="ProcurementCost" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind4" />
+          <RoundRuleBind Name="RoundRuleBind4" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+          <CurrencyType Name="CurrencyType4" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="e62dfa99-2ea1-4da5-a29b-c7cb1ad3314f" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.包装人工费用" IsNull="True" IsProperty="False" IsSequence="False" Name="LabourCharges0" NPos="10" Point="0" UIFieldID="LabourCharges" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind5" />
+          <RoundRuleBind Name="RoundRuleBind5" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
+          <CurrencyType Name="CurrencyType5" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="b81efc2f-7eb7-4f54-bbf3-78ea006f263c" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.产品采购成本" IsNull="True" IsProperty="False" IsSequence="False" Name="ProductCost0" NPos="11" Point="0" UIFieldID="ProductCost" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind6" />
+          <RoundRuleBind Name="RoundRuleBind6" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
+          <CurrencyType Name="CurrencyType6" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="5f45d4e2-3ffa-4e2a-8dab-c424f3588dcf" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.管理费" IsNull="True" IsProperty="False" IsSequence="False" Name="AdministrativeFee0" NPos="12" Point="0" UIFieldID="AdministrativeFee" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind7" />
+          <RoundRuleBind Name="RoundRuleBind7" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind7" />
+          <CurrencyType Name="CurrencyType7" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="1626c799-8897-4efb-902d-f9a95096f28c" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.利息" IsNull="True" IsProperty="False" IsSequence="False" Name="Interest0" NPos="13" Point="0" UIFieldID="Interest" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind8" />
+          <RoundRuleBind Name="RoundRuleBind8" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
+          <CurrencyType Name="CurrencyType8" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="9d2dbb9f-fc85-4533-8178-f9c65505efb2" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.模具费" IsNull="True" IsProperty="False" IsSequence="False" Name="MouldFee0" NPos="14" Point="0" UIFieldID="MouldFee" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind9" />
+          <RoundRuleBind Name="RoundRuleBind9" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind9" />
+          <CurrencyType Name="CurrencyType9" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="0868aec4-79e3-4010-8ded-a1a84d7ce13c" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.防盗标签费" IsNull="True" IsProperty="False" IsSequence="False" Name="Labelling0" NPos="15" Point="0" UIFieldID="Labelling" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind10" />
+          <RoundRuleBind Name="RoundRuleBind10" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind10" />
+          <CurrencyType Name="CurrencyType10" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="c0978915-b519-418e-a3be-252a567aa4a7" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.信用保险保费" IsNull="True" IsProperty="False" IsSequence="False" Name="CreditInsurance0" NPos="16" Point="0" UIFieldID="CreditInsurance" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind11" />
+          <RoundRuleBind Name="RoundRuleBind11" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind11" />
+          <CurrencyType Name="CurrencyType11" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="272e43ee-92b5-4035-b4dc-c48abdf4ba14" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.银行费用" IsNull="True" IsProperty="False" IsSequence="False" Name="BankCharge0" NPos="17" Point="0" UIFieldID="BankCharge" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind12" />
+          <RoundRuleBind Name="RoundRuleBind12" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind12" />
+          <CurrencyType Name="CurrencyType12" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="06934e7b-1a3f-44be-a137-1feeb2299000" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.成品预测利润" IsNull="True" IsProperty="False" IsSequence="False" Name="ProductForecastRate0" NPos="18" Point="0" UIFieldID="ProductForecastRate" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind13" />
+          <RoundRuleBind Name="RoundRuleBind13" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind13" />
+          <CurrencyType Name="CurrencyType13" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="95e955a9-3229-43db-a4c8-e7182053dd37" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.整单预测利润" IsNull="True" IsProperty="False" IsSequence="False" Name="ListForecastRate0" NPos="19" Point="0" UIFieldID="ListForecastRate" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind14" />
+          <RoundRuleBind Name="RoundRuleBind14" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind14" />
+          <CurrencyType Name="CurrencyType14" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="1a07800c-4389-41f2-8434-f74890478da4" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.成品利润率" IsNull="True" IsProperty="False" IsSequence="False" Name="ProductRate0" NPos="20" Point="0" UIFieldID="ProductRate" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind15" />
+          <RoundRuleBind Name="RoundRuleBind15" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind15" />
+          <CurrencyType Name="CurrencyType15" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="b9a9b382-fec0-4b79-9e7a-94a8fe1b367a" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.整单利润率" IsNull="True" IsProperty="False" IsSequence="False" Name="ListRate0" NPos="21" Point="0" UIFieldID="ListRate" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind16" />
+          <RoundRuleBind Name="RoundRuleBind16" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind16" />
+          <CurrencyType Name="CurrencyType16" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="9f29f490-e509-4d92-9db1-0260bff94cc0" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.汇率" IsNull="True" IsProperty="False" IsSequence="False" Name="ExchangeRate0" NPos="22" Point="0" UIFieldID="ExchangeRate" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind17" />
+          <RoundRuleBind Name="RoundRuleBind17" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind17" />
+          <CurrencyType Name="CurrencyType17" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="5fe85b3a-2975-4f1b-bf25-34a0629cdbf5" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.国内运费" IsNull="True" IsProperty="False" IsSequence="False" Name="DomesticFee0" NPos="23" Point="0" UIFieldID="DomesticFee" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind18" />
+          <RoundRuleBind Name="RoundRuleBind18" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind18" />
+          <CurrencyType Name="CurrencyType18" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="2e673a0a-bd62-4552-94e2-2af50b7e2f02" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="销售订单成本预测.Misc.其他国内费" IsNull="True" IsProperty="False" IsSequence="False" Name="OtherDomesticFee0" NPos="24" Point="0" UIFieldID="OtherDomesticFee" UIViewID="CostForecast" Visible="True">
+          <PrecisionBind Name="PrecisionBind19" />
+          <RoundRuleBind Name="RoundRuleBind19" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind19" />
+          <CurrencyType Name="CurrencyType19" />
+          <Events />
+        </NumberColumn>
+      </Columns>
+    </DataGrid>
+  </Card>
+  <Events />
+</View>

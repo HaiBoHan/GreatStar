@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="b6173afc-0f34-4fb4-8984-5cf5cc16867f" name="ShippingType" displayName="值集值定义" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.GS.FT.ShipPlanDetailUI.ShippingType" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="c8b43790-c5d6-4296-96e1-c715858f1310" name="cRef" displayName="cRef" description="" help="值集值定义" refEntityId="f52b36dc-e642-4513-a0e6-8bddd4f9e7fc" refEntityName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="b71d61d5-745e-4f93-9e6b-77c2ac22185d" name="ID" displayName="ID" description="" help="值集值定义.Misc.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:ID" displayNameIndexStr="2" />
+        <RefField id="42f7c1cc-652a-49f3-8415-7835d648c0b3" name="Code" displayName="编码" description="" help="值集值定义.Misc.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Code" displayNameIndexStr="2" />
+        <RefField id="39121029-74cf-4055-b4b4-5f2a772b15de" name="Name" displayName="名称" description="" help="值集值定义.Misc.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Name" displayNameIndexStr="2" />
+        <RefField id="036f343a-6b14-4701-94e7-da6fe86f17d4" name="Description" displayName="描述" description="" help="值集值定义.Misc.描述" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Description" displayNameIndexStr="2" />
+        <RefField id="3b6221e6-80da-456a-b79b-af03ab2f396d" name="Effective_IsEffective" displayName="生效" description="" help="状态.Misc.生效" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Effective.IsEffective" displayNameIndexStr="2" />
+        <RefField id="6161b746-0ca5-4032-a3c9-986984693102" name="Effective_EffectiveDate" displayName="生效日期" description="" help="状态.Misc.生效日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Effective.EffectiveDate" displayNameIndexStr="2" />
+        <RefField id="aa59881c-72f6-428c-8e1d-a68bd4cdc18e" name="Effective_DisableDate" displayName="失效日期" description="" help="状态.Misc.失效日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Effective.DisableDate" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

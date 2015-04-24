@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="7f4ebb2e-1d68-499b-89d1-16382a28a483" name="BillNoAllocationUI" displayName="BillNoAllocationUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FT.BillNoAllocationUI" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="a9bef200-1dc7-4300-8f45-a679639dd885" name="FTBE" displayName="FTBE" description="" help="" componentid="d5f38b6f-bd81-4f81-83c7-f44bc3018259" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="d0128972-6e4d-4110-8662-5491bab1fa24" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="3545a717-dd1e-4377-bbe1-e6f2bd200016" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="1eea6eaf-9507-4c39-b329-3640be4210de" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="afec67c0-e2b6-40c9-a5f7-d659f77d5167" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="80a848af-9c5e-4dc1-b54e-4685c26064bc" name="ShipPlanDetailUI" displayName="ShipPlanDetailUI" description="" help="" componentid="5d949af0-5b75-4e06-85f8-38ade1e0eb02" path="..\ShipPlanDetailUI\ShipPlanDetailUI.ubfuiproj" type="UI" isRuntime="False" />
+    <Import id="b2a8b49d-1d77-47a7-8caa-79a0915d7e37" name="FTBP" displayName="FTBP" description="" help="" componentid="64c2a57c-cf4b-420c-a635-34c21f79ca06" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FT.FTBP.MetaData.dll" type="BP" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="06c62b9e-090c-41ef-b5dc-214b8adeb679" name="BillNoAllocationUIModel.ubfuim" displayName="BillNoAllocationUIModel.ubfuim" description="" help="" include="BillNoAllocationUIModel.ubfuim" type="" />
+    <Item id="15b19d87-dba1-4c53-a927-be8685987a9e" name="BillNoAllocationUIForm.ubfform" displayName="BillNoAllocationUIForm.ubfform" description="" help="" include="BillNoAllocationUIForm.ubfform" type="" />
+    <Item id="aca72ea4-9a0e-49a3-9053-150df5cb0e65" name="UIRef" displayName="UIRef" description="" help="" include="UIRef" type="" />
+    <Item id="6da73392-4474-4360-8cfc-eb4322e25354" name="BillNoRef.ubfref" displayName="BillNoRef.ubfref" description="" help="" include="UIRef\BillNoRef.ubfref" type="" />
+    <Item id="c7f0630c-5b73-45ea-9792-6e38b6e76bf6" name="ShipPlanRef.ubfref" displayName="ShipPlanRef.ubfref" description="" help="" include="UIRef\ShipPlanRef.ubfref" type="" />
+    <Item id="560100d9-f847-41b5-8530-a62bc83b32f4" name="FindRef" displayName="FindRef" description="" help="" include="FindRef" type="" />
+    <Item id="52552da9-2022-489f-a71e-90fea7b67a02" name="BillNoItemFindRef.ubfref" displayName="BillNoItemFindRef.ubfref" description="" help="" include="FindRef\BillNoItemFindRef.ubfref" type="" />
+    <Item id="205ee1c4-f859-402e-928e-5d470df83a89" name="BillNoAllocationFindRef.ubfref" displayName="BillNoAllocationFindRef.ubfref" description="" help="" include="FindRef\BillNoAllocationFindRef.ubfref" type="" />
+  </ItemGroup>
+</Project>

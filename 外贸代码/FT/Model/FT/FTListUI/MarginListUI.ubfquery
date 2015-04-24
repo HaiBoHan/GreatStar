@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="334a9c17-303b-4c3b-9fb1-71ccbd8df8fb" name="MarginListUI" displayName="MarginListUI" description="" help="" QueryType="List" QueryURI="bb93adde-827a-4dea-9940-54d13c972e9a" QuerySourceFullName="UFIDA.U9.Cust.GS.FT.MarginBE.Margin" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="af956ab5-acfa-41cf-8cca-a73b75a81288" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="0550b35c-63a0-432a-8aa2-6a3bceeea0df" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="00e2e4fa-2e94-4a5d-a96b-48acb5a73c24" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="1c3b71a1-b30e-4455-912e-b0ce31748b5b" UIFormItemID="e9384aff-83b4-4d19-9301-9f507f1fe3b1" UIModelID="0b31e627-b5c3-4552-ab8c-80ce72d1774a" />
+  <FilterDefines>
+    <FilterDefine id="1256b0b6-82fe-4613-93c3-05cf8f5725e9" name="CreatedOn" displayName="CreatedOn" description="" help="" ParentName="" Alias="CreatedOn" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="2cf800a0-35d1-46fc-ad3c-465f99fd996d" name="CreatedBy" displayName="CreatedBy" description="" help="" ParentName="" Alias="CreatedBy" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="4e41bca7-dcc4-4603-a9f5-cbb8c8d99670" name="ModifiedOn" displayName="ModifiedOn" description="" help="" ParentName="" Alias="ModifiedOn" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="81a02084-fb9f-49b5-9acf-713933026c9c" name="ModifiedBy" displayName="ModifiedBy" description="" help="" ParentName="" Alias="ModifiedBy" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="94054a38-8252-4f7c-8f0a-7a8f82b44c67" name="ItemsType" displayName="ItemsType" description="" help="" ParentName="" Alias="ItemsType" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="54f9a31a-73aa-4691-8fb0-ebd1a8f6c982" name="Org" displayName="Org" description="" help="" ParentName="" Alias="Org" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="0374b307-9f6a-4213-8d76-2e5427ddf6f7" name="MarginScale" displayName="MarginScale" description="" help="" ParentName="" Alias="MarginScale" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="b3535539-8db9-4251-98a7-24bfd0cb5be3" name="IsValid" displayName="IsValid" description="" help="" ParentName="" Alias="IsValid" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="82b1f6da-7526-4737-b701-48b1cac8ba65" name="ValidDate" displayName="ValidDate" description="" help="" ParentName="" Alias="ValidDate" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="03e1fb31-fb4a-4b35-8606-d9662158ebf8" name="UnValidDate" displayName="UnValidDate" description="" help="" ParentName="" Alias="UnValidDate" IsFixed="True" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="30810533-ae40-4b5e-a6a2-4b68c9e60650" name="CreatedOn" displayName="CreatedOn" description="" help="" ParentName="" Alias="CreatedOn" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="DateTime" Point="2" />
+    <ColumnDefine id="7bc0cac0-77e2-4639-8ea9-98a7be7a48f2" name="CreatedBy" displayName="CreatedBy" description="" help="" ParentName="" Alias="CreatedBy" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="ffdb8d18-60d3-4e21-9094-4187b963fa11" name="ModifiedOn" displayName="ModifiedOn" description="" help="" ParentName="" Alias="ModifiedOn" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="DateTime" Point="2" />
+    <ColumnDefine id="14943e1c-6d31-44be-8127-977e18dde2a2" name="ModifiedBy" displayName="ModifiedBy" description="" help="" ParentName="" Alias="ModifiedBy" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="3302f9e8-5ce2-44a8-ad95-e78bf919892e" name="ItemsType" displayName="ItemsType" description="" help="" ParentName="" Alias="ItemsType" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="903daf19-b363-4b03-84f8-75c32e3ff099" name="Org" displayName="Org" description="" help="" ParentName="" Alias="Org" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="7d2bacbe-8330-4901-8461-a9ca63a55b57" name="MarginScale" displayName="MarginScale" description="" help="" ParentName="" Alias="MarginScale" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="194700dd-122d-4800-a086-f80304f6b8fa" name="IsValid" displayName="IsValid" description="" help="" ParentName="" Alias="IsValid" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="b783dcca-a964-4008-b6d9-332c096e022b" name="ValidDate" displayName="ValidDate" description="" help="" ParentName="" Alias="ValidDate" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="c9506626-d85f-4f13-bd8d-712c14220415" name="UnValidDate" displayName="UnValidDate" description="" help="" ParentName="" Alias="UnValidDate" IsFixed="True" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="10f92f4e-8207-447a-a3bb-52c9098f8f14" name="CreatedOn" displayName="" description="" help="" ParentName="" Alias="CreatedOn" IsFixed="True" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="d201672d-7b35-4015-a0ed-f7d692be3c4e" name="CreatedBy" displayName="" description="" help="" ParentName="" Alias="CreatedBy" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="ed48afa7-3f1a-4885-98bc-52774b63de5d" name="ModifiedOn" displayName="" description="" help="" ParentName="" Alias="ModifiedOn" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="a43a67e9-fea1-49b6-9928-b7361c22bece" name="ModifiedBy" displayName="" description="" help="" ParentName="" Alias="ModifiedBy" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="7eecf772-0498-4e4f-935d-5913ad789041" name="ItemsType" displayName="" description="" help="" ParentName="" Alias="ItemsType" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="e13f1da0-9983-4ab8-9d12-84defa525679" name="Org" displayName="" description="" help="" ParentName="" Alias="Org" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="7af448af-7f2f-4cef-8ce7-7eb9f26d0017" name="MarginScale" displayName="" description="" help="" ParentName="" Alias="MarginScale" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="91df4541-19eb-4976-a096-1201986eba6f" name="IsValid" displayName="" description="" help="" ParentName="" Alias="IsValid" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="7b0be4ac-8292-4193-b582-15007031db19" name="ValidDate" displayName="" description="" help="" ParentName="" Alias="ValidDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="779cd931-0203-424f-9f3b-d06197921413" name="UnValidDate" displayName="" description="" help="" ParentName="" Alias="UnValidDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="de8b30dc-d895-47a2-b498-2c48d9d09746" name="ItemsType" displayName="料品分类" description="" help="" />
+      <BasicFilter id="926f28ac-add9-4a5a-b90f-787986bcfdef" name="MarginScale" displayName="余量比例" description="" help="" />
+      <BasicFilter id="a9fd34f5-db7e-45d9-8fdf-e45633bc0757" name="ValidDate" displayName="有效开始日期" description="" help="" />
+      <BasicFilter id="55ea0c89-b44c-4c8e-9e09-eed3a2889ce0" name="IsValid" displayName="有效" description="" help="" />
+      <BasicFilter id="9f27bec7-3f4d-4451-adb7-197d597f2fd3" name="UnValidDate" displayName="失效日期" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="621d4467-84cd-475f-8691-62cebb0a7d51" name="ItemsType" displayName="料品分类" description="" help="" />
+      <Column id="be63dd58-1224-4089-b53b-9fe0ec83b4f2" name="IsValid" displayName="有效" description="" help="" />
+      <Column id="3a52617f-d133-40e2-b93a-7213bfd22f0a" name="ValidDate" displayName="有效开始日期" description="" help="" />
+      <Column id="114d2b0d-ef79-4818-a500-77cc0987c88a" name="UnValidDate" displayName="失效日期" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="ada8f773-14e7-4f3b-be47-22a0f1395f12" name="CreatedOn" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>
