@@ -1,8 +1,0 @@
-<Solution>
-  <SourceControl>
-  </SourceControl>
-  <ItemGroup>
-    <Item id="6d11cac4-aaf9-4bd8-b394-de63cd0da857" include="FTSV\FTSV.ubfserproj" />
-  </ItemGroup>
-  <ServiceGroupInfo id="5292e9cd-531d-40e7-b5a8-bacbb531fde8" name="GSInterface" displayName="GSInterface" description="" help="" fullPath="D:\UFIDA\UBFDocs\GSInterface\GSInterface.ubfsln" applicationID="" />
-</Solution>
