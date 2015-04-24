@@ -274,7 +274,8 @@ _UpgradeReport_Files/
 
 #*/Code/*/*.*
 */Code/*/*.*
-!*/Code/*/*.csproj
+# Error , sln peer Wrap.csproj
+# !*/Code/*/*.csproj
 #public method maybe  but ... UBFAssebmly.cs 
 #!*/Code/*/*.cs
 
@@ -282,7 +283,8 @@ _UpgradeReport_Files/
 !*/Code/*/Entity/*.csproj
 #public method maybe  but ... UBFAssebmly.cs 
 # !*/Code/*/Entity/*.cs
-!*/Code/*/BpImplement/*.cs
+#public method maybe  but ... UBFAssebmly.cs 
+#!*/Code/*/BpImplement/*.cs
 */Code/*/Entity/*/*
 !*/Code/*/Entity/*/*Extend.cs
 
@@ -291,7 +293,6 @@ _UpgradeReport_Files/
 !*/Code/*/BpImplement/*.csproj
 #public method maybe  but ... UBFAssebmly.cs 
 #!*/Code/*/BpImplement/*.cs
-!*/Code/*/BpImplement/*.cs
 */Code/*/BpImplement/*/*
 !*/Code/*/BpImplement/*/*Extend.cs
 
