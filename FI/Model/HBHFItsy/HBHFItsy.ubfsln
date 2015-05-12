@@ -1,0 +1,9 @@
+<Solution>
+  <SourceControl>
+  </SourceControl>
+  <ItemGroup>
+    <Item id="c424deb4-3163-49d0-9f0d-aeabeda28626" include="FIBE\FIBE.ubfmlproj" />
+    <Item id="7bde3256-539a-47c2-9a8a-f4010eee60eb" include="FIUI\FIUI.ubfuiproj" />
+  </ItemGroup>
+  <ServiceGroupInfo id="e15556b3-d050-40f4-95a5-6c73f1b39d5e" name="HBHFItsy" displayName="HBHFItsy" description="" help="" fullPath="D:\U9\U9Proj-Empty\GreatStar\FI\Model\HBHFItsy\HBHFItsy.ubfsln" applicationID="" />
+</Solution>

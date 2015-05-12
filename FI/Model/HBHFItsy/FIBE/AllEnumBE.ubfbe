@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="80cc1881-5c27-4e34-a8f4-614ead09db60" name="AllEnumBE" displayName="AllEnumBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FI.FIBEtsy">
+  <Namespace id="2697bbfb-590a-4a63-9f0c-ef3b02b1a82c" name="AllEnumBE" displayName="AllEnumBE" description="" help="">
+    <Enum id="147ea622-5e39-4152-bb66-3cc020c43a4c" name="Enum" displayName="枚举" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isExtend="False">
+      <Attributes>
+        <Attribute id="7f79c325-ce5b-43dd-8460-4729d5208b8e" name="Opening" displayName="开立" description="" help="枚举.Misc.开立" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="0" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="7f6b5796-36a1-4a16-a7f1-23a17a2df12d" name="Approving" displayName="审核中" description="" help="枚举.Misc.审核中" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="1" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="a5cd8c55-5e2d-4d63-b08c-797bac51e6de" name="Approved" displayName="已审核" description="" help="枚举.Misc.已审核" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="2" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </Enum>
+    <Diagram id="00000000-0000-0000-0000-000000000000" name="AllEnumBE" displayName="AllEnumBE">
+      <Class Editable="True" ID="56df6d0e-4e0e-4db2-a325-45e4d5aefd14" Type="EnumType" ADID="147ea622-5e39-4152-bb66-3cc020c43a4c">
+        <Location X="253" Y="189" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

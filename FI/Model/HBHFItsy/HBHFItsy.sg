@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceGroup>
+  <ServiceGroupInfo id="e15556b3-d050-40f4-95a5-6c73f1b39d5e" name="HBHFItsy" displayName="HBHFItsy" description="" help="" fullPath="D:\U9\U9Proj-Empty\GreatStar\FI\Model\HBHFItsy\HBHFItsy.sg" applicationID="" />
+  <AssemblyGroup>
+    <Assembly ID="3f6cc9b7-d272-4d2b-aa4f-1ddd3758e932" name="UFIDA.U9.Cust.GS.FI.FIBE" type="BE" path="" />
+    <Assembly ID="c1a79829-62d7-4d59-828f-be7840221167" name="UFIDA.U9.Cust.GS.FI.FIUI" type="UI" path="" />
+  </AssemblyGroup>
+</ServiceGroup>

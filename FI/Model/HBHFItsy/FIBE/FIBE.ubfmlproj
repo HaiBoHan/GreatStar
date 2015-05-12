@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="3f6cc9b7-d272-4d2b-aa4f-1ddd3758e932" name="FIBEtsy" displayName="FIBEtsy" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.GS.FI.FIBEtsy" mapProject=".\..\FIBE_DB\FIBE_DB.ubfdbproj" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="af35b28c-72fd-46ab-9bcf-c724287c95db" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="b12cdf16-2db3-4d21-8851-de351fd239b1" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="9ea66d17-fc1b-4968-ba80-29f4ec78844a" name="CBO_SCMBE" displayName="CBO_SCMBE" description="" help="" componentid="b6f24ded-125b-492b-8292-c000f06ad453" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.SCMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="fa77497a-90c4-4428-a13a-5ce80628e88f" name="SMBE" displayName="SMBE" description="" help="" componentid="c901c367-9f35-425c-812e-9a9966cb21a3" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="07fd4c5d-2f74-4a9f-8d8e-86a26735b46c" name="PMBE" displayName="PMBE" description="" help="" componentid="40c924ae-393f-4adb-9176-e5e26110633d" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.PM.PMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="6639530e-bf09-4575-adfc-ca6ba5a62916" name="LotBE" displayName="LotBE" description="" help="" componentid="84da9a87-895d-4954-a168-832b2316ee21" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.Lot.LotBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="9effd333-c6e3-4ee1-ad72-996dd3b1c032" name="CostStatementBillBE.ubfbe" displayName="CostStatement.ubfbe" description="" help="" include="CostStatementBillBE.ubfbe" type="BE" />
+    <Item id="027bbc06-d448-44c3-bb37-a3beca0395c1" name="CostAdjustmentBillBE.ubfbe" displayName="CostAdjustmentBillBE.ubfbe" description="" help="" include="CostAdjustmentBillBE.ubfbe" type="BE" />
+    <Item id="0821e9ed-a52d-4754-9772-fd00744400f5" name="AllEnumBE.ubfbe" displayName="AllEnumBE.ubfbe" description="" help="" include="AllEnumBE.ubfbe" type="BE" />
+    <Item id="211277a5-e2df-4052-b24b-cfe15cbc418c" name="VirtualOutboundOrderBE.ubfbe" displayName="VirtualOutboundOrderBE.ubfbe" description="" help="" include="VirtualOutboundOrderBE.ubfbe" type="BE" />
+    <Item id="3123d58a-93b7-4688-9347-35c8f8c6ab4d" name="VirtualSingleStorageBE.ubfbe" displayName="VirtualSingleStorageBE.ubfbe" description="" help="" include="VirtualSingleStorageBE.ubfbe" type="BE" />
+    <Item id="73a19803-2e57-4f0b-b430-5c71d3438e01" name="VirtualOutStorageStatisticsBE.ubfbe" displayName="VirtualOutStorageStatisticsBE.ubfbe" description="" help="" include="VirtualOutStorageStatisticsBE.ubfbe" type="BE" />
+    <Item id="6d826fdb-e54d-49cf-b1e3-1b87ccfa3842" name="BusinessProceedsBE.ubfbe" displayName="BusinessProceedsBE.ubfbe" description="" help="" include="BusinessProceedsBE.ubfbe" type="BE" />
+  </ItemGroup>
+</Project>

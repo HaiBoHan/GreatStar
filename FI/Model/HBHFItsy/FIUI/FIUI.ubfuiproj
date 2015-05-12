@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="c1a79829-62d7-4d59-828f-be7840221167" name="FIUI" displayName="FIUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FI.FIUI" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="8167e710-de98-42eb-af06-d41345c87486" name="FIBE" displayName="FIBE" description="" help="" componentid="3f6cc9b7-d272-4d2b-aa4f-1ddd3758e932" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\FIBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="7c7ae773-ab81-4bcc-a766-82edbfc75bde" name="BaseBE" displayName="BaseBE" description="" help="" componentid="c63d160d-c4a3-4696-b03b-d16dd5b01ae9" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="15bf97cc-78fd-4d3d-b50b-f2e02a8607b9" name="CostStatementBillUI.ubfuim" displayName="CostStatementBillUI.ubfuim" description="" help="" include="CostStatementBillUI.ubfuim" type="" />
+    <Item id="22d48e5a-7609-43fe-8556-7339f3b264bd" name="CurrencyRef.ubfref" displayName="CurrencyRef.ubfref" description="" help="" include="CurrencyRef.ubfref" type="" />
+    <Item id="433cae55-1b50-4dff-9709-2c4b76d58eee" name="CostAdjustmentBillUI.ubfuim" displayName="CostAdjustmentBillUI.ubfuim" description="" help="" include="CostAdjustmentBillUI.ubfuim" type="" />
+    <Item id="950829f5-0eeb-4a33-9150-283563c8b7bc" name="VirtualOutboundOrderUI.ubfuim" displayName="VirtualOutboundOrderUI.ubfuim" description="" help="" include="VirtualOutboundOrderUI.ubfuim" type="" />
+    <Item id="58e81915-8333-4694-ad31-4d5d645326e7" name="CostStatementBillUIModel.ubfform" displayName="CostStatementBillUIModel.ubfform" description="" help="" include="CostStatementBillUIModel.ubfform" type="" />
+    <Item id="95ee2862-4aa5-4e92-8fb1-ec9b64c21140" name="CostAdjustmentBillUIModel.ubfform" displayName="CostAdjustmentBillUIModel.ubfform" description="" help="" include="CostAdjustmentBillUIModel.ubfform" type="" />
+    <Item id="a37dac4d-6e5a-4066-96d7-50aa7fdafada" name="VirtualOutboundOrderUIModel.ubfform" displayName="VirtualOutboundOrderUIModel.ubfform" description="" help="" include="VirtualOutboundOrderUIModel.ubfform" type="" />
+    <Item id="7eac1e71-e826-4327-886d-d082996c3ca3" name="VirtualSingleStorgeUI.ubfuim" displayName="VirtualSingleStorgeUI.ubfuim" description="" help="" include="VirtualSingleStorgeUI.ubfuim" type="" />
+    <Item id="ae963fe0-a4f5-4e07-a8ce-f117c50ce64a" name="VirtualSingleStorageUIModel.ubfform" displayName="VirtualSingleStorageUIModel.ubfform" description="" help="" include="VirtualSingleStorageUIModel.ubfform" type="" />
+    <Item id="d29e3936-9413-4149-83ae-68103d0a56ac" name="VirtualOutStorageStatisticsUI.ubfuim" displayName="VirtualOutStorageStatisticsUI.ubfuim" description="" help="" include="VirtualOutStorageStatisticsUI.ubfuim" type="" />
+    <Item id="72f5e660-e6f6-4616-a7b9-02d07f3a782c" name="VirtualOutStorageStatisticsUIModel.ubfform" displayName="VirtualOutStorageStatisticsUIModel.ubfform" description="" help="" include="VirtualOutStorageStatisticsUIModel.ubfform" type="" />
+  </ItemGroup>
+</Project>
