@@ -781,60 +781,8 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
 
         #region 自定义按钮事件
 
-        //生成订单佣金
-        public void BtnBrokerage_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
-        {        
-            this.part.Model.ClearErrorMessage();
-            try
-            {
-                List<long> solineList = new List<long>();
-                foreach (IUIRecord record in part.Model.Views["SO_SOLines"].Records)
-                {
-                    if (record.DataRecordState == DataRowState.Added)
-                    {
-                        this.part.Model.ErrorMessage.Message = "第" + record["DocLineNo"].ToString() + "行:还未保存！";
-                        return;
-                    }
-                    if (!record["DescFlexField_PrivateDescSeg19"].ToString().Contains("True"))
-                    {
-                        this.part.Model.ErrorMessage.Message = "请先生成折扣后再产生佣金！";
-                        return;
-                    }
-                    solineList.Add(Convert.ToInt64(record["ID"]));
-                }
-                if (solineList.Count > 0)
-                {
-                    SOUIHelperExtend.DeleteBrokerage(solineList);
-                    SOUIHelperExtend.CreateBrokerage(solineList);
-                    (this.part.Action as BaseAction).NavigateAction.Refresh(null);
-                }
-            }
-            catch (Exception ex)
-            {
-                this.part.Model.ErrorMessage.Message = ex.Message;
-                return;
-            }
-        }
-        //订单佣金明细
-        public void BtnOrderBrokerage_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
-        {
-            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO_SOLines"].FocusedRecord != null)
-            {
-                part.Model.ClearErrorMessage();
-                part.DataCollect();
-                part.IsConsuming = false;
-                part.IsDataBinding = true;
+        #region 订单动作
 
-                SetDto();
-
-                part.ShowModalDialog("c995ec02-be18-45fa-a119-1a5b662899e3", "订单佣金", "880", "400", "", null, true);
-            }
-            else
-            {
-                this.part.Model.ErrorMessage.Message = "当前销售订单/销售订单行不能为空！";
-                return;
-            }
-        }
         //生成订单折扣
         public void BtnDiscount_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
         {
@@ -877,19 +825,8 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                 }
             }
         }
-        //订单折扣
-        public void BtnDiscountDetail_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
-        {
-            if (this.part.Model.Views["SO"].FocusedRecord != null)
-            {
-                NameValueCollection param = new NameValueCollection();
-                param.Add("PDPageStatus", "Browse");//这行代码是控制弹开画面为浏览状态
-                param.Add("SO", this.part.Model.Views["SO"].FocusedRecord["ID"].ToString());
-                part.ShowModalDialog("7913c4b1-fead-41dd-9f86-6924ee29158c", "订单折扣", "730", "375", "",param, true);
-            }
-        }
-        //整单BOM生成
-        public void BtnSOBom_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        //生成订单佣金
+        public void BtnBrokerage_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
         {
             this.part.Model.ClearErrorMessage();
             try
@@ -902,55 +839,24 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                         this.part.Model.ErrorMessage.Message = "第" + record["DocLineNo"].ToString() + "行:还未保存！";
                         return;
                     }
+                    if (!record["DescFlexField_PrivateDescSeg19"].ToString().Contains("True"))
+                    {
+                        this.part.Model.ErrorMessage.Message = "请先生成折扣后再产生佣金！";
+                        return;
+                    }
                     solineList.Add(Convert.ToInt64(record["ID"]));
                 }
                 if (solineList.Count > 0)
                 {
-                    SOUIHelperExtend.CreateSOBom(solineList);
+                    SOUIHelperExtend.DeleteBrokerage(solineList);
+                    SOUIHelperExtend.CreateBrokerage(solineList);
                     (this.part.Action as BaseAction).NavigateAction.Refresh(null);
                 }
-
             }
             catch (Exception ex)
             {
                 this.part.Model.ErrorMessage.Message = ex.Message;
                 return;
-            }
-        }
-        //随单BOM
-        public void BtnOrderBom_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
-        {
-            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO_SOLines"].FocusedRecord != null)
-            {
-                part.Model.ClearErrorMessage();
-                part.DataCollect();
-                part.IsConsuming = false;
-                part.IsDataBinding = true;
-
-                SetDto();
-                part.CurrentState["IsBefore"] = "True";
-                part.ShowModalDialog("1291fa14-0137-4dca-958d-ed67066447dc", "订单BOM", "930", "435", "", null, true);
-            }
-            else
-            {
-                this.part.Model.ErrorMessage.Message = "当前销售订单/销售订单行不能为空！";
-                return;
-            }
-        }
-        //整单包材确认
-        private void BtnSubItemConfirm_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
-        {
-            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO"].FocusedRecord["ID"] != null)
-            {
-                PubHelperUI.SOUIHelperExtend.ConfirmSubItem(long.Parse(part.Model.Views["SO"].FocusedRecord["ID"].ToString()), true);
-            }
-        }
-        //整单包材取消确认
-        private void BtnSubItemCancel_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
-        {
-            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO"].FocusedRecord["ID"] != null)
-            {
-                PubHelperUI.SOUIHelperExtend.ConfirmSubItem(long.Parse(part.Model.Views["SO"].FocusedRecord["ID"].ToString()), false);
             }
         }
         //一键创建订单折扣及佣金
@@ -1010,6 +916,107 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                 }
             }
         }
+        //整单BOM生成
+        public void BtnSOBom_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        {
+            this.part.Model.ClearErrorMessage();
+            try
+            {
+                List<long> solineList = new List<long>();
+                foreach (IUIRecord record in part.Model.Views["SO_SOLines"].Records)
+                {
+                    if (record.DataRecordState == DataRowState.Added)
+                    {
+                        this.part.Model.ErrorMessage.Message = "第" + record["DocLineNo"].ToString() + "行:还未保存！";
+                        return;
+                    }
+                    solineList.Add(Convert.ToInt64(record["ID"]));
+                }
+                if (solineList.Count > 0)
+                {
+                    SOUIHelperExtend.CreateSOBom(solineList);
+                    (this.part.Action as BaseAction).NavigateAction.Refresh(null);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                this.part.Model.ErrorMessage.Message = ex.Message;
+                return;
+            }
+        }
+        //整单包材确认
+        private void BtnSubItemConfirm_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        {
+            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO"].FocusedRecord["ID"] != null)
+            {
+                PubHelperUI.SOUIHelperExtend.ConfirmSubItem(long.Parse(part.Model.Views["SO"].FocusedRecord["ID"].ToString()), true);
+            }
+        }
+        //整单包材取消确认
+        private void BtnSubItemCancel_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        {
+            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO"].FocusedRecord["ID"] != null)
+            {
+                PubHelperUI.SOUIHelperExtend.ConfirmSubItem(long.Parse(part.Model.Views["SO"].FocusedRecord["ID"].ToString()), false);
+            }
+        }
+
+        #endregion
+
+        #region 弹出页面
+
+        //订单佣金明细
+        public void BtnOrderBrokerage_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        {
+            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO_SOLines"].FocusedRecord != null)
+            {
+                part.Model.ClearErrorMessage();
+                part.DataCollect();
+                part.IsConsuming = false;
+                part.IsDataBinding = true;
+
+                SetDto();
+
+                part.ShowModalDialog("c995ec02-be18-45fa-a119-1a5b662899e3", "订单佣金", "880", "400", "", null, true);
+            }
+            else
+            {
+                this.part.Model.ErrorMessage.Message = "当前销售订单/销售订单行不能为空！";
+                return;
+            }
+        }
+        //随单BOM
+        public void BtnOrderBom_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        {
+            if (this.part.Model.Views["SO"].FocusedRecord != null && this.part.Model.Views["SO_SOLines"].FocusedRecord != null)
+            {
+                part.Model.ClearErrorMessage();
+                part.DataCollect();
+                part.IsConsuming = false;
+                part.IsDataBinding = true;
+
+                SetDto();
+                part.CurrentState["IsBefore"] = "True";
+                part.ShowModalDialog("1291fa14-0137-4dca-958d-ed67066447dc", "订单BOM", "930", "435", "", null, true);
+            }
+            else
+            {
+                this.part.Model.ErrorMessage.Message = "当前销售订单/销售订单行不能为空！";
+                return;
+            }
+        }
+        //订单折扣
+        public void BtnDiscountDetail_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
+        {
+            if (this.part.Model.Views["SO"].FocusedRecord != null)
+            {
+                NameValueCollection param = new NameValueCollection();
+                param.Add("PDPageStatus", "Browse");//这行代码是控制弹开画面为浏览状态
+                param.Add("SO", this.part.Model.Views["SO"].FocusedRecord["ID"].ToString());
+                part.ShowModalDialog("7913c4b1-fead-41dd-9f86-6924ee29158c", "订单折扣", "730", "375", "", param, true);
+            }
+        }
         //订单费用明细
         public void BtnFeeAmount_ItemClick(object sender, UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs e)
         {
@@ -1046,6 +1053,9 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
         {
             part.NavigatePage("Cust.GS.FT.CostForecastListURI", null);
         }
+
+        #endregion
+
         #endregion
     }
 }

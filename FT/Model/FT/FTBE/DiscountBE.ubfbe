@@ -5,7 +5,7 @@
       <Groups>
         <Group id="d9bf1be5-b4ac-416d-9086-ffefb10870f6" name="Key" displayName="Key" description="" help="" />
         <Group id="5975bb96-4cdd-4c55-80a9-9c3472176d12" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="1c1ea3ba-d403-4caf-adcb-b794e57f306e" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="515ee38d-8afa-4a28-84cc-75b224126f5f" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="1f0dd421-a799-4b1d-a3b4-81d0ebb6266c" name="ID" displayName="ID" description="" help="产品客户折扣关系单头.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -45,7 +45,7 @@
       <Groups>
         <Group id="f610ad8c-979a-4de7-8272-140c02e5586c" name="Key" displayName="Key" description="" help="" />
         <Group id="65fa47ae-2fae-4ab3-b365-cacc95c2c73a" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="fe0ed780-a23f-4a5d-bc20-085ef1d21ad9" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="5b4db363-59b6-4a58-b557-3acdbe33741e" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="a5924b29-8bbf-4cf6-85c7-64d4017d7435" name="ID" displayName="ID" description="" help="产品客户折扣关系单行.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
