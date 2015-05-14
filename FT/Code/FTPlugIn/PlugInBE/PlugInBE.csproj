@@ -233,7 +233,7 @@
     <Reference Include="UFIDA.U9.SPR.SPRSV.Deploy">
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.SPR.SPRSV.Deploy.dll</HintPath>
     </Reference>
-    <Reference Include="UFIDA.UBF.MD.Entity.Deploy" >
+    <Reference Include="UFIDA.UBF.MD.Entity.Deploy">
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.UBF.MD.Entity.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFSoft.UBF.AopFrame, Version=25.5401.12927.0, Culture=neutral, processorArchitecture=MSIL">
@@ -278,26 +278,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemMasterDeletedBEExtend.cs" />
+    <Compile Include="ItemMaster_AfterDeletedExtend.cs" />
     <Compile Include="PubHelperBE\CreateSOAssessTypeExtend.cs" />
     <Compile Include="PubHelperBE\CreateSOFeeExtend.cs" />
     <Compile Include="PubHelperBE\PubSoDeleteExtend.cs" />
     <Compile Include="PubHelperBE\PubSoSetDefaultValueExtend.cs" />
     <Compile Include="PubHelperBE\SOValidateExtend.cs" />
-    <Compile Include="SOAfterValidateExtend.cs" />
-    <Compile Include="SOBeforeValidateExtend.cs" />
-    <Compile Include="SOInsertedPlugBEExtend.cs" />
-    <Compile Include="SOLineDeletePlugBEExtend.cs" />
-    <Compile Include="SOSetDefaultValueExtend.cs" />
-    <Compile Include="SoDeleteIngBEExtend.cs" />
-    <Compile Include="SoDeletedBEExtend.cs" />
+    <Compile Include="SO_AfterValidateExtend.cs" />
+    <Compile Include="SO_BeforeValidateExtend.cs" />
+    <Compile Include="SO_AfterInsertedExtend.cs" />
+    <Compile Include="SOLine_AfterDeletedExtend.cs" />
+    <Compile Include="SO_BeforeDefaultValueExtend.cs" />
+    <Compile Include="SO_AfterDeletedExtend.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PubHelperBE\PubCreateSalePriceAdjustmentExtend.cs" />
     <Compile Include="PubHelperBE\PubHelperExtend.cs" />
     <Compile Include="PubHelperBE\PubSoApprovedExtend.cs" />
     <Compile Include="PubHelperBE\PubSoSubmitExtend.cs" />
-    <Compile Include="SOPlugBEExtend.cs" />
-    <Compile Include="SOUpdatePlugBEExtend.cs" />
+    <Compile Include="SO_oldPlugBEExtend.cs" />
+    <Compile Include="SO_AfterUpdatedExtend.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
