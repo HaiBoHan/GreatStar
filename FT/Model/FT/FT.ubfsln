@@ -12,6 +12,7 @@
     <Item id="c7258650-f068-42f2-babc-d883d8c5c076" include="SOListUI\SOListUI.ubfuiproj" />
     <Item id="a155cfa0-6221-45f9-8c99-5db50d5ecaf9" include="SOListBP\SOListBP.ubfbpproj" />
     <Item id="2eb2911d-0ec3-4bc7-a890-7542575eec81" include="SOListUI\SOListUI.ubfqueryproj" />
+    <Item id="cf1b5c41-4066-4df6-8908-6e4fa85a8167" include="..\GSInterface\FTSV\FTSV.ubfserproj" />
   </ItemGroup>
-  <ServiceGroupInfo id="34e6c310-e566-4c19-97ff-2458deb52e58" name="UFIDA.U9.Cust.GS.FT" displayName="FT" description="" help="" fullPath="D:\UFIDA\UBFDocs\GS\FT\FT.ubfsln" applicationID="" />
+  <ServiceGroupInfo id="34e6c310-e566-4c19-97ff-2458deb52e58" name="UFIDA.U9.Cust.GS.FT" displayName="FT" description="" help="" fullPath="D:\U9Cust\UFIDA\U9Proj\GreatStar\FT\Model\FT\FT.ubfsln" applicationID="" />
 </Solution>

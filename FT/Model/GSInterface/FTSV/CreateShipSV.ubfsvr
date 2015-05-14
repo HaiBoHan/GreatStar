@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Component id="4c5b161d-4b3a-42b6-bd3c-c566582ca536" name="CreateShipSV" displayName="CreateShipSV" description="" help="" type="SV" assemblyName="UFIDA.U9.Cust.GS.GSInterface.FTSV">
+<Component id="4c5b161d-4b3a-42b6-bd3c-c566582ca536" name="CreateShipSV" displayName="CreateShipSV" description="" help="" type="SV" assemblyName="UFIDA.U9.Cust.GS.FT.FTSV">
   <Namespace id="29af77e9-2103-4361-bbc2-2ed252e24564" name="UFIDA.U9.Cust.GS.SM.CreateShipSV" displayName="UFIDA.U9.Cust.GS.SM.CreateShipSV" description="" help="">
     <PropertyType id="a36b1e66-9006-49ee-86b8-4a551dbe501e" name="SrcSOInfoDTO" displayName="来源销售订单信息DTO" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
       <Groups>
@@ -26,7 +26,7 @@
         <Attribute id="0696c302-cf5e-483c-afc4-c034ee2b42c0" name="ShipDocOrg" displayName="出货单组织编码" description="" help="出货单信息DTO.Misc.出货单组织编码" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="3" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
       </Attributes>
     </PropertyType>
-    <Operation id="f51972ac-33cf-4efc-bd2b-be8b0a86b4a6" name="CreateShipSV" displayName="创建出货单接口" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="True" isDefault="False" isEntityKey="False" transactionType="0" isAuthorization="True" isISV="False">
+    <Operation id="f51972ac-33cf-4efc-bd2b-be8b0a86b4a6" name="CreateShipSV" displayName="创建出货单接口" description="创建出货单接口" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="True" isDefault="False" isEntityKey="False" transactionType="0" isAuthorization="True" isISV="False">
       <Groups>
         <Group id="71bb8eea-f3e5-4daf-afa2-913c479dda08" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
@@ -38,10 +38,6 @@
       </Implements>
     </Operation>
     <Diagram id="372d336f-5262-4a3e-ba29-d2ad2cb39e15" name="CreateShipSV" displayName="CreateShipSV">
-      <Class Editable="True" ID="c4c65b51-1b89-4563-97e2-d1983fefc59a" Type="Service" ADID="f51972ac-33cf-4efc-bd2b-be8b0a86b4a6">
-        <Location X="36" Y="23" />
-        <Size width="120" height="58" />
-      </Class>
       <Class Editable="True" ID="6ef694d9-a522-42dd-ac9c-8ce73d1470d6" Type="PropertyType" ADID="a36b1e66-9006-49ee-86b8-4a551dbe501e">
         <Location X="203" Y="26" />
         <Size width="180" height="58" />
@@ -49,6 +45,10 @@
       <Class Editable="True" ID="55820e84-f644-4d90-a72a-8c5b61a210ae" Type="PropertyType" ADID="4e016b4e-28b0-4689-8fdb-ed871e5ff0bd">
         <Location X="209" Y="112" />
         <Size width="166" height="58" />
+      </Class>
+      <Class Editable="True" ID="c4c65b51-1b89-4563-97e2-d1983fefc59a" Type="Service" ADID="f51972ac-33cf-4efc-bd2b-be8b0a86b4a6">
+        <Location X="36" Y="23" />
+        <Size width="120" height="58" />
       </Class>
     </Diagram>
   </Namespace>
