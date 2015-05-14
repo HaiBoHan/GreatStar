@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugInBE", "PlugInBE\PlugInBE.csproj", "{DB815F82-4098-417E-B3EF-7A135277DA92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFIDA.U9.Cust.GS.FT.PlugInBE", "PlugInBE\UFIDA.U9.Cust.GS.FT.PlugInBE.csproj", "{DB815F82-4098-417E-B3EF-7A135277DA92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugInUI", "PlugInUI\PlugInUI.csproj", "{550E60F9-E26B-4001-B0A5-3C9908DFE791}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFIDA.U9.Cust.GS.FT.PlugInUI", "PlugInUI\UFIDA.U9.Cust.GS.FT.PlugInUI.csproj", "{550E60F9-E26B-4001-B0A5-3C9908DFE791}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
