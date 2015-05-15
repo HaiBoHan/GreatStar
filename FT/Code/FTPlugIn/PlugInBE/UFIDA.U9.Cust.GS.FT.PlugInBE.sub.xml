@@ -20,7 +20,10 @@
   <subcription event="UFIDA.U9.SM.SO.SO.AfterDeleted">
     <subscriber  type="UFIDA.U9.Cust.GS.FT.PlugInBE.SO_AfterInsertedExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
   </subcription>
-  
+
+  <subcription event="UFIDA.U9.SM.SO.SOLine.BeforeDefaultValue">
+    <subscriber type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOLine_BeforeDefaultValueExtend,UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
+  </subcription>
   <subcription event="UFIDA.U9.SM.SO.SOLine.AfterDeleted">
     <subscriber  type="UFIDA.U9.Cust.GS.FT.PlugInBE.SOLine_AfterDeletedExtend, UFIDA.U9.Cust.GS.FT.PlugInBE.dll" />
   </subcription>

@@ -43,55 +43,55 @@ where 1=1
 
 -- 2、匹配  有效的客户产品折扣关系表 ; 计算订单折扣 
 
-update #hbh_tmp_SOLineCalcDis
-set
-	DiscountedPrice = 
-				-- 折后价
-				-- DiscountType : FixedValues 0 固定值		PercentValues 3  百分比
-				Round
-					(case disLine.DiscountType 
-						-- 点击生成折扣，当固定值＞外销价时(币种相同)，应予以提示，不允许进行折扣生成
-						when 0 then case when tmpSO.soPrice > disLine.Prices
-									then disLine.Prices
-									else tmpSO.soPrice end
-						when 3 then tmpSO.soPrice * disLine.Discount
-						else tmpSO.soPrice
-						end
-							,currency.PriceRound_Precision)
+--update #hbh_tmp_SOLineCalcDis
+--set
+--	DiscountedPrice = 
+--				-- 折后价
+--				-- DiscountType : FixedValues 0 固定值		PercentValues 3  百分比
+--				Round
+--					(case disLine.DiscountType 
+--						-- 点击生成折扣，当固定值＞外销价时(币种相同)，应予以提示，不允许进行折扣生成
+--						when 0 then case when tmpSO.soPrice > disLine.Prices
+--									then disLine.Prices
+--									else tmpSO.soPrice end
+--						when 3 then tmpSO.soPrice * disLine.Discount
+--						else tmpSO.soPrice
+--						end
+--							,currency.PriceRound_Precision)
 						
 
---select 
---	tmpSO.ID as SOShiplineID
---	,soline.ID as SOLineID
---	,so.ID as SOID
+select 
+	tmpSO.ID as SOShiplineID
+	,soline.ID as SOLineID
+	,so.ID as SOID
 
---	,disLine.ID as DisLineID
---	,disHead.ID as DisHeadID
+	,disLine.ID as DisLineID
+	,disHead.ID as DisHeadID
 
---	-- FixedValues 0 固定值		PercentValues 3  百分比
---	,disLine.DiscountType
+	-- FixedValues 0 固定值		PercentValues 3  百分比
+	,disLine.DiscountType
 
---	--,disLine.Prices
---	--,disLine.Discount
+	--,disLine.Prices
+	--,disLine.Discount
 
---	-- 订单外销价
---	,tmpSO.soPrice
+	-- 订单外销价
+	,tmpSO.soPrice
 
---	-- 折后价
---	-- DiscountType : FixedValues 0 固定值		PercentValues 3  百分比
---	,Round
---	(case disLine.DiscountType 
---		-- 点击生成折扣，当固定值＞外销价时(币种相同)，应予以提示，不允许进行折扣生成
---		when 0 then case when tmpSO.soPrice > disLine.Prices
---					then disLine.Prices
---					else tmpSO.soPrice end
---		when 3 then tmpSO.soPrice * disLine.Discount
---		else tmpSO.soPrice
---		end
---			,currency.PriceRound_Precision)
---		 as DiscountedPrice
+	-- 折后价
+	-- DiscountType : FixedValues 0 固定值		PercentValues 3  百分比
+	,Round
+	(case disLine.DiscountType 
+		-- 点击生成折扣，当固定值＞外销价时(币种相同)，应予以提示，不允许进行折扣生成
+		when 0 then case when tmpSO.soPrice > disLine.Prices
+					then disLine.Prices
+					else tmpSO.soPrice end
+		when 3 then tmpSO.soPrice * disLine.Discount
+		else tmpSO.soPrice
+		end
+			,currency.PriceRound_Precision)
+		 as DiscountedPrice
 
---	-- 折扣额		DescFlexField.PrivateDescSeg21
+	-- 折扣额		DescFlexField.PrivateDescSeg21
 	
 
 from #hbh_tmp_SOLineCalcDis tmpSOLine
@@ -128,18 +128,18 @@ where
 -- 3、
 -- （涉及到订单金额、最终价计算，所以需要在实体、或BP中做修改订单价格金额，这里只是查出）
 -- 方案改为 折扣额、折后价 更新订单行的公共段；
-update SM_SOLine
-set
-	--折后价 (未定)
-	DescFlexField_PublicDescSeg5 = tmpSOLine.DiscountedPrice
-	-- 折扣额 (未定)
-	,DescFlexField_PublicDescSeg6 = soline.TotalMoneyTC - (tmpSOLine.DiscountedPrice * soline.OrderQtyTU)
-	-- 折后金额 (未定)
-	,DescFlexField_PublicDescSeg7 = (tmpSOLine.DiscountedPrice * soline.OrderQtyTU)
-from 
-	#hbh_tmp_SOLineCalcDis tmpSOLine
-	inner join SM_SOLine soline
-	on tmpSOLine.SOLine = subline.SOLine
+--update SM_SOLine
+--set
+--	--折后价 (未定)
+--	DescFlexField_PublicDescSeg5 = tmpSOLine.DiscountedPrice
+--	-- 折扣额 (未定)
+--	,DescFlexField_PublicDescSeg6 = soline.TotalMoneyTC - (tmpSOLine.DiscountedPrice * soline.OrderQtyTU)
+--	-- 折后金额 (未定)
+--	,DescFlexField_PublicDescSeg7 = (tmpSOLine.DiscountedPrice * soline.OrderQtyTU)
+--from 
+--	#hbh_tmp_SOLineCalcDis tmpSOLine
+--	inner join SM_SOLine soline
+--	on tmpSOLine.SOLine = subline.SOLine
 
 
 

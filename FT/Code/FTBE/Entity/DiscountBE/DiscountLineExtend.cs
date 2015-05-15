@@ -7,6 +7,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.PL;
+using UFIDA.U9.SM.SO;
+using UFIDA.U9.Base;
 
 #endregion
 
@@ -123,6 +125,33 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
 
 
 		#region Model Methods
+
+        public static DiscountLine GetDiscountLineBySOLine(SOLine soline)
+        {
+            if (soline != null)
+            {
+                SO so = soline.SO;
+
+                if (so != null)
+                {
+                    // FixedValues 0  固定值  ; 百分比  PercentValues 3 ;
+                    //discount.DiscountType = UFIDA.U9.Cust.GS.FT.AllEnumBE.DiscountTypeEnum.f
+                    string strWhere = "DiscountHead.Custmor.Code=@Customer  and DiscountHead.Product.Code=@Item and ValidDate<=@Date and UnValidDate>=@Date and DiscountHead.Org=@Org and(DiscountType != 0 or CurrencyType=@Currency) and DiscountHead.States=2";
+                    OqlParam[] appOqlparm = new OqlParam[] {
+                            new OqlParam("Customer", so.OrderBy.Code)
+                            ,new OqlParam("Item", soline.ItemInfo.ItemCode)
+                            ,new OqlParam("Date",so.BusinessDate)
+                            ,new OqlParam("Org",Context.LoginOrg.ID)
+                            ,new OqlParam("Currency",so.TCKey.ID)
+                        };
+                    UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountLine discount = UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountLine.Finder.Find(strWhere, appOqlparm);
+
+                    return discount;
+                }
+            }
+            return null;
+        }
+
 		#endregion		
 	}
 }

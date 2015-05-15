@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
 using UFSoft.UBF.PL;
+using UFIDA.U9.SM.SO;
 
 #endregion
 
@@ -125,10 +126,9 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
 
 
 
+        
+        #region Disuse
 
-
-
-        #region Model Methods
         //private void ValidateLine()
         //{
         //    // update by Ldward 20150203 折扣行校验,着重日期判断
@@ -193,6 +193,12 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
         //        }
         //    }
         //}
+
+        #endregion
+
+
+        #region Model Methods
+
 		#endregion		
 	}
     public class DisInfo

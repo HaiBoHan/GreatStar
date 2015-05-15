@@ -228,6 +228,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             #endregion
 
             #region 自定义订单明细下拉按钮
+
             UFSoft.UBF.UI.ControlModel.IUFDropDownButton dpSODetail = new UFWebDropDownButtonAdapter();
             dpSODetail.Text = "订单明细";
             dpSODetail.ID = "dpSODetail";
@@ -271,16 +272,17 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             BtnForecast.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnForecast_ItemClick);
             BtnForecast.AutoPostBack = true;
 
-            dpSODetail.MenuItems.Add(BtnOrderBrokerage);
-            dpSODetail.MenuItems.Add(BtnFeeAmount);
             dpSODetail.MenuItems.Add(BtnOrderBom);
             dpSODetail.MenuItems.Add(BtnDiscountDetail);
+            dpSODetail.MenuItems.Add(BtnOrderBrokerage);
+            dpSODetail.MenuItems.Add(BtnFeeAmount);
             dpSODetail.MenuItems.Add(BtnAssessType);
             dpSODetail.MenuItems.Add(BtnForecast);
 
             IUFCard card = (IUFCard)part.GetUFControlByName(part.TopLevelContainer, "Card0");
             card.Controls.Add(dpSODetail);
             CommonFunctionExtend.Layout(card, dpSODetail, 18, 0);
+
             #endregion
 
             #region 在工具栏加按钮
