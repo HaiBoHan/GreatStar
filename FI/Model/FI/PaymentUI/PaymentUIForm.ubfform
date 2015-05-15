@@ -546,12 +546,12 @@
           <Events />
           <RelationControls />
         </CheckBox>
-        <Label ID="34c6143b-02a1-4c98-add9-a24fcf1f690f" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblMeno78" RelationControl="Meno78" TabIndex="36" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="250" Y="105">
+        <Label ID="34c6143b-02a1-4c98-add9-a24fcf1f690f" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblMemo78" RelationControl="Memo78" TabIndex="36" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="250" Y="105">
           <Events />
           <RelationControls />
           <Events />
         </Label>
-        <TextBox ID="0d7a9d54-45a7-4e4a-8850-b0f8c3aad82b" DisplayFormat="5000" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Meno78" RelationControl="lblMeno78" TabIndex="37" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="Payment" Visible="True" Width="120" X="355" Y="105">
+        <TextBox ID="0d7a9d54-45a7-4e4a-8850-b0f8c3aad82b" DisplayFormat="5000" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Memo78" RelationControl="lblMemo78" TabIndex="37" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="Payment" Visible="True" Width="120" X="355" Y="105">
           <Events />
           <RelationControls />
         </TextBox>
@@ -925,7 +925,7 @@
               <HeaderCell ID="7711077d-4096-4353-9396-69f8af5bf240" ColSpan="1" Name="HeaderCell39" OwnerColName="InvoiceMoney0" RowSpan="1" />
               <HeaderCell ID="f4618485-9b6a-45d8-beda-dfebdf5c1b16" ColSpan="1" Name="HeaderCell40" OwnerColName="HSCode0" RowSpan="1" />
               <HeaderCell ID="0cd556f0-4b7e-4aab-b3e6-d844a40dd32d" ColSpan="1" DisplayName="开票单位" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell43" OwnerColName="InvoiceUOM0" RowSpan="1" />
-              <HeaderCell ID="4f221ef9-7f4b-4a25-88ce-c26b49bca194" ColSpan="1" Name="HeaderCell41" OwnerColName="Meno79" RowSpan="1" />
+              <HeaderCell ID="4f221ef9-7f4b-4a25-88ce-c26b49bca194" ColSpan="1" Name="HeaderCell41" OwnerColName="Memo79" RowSpan="1" />
               <HeaderCell ID="4a415dc3-e849-453c-978d-ac6a3b959a23" ColSpan="1" Name="HeaderCell44" OwnerColName="InvoiceUOM_Round_Precision0" RowSpan="1" />
               <HeaderCell ID="8006c002-e55d-43b0-84c9-3442e53c0219" ColSpan="1" Name="HeaderCell45" OwnerColName="InvoiceUOM_Round_RoundType0" RowSpan="1" />
               <HeaderCell ID="d3789243-bc3f-42e7-b664-4b78d8f7d1ef" ColSpan="1" Name="HeaderCell46" OwnerColName="InvoiceUOM_Round_RoundValue0" RowSpan="1" />
@@ -1167,7 +1167,7 @@
               </UIFilterBar>
               <Events />
             </ReferenceColumn>
-            <TextBoxColumn ID="d8ffff80-e1df-43cb-bb25-542df1093c71" DefaultValue="" DisplayFormat="50" Enabled="True" Help="付款通知单行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Meno79" NPos="27" Point="0" TextAlign="Left" UIFieldID="Meno" UIViewID="Payment_PaymentLine" Visible="True">
+            <TextBoxColumn ID="d8ffff80-e1df-43cb-bb25-542df1093c71" DefaultValue="" DisplayFormat="50" Enabled="True" Help="付款通知单行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo79" NPos="27" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="Payment_PaymentLine" Visible="True">
               <Events />
             </TextBoxColumn>
             <NumberColumn ID="bae200ee-2b39-42a4-8300-09424d4bc58a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="计量单位.Misc.精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="InvoiceUOM_Round_Precision0" NPos="28" Point="0" UIFieldID="InvoiceUOM_Round_Precision" UIViewID="Payment_PaymentLine" Visible="False">

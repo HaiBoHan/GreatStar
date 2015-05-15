@@ -281,7 +281,7 @@
           <HeaderCell ID="ea576bfb-9de8-4245-aa63-c9cefb2c864c" ColSpan="1" Name="HeaderCell26" OwnerColName="IntoMoney0" RowSpan="1" />
           <HeaderCell ID="0a10bdac-cef4-4dac-94e1-4d042f2e812b" ColSpan="1" Name="HeaderCell27" OwnerColName="CanPreMoney0" RowSpan="1" />
           <HeaderCell ID="69313b5c-5776-4f17-b860-282b3da85a78" ColSpan="1" Name="HeaderCell28" OwnerColName="ThisPreMoney0" RowSpan="1" />
-          <HeaderCell ID="c8e68c1e-ead8-4a0d-b5f2-24e51e48c447" ColSpan="1" Name="HeaderCell29" OwnerColName="Meno0" RowSpan="1" />
+          <HeaderCell ID="c8e68c1e-ead8-4a0d-b5f2-24e51e48c447" ColSpan="1" Name="HeaderCell29" OwnerColName="Memo0" RowSpan="1" />
         </HeaderRow>
       </Header>
       <UIFilterBar Name="LocateBar" />
@@ -471,7 +471,7 @@
           <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="PurchaseOrderView" />
           <Events />
         </NumberColumn>
-        <TextBoxColumn ID="f9375994-fb43-4017-aec6-fe6f8af29146" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Meno0" NPos="26" Point="0" TextAlign="Left" UIFieldID="Meno" UIViewID="PurchaseOrderView" Visible="True">
+        <TextBoxColumn ID="f9375994-fb43-4017-aec6-fe6f8af29146" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo0" NPos="26" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="PurchaseOrderView" Visible="True">
           <Events />
         </TextBoxColumn>
       </Columns>

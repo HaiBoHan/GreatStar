@@ -18,7 +18,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBP {
 		/// <summary>
 		/// Constructor with Full Argument 
 		/// </summary>
-		public PurchaseOrderDTO(  System.String documentType  , System.String pODocNo  , System.Int64 pODocID  , System.Int64 supplier  , System.String supplier_Code  , System.String supplier_Name  , System.Int64 pOOrg  , System.String pOOrg_Code  , System.String pOOrg_Name  , System.Int64 srcOrg  , System.String srcOrg_Code  , System.String srcOrg_Name  , System.Int64 currency  , System.String currency_Code  , System.String currency_Name  , System.String currency_Symbol  , System.Int32 currency_MoneyRound_Precision  , System.Int32 currency_MoneyRound_RoundType  , System.Int32 currency_MoneyRound_RoundValue  , System.Int64 buyer  , System.String buyer_Code  , System.String buyer_Name  , System.Int64 dept  , System.String dept_Code  , System.String dept_Name  , System.DateTime busDate  , System.Decimal totalMoney  , System.Decimal prePayMoney  , System.Decimal preApplyMoney  , System.Decimal redMoney  , System.Decimal moveMoney  , System.Decimal intoMoney  , System.Decimal canPreMoney  , System.Decimal thisPreMoney  , System.String meno  )
+		public PurchaseOrderDTO(  System.String documentType  , System.String pODocNo  , System.Int64 pODocID  , System.Int64 supplier  , System.String supplier_Code  , System.String supplier_Name  , System.Int64 pOOrg  , System.String pOOrg_Code  , System.String pOOrg_Name  , System.Int64 srcOrg  , System.String srcOrg_Code  , System.String srcOrg_Name  , System.Int64 currency  , System.String currency_Code  , System.String currency_Name  , System.String currency_Symbol  , System.Int32 currency_MoneyRound_Precision  , System.Int32 currency_MoneyRound_RoundType  , System.Int32 currency_MoneyRound_RoundValue  , System.Int64 buyer  , System.String buyer_Code  , System.String buyer_Name  , System.Int64 dept  , System.String dept_Code  , System.String dept_Name  , System.DateTime busDate  , System.Decimal totalMoney  , System.Decimal prePayMoney  , System.Decimal preApplyMoney  , System.Decimal redMoney  , System.Decimal moveMoney  , System.Decimal intoMoney  , System.Decimal canPreMoney  , System.Decimal thisPreMoney  , System.String Memo  )
 		{
 			this.DocumentType = documentType;
 			this.PODocNo = pODocNo;
@@ -54,7 +54,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBP {
 			this.IntoMoney = intoMoney;
 			this.CanPreMoney = canPreMoney;
 			this.ThisPreMoney = thisPreMoney;
-			this.Meno = meno;
+			this.Memo = Memo;
 		}
 		#endregion	
 

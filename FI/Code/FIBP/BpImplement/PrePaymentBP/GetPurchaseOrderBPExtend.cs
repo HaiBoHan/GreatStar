@@ -70,8 +70,8 @@ using System.Data;
                     dto.PODocID = long.Parse(dr["ID"].ToString());
                 if (dr["BusinessDate"] != null)
                     dto.BusDate = DateTime.Parse(dr["BusinessDate"].ToString());
-                if (dr["Meno"] != null)
-                    dto.Meno = dr["Meno"].ToString();
+                if (dr["Memo"] != null)
+                    dto.Memo = dr["Memo"].ToString();
 
                 if (dr["POOrg"] != null)
                     dto.POOrg = long.Parse(dr["POOrg"].ToString());
@@ -163,7 +163,7 @@ using System.Data;
             sb.Append(" I.Symbol,max(i.MoneyRound_Precision) as MoneyRound_Precision,");
             sb.Append(" max(I.MoneyRound_RoundType) as MoneyRound_RoundType,max(I.MoneyRound_RoundValue) as MoneyRound_RoundValue,");
             sb.Append(" K.ID as Dept,K.Code as Dept_Code,K1.Name as Dept_Name,L.ID as Buyer,L.Code as Buyer_Code,L1.Name as Buyer_Name,");
-            sb.Append(" max(A.BusinessDate) as BusinessDate,A.Supplier_Supplier,A.Supplier_Code,D.Supplier_Name,A2.Description as Meno,");
+            sb.Append(" max(A.BusinessDate) as BusinessDate,A.Supplier_Supplier,A.Supplier_Code,D.Supplier_Name,A2.Description as Memo,");
             sb.Append(" isnull(SUM(B.TotalMnyTC),0) as TotalMoney,");//--总金额
             sb.Append(" SUM(case when A.DescFlexField_PrivateDescSeg3='' or A.DescFlexField_PrivateDescSeg3 IS NULL THEN '0' ELSE Convert(decimal(18,9),A.DescFlexField_PrivateDescSeg3) END) as TotalPreMoney,");//--已制预付单金额
             sb.Append(" SUM(case when A.DescFlexField_PrivateDescSeg4='' or A.DescFlexField_PrivateDescSeg4 IS NULL THEN '0' ELSE Convert(decimal(18,9),A.DescFlexField_PrivateDescSeg4) END) as TotalPreVerMoney,");//--预付已核销金额

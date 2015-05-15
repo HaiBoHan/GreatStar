@@ -692,12 +692,12 @@
       <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="DeductionRegister" />
     </NumberControl>
     <Line ID="9b73dfe7-3e0a-4508-bf94-59ffdfb79405" DisplayName="备注" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="3" GridX="4" GridY="11" Height="20" Name="Line4" TabIndex="56" TabStop="True" Width="309" X="341" Y="275" />
-    <Label ID="9403edf4-bf24-4029-82be-2f50c7393587" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblMeno95" RelationControl="Meno95" TabIndex="57" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="300">
+    <Label ID="9403edf4-bf24-4029-82be-2f50c7393587" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblMemo95" RelationControl="Memo95" TabIndex="57" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="341" Y="300">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <TextBox ID="ba7ca62f-9677-4884-a848-7865dbb6b476" DisplayFormat="2000" Enabled="True" GridHeight="3" GridWidth="1" GridX="6" GridY="12" Height="70" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Meno95" RelationControl="lblMeno95" TabIndex="58" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="300">
+    <TextBox ID="ba7ca62f-9677-4884-a848-7865dbb6b476" DisplayFormat="2000" Enabled="True" GridHeight="3" GridWidth="1" GridX="6" GridY="12" Height="70" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Memo95" RelationControl="lblMemo95" TabIndex="58" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="300">
       <Events />
       <RelationControls />
     </TextBox>

@@ -109,7 +109,7 @@ namespace UFIDA.U9.Cust.GS.FI.BatchPaymentForPOUIModel
                 record.IntoMoney = dto.IntoMoney;
                 record.CanPreMoney = dto.CanPreMoney;
                 record.ThisPreMoney = dto.ThisPreMoney;
-                record.Meno = dto.Meno;
+                record.Memo = dto.Memo;
 
             }
         }

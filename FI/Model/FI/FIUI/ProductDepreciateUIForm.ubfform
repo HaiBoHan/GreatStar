@@ -426,12 +426,12 @@
       <Events />
       <RelationControls />
     </DatePicker>
-    <Label ID="04d0787b-b269-4a1d-bd97-3d7bb17c3d85" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="14" Height="20" IsNull="True" IsSequence="False" Name="lblMeno25" RelationControl="Meno25" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="350">
+    <Label ID="04d0787b-b269-4a1d-bd97-3d7bb17c3d85" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="14" Height="20" IsNull="True" IsSequence="False" Name="lblMemo25" RelationControl="Memo25" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="350">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <TextBox ID="93eab7ff-1e57-4d25-824a-66a45d5fe606" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="14" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Meno25" RelationControl="lblMeno25" TabIndex="33" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="350">
+    <TextBox ID="93eab7ff-1e57-4d25-824a-66a45d5fe606" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="14" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Memo25" RelationControl="lblMemo25" TabIndex="33" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="ProductDepreciate" Visible="True" Width="153" X="168" Y="350">
       <Events />
       <RelationControls />
     </TextBox>

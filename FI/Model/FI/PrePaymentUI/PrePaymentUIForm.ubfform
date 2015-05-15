@@ -602,12 +602,12 @@
           <Events />
           <RelationControls />
         </CheckBox>
-        <Label ID="ff5b6700-d162-404f-8ebe-19adef673f56" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblMeno102" RelationControl="Meno102" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="80">
+        <Label ID="ff5b6700-d162-404f-8ebe-19adef673f56" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblMemo102" RelationControl="Memo102" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="80">
           <Events />
           <RelationControls />
           <Events />
         </Label>
-        <TextBox ID="83e8b341-e9dc-43c7-b226-c24235840053" DisplayFormat="2000" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Meno102" RelationControl="lblMeno102" TabIndex="35" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="80">
+        <TextBox ID="83e8b341-e9dc-43c7-b226-c24235840053" DisplayFormat="2000" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Memo102" RelationControl="lblMemo102" TabIndex="35" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="80">
           <Events />
           <RelationControls />
         </TextBox>
@@ -685,7 +685,7 @@
               <HeaderCell ID="6ed3b8b5-d21c-44ce-aade-ace8df49886b" ColSpan="1" Name="HeaderCell9" OwnerColName="SumRedFlushMoney0" RowSpan="1" />
               <HeaderCell ID="6759dfb1-a992-4ba1-a209-0bc8e5561567" ColSpan="1" Name="HeaderCell10" OwnerColName="SumMoveMoney0" RowSpan="1" />
               <HeaderCell ID="68bea073-d559-43a1-9e7c-263b7d3a9914" ColSpan="1" Name="HeaderCell11" OwnerColName="SrcMoveDocNo0" RowSpan="1" />
-              <HeaderCell ID="a9d1c9b6-5fc6-42a8-a733-1dfc7152b59f" ColSpan="1" Name="HeaderCell12" OwnerColName="Meno103" RowSpan="1" />
+              <HeaderCell ID="a9d1c9b6-5fc6-42a8-a733-1dfc7152b59f" ColSpan="1" Name="HeaderCell12" OwnerColName="Memo103" RowSpan="1" />
               <HeaderCell ID="8232325c-753c-441b-93f1-93b71e613de9" ColSpan="1" Name="HeaderCell26" OwnerColName="PrePayment_Currency_Symbol0" RowSpan="1" />
               <HeaderCell ID="50e4bdcb-cfc9-429f-b342-dd2a45466f1a" ColSpan="1" Name="HeaderCell27" OwnerColName="PrePayment_Currency_MoneyRound_Precision0" RowSpan="1" />
               <HeaderCell ID="4ba41144-bee4-442e-a51e-38ab91347c7b" ColSpan="1" Name="HeaderCell28" OwnerColName="PrePayment_Currency_MoneyRound_RoundType0" RowSpan="1" />
@@ -786,7 +786,7 @@
             <TextBoxColumn ID="5f0deef6-bd09-4b09-955e-18c4c5c07978" DefaultValue="" DisplayFormat="50" Enabled="False" Help="预付款通知单行.Misc.挪入来源单号" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcMoveDocNo0" NPos="11" Point="0" TextAlign="Left" UIFieldID="SrcMoveDocNo" UIViewID="PrePayment_PrePaymentLines" Visible="True">
               <Events />
             </TextBoxColumn>
-            <TextBoxColumn ID="ff115310-41cc-4ee8-be95-93278b8a3e35" DefaultValue="" DisplayFormat="50" Enabled="True" Help="预付款通知单行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Meno103" NPos="12" Point="0" TextAlign="Left" UIFieldID="Meno" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+            <TextBoxColumn ID="ff115310-41cc-4ee8-be95-93278b8a3e35" DefaultValue="" DisplayFormat="50" Enabled="True" Help="预付款通知单行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo103" NPos="12" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="PrePayment_PrePaymentLines" Visible="True">
               <Events />
             </TextBoxColumn>
             <TextBoxColumn ID="2440f5e0-cfa3-4ce7-8c39-4b12ec1be895" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_Symbol0" NPos="13" Point="0" TextAlign="Left" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePayment_PrePaymentLines" Visible="False">
@@ -834,7 +834,7 @@
               <HeaderCell ID="6b4c95db-c715-4d8a-af38-e8591dbea168" ColSpan="1" Name="HeaderCell20" OwnerColName="Supplier107" RowSpan="1" />
               <HeaderCell ID="3a6fa704-3150-45e7-9e49-054db9861507" ColSpan="1" Name="HeaderCell21" OwnerColName="SumDRMoney0" RowSpan="1" />
               <HeaderCell ID="9ae1dbb5-a9da-4cf2-a6d6-ac9b1118d58e" ColSpan="1" Name="HeaderCell23" OwnerColName="DRMoney1" RowSpan="1" />
-              <HeaderCell ID="72a0a3e9-d3a8-4dba-859d-e4b16188a06a" ColSpan="1" Name="HeaderCell24" OwnerColName="Meno104" RowSpan="1" />
+              <HeaderCell ID="72a0a3e9-d3a8-4dba-859d-e4b16188a06a" ColSpan="1" Name="HeaderCell24" OwnerColName="Memo104" RowSpan="1" />
               <HeaderCell ID="d8766580-1dd2-4845-ba6c-f946bd8042da" ColSpan="1" Name="HeaderCell30" OwnerColName="Currency_Symbol95" RowSpan="1" />
               <HeaderCell ID="f1052bc9-3e4d-4d33-9bca-201a01c1ce59" ColSpan="1" Name="HeaderCell31" OwnerColName="Currency_MoneyRound_Precision83" RowSpan="1" />
               <HeaderCell ID="b2d26270-0601-4b66-9225-61558fcb1282" ColSpan="1" Name="HeaderCell32" OwnerColName="Currency_MoneyRound_RoundType101" RowSpan="1" />
@@ -934,7 +934,7 @@
               <CurrencyType BindType="UIField" UIFieldID="Currency_Symbol" UIViewID="PrePayment_PrePaymentLines_PrePaymentDRDetails" />
               <Events />
             </NumberColumn>
-            <TextBoxColumn ID="999d6481-94bb-4b9d-98c4-cf720e714a43" DefaultValue="" DisplayFormat="50" Enabled="True" Help="扣款登记明细行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Meno104" NPos="11" Point="0" TextAlign="Left" UIFieldID="Meno" UIViewID="PrePayment_PrePaymentLines_PrePaymentDRDetails" Visible="True">
+            <TextBoxColumn ID="999d6481-94bb-4b9d-98c4-cf720e714a43" DefaultValue="" DisplayFormat="50" Enabled="True" Help="扣款登记明细行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo104" NPos="11" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="PrePayment_PrePaymentLines_PrePaymentDRDetails" Visible="True">
               <Events />
             </TextBoxColumn>
             <TextBoxColumn ID="9dc1252c-180a-4942-abbc-87154b55f53f" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="False" IsProperty="False" IsSequence="False" Name="Currency_Symbol95" NPos="12" Point="0" TextAlign="Left" UIFieldID="Currency_Symbol" UIViewID="PrePayment_PrePaymentLines_PrePaymentDRDetails" Visible="False">

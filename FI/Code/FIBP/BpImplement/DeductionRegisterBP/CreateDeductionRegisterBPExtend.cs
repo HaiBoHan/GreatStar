@@ -74,7 +74,7 @@
                     doc.RegisterBy = dto.RegisterBy;
                     doc.RegisterDate = dto.RegisterDate;
                     doc.BuyerKey = dto.Buyer;
-                    doc.Meno = dto.Meno;
+                    doc.Memo = dto.Memo;
                     doc.BusinessDate = DateTime.Now;
                     #endregion
                     result.ID = doc.ID;

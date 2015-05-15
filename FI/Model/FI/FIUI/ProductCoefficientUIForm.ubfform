@@ -365,12 +365,12 @@
       <Events />
       <RelationControls />
     </DatePicker>
-    <Label ID="d7b13be7-1443-4be0-9115-1857b8fe7f00" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblMeno76" RelationControl="Meno76" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="275">
+    <Label ID="d7b13be7-1443-4be0-9115-1857b8fe7f00" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblMemo76" RelationControl="Memo76" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="275">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <TextBox ID="5982eee5-dffa-493d-9c86-c5f4dfb02453" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="11" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Meno76" RelationControl="lblMeno76" TabIndex="27" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Meno" UIViewID="ProductCoefficient" Visible="True" Width="153" X="168" Y="275">
+    <TextBox ID="5982eee5-dffa-493d-9c86-c5f4dfb02453" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="11" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Memo76" RelationControl="lblMemo76" TabIndex="27" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="ProductCoefficient" Visible="True" Width="153" X="168" Y="275">
       <Events />
       <RelationControls />
     </TextBox>
