@@ -10,29 +10,37 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 {
     public class EntityTakeQtyUpdate
     {
-        public void UpdateTakeQty(Entity sourceEntity, Entity targetEntity, string sourceField, string targetField)
+        // 更新来源单据占有量(上下游单据更新)
+        /// <summary>
+        /// 更新来源单据占有量(上下游单据更新)
+        /// </summary>
+        /// <param name="lowerEntity">下游单据</param>
+        /// <param name="upperEntity">上游单据</param>
+        /// <param name="lowerField">下游占有量字段</param>
+        /// <param name="upperField">上游数量或金额字段</param>
+        public static void UpdateTakeQty(Entity lowerEntity, Entity upperEntity, string lowerField, string upperField)
         {
-            if (sourceEntity != null
-                && targetEntity != null
-                && ! PubClass.IsNull(sourceField)
-                && ! PubClass.IsNull(targetField)
+            if (lowerEntity != null
+                && upperEntity != null
+                && ! PubClass.IsNull(lowerField)
+                && ! PubClass.IsNull(upperField)
                 )
             {
                 //decimal oldValue = 0;
                 //decimal newValue = 0;
 
                 //// 非新增,有旧值，那么取得旧值
-                //if (sourceEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
-                //    && sourceEntity.OriginalData != null
+                //if (lowerEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
+                //    && lowerEntity.OriginalData != null
                 //    )
                 //{
-                //    oldValue = sourceEntity.OriginalData.GetValue(sourceField).GetDecimal();
+                //    oldValue = lowerEntity.OriginalData.GetValue(lowerField).GetDecimal();
                 //}
 
                 //// 非删除,取新值
-                //if (sourceEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Deleted)
+                //if (lowerEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Deleted)
                 //{
-                //    newValue = sourceEntity.GetValue(sourceField).GetDecimal();
+                //    newValue = lowerEntity.GetValue(lowerField).GetDecimal();
                 //}
 
                 //decimal addValue = newValue - oldValue;
@@ -42,7 +50,7 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                 //{
                 //    using (ISession session = Session.Open())
                 //    {
-                //        object objOldTargetValue = targetEntity.GetValue(targetField);
+                //        object objOldTargetValue = upperEntity.GetValue(upperField);
 
                 //        decimal oldTargetValue = objOldTargetValue.GetDecimal();
 
@@ -58,7 +66,7 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                 //            objNewTargetValue = newTargetValue;
                 //        }
 
-                //        targetEntity.SetValue(targetField, objNewTargetValue);
+                //        upperEntity.SetValue(upperField, objNewTargetValue);
 
                 //        session.Commit();
                 //    }
@@ -66,7 +74,7 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 
                 using (ISession session = Session.Open())
                 {
-                    bool isUpdated = UpdateLineTakeQty(sourceEntity, targetEntity, sourceField, targetField);
+                    bool isUpdated = UpdateLineTakeQty(lowerEntity, upperEntity, lowerField, upperField);
 
                     if (isUpdated)
                     {
@@ -77,28 +85,37 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
         }
 
 
-        public void UpdateTakeQty(Entity sourceHeadEntity,string lineField, Entity targetEntity, string sourceField, string targetField)
+        // 更新来源单据占有量(上下游单据更新)
+        /// <summary>
+        /// 更新来源单据占有量(上下游单据更新)
+        /// </summary>
+        /// <param name="lowerHeadEntity">下源单据</param>
+        /// <param name="lowerLineField">下游行字段</param>
+        /// <param name="upperEntity">上游单据</param>
+        /// <param name="lowerField">下游占有量字段</param>
+        /// <param name="upperField">上游数量或金额字段</param>
+        public static void UpdateTakeQty(Entity lowerHeadEntity, string lowerLineField, Entity upperEntity, string lowerField, string upperField)
         {
-            if (sourceHeadEntity != null
-                && !PubClass.IsNull(lineField)
-                && targetEntity != null
-                && !PubClass.IsNull(sourceField)
-                && !PubClass.IsNull(targetField)
+            if (lowerHeadEntity != null
+                && !PubClass.IsNull(lowerLineField)
+                && upperEntity != null
+                && !PubClass.IsNull(lowerField)
+                && !PubClass.IsNull(upperField)
                 )
             {
-                POList<Entity> listLines = sourceHeadEntity.GetValue(lineField) as POList<Entity>;
+                POList<Entity> lowerLines = lowerHeadEntity.GetValue(lowerLineField) as POList<Entity>;
                  
 
-                if (listLines != null
-                    && listLines.Count > 0
+                if (lowerLines != null
+                    && lowerLines.Count > 0
                     )
                 {
                     using (ISession session = Session.Open())
                     {
                         bool isUpdated = false;
-                        foreach (Entity sourceEntity in listLines)
+                        foreach (Entity lowerEntity in lowerLines)
                         {
-                            bool isCurLineUpdated = UpdateLineTakeQty(targetEntity, sourceEntity, sourceField, targetField);
+                            bool isCurLineUpdated = UpdateLineTakeQty(lowerEntity, upperEntity, lowerField, upperField);
 
                             if (isCurLineUpdated)
                             {
@@ -106,13 +123,13 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                             }
                         }
 
-                        if (listLines.DelLists != null
-                            && listLines.DelLists.Count > 0
+                        if (lowerLines.DelLists != null
+                            && lowerLines.DelLists.Count > 0
                             )
                         {
-                            foreach (Entity sourceEntity in listLines.DelLists)
+                            foreach (Entity lowerEntity in lowerLines.DelLists)
                             {
-                                bool isCurLineUpdated = UpdateLineTakeQty(targetEntity, sourceEntity, sourceField, targetField);
+                                bool isCurLineUpdated = UpdateLineTakeQty(upperEntity, lowerEntity, lowerField, upperField);
 
                                 if (isCurLineUpdated)
                                 {
@@ -130,7 +147,15 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             }
         }
 
-        private static bool UpdateLineTakeQty(Entity targetEntity, Entity sourceEntity, string sourceField, string targetField)
+        // 更新来源单据占有量(上下游单据更新)
+        /// <summary>
+        /// 更新来源单据占有量(上下游单据更新)
+        /// </summary>
+        /// <param name="lowerEntity">下源单据</param>
+        /// <param name="upperEntity">上游单据</param>
+        /// <param name="lowerField">下游占有量字段</param>
+        /// <param name="upperField">上游数量或金额字段</param>
+        private static bool UpdateLineTakeQty(Entity lowerEntity, Entity upperEntity, string lowerField, string upperField)
         {
             bool isUpdated = false;
 
@@ -138,17 +163,17 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             decimal newValue = 0;
 
             // 非新增,有旧值，那么取得旧值
-            if (sourceEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
-                && sourceEntity.OriginalData != null
+            if (lowerEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
+                && lowerEntity.OriginalData != null
                 )
             {
-                oldValue = PubClass.GetDecimal(sourceEntity.OriginalData.GetValue(sourceField));
+                oldValue = PubClass.GetDecimal(lowerEntity.OriginalData.GetValue(lowerField));
             }
 
             // 非删除,取新值
-            if (sourceEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Deleted)
+            if (lowerEntity.SysState != UFSoft.UBF.PL.Engine.ObjectState.Deleted)
             {
-                newValue = PubClass.GetDecimal(sourceEntity.GetValue(sourceField));
+                newValue = PubClass.GetDecimal(lowerEntity.GetValue(lowerField));
             }
 
             decimal addValue = newValue - oldValue;
@@ -158,7 +183,7 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             {
                 isUpdated = true;
                 {
-                    object objOldTargetValue = targetEntity.GetValue(targetField);
+                    object objOldTargetValue = upperEntity.GetValue(upperField);
 
                     decimal oldTargetValue = PubClass.GetDecimal(objOldTargetValue);
 
@@ -174,7 +199,7 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                         objNewTargetValue = newTargetValue;
                     }
 
-                    targetEntity.SetValue(targetField, objNewTargetValue);
+                    upperEntity.SetValue(upperField, objNewTargetValue);
 
                 }
             }
