@@ -33,6 +33,20 @@ namespace UFIDA.U9.Cust.GS.FI.ProductCoefficientBE {
 			base.OnSetDefaultValue();
             if (this.Org == null)
                 this.Org = Context.LoginOrg;
+            
+            if (this.ApplyDate == null
+                || this.ApplyDate.Year < 2000
+                )
+            {
+                this.ApplyDate = DateTime.Now;
+            }
+
+            if (string.IsNullOrEmpty(this.ApplyBy))
+            {
+                this.ApplyBy = Environment.UserDomainName;
+            }
+
+
 		}
 		/// <summary>
 		/// before Insert
