@@ -28,8 +28,10 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                 }
 
                 // 新旧价变更，计算折扣
-                decimal oldPrice = GetExportPrice(soline.OriginalData.DescFlexField);
-                decimal newPrice = GetExportPrice(soline.DescFlexField);
+                //decimal oldPrice = GetExportPrice(soline.OriginalData.DescFlexField);
+                //decimal newPrice = GetExportPrice(soline.DescFlexField);
+                decimal oldPrice = GetExportPrice(soline.OriginalData);
+                decimal newPrice = GetExportPrice(soline);
 
                 if (oldPrice != newPrice)
                 {
@@ -56,44 +58,48 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
         }
 
 
-        #region Disuse
+        // 获得外销价(当前数据)
+        /// <summary>
+        /// 获得外销价(当前数据)
+        /// </summary>
+        /// <param name="soline"></param>
+        /// <returns></returns>
+        public static decimal GetExportPrice(SOLine soline)
+        {
+            if (soline != null)
+            {
+                return PubClass.GetDecimal(soline.DescFlexField);
+            }
+            return 0;
+        }
 
-        //// 获得外销价(当前数据)
-        ///// <summary>
-        ///// 获得外销价(当前数据)
-        ///// </summary>
-        ///// <param name="soline"></param>
-        ///// <returns></returns>
-        //public static decimal GetExportPrice(SOLine soline)
-        //{
-        //    if (soline != null)
-        //    {
-        //        return PubClass.GetDecimal(soline.DescFlexField);
-        //    }
-        //    return 0;
-        //}
+        // 获得外销价(Original数据)
+        /// <summary>
+        /// 获得外销价(Original数据)
+        /// </summary>
+        /// <param name="soline"></param>
+        /// <returns></returns>
+        public static decimal GetExportPrice(SOLine.EntityOriginal soline)
+        {
+            if (soline != null)
+            {
+                return PubClass.GetDecimal(soline.DescFlexField);
+            }
+            return 0;
+        }
 
-        //// 获得外销价(Original数据)
-        ///// <summary>
-        ///// 获得外销价(Original数据)
-        ///// </summary>
-        ///// <param name="soline"></param>
-        ///// <returns></returns>
-        //public static decimal GetExportPrice(SOLine.EntityOriginal soline)
-        //{
-        //    if (soline != null)
-        //    {
-        //        return PubClass.GetDecimal(soline.DescFlexField);
-        //    }
-        //    return 0;
-        //}
+        // 设置外销价
+        /// <summary>
+        /// 设置外销价
+        /// </summary>
+        /// <param name="soline">订单行</param>
+        /// <param name="price">外销价</param>
+        /// <returns></returns>
+        public static void SetExportPrice(SOLine soline, decimal price)
+        {
+            SetExportPrice(soline.DescFlexField, price);
+        }
 
-        //public static void SetExportPrice(SOLine soline, decimal price)
-        //{
-        //    SetExportPrice(soline.DescFlexField, price);
-        //}
-
-        #endregion
 
         #region 扩展字段
 
