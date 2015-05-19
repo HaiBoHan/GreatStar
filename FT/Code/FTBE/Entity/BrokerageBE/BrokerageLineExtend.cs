@@ -6,6 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UFIDA.U9.SM.SO;
+using UFSoft.UBF.PL;
 
 #endregion
 
@@ -122,7 +124,30 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageBE {
 
 
 
-		#region Model Methods
+        #region Model Methods
+
+        public static BrokerageLine.EntityList GetBrokerageLineBySOLine(SOLine soline)
+        {
+            if (soline != null)
+            {
+                SO so = soline.SO;
+
+                if (so != null)
+                {
+                    string strWhere = "BrokerageHead.Custmer.Code=@Customer and BrokerageHead.Product.Code=@Item and BrokerageHead.States=2 and BrokerageHead.Org=@Org and Valid=1 and @Date >= ValidDate and @Date <= UnValidDate";
+                    OqlParam[] appOqlparm = new OqlParam[] {
+                            new OqlParam("Customer", soline.SO.OrderBy.Code),
+                            new OqlParam("Item", soline.ItemInfo.ItemCode),
+                            new OqlParam("Org",soline.SO.Org.ID),
+                            new OqlParam("Date",soline.SO.BusinessDate)
+                        };
+                    UFIDA.U9.Cust.GS.FT.BrokerageBE.BrokerageLine.EntityList list = UFIDA.U9.Cust.GS.FT.BrokerageBE.BrokerageLine.Finder.FindAll(strWhere, appOqlparm);
+
+                    return list;
+                }
+            }
+            return null;
+        }
 		#endregion		
 	}
 }

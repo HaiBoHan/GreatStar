@@ -6,6 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UFIDA.U9.SM.SO;
+using UFIDA.U9.Cust.GS.FT.BrokerageBE;
 
 #endregion
 
@@ -143,6 +145,64 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
 
 
 		#region Model Methods
+
+        public static List<OrderLineBrokerage> CreateBrokerageBySO(UFIDA.U9.SM.SO.SOLine soline)
+        {
+            List<OrderLineBrokerage> listResult = new List<OrderLineBrokerage>();
+
+            BrokerageLine.EntityList brokerageList = BrokerageLine.GetBrokerageLineBySOLine(soline);
+
+            if (brokerageList != null
+                && brokerageList.Count > 0
+                )
+            {
+                foreach (BrokerageLine brgLine in brokerageList)
+                {
+                    OrderLineBrokerage orderLineBrg = OrderLineBrokerage.Create();
+                    orderLineBrg.OrderLineRowNo = soline.DocLineNo;//行号
+                    orderLineBrg.OrderLineIDKey = soline.Key;//销售订单行ID
+                    orderLineBrg.ClientKey = brgLine.BrokerageHead.CustmerKey;// soline.customerItem.Customer.Key;//客户
+                    orderLineBrg.ProductKey = soline.ItemInfo.ItemIDKey;//料品
+                    orderLineBrg.BrokerageType = brgLine.BrokerageType;//佣金方式
+                    orderLineBrg.Prices = brgLine.Prices;//单价
+                    orderLineBrg.BrokerageRatio = brgLine.Brokerage;//佣金比例
+                    if (brgLine.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues && brgLine.CurrentyKey == soline.OriginalTCKey)//固定值
+                    {
+                        orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU;//支付金额=佣金.单价*销售行.数量
+                        orderLineBrg.PayCurrencyKey = brgLine.CurrentyKey;//支付币种=佣金.支付币种
+                    }
+                    else
+                    {//百分比 
+                        if (brgLine.Computes == AllEnumBE.ComputeEnum.IsPlan)//折扣金额前计划
+                        {
+                            if (!string.IsNullOrEmpty(soline.DescFlexField.PrivateDescSeg5 + ""))
+                            {
+                                orderLineBrg.PayAmount = orderLineBrg.BrokerageRatio * soline.OrderByQtyPU * Convert.ToDecimal(soline.DescFlexField.PrivateDescSeg5);//支付金额=佣金.比例*销售行.数量*销售行.外销价
+                            }
+                            orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
+                        }
+                        else //折扣后金额计算
+                        {
+                            orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * soline.FinallyPriceTC;//支付金额=佣金.单价*销售行.数量*销售行.最终价
+                            orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
+                        }
+                    }
+
+                    orderLineBrg.SourceType = AllEnumBE.SourceTypeEnum.SelfMotion;//来源类型 ="自动产生"
+                    //  Brokerage.Memo;//备注
+                    // Brokerage.OutPayment;//已付款金额
+                    orderLineBrg.OrderCurrencyKey = soline.OriginalTCKey;//订单币种
+                    orderLineBrg.PayeeKey = brgLine.PayManKey;//收款人
+                    orderLineBrg.Rate = soline.TCToCCExchRate;//汇率
+
+                    listResult.Add(orderLineBrg); 
+                }
+            }
+
+            return listResult;
+        }
+
+
 		#endregion		
 	}
 }

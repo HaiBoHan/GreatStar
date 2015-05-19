@@ -27,6 +27,7 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                     return true;
                 }
 
+                // 新旧价变更，计算折扣
                 decimal oldPrice = GetExportPrice(soline.OriginalData.DescFlexField);
                 decimal newPrice = GetExportPrice(soline.DescFlexField);
 
@@ -34,6 +35,22 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                 {
                     return true;
                 }
+            }
+            return false;
+        }
+
+        // 是否计算佣金
+        /// <summary>
+        /// 是否计算佣金
+        /// </summary>
+        /// <param name="soline"></param>
+        /// <returns></returns>
+        public static bool IsRecalcBrokerage(SOLine soline)
+        {
+            if (soline != null)
+            {
+                // 暂时，计算折扣时，就计算佣金
+                return IsRecalcDiscount(soline);
             }
             return false;
         }
