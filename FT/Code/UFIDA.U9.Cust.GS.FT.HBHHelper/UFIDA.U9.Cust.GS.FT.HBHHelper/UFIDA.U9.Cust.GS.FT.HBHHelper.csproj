@@ -41,69 +41,86 @@
     <Reference Include="System.Xml" />
     <Reference Include="UBF.System">
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UBF.System.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.AP.APBE, Version=25.5401.15588.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.AP.APBE.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.AP.APBP.Deploy, Version=25.5401.15495.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.AP.APBP.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.AR.ARBE, Version=25.5401.11876.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.AR.ARBE.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBE, Version=1.5.30.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBE.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBE.Deploy, Version=20.1.30.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Agent, Version=25.5401.15502.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Deploy, Version=25.5401.15502.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.BS.Notification.MessageFramework">
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.BS.Notification.MessageFramework.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.FIBE, Version=25.5401.11682.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.FIBE.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.FIBE.Deploy, Version=25.5401.11682.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.FIBE.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.FIBP, Version=25.5401.11494.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.FIBP.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.FIBP.Deploy, Version=25.5401.11494.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.FIBP.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.HRBE, Version=25.5401.11843.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.HRBE.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.HRBP.Deploy, Version=25.5401.9622.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.HRBP.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.PubBE, Version=2.0.668.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubBE.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.PubBE.Deploy, Version=2.0.668.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubBE.Deploy.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UFIDA.U9.CBO.SCMBE, Version=25.5401.15464.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -250,7 +267,6 @@
       Copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
 
       if not exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"
-      Copy $(TargetDir) $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
