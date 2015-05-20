@@ -78,10 +78,10 @@
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.U9.GeneralEvents.dll</HintPath>
     </Reference>
     <Reference Include="UFSoft.UBF.Util.DataAccess">
-      <HintPath>..\..\..\..\..\U9V28\Portal\bin\UFSoft.UBF.Util.DataAccess.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFSoft.UBF.Util.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="UFSoft.UBF.Util.DBHelper">
-      <HintPath>..\..\..\..\..\U9V28\Portal\bin\UFSoft.UBF.Util.DBHelper.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFSoft.UBF.Util.DBHelper.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

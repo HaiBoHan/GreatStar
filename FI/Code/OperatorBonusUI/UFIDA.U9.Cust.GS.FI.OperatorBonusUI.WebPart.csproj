@@ -33,25 +33,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UFIDA.U9.Base.BaseBE">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBE.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBE.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBE.Deploy">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBE">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBE.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBE.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBE.Deploy">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBE.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBE.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBP.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP.Agent">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBP.Agent.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.Agent.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP.Deploy">
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBP.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.Deploy.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

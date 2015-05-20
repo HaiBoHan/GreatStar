@@ -33,25 +33,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UFIDA.U9.Approval.Util">
-      <HintPath>..\..\..\..\U9V28\Portal\UBFLib\UFIDA.U9.Approval.Util.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.U9.Approval.Util.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP">
-      <HintPath>..\..\..\..\U9V28\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBP.dll</HintPath>
+      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Agent">
-      <HintPath>..\..\..\..\U9V28\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
+      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Deploy">
-      <HintPath>..\..\..\..\U9V28\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP">
-      <HintPath>..\..\..\..\U9V28\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBP.dll</HintPath>
+      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP.Agent">
-      <HintPath>..\..\..\..\U9V28\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBP.Agent.dll</HintPath>
+      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.Agent.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP.Deploy">
-      <HintPath>..\..\..\..\U9V28\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FI.FIBP.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.Deploy.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
