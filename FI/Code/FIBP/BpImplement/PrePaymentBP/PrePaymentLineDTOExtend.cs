@@ -23,8 +23,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBP {
 			this.PurchaseOrder = purchaseOrder;
 			this.PrePayMoney = prePayMoney;
 			this.Memo = Memo;
-			this.SrcMoveLineNum = srcMoveLineNum;
-			this.SrcMoveDocID = srcMoveDocID;
+            //this.SrcMoveLineNum = srcMoveLineNum;
+            //this.SrcMoveDocID = srcMoveDocID;
 			this.SrcPrePayLineID = srcPrePayLineID;
 			this.SrcPrePayLineNum = srcPrePayLineNum;
 			this.PrePaymentHeadDTO = prePaymentHeadDTO;

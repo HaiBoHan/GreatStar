@@ -7,6 +7,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.Business;
+using UFSoft.UBF.PL;
+using UFIDA.U9.PM.PO;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 #endregion
 
@@ -39,8 +42,11 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnInserting() {
             UpdatePOPrePaymentMoney();
 			base.OnInserting();
+
 			// TO DO: write your business code here...
-		}
+           
+          
+        }
 
 		/// <summary>
 		/// after Insert
@@ -48,6 +54,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnInserted() {
 			base.OnInserted();
 			// TO DO: write your business code here...
+            ResetSrcOrder();
 		}
 
 		/// <summary>
@@ -65,6 +72,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnUpdated() {
 			base.OnUpdated();
 			// TO DO: write your business code here...
+            ResetSrcOrder();
 		}
 
 
@@ -83,6 +91,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnDeleted() {
 			base.OnDeleted();
 			// TO DO: write your business code here...
+            ResetSrcOrder();
+           
 		}
 
 		/// <summary>
@@ -118,6 +128,19 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 
 
         #region 自定义方法
+        /// <summary>
+        /// 回写上游单据
+        /// </summary>
+        private void ResetSrcOrder()
+        {
+            EntityTakeQtyUpdate etup = new EntityTakeQtyUpdate();
+            etup.UpdateTakeQty(this, this.SrcPO, "PrePayMoney", "DescFlexField_PrivateDescSeg3");
+            etup.UpdateTakeQty(this, this.SrcPO, "SumApplyMoney", "DescFlexField_PrivateDescSeg4");
+            etup.UpdateTakeQty(this, this.SrcPO, "SumRedFlushMoney", "DescFlexField_PrivateDescSeg5");
+            etup.UpdateTakeQty(this, this.SrcPO, "SumMoveMoney", "DescFlexField_PrivateDescSeg6");
+		        
+        }
+
         /// <summary>
         /// 更新采购订单中的已制预付通知单金额
         /// </summary>

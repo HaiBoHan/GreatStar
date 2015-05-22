@@ -72,6 +72,7 @@ namespace UFIDA.U9.Cust.GS.FI.MoveMoneyUIModel
             {
                 throw new Exception("没有选择需要挪入的采购订单！");
             }
+            List<UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentLineMoveDetailDTOData> moveDetailList = new List<PrePaymentBP.PrePaymentLineMoveDetailDTOData>();
 
             List<UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentHeadDTOData> headList = new List<PrePaymentBP.PrePaymentHeadDTOData>();
             UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentHeadDTOData head = new PrePaymentBP.PrePaymentHeadDTOData();
@@ -97,13 +98,19 @@ namespace UFIDA.U9.Cust.GS.FI.MoveMoneyUIModel
                 sumIntoMoney = sumIntoMoney + intoMoney;
 
                 //将挪入的行加入到DTO
+                PrePaymentBP.PrePaymentLineMoveDetailDTOData moveDetail = new PrePaymentBP.PrePaymentLineMoveDetailDTOData();
+                moveDetail.MoveMoney = poRecord.ThisMoveMoney.Value;
+                moveDetail.SrcMoveDocID = this.Model.PrePaymentLine.FocusedRecord.PrePayment_ID;
+                moveDetail.SrcMoveDocNo = this.Model.PrePaymentLine.FocusedRecord.PrePayment_DocNo;
+                moveDetailList.Add(moveDetail);
+
                 PrePaymentBP.PrePaymentLineDTOData intoLine = new PrePaymentBP.PrePaymentLineDTOData();
                 intoLine.PurchaseOrder = poRecord.PODocID.Value;
                 intoLine.PrePayMoney = poRecord.ThisMoveMoney.Value;
-                intoLine.SrcMoveDocID = this.Model.PrePaymentLine.FocusedRecord.PrePayment_ID;
-                intoLine.SrcMoveDocNo = this.Model.PrePaymentLine.FocusedRecord.PrePayment_DocNo;
-                intoLine.SrcMoveLineID = this.Model.PrePaymentLine.FocusedRecord.ID;
-                intoLine.SrcMoveLineNum = this.Model.PrePaymentLine.FocusedRecord.LineNum.Value;
+                //intoLine.SrcMoveDocID = this.Model.PrePaymentLine.FocusedRecord.PrePayment_ID;
+                //intoLine.SrcMoveDocNo = this.Model.PrePaymentLine.FocusedRecord.PrePayment_DocNo;
+                //intoLine.SrcMoveLineID = this.Model.PrePaymentLine.FocusedRecord.ID;
+                //intoLine.SrcMoveLineNum = this.Model.PrePaymentLine.FocusedRecord.LineNum.Value;
                 head.PrePaymentLineDTOs.Add(intoLine);
 
             }
@@ -114,6 +121,8 @@ namespace UFIDA.U9.Cust.GS.FI.MoveMoneyUIModel
 
             UFIDA.U9.Cust.GS.FI.PrePaymentBP.Proxy.PrePaymentMoveBPProxy bp = new PrePaymentBP.Proxy.PrePaymentMoveBPProxy();
             bp.PrePaymentHeadDTOs = headList;
+            bp.PrePaymentLineMoveDetailDTO = moveDetailList;
+
             bp.Do();
 
 

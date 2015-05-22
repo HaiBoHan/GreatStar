@@ -6,6 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
+using UFIDA.U9.PM.PO;
 
 #endregion
 
@@ -46,6 +48,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnInserted() {
 			base.OnInserted();
 			// TO DO: write your business code here...
+            ResetSrcOrder();
+            
 		}
 
 		/// <summary>
@@ -63,6 +67,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnUpdated() {
 			base.OnUpdated();
 			// TO DO: write your business code here...
+            ResetSrcOrder();
 		}
 
 
@@ -81,6 +86,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnDeleted() {
 			base.OnDeleted();
 			// TO DO: write your business code here...
+            ResetSrcOrder();
+
 		}
 
 		/// <summary>
@@ -92,9 +99,23 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 			// TO DO: write your business code here...
 		}
 		#endregion
-		
-		#region 异常处理，开发人员可以重新封装异常
-		public override void  DealException(Exception e)
+        #region 回写上游单据
+        protected void ResetSrcOrder()
+        {
+            EntityTakeQtyUpdate etup = new EntityTakeQtyUpdate();
+            etup.UpdateTakeQty(this, this.PrePaymentLine, "MoveMoney", "SumMoveMoney");
+
+            if (this != null && this.PrePaymentLine != null && this.PrePaymentLine.SrcPO != null)
+            {
+                PurchaseOrder po = this.PrePaymentLine.SrcPO;
+                etup.UpdateTakeQty(this, po, "MoveMoney", "DescFlexField_PrivateDescSeg7");
+
+            }
+        }
+        #endregion
+
+        #region 异常处理，开发人员可以重新封装异常
+        public override void  DealException(Exception e)
         	{
           		base.DealException(e);
           		throw e;

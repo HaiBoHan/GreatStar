@@ -42,6 +42,12 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterBE {
             }
             if (this.Org == null)
                 this.Org = Context.LoginOrg;
+
+            if(string.IsNullOrEmpty(this.RegisterBy))
+            {
+                this.RegisterBy = Context.LoginUser;
+            }
+             this.RegisterDate = Context.LoginDate;
 		}
 		/// <summary>
 		/// before Insert
@@ -116,6 +122,10 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterBE {
             if (this.DRObject == DRObjectEnum.Org && this.DROrg == null)
             {
                 throw new Exception("扣款对象为组织时，组织不能为空！");
+            }
+            if (this.SumDRMoney > this.DRMoney)
+            {
+                throw new Exception("累计扣款金额不允许大于扣款金额！");
             }
 		}
 		#endregion

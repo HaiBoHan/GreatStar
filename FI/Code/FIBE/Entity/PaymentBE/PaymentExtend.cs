@@ -42,6 +42,7 @@ namespace UFIDA.U9.Cust.GS.FI.PaymentBE {
             }
             if (this.Org == null)
                 this.Org = Context.LoginOrg;
+         
 		}
 		/// <summary>
 		/// before Insert

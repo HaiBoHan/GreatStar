@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Agent, Version=25.5401.16327.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Deploy, Version=25.5401.16327.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -60,19 +60,19 @@
     </Reference>
     <Reference Include="UFIDA.U9.BS.Job.RequestClient, Version=21.5401.7356.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.BS.Job.RequestClient.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.BS.Job.RequestClient.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.BS.Notification.MessageBE, Version=21.5200.666.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.BS.Notification.MessageBE.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.BS.Notification.MessageBE.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.BS.Notification.MessageBE.Deploy, Version=21.5200.666.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.BS.Notification.MessageBE.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.BS.Notification.MessageBE.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.BS.Notification.MessageFramework, Version=21.5401.3789.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.BS.Notification.MessageFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.BS.Notification.MessageFramework.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.GeneralEvents">
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.U9.GeneralEvents.dll</HintPath>

@@ -43,6 +43,9 @@
     <Reference Include="UFIDA.U9.Cust.GS.FT.FTBE.Deploy">
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.Cust.GS.FT.FTBE.Deploy.dll</HintPath>
     </Reference>
+    <Reference Include="UFIDA.U9.Cust.GS.FT.HBHHelper">
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.HBHHelper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -37,6 +37,15 @@
 
             using (ISession session = Session.Open())
             {
+                foreach (PrePaymentLineMoveDetailDTO moveDetailDTO in bpObj.PrePaymentLineMoveDetailDTO)
+                {
+                    UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLineMoveDeail moveDetail = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLineMoveDeail.Create();
+                    moveDetail.SrcMoveDocID = moveDetailDTO.SrcMoveDocID;
+                    moveDetail.SrcMoveDocNo = moveDetailDTO.SrcMoveDocNo;
+                    moveDetail.MoveMoney = moveDetailDTO.MoveMoney;
+                   // moveDetail.PrePaymentLine = 
+                }
+
                 foreach (PrePaymentHeadDTO head in bpObj.PrePaymentHeadDTOs)
                 {
                     UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment doc = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment.Finder.FindByID(head.ID);
@@ -76,10 +85,10 @@
             line.PrePayMoney = lineDto.PrePayMoney;
             line.ActualMoeny = lineDto.PrePayMoney;
 
-            line.SrcMoveDocID = lineDto.SrcMoveDocID;
-            line.SrcMoveDocNo = lineDto.SrcMoveDocNo;
-            line.SrcMoveLineID = lineDto.SrcMoveLineID;
-            line.SrcMoveLineNum = lineDto.SrcMoveLineNum;
+            ////line.SrcMoveDocID = lineDto.SrcMoveDocID;
+            ////line.SrcMoveDocNo = lineDto.SrcMoveDocNo;
+            ////line.SrcMoveLineID = lineDto.SrcMoveLineID;
+            ////line.SrcMoveLineNum = lineDto.SrcMoveLineNum;
         }
         /// <summary>
         /// 修改预付款通知单行中的挪出数量

@@ -28,6 +28,9 @@ using UFIDA.U9.Base.Profile;
 using UFSoft.UBF.UI.ControlModel;
 using System.Collections.Specialized;
 using System.Collections.Generic;
+using UFSoft.UBF.UI.WebControls.Association;
+using UFSoft.UBF.UI.WebControls.Association.Adapter;
+using UFIDA.U9.Cust.GS.FI.EnumBE;
 
 
 
@@ -286,18 +289,28 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
-            if (this.Model.PrePayment_PrePaymentLines.FocusedRecord != null)
-            {
-                NameValueCollection param = new NameValueCollection();
-                param.Add("PDPageStatus", "Browse");//这行代码是控制弹开画面为浏览状态
-                string FormID = "e356f094-c6f9-48a0-9e33-c5eb9b579a01";
-                param.Add("btnRefresh", this.btnRefresh.ClientID);
-                param.Add("PrePaymentLine", this.Model.PrePayment_PrePaymentLines.FocusedRecord.ID.ToString());
+            //if (this.Model.PrePayment_PrePaymentLines.FocusedRecord != null)
+            //{
+            //    NameValueCollection param = new NameValueCollection();
+            //    param.Add("PDPageStatus", "Browse");//这行代码是控制弹开画面为浏览状态
+            //    string FormID = "e356f094-c6f9-48a0-9e33-c5eb9b579a01";
+            //    param.Add("btnRefresh", this.btnRefresh.ClientID);
+            //    param.Add("PrePaymentLine", this.Model.PrePayment_PrePaymentLines.FocusedRecord.ID.ToString());
 
-                this.ShowAtlasModalDialog(this.btnRefresh, FormID, "预付挪用款", "830", "435", null, param, true, true, false);
+            //    this.ShowAtlasModalDialog(this.btnRefresh, FormID, "预付挪用款", "830", "435", null, param, true, true, false);
 
-                MenuMove_Click_DefaultImpl(sender, e);
-            }
+            //    MenuMove_Click_DefaultImpl(sender, e);
+            //}
+              this.Model.PrePayment.FocusedRecord.DocNo = string.Empty;
+            this.Model.PrePayment.FocusedRecord.Status = 0;
+            this.Model.PrePayment.FocusedRecord.WFCurrentState = 0;
+            this.Model.PrePayment.FocusedRecord.WFOriginalState = -1;
+            this.Model.PrePayment.FocusedRecord.DocumentType = null;
+           // this.DocumentType98.AddTypeParams("PaymentType", PaymentTypeEnum.RedWord);//.CustomInParams = "";//CurrentFilter.OPath 
+            this.Model.PrePayment.FocusedRecord.PaymentType = PaymentTypeEnum.RedWord.Value;
+
+			BtnCopy_Click_DefaultImpl(sender,e);
+
 			MenuFlush_Click_DefaultImpl(sender,e);
 		}
 
@@ -579,7 +592,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
             string message = PDResource.GetDeleteConfirmInfo();
             //绑定注册弹出对话框到删除按钮
             PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
-		
+
+
         }
         
         public void AfterEventBind()
@@ -605,6 +619,34 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
         #endregion
 
         #region 自定义方法
+        /////////// <summary>
+        /////////// 预付金额改变回写采购订单私有字段3（已预付金额）
+        /////////// </summary>
+        ////////private void Grid10_PostBack_PrePayMoney()
+        ////////{
+        ////////    AssociationControl assoC = new AssociationControl();
+        ////////    assoC.SourceServerControl = this.DataGrid10;
+
+        ////////    assoC.SourceControl.EventName = "OnCellDataChanged";
+        ////////    ((IUFClientAssoGrid)assoC.SourceControl).FireEventCols.Add("PrePayMoney");
+        ////////    //ClientCallBackFrm cF = new ClientCallBackFrm();
+        ////////    //cF.DoCustomerAction += new ClientCallBackFrm.ActionCustomer(Grid5_CallBack_ExchangeItemMaster_Action);
+        ////////    //cF.ParameterControls.Add(DataGrid5);
+        ////////    //cF.ParameterControls.Add(Customer17);
+        ////////    //cF.Add(assoC);
+
+        ////////    CodeBlock cb = new CodeBlock();
+        ////////    UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid10);
+        ////////    grid.IsPostBack = true;
+        ////////    grid.PostBackTag = this.DataGrid5.ID + "_" + assoC.SourceControl.EventName;
+
+        ////////    cb.TargetControls.addControl(grid);
+        ////////    assoC.addBlock(cb);
+
+        ////////    UFGrid sGrid = this.DataGrid5 as UFGrid;
+
+        ////////    sGrid.GridCustomerPostBackEvent += new GridCustomerPostBackDelegate(Grid5_PostBack_ExchangeItemMaster_Action);
+        ////////}
 
         private void SetButtonEnabled()
         {

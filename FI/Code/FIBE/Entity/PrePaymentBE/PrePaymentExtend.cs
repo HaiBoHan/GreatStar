@@ -7,6 +7,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
+using UFSoft.UBF.Business;
+using UFIDA.U9.PM.PO;
+using UFSoft.UBF.PL;
 
 #endregion
 
@@ -67,6 +71,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnInserted() {
 			base.OnInserted();
 			// TO DO: write your business code here...
+           
+           // etup.UpdateTakeQty(this,
 		}
 
 		/// <summary>
@@ -109,6 +115,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...
+
 		}
 		#endregion
 		

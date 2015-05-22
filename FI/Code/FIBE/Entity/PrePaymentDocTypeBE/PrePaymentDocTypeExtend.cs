@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
+using UFIDA.U9.Cust.GS.FI.EnumBE;
 
 #endregion
 
@@ -90,6 +91,19 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentDocTypeBE {
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...
+
+            if (this.PaymentType != null)
+            {
+                if (this.PaymentType.Equals(PaymentTypeEnum.BlueWord)&&!(this.BusType.Equals(FIBusTypeEnum.Blue)))
+                {
+                    throw new Exception("付款类型为蓝字，业务类型必须为蓝字！"); 
+                }
+                if (this.PaymentType.Equals(PaymentTypeEnum.RedWord) && this.BusType.Equals(FIBusTypeEnum.Blue))
+                {
+                    throw new Exception("付款类型为红字，业务类型必须为红字-红冲 或者 红字-退款！ ");
+                }
+            }
+            
 		}
 		#endregion
 		
