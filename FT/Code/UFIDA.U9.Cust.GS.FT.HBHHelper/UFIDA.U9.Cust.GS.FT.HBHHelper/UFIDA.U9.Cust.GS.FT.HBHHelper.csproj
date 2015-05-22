@@ -252,6 +252,7 @@
   <ItemGroup>
     <Compile Include="DescFlexFieldHelper.cs" />
     <Compile Include="EntityTakeQtyUpdate.cs" />
+    <Compile Include="GreatStarHelper.cs" />
     <Compile Include="PubClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SOHelper.cs" />
