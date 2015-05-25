@@ -43,7 +43,7 @@
                     moveDetail.SrcMoveDocID = moveDetailDTO.SrcMoveDocID;
                     moveDetail.SrcMoveDocNo = moveDetailDTO.SrcMoveDocNo;
                     moveDetail.MoveMoney = moveDetailDTO.MoveMoney;
-                   // moveDetail.PrePaymentLine = 
+                    moveDetail.PrePaymentLine = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine.Finder.FindByID(moveDetailDTO.PrePaymentLineID);
                 }
 
                 foreach (PrePaymentHeadDTO head in bpObj.PrePaymentHeadDTOs)

@@ -84,7 +84,7 @@ namespace UFIDA.U9.Cust.GS.FI.MoveMoneyUIModel
             PrePaymentBP.PrePaymentLineDTOData moveLine = new PrePaymentBP.PrePaymentLineDTOData();
             moveLine.ID = this.Model.PrePaymentLine.FocusedRecord.ID;
             moveLine.ThisMoveMoney = this.Model.PrePaymentLine.FocusedRecord.ThisMoveMoney ?? decimal.Zero;
-
+            
             head.PrePaymentLineDTOs.Add(moveLine);
 
             decimal sumIntoMoney = 0;
@@ -102,6 +102,7 @@ namespace UFIDA.U9.Cust.GS.FI.MoveMoneyUIModel
                 moveDetail.MoveMoney = poRecord.ThisMoveMoney.Value;
                 moveDetail.SrcMoveDocID = this.Model.PrePaymentLine.FocusedRecord.PrePayment_ID;
                 moveDetail.SrcMoveDocNo = this.Model.PrePaymentLine.FocusedRecord.PrePayment_DocNo;
+                moveDetail.PrePaymentLineID = this.Model.PrePaymentLine.FocusedRecord.ID;
                 moveDetailList.Add(moveDetail);
 
                 PrePaymentBP.PrePaymentLineDTOData intoLine = new PrePaymentBP.PrePaymentLineDTOData();
