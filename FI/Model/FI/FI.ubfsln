@@ -9,6 +9,7 @@
     <Item id="b6a40ecd-dec9-49dd-a32a-52195abd0c5f" include="PrePaymentUI\PrePaymentUI.ubfuiproj" />
     <Item id="95a60912-31bb-4f4b-a0c0-0b91139c98b2" include="PaymentUI\PaymentUI.ubfuiproj" />
     <Item id="07575d57-fc63-4bf0-97f5-2afb76176c8b" include="OperatorBonusUI\OperatorBonusUI.ubfuiproj" />
+    <Item id="e9d4041f-65e3-4394-827f-7e3ddff107eb" include="FISV\FISV.ubfserproj" />
   </ItemGroup>
-  <ServiceGroupInfo id="e3e909a4-168d-4782-a544-e355bfc51d2a" name="FI" displayName="FI" description="" help="" fullPath="D:\UFIDA\UBFDocs\GS\FI\FI.ubfsln" applicationID="" />
+  <ServiceGroupInfo id="e3e909a4-168d-4782-a544-e355bfc51d2a" name="FI" displayName="FI" description="" help="" fullPath="E:\宋丽丽\巨星\GreatStar\FI\Model\FI\FI.ubfsln" applicationID="" />
 </Solution>

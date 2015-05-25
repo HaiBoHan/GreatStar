@@ -92,11 +92,11 @@
     </Entity>
     <Diagram id="3d4a9819-5f66-40df-9516-a5110b6e303a" name="DeductionRegisterBE" displayName="DeductionRegisterBE">
       <Class Editable="False" ID="1f5547cc-b45a-492c-921d-a9dc6ab40d92" Type="Entity" ADID="35ca30b7-f9dd-410b-acda-6190361b6f79">
-        <Location X="94" Y="25" />
+        <Location X="94" Y="24" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="ede7763c-2da9-4114-9abd-902ac205c752" Type="Entity" ADID="b788c285-41e5-413a-80bf-e0003d03e6eb">
-        <Location X="91" Y="131" />
+        <Location X="91" Y="130" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="1007dada-38b0-4012-bbd0-14e711a6a35e" Type="Event" ADID="3bd2a3fc-8dd5-4b9a-998c-d53e6998d7a7">

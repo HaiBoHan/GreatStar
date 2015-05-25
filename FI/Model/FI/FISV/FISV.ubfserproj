@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="52d56d28-714c-45f8-b1ef-5e150b16effd" name="FISV" displayName="FISV" description="" help="" type="SV" assemblyName="UFIDA.U9.Cust.GS.FI.FISV" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="db01940d-e08c-439f-bd15-97d6f2166e42" name="FIBE" displayName="FIBE" description="" help="" componentid="daa708bc-fde6-441c-a362-cf5087c6d7b4" path="..\..\..\..\..\UBFV30\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FI.FIBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="95162a77-0e2a-4855-9f22-836dedfc4536" name="CBO_PubSV" displayName="CBO_PubSV" description="" help="" componentid="a7a5539e-b071-49e3-afef-f09c24642f23" path="..\..\..\..\..\UBFV30\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubSV.MetaData.dll" type="SV" isRuntime="True" />
+    <Import id="c12187f7-62eb-4ec5-91e4-2b3813a6c1e1" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\UBFV30\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="b6a287bf-8a61-43a4-853c-07fba80a20ee" name="DeductionRegisterSV.ubfsvr" displayName="DeductionRegisterSV.ubfsvr" description="" help="" include="DeductionRegisterSV.ubfsvr" type="BE" />
+  </ItemGroup>
+</Project>

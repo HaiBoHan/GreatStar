@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="86522135-503d-446a-ba8d-7f77b27c69d2" name="DeductionRegisterSV" displayName="DeductionRegisterSV" description="" help="" type="SV" assemblyName="UFIDA.U9.Cust.GS.FI.FISV">
+  <Namespace id="3c86f7cc-18c3-4896-a2de-a1c802e3fdbe" name="UFIDA.U9.Cust.GS.FI.DeductionRegisterSV" displayName="UFIDA.U9.Cust.GS.FI.DeductionRegisterSV" description="" help="">
+    <Operation id="16f120d1-cc7b-439e-a12c-384be5db7081" name="CreateDeductionRegisterSV" displayName="创建扣款登记服务" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="49c8362f-f94e-4d65-9bf4-7c67b269d37a" isService="True" isDefault="False" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="005bf780-fa0a-4644-9371-f1b7a2aeae77" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="3f49ea2d-3e40-43e4-a4c3-494a05b2bb90" name="DeductionRegisterLst" displayName="扣款登记集合" description="" help="创建扣款登记服务.Misc.扣款登记集合" isCollection="True" dataTypeID="b788c285-41e5-413a-80bf-e0003d03e6eb" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="2c531862-2f7f-4175-9e35-d6c9365ec492" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="02b85cd8-c6e9-4a06-8b6f-bc364b410a90" name="DeductionRegisterSV" displayName="DeductionRegisterSV">
+      <Class Editable="True" ID="a09c2154-1087-4379-b648-ce8dcf7ed8ba" Type="Service" ADID="16f120d1-cc7b-439e-a12c-384be5db7081">
+        <Location X="105" Y="50" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

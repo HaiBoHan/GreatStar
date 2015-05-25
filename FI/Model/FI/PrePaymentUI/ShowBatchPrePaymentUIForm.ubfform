@@ -34,21 +34,21 @@
       <UIFilterBar Name="LocateBar" />
       <Columns>
         <NumberColumn ID="7465c8b5-afdc-408d-9ebf-83839dc590be" DefaultValue="" DisplayFormat="8.0" Enabled="True" Help="单据基类.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="PrePayment" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind0" />
+          <RoundRuleBind Name="RoundRuleBind0" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+          <CurrencyType Name="CurrencyType0" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="40ad584a-967f-406a-ac81-62bf47e201dd" DefaultValue="0" DisplayFormat="8.0" Enabled="True" Help="单据基类.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion0" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="PrePayment" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind1" />
+          <RoundRuleBind Name="RoundRuleBind1" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+          <CurrencyType Name="CurrencyType1" />
           <Events />
         </NumberColumn>
         <TextBoxColumn ID="14e70d86-7138-4e3e-af66-387f06a16953" DefaultValue="" DisplayFormat="50" Enabled="False" Help="单据基类.Misc.单号" IsNull="False" IsProperty="False" IsSequence="False" Name="DocNo0" NPos="3" Point="0" TextAlign="Left" UIFieldID="DocNo" UIViewID="PrePayment" Visible="True">
-          <FormLink FormRefID="c83c8dae-2982-41bb-ac76-de943d94c1a1" FormRefName="PrePaymentUIForm.ubfform" FormRefPath="PrePaymentUIForm.ubfform" FormRefProjectPath="PrePaymentUI.ubfuiproj" Height="504" IsShowStateBar="True" Width="992">
+          <FormLink FormRefID="c83c8dae-2982-41bb-ac76-de943d94c1a1" FormRefName="PrePaymentUIForm.ubfform" FormRefPath="PrePaymentUIForm.ubfform" FormRefProjectPath="PrePaymentUI.ubfuiproj" Height="504" IsShowStateBar="True" Name="FormLink0" Width="992">
             <InParameters>
               <Parameter ContextID="" ControlID="ID" ControlProperty="Value" ControlType="NumberColumnModel" Name="ID" ParameterBindType="Bind2Control" />
             </InParameters>
@@ -60,14 +60,14 @@
           <Events />
         </DatePickerColumn>
         <ReferenceColumn ID="4ef2fb49-5356-4b96-a2b8-050a312b0f7f" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DocumentType_Code" CodeFieldUIViewID="PrePayment" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="预付款通知单.Misc.单据类型" IsNull="True" IsProperty="False" IsSequence="False" Name="DocumentType0" NameAttributeName="Name" NameFieldUIFieldID="DocumentType_Name" NameFieldUIViewID="PrePayment" NPos="5" PkeyField="ID" Point="0" RefType="8d5e22ce-2a8f-4ce7-b031-4c23f7679a2c" TextAlign="Right" UIFieldID="DocumentType" UIViewID="PrePayment" Visible="True" WindowHeight="408" WindowWidth="580">
-          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="确认方式" ColumnID="ConfirmType" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="业务类型" ColumnID="BusType" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="审批方式" ColumnID="ApproveType" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation0" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation1" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation2" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" Name="ReferenceRelation3" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation4" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="确认方式" ColumnID="ConfirmType" Name="ReferenceRelation5" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务类型" ColumnID="BusType" Name="ReferenceRelation6" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="审批方式" ColumnID="ApproveType" Name="ReferenceRelation7" TargetControlType="" TargetID="" TargetProperty="" />
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>
@@ -78,12 +78,12 @@
           <Events />
         </DropDownListColumn>
         <ReferenceColumn ID="23f84f1b-3568-4321-a08f-ad322d87c443" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="PrePayment" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="预付款通知单.Misc.供应商" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier0" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="PrePayment" NPos="7" PkeyField="ID" Point="0" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" TextAlign="Right" UIFieldID="Supplier" UIViewID="PrePayment" Visible="True" WindowHeight="408" WindowWidth="580">
-          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="分类" ColumnID="Category_Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation8" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation9" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation10" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" Name="ReferenceRelation11" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="分类" ColumnID="Category_Name" Name="ReferenceRelation12" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" Name="ReferenceRelation13" TargetControlType="" TargetID="" TargetProperty="" />
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>
@@ -91,12 +91,12 @@
           <Events />
         </ReferenceColumn>
         <ReferenceColumn ID="813ab29b-729f-4826-9292-b7fb7a045b09" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="POOrg_Code" CodeFieldUIViewID="PrePayment" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="预付款通知单.Misc.采购组织" IsNull="True" IsProperty="False" IsSequence="False" Name="POOrg0" NameAttributeName="Name" NameFieldUIFieldID="POOrg_Name" NameFieldUIViewID="PrePayment" NPos="8" PkeyField="ID" Point="0" RefType="038046a3-cfb5-4cea-9af1-c0c5195fe2aa" TextAlign="Right" UIFieldID="POOrg" UIViewID="PrePayment" Visible="True" WindowHeight="408" WindowWidth="580">
-          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="组织形态" ColumnID="OrgClassify" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation14" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation15" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation16" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" Name="ReferenceRelation17" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" Name="ReferenceRelation18" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="组织形态" ColumnID="OrgClassify" Name="ReferenceRelation19" TargetControlType="" TargetID="" TargetProperty="" />
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>
@@ -107,16 +107,16 @@
           <Events />
         </ReferenceColumn>
         <ReferenceColumn ID="8e089105-0918-48db-85ae-77aace269012" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Dept_Code" CodeFieldUIViewID="PrePayment" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="预付款通知单.Misc.采购部门" IsNull="True" IsProperty="False" IsSequence="False" Name="Dept0" NameAttributeName="Name" NameFieldUIFieldID="Dept_Name" NameFieldUIViewID="PrePayment" NPos="9" PkeyField="ID" Point="0" RefType="82a8f09a-6081-4b12-8735-10ffcaddca48" TextAlign="Right" UIFieldID="Dept" UIViewID="PrePayment" Visible="True" WindowHeight="408" WindowWidth="580">
-          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="来源组织" ColumnID="MasterOrg_Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点ID" ColumnID="Warehouse_ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点编码" ColumnID="Warehouse_Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点名称" ColumnID="Warehouse_Name" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="库位ID" ColumnID="Bin_ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="库位编码" ColumnID="Bin_Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="库位名称" ColumnID="Bin_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation20" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation21" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation22" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="来源组织" ColumnID="MasterOrg_Name" Name="ReferenceRelation23" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点ID" ColumnID="Warehouse_ID" Name="ReferenceRelation24" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点编码" ColumnID="Warehouse_Code" Name="ReferenceRelation25" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点名称" ColumnID="Warehouse_Name" Name="ReferenceRelation26" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="库位ID" ColumnID="Bin_ID" Name="ReferenceRelation27" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="库位编码" ColumnID="Bin_Code" Name="ReferenceRelation28" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="库位名称" ColumnID="Bin_Name" Name="ReferenceRelation29" TargetControlType="" TargetID="" TargetProperty="" />
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>
@@ -124,9 +124,9 @@
           <Events />
         </ReferenceColumn>
         <ReferenceColumn ID="bcb9952a-a9a6-4a92-9451-78b29f33be0a" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Buyer_Code" CodeFieldUIViewID="PrePayment" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="预付款通知单.Misc.采购员" IsNull="True" IsProperty="False" IsSequence="False" Name="Buyer0" NameAttributeName="Name" NameFieldUIFieldID="Buyer_Name" NameFieldUIViewID="PrePayment" NPos="10" PkeyField="ID" Point="0" RefType="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" TextAlign="Right" UIFieldID="Buyer" UIViewID="PrePayment" Visible="True" WindowHeight="408" WindowWidth="580">
-          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation30" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation31" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation32" TargetControlType="" TargetID="" TargetProperty="" />
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>

@@ -71,49 +71,59 @@
         <Attribute id="38a69a5d-2be1-4cfd-8b1b-8d15028b7e59" name="RepairCalculate" displayName="补算" description="" help="会计期间状态.Misc.补算" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="2" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
       </Attributes>
     </Enum>
+    <Enum id="7b00f734-3ccc-46c7-8d95-4005d890ef76" name="PaymentTypeEnum" displayName="付款类型" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isExtend="False">
+      <Attributes>
+        <Attribute id="b10b783a-d755-4c26-848c-681561d15ec0" name="BlueWord" displayName="蓝字" description="" help="付款类型.Misc.蓝字" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="0" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="13237296-cec8-4f6f-99b9-b6a179bdddf9" name="RedWord" displayName="红字" description="" help="付款类型.Misc.红字" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="1" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </Enum>
     <Diagram id="6630eefb-a5ae-426f-b443-719aabb087b7" name="EnumBE" displayName="EnumBE">
       <Class Editable="True" ID="3f2532ab-5299-4fe5-86a3-b4ded0dff7ae" Type="EnumType" ADID="67d4c713-68bf-433b-a082-9c9cf81fa96c">
-        <Location X="22" Y="20" />
+        <Location X="449" Y="21" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="3a0f0035-c86b-43ad-8f37-a794c2deffd7" Type="EnumType" ADID="bceba2f9-1941-4477-a5f2-96d8046c24fc">
-        <Location X="164" Y="25" />
+        <Location X="717" Y="25" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="0461904b-10bf-48d4-b282-7d979ddaa7e6" Type="EnumType" ADID="ecd6f398-f623-4dfc-834c-a7bfe4ae73e7">
-        <Location X="317" Y="26" />
+        <Location X="870" Y="26" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="0837d383-b6a3-45f7-a871-ff626fdd709f" Type="EnumType" ADID="7148a1ed-2b1e-4c3f-905e-d4fd407e32bf">
-        <Location X="463" Y="24" />
+        <Location X="1016" Y="24" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="c0f99c30-378c-4f45-9e7d-c8f864ef9058" Type="EnumType" ADID="af427c8c-84bf-485c-b43d-bd6e9b90985c">
-        <Location X="610" Y="26" />
+        <Location X="1163" Y="26" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="1dc9030c-0460-4717-9b3d-307c5b785220" Type="EnumType" ADID="d18f74e2-24a5-4de9-8d79-ab372286e481">
-        <Location X="19" Y="88" />
+        <Location X="430" Y="85" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="93b265bd-91bd-4024-96f4-228b3d5a94ee" Type="EnumType" ADID="3cc426d9-59bc-4881-87e5-5c154d8f0157">
-        <Location X="165" Y="93" />
+        <Location X="718" Y="93" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="b4ca6c6e-b684-4d87-ae42-ee3ca4e8387e" Type="EnumType" ADID="4d426d44-90f9-4547-b83b-e3a284b8e145">
-        <Location X="319" Y="96" />
+        <Location X="872" Y="96" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="cca311c1-f3b6-4921-9723-f88c9ebaf401" Type="EnumType" ADID="e22cf448-704f-4698-999e-6325cc11ef26">
-        <Location X="483" Y="102" />
+        <Location X="1036" Y="102" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="35324d15-fd77-4e44-801c-fcfe8d117336" Type="EnumType" ADID="54df3b9e-4afa-4821-850e-487cd1686ba4">
-        <Location X="775" Y="33" />
+        <Location X="1328" Y="33" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="d8e1146f-31b4-4aa2-ad05-cb85aeea3bb6" Type="EnumType" ADID="92958cfa-87ae-46e2-8d3f-6315858812a5">
-        <Location X="776" Y="127" />
+        <Location X="1312" Y="110" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="c1ceb81f-c1c8-4c25-9677-fefc288ff916" Type="EnumType" ADID="7b00f734-3ccc-46c7-8d95-4005d890ef76">
+        <Location X="1172" Y="103" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>
