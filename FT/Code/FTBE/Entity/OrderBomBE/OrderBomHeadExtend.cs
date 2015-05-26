@@ -14,6 +14,7 @@ using UFIDA.U9.Cust.GS.FT.HBHHelper;
 using UFIDA.U9.CBO.MFG.BOM;
 using UFIDA.U9.Base;
 using System.Data;
+using UFIDA.U9.CBO.SCM.Item;
 
 #endregion
 
@@ -181,12 +182,16 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
         #region Model Methods
 
 
-        public static List<OrderBomHead> CreateOrderBom(SO so)
+        public static void CreateOrderBom(SO so)
         {
-            List<OrderBomHead> listOrderBom = new List<OrderBomHead>();
-            if (so != null
-                && so.SOLines != null
-                && so.SOLines.Count > 0
+            CreateOrderBom(so.SOLines);
+        }
+
+        public static void CreateOrderBom(SOLine.EntityList lstSOLine)
+        {
+            //List<OrderBomHead> listOrderBom = new List<OrderBomHead>();
+            if (lstSOLine != null
+                && lstSOLine.Count > 0
                 )
             {
                 //string strWhere = "ItemMaster.Code=@ItemCode and Org.Code=@Org and Status=2 and @Date >=EffectiveDate and @Date <=DisableDate and ProductUOM=@UOM";
@@ -206,11 +211,32 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
 
                 //UFIDA.U9.CBO.MFG.BOM.BOMMaster.EntityList lstBom = UFIDA.U9.CBO.MFG.BOM.BOMMaster.Finder.FindAll(strWhere, appOqlparm);
 
+                List<long> lstLineID = new List<long>();
+                StringBuilder sbSOLineIDs = new StringBuilder();
+                foreach (SOLine soline in lstSOLine)
+                {
+                    if (soline != null)
+                    {
+                    //    long itemID = ItemMasterHelper.GetItemID(soline.ItemInfo);
+                        long id = soline.ID;
+                        if (id > 0)
+                        {
+                            if (!lstLineID.Contains(id))
+                            {
+                                lstLineID.Add(id);
+                                sbSOLineIDs.Append(id).Append(",");
+                            }
+                        }
+                    }
+                }
 
+                if (sbSOLineIDs.Length == 0)
+                    return;
 
                 System.Data.DataSet ds = null;
                 UFSoft.UBF.Util.DataAccess.DataParamList sqlParams = new UFSoft.UBF.Util.DataAccess.DataParamList();
-                sqlParams.Add(UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput("SO", so.ID, System.Data.DbType.Int64));
+                sqlParams.Add(UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput("SO", lstSOLine[0].SO.ID, System.Data.DbType.Int64));
+                sqlParams.Add(UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput("SOLines", PubClass.GetStringRemoveLastSplit(sbSOLineIDs), System.Data.DbType.AnsiString));
 
                 string ProcedureName = "HBH_SP_GreatStar_GetSOBom";
                 UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(ProcedureName, sqlParams, out ds);
@@ -265,72 +291,130 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
                 {
                     using (ISession session = Session.Open())
                     {
-                        foreach (UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO dto in entityList)
+                        //foreach (SOLine soline in so.SOLines)
+                        foreach (SOLine soline in lstSOLine)
                         {
-                            UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHead doc = UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHead.Create();
+                            //long itemID = soline.ItemInfo.ItemIDKey.ID;
+                            ItemMaster item = soline.ItemInfo.ItemID;
+                            //decimal orderByQtyTU = soline.OrderByQtyTU;
+                            UOM.EntityKey saleUomKey = soline.TUKey;
+                            decimal demandQty = soline.OrderByQtyTU;
 
-                            doc.Tier = dto.Tier;
-                            doc.SubKey = dto.SubKey;
-                            doc.SubkeyType = dto.SubkeyType;
-                            doc.ArrirmState = dto.ArrirmState;
-                            doc.ParentPart = dto.ParentPart;//母件
-                            doc.BomMaster = dto.BomMaster;
-                            doc.BomCompont = dto.BomCompont;
-                            doc.Dosage = dto.Dosage;//用量
-                            doc.DosageUnit = dto.DosageUnit;//用量单位
-                            doc.SellNumber = dto.SellNumber;//销售数量
-                            doc.SellUnit = dto.SellUnit;//销售单位
-                            doc.Loss = dto.Loss;//固定损耗
-                            doc.NeedNumber = dto.NeedNumber;//需求数量
-                            doc.SourceType = dto.SourceType;
-                            doc.OrderHead = dto.OrderHead;
-                            doc.OrderLine = dto.OrderLine;
-                            foreach (OrderBomBE.OrderBomLineDTO lineDto in dto.OrderBomLine)
+                            bool isExpend = true;
+                            //如果包装工厂不等于外厂包装，则生成随单BOM，否则生成一行料品等于销售订单行料品的中类的随单BOM行
+                            if (soline.DescFlexField.PubDescSeg18 != "02")
                             {
-                                OrderBomBE.OrderBomLine line = OrderBomBE.OrderBomLine.Create(doc);
-                                line.SalesMan = lineDto.SalesMan;
-                                line.Department = lineDto.Department;
-                                line.SubKey = lineDto.SubKey;
-                                line.NeedNumber = lineDto.NeedNumber;
-                                line.NeedUom = lineDto.NeedUom;
-                                line.ProcurementQty = lineDto.ProcurementQty;
+                                isExpend = false;
                             }
+                            CreateOrderBom(dicBom, soline.SO, soline, item, item, null, null, demandQty, saleUomKey, "1", isExpend);
                         }
+
                         session.Commit();
                     }
+                }
+            }
+            //return listOrderBom;
+        }
 
-                    foreach (SOLine line in so.SOLines)
+        private static void CreateOrderBom(Dictionary<long, BOMMaster> dicBom, SO so, SOLine soline, ItemMaster parentItem, ItemMaster childItem, BOMMaster bom, BOMComponent bomCom, decimal demandQty, UOM.EntityKey saleUomKey, string tier,bool isExpend)
+        {
+            if (parentItem != null
+                && childItem != null
+                )
+            {
+                OrderBomHead head = OrderBomHead.Create();
+                //head.Tier = parentTier + "." + n.ToString();
+                head.Tier = tier;
+
+                head.SubKey = childItem;
+                head.SubkeyType = childItem.StockCategory;
+                //如果子件的库存分类为工具类子件，则自动勾选确认状态
+                if (childItem.StockCategory != null && childItem.StockCategory.Code == "02")
+                {
+                    head.ArrirmState = true;
+                }
+                head.OrderHead = so;
+                head.OrderLine = soline;
+                head.ParentPart = parentItem;//母件
+                head.BomMaster = bom;
+
+                if (bomCom != null)
+                {
+                    head.BomCompont = bomCom;
+                    head.Dosage = bomCom.UsageQty;//用量
+                    head.DosageUnitKey = bomCom.IssueUOMKey;//用量单位
+                    head.Loss = bomCom.FixedScrap;//固定损耗
+                    head.NeedNumber = Math.Ceiling(demandQty * (bomCom.UsageQty / bomCom.ParentQty));//需求数量=母件的需求数量*子件用量/母件底数
+                }
+                else
+                {
+                    head.Dosage = 1;//用量
+                    head.DosageUnitKey = saleUomKey;//用量单位
+                    head.Loss = 0;//固定损耗
+                    head.NeedNumber = demandQty;//需求数量=母件的需求数量*子件用量/母件底数
+                }
+                //head.SellNumber = orderByQtyTU;//销售数量
+                head.SellNumber = soline.OrderByQtyTU;//销售数量
+                head.SellUnitKey = saleUomKey;//销售单位
+
+                head.SourceType = AllEnumBE.SourceTypeEnum.HandWork;
+
+                if (childItem.PurchaseInfo.Buyer != null)
+                {
+                    OrderBomBE.OrderBomLine lineDto = OrderBomBE.OrderBomLine.Create(head);
+                    lineDto.SalesMan = childItem.PurchaseInfo.Buyer;
+                    if (childItem.PurchaseInfo.Buyer.Dept != null)
+                        lineDto.Department = childItem.PurchaseInfo.Buyer.Dept;
+                    lineDto.SubKey = childItem;
+                    lineDto.NeedNumber = head.NeedNumber;
+                    lineDto.NeedUom = head.DosageUnit;
+                    lineDto.ProcurementQty = head.NeedNumber;
+                    head.OrderBomLine.Add(lineDto);
+                }
+
+                // 是否展开
+                if (isExpend)
+                {
+                    long itemID = childItem.ID;
+                    if (itemID > 0
+                        && dicBom.ContainsKey(itemID)
+                        )
                     {
-                        if (line != null)
+                        BOMMaster childBom = dicBom[itemID];
+
+                        if (childBom != null)
                         {
-                            //BOMMaster bom = GetBomMaster(line, dicBom);
+                            int n = 0;
 
-                            //if (bom != null)
-                            //{
+                            foreach (UFIDA.U9.CBO.MFG.BOM.BOMComponent childCom in childBom.BOMComponents)
+                            {
+                                n++;
+                                ItemMaster curParent = GetItemMaster(childBom.ItemMaster.Code);//母件
+                                ItemMaster curChild = GetItemMaster(childCom.ItemMaster.Code);//子件
+                                UOM.EntityKey curUomKey = childCom.IssueUOMKey;
+                                decimal curDemandQty = head.NeedNumber;
 
-                            //}
+                                string curTier = tier + "." + n.ToString();
 
-                            long itemID = line.ItemInfo.ItemIDKey.ID;
+                                CreateOrderBom(dicBom, so, soline, curParent, curChild, childBom, childCom, curDemandQty, curUomKey, curTier,true);
 
-                            CreateSOBom(itemID, dicBom);
-
+                            }
                         }
                     }
                 }
             }
-            return listOrderBom;
         }
 
-        private static void CreateSOBom(long itemID, Dictionary<long, BOMMaster> dicBom)
-        {
-            if (dicBom.ContainsKey(itemID))
-            {
-                BOMMaster bom = dicBom[itemID];
+        //private static void CreateSOBom(long itemID, Dictionary<long, BOMMaster> dicBom)
+        //{
+        //    if (dicBom.ContainsKey(itemID))
+        //    {
+        //        BOMMaster bom = dicBom[itemID];
 
 
 
-            }
-        }
+        //    }
+        //}
 
         private static BOMMaster GetBomMaster(SOLine line, Dictionary<long, BOMMaster> dicBom)
         {
@@ -342,138 +426,6 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             }
 
             return null;
-        }
-
-        public static OrderBomHead CreateOrderBom(SOLine soline, BOMMaster bom)
-        {
-            if (soline != null)
-            {
-                //如果包装工厂不等于外厂包装，则生成随单BOM，否则生成一行料品等于销售订单行料品的中类的随单BOM行
-                if (soline.DescFlexField.PubDescSeg18 != "02")
-                {
-                    string i = "1";
-
-                    GetBomMaster(soline, bom, soline.OrderByQtyTU, entityList, i);
-                }
-                else
-                {
-
-                }
-                CreateSOBom(entityList);
-            }
-        }
-
-        /// <summary>
-        /// 获取料品的BOM清单
-        /// </summary>
-        /// <param name="soLine">销售订单行实体</param>
-        /// <param name="itemCode">母件料号</param>
-        /// <param name="date">日期</param>
-        /// <param name="uom">母件的生产单位</param>
-        /// <param name="orderByQtyTU">销售数量</param>
-        /// <param name="saleUom">销售单位</param>
-        /// <param name="demandQty">需求数量</param>
-        /// <param name="entityList">随单BOM-DTO集合</param>
-        /// <param name="i">层级</param>
-        private void GetBomMaster(UFIDA.U9.SM.SO.SOLine soLine,BOMMaster bom, decimal demandQty, List<UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO> entityList, string i)
-        {
-            //string strWhere = "ItemMaster.Code=@ItemCode and Org.Code=@Org and Status=2 and @Date >=EffectiveDate and @Date <=DisableDate and ProductUOM=@UOM";
-            //OqlParam[] appOqlparm = new OqlParam[] {
-            //                new OqlParam("ItemCode", itemCode),
-            //                new OqlParam("Org", "J001"),
-            //                new OqlParam("Date",date),
-            //                new OqlParam("UOM",uom)
-            //};
-            //UFIDA.U9.CBO.MFG.BOM.BOMMaster bom = UFIDA.U9.CBO.MFG.BOM.BOMMaster.Finder.Find(strWhere, appOqlparm);
-            if (bom != null)
-            {
-                int n = 0;
-                foreach (UFIDA.U9.CBO.MFG.BOM.BOMComponent bomCom in bom.BOMComponents)
-                {
-                    n++;
-                    UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO dto = new OrderBomBE.OrderBomHeadDTO();
-                    dto.Tier = i.ToString() + "." + n.ToString();
-
-                    #region 赋值
-                    UFIDA.U9.CBO.SCM.Item.ItemMaster subItemMaster = GetItemMaster(bomCom.ItemMaster.Code);//子件
-                    dto.SubKey = subItemMaster;
-                    dto.SubkeyType = subItemMaster.StockCategory;
-                    //如果子件的库存分类为工具类子件，则自动勾选确认状态
-                    if (subItemMaster.StockCategory != null && subItemMaster.StockCategory.Code == "02")
-                    {
-                        dto.ArrirmState = true;
-                    }
-                    dto.OrderHead = soLine.SO;
-                    dto.OrderLine = soLine;
-                    dto.ParentPart = GetItemMaster(bom.ItemMaster.Code);//母件
-                    dto.BomMaster = bom;
-                    dto.BomCompont = bomCom;
-                    dto.Dosage = bomCom.UsageQty;//用量
-                    dto.DosageUnit = bomCom.IssueUOM;//用量单位
-                    dto.SellNumber = soLine.OrderByQtyTU;//销售数量
-                    dto.SellUnit = soLine.TU;//销售单位
-                    dto.Loss = bomCom.FixedScrap;//固定损耗
-
-                    dto.NeedNumber = Math.Ceiling(demandQty * (bomCom.UsageQty / bomCom.ParentQty));//需求数量=母件的需求数量*子件用量/母件底数
-                    dto.SourceType = AllEnumBE.SourceTypeEnum.HandWork;
-                    dto.OrderBomLine = new List<OrderBomBE.OrderBomLineDTO>();
-                    if (subItemMaster.PurchaseInfo.Buyer != null)
-                    {
-                        OrderBomBE.OrderBomLineDTO lineDto = new OrderBomBE.OrderBomLineDTO();
-                        lineDto.SalesMan = subItemMaster.PurchaseInfo.Buyer;
-                        if (subItemMaster.PurchaseInfo.Buyer.Dept != null)
-                            lineDto.Department = subItemMaster.PurchaseInfo.Buyer.Dept;
-                        lineDto.SubKey = subItemMaster;
-                        lineDto.NeedNumber = dto.NeedNumber;
-                        lineDto.NeedUom = dto.DosageUnit;
-                        lineDto.ProcurementQty = dto.NeedNumber;
-                        dto.OrderBomLine.Add(lineDto);
-                    }
-                    entityList.Add(dto);
-                    #endregion
-
-                    GetBomMaster(soLine, bomCom.ItemMaster.Code, date, bomCom.IssueUOM.ID, orderByQtyTU, saleUom, dto.NeedNumber, entityList, dto.Tier);
-                }
-            }
-        }
-
-        private static void CreateSOBom(List<UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO> entityList)
-        {
-            using (ISession session = Session.Open())
-            {
-                foreach (UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO dto in entityList)
-                {
-                    UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHead doc = UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHead.Create();
-
-                    doc.Tier = dto.Tier;
-                    doc.SubKey = dto.SubKey;
-                    doc.SubkeyType = dto.SubkeyType;
-                    doc.ArrirmState = dto.ArrirmState;
-                    doc.ParentPart = dto.ParentPart;//母件
-                    doc.BomMaster = dto.BomMaster;
-                    doc.BomCompont = dto.BomCompont;
-                    doc.Dosage = dto.Dosage;//用量
-                    doc.DosageUnit = dto.DosageUnit;//用量单位
-                    doc.SellNumber = dto.SellNumber;//销售数量
-                    doc.SellUnit = dto.SellUnit;//销售单位
-                    doc.Loss = dto.Loss;//固定损耗
-                    doc.NeedNumber = dto.NeedNumber;//需求数量
-                    doc.SourceType = dto.SourceType;
-                    doc.OrderHead = dto.OrderHead;
-                    doc.OrderLine = dto.OrderLine;
-                    foreach (OrderBomBE.OrderBomLineDTO lineDto in dto.OrderBomLine)
-                    {
-                        OrderBomBE.OrderBomLine line = OrderBomBE.OrderBomLine.Create(doc);
-                        line.SalesMan = lineDto.SalesMan;
-                        line.Department = lineDto.Department;
-                        line.SubKey = lineDto.SubKey;
-                        line.NeedNumber = lineDto.NeedNumber;
-                        line.NeedUom = lineDto.NeedUom;
-                        line.ProcurementQty = lineDto.ProcurementQty;
-                    }
-                }
-                session.Commit();
-            }
         }
 
         private static UFIDA.U9.CBO.SCM.Item.ItemMaster GetItemMaster(string code)

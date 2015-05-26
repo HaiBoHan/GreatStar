@@ -9,6 +9,8 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 {
     public class SOLineHelper
     {
+        #region 触发时机
+
         // 是否计算折扣
         /// <summary>
         /// 是否计算折扣
@@ -56,6 +58,48 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             }
             return false;
         }
+
+
+        // 是否重算随单Bom
+        /// <summary>
+        /// 是否重算随单Bom
+        /// </summary>
+        /// <param name="soline"></param>
+        /// <returns></returns>
+        public static bool IsReCreateBom(SOLine soline)
+        {
+            if (soline != null
+                && soline.Status == SODocStatusEnum.Approving
+                && soline.OriginalData != null
+                )
+            {
+                // 提交： 开立->审核中
+                if (soline.OriginalData.Status == SODocStatusEnum.Open
+                    )
+                {
+                    return true;
+                }
+
+                // 物料变化
+                long oldItem = ItemMasterHelper.GetItemID(soline.OriginalData.ItemInfo);
+                long newItem = ItemMasterHelper.GetItemID(soline.ItemInfo);
+                if (oldItem != newItem)
+                {
+                    return true;
+                }
+
+                // 数量变化
+                decimal oldQty = soline.OriginalData.OrderByQtyTU;
+                decimal newQty = soline.OrderByQtyTU;
+                if (oldQty != newQty)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        #endregion
 
 
         // 获得外销价(当前数据)

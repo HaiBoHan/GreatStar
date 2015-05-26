@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 namespace UFIDA.U9.Cust.GS.FT.PlugInUI.PubHelperUI
 {
     public static class SOUIHelperExtend
     {
-        // 贸易中心组织编码 = J002
-        /// <summary>
-        /// 贸易中心组织编码 = J002
-        /// </summary>
-        public const string Const_TradeCenterOrgCode = "J002";
+        //// 贸易中心组织编码 = J002
+        ///// <summary>
+        ///// 贸易中心组织编码 = J002
+        ///// </summary>
+        //public const string Const_TradeCenterOrgCode = "J002";
 
         public static bool IsTradeCenterOrg()
         {
-            return UFIDA.U9.UI.PDHelper.PDContext.Current.OrgRef.CodeColumn == Const_TradeCenterOrgCode;
+            return UFIDA.U9.UI.PDHelper.PDContext.Current.OrgRef.CodeColumn == GreatStarHelper.Const_TradeCenterOrgCode;
         }
 
         /// <summary>

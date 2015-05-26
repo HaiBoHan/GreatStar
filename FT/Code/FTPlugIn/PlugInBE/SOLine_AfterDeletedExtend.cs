@@ -20,7 +20,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             if (soLine == null)
                 return;
             //if (UFIDA.U9.Base.Context.LoginOrg.Code != "J002") return;//组织必须等于贸易中心
-            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg()) return;//组织必须等于贸易中心
+            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg(soLine.SO)) return;//组织必须等于贸易中心
             UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubSoDeleteExtend.IsSoOrderSale(soLine);
             using (ISession session = Session.Open())
             {

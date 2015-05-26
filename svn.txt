@@ -31,6 +31,7 @@ Code
 ..\..\..\..\..\U9V30\Portal\ApplicationServer\Libs\
 改为
 ..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\
+..\..\..\..\..\U9V30\U9.VOB.Product.Component\App\
 5、
 ..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.CS.Workflow
 ..\..\..\..\..\U9Product\U9.VOB.Product.Component\CS\UFIDA.U9.CS.Workflow
@@ -42,3 +43,9 @@ Code
 ..\..\..\..\..\U9V28\Portal\UBFLib
 改为
 ..\..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime
+
+
+
+
+8、
+..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\

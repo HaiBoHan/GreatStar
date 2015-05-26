@@ -6,6 +6,8 @@ using UFSoft.UBF.Business;
 using UFSoft.UBF.PL;
 using UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper;
 using UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelperBE;
+using UFIDA.U9.SM.SO;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 namespace UFIDA.U9.Cust.GS.FT.PlugInBE
 {
@@ -23,7 +25,26 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             if (entity == null)
                 return;
             //if (UFIDA.U9.Base.Context.LoginOrg.Code != "J002") return;//组织必须等于贸易中心
-            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg()) return;//组织必须等于贸易中心
+            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg(entity)) return;//组织必须等于贸易中心
+
+            // 创建随单Bom
+            SOLine.EntityList lstUpdBom = new SOLine.EntityList();
+            foreach (SOLine soline in entity.SOLines)
+            {
+                if (soline != null
+                    && SOLineHelper.IsReCreateBom(soline)
+                    )
+                {
+                    lstUpdBom.Add(soline);
+                }
+            }
+
+            if (lstUpdBom.Count > 0)
+            {
+                OrderBomBE.OrderBomHead.CreateOrderBom(lstUpdBom);
+            }
+
+
 
             List<UFIDA.U9.SM.SO.SOLine> sssessTypeList = new List<SM.SO.SOLine>();//需要创建大货评估的订单行
             List<UFIDA.U9.SM.SO.SOLine> adjustPriceList = new List<UFIDA.U9.SM.SO.SOLine>();//需要创建的调价单集合

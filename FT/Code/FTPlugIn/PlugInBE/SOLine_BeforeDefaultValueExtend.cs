@@ -25,7 +25,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             if (enity == null)
                 return;
             //if (UFIDA.U9.Base.Context.LoginOrg.Code != "J002") return;//组织必须等于贸易中心
-            if (!PubHelperExtend.IsTradeCenterOrg()) return;//组织必须等于贸易中心
+            if (!PubHelperExtend.IsTradeCenterOrg(enity.SO)) return;//组织必须等于贸易中心
 
             if (SOLineHelper.IsRecalcDiscount(enity))
             {

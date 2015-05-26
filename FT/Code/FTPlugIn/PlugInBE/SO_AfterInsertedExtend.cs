@@ -16,11 +16,11 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
 
             if (key == null)
                 return;
-            UFIDA.U9.SM.SO.SO so = key.GetEntity() as UFIDA.U9.SM.SO.SO;//销售订单实体
-            if (so == null)
+            UFIDA.U9.SM.SO.SO entity = key.GetEntity() as UFIDA.U9.SM.SO.SO;//销售订单实体
+            if (entity == null)
                 return;
             //if (UFIDA.U9.Base.Context.LoginOrg.Code != "J002") return;//组织必须等于贸易中心
-            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg()) return;//组织必须等于贸易中心
+            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg(entity)) return;//组织必须等于贸易中心
         }
     }
 }

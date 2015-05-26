@@ -27,7 +27,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             if (so == null)
                 return;
             //if (UFIDA.U9.Base.Context.LoginOrg.Code != "J002") return;//组织必须等于贸易中心
-            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg()) return;//组织必须等于贸易中心
+            if (!UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper.PubHelperExtend.IsTradeCenterOrg(so)) return;//组织必须等于贸易中心
 
 
             #region 变量定义

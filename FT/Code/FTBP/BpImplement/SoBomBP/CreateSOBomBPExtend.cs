@@ -9,6 +9,7 @@ using UFSoft.UBF.PL;
     using UFIDA.U9.Base;
 using UFIDA.U9.Base.UOM;
     using UFSoft.UBF.Business;
+    using UFIDA.U9.SM.SO;
 
 	/// <summary>
 	/// CreateSOBomBP partial 
@@ -37,27 +38,48 @@ using UFIDA.U9.Base.UOM;
             if (bpObj == null)
                 return false;
 
-            List<UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO> entityList = new List<OrderBomBE.OrderBomHeadDTO>();
-
+            // 调用BE方法，与SO插件会调用同一方法
+            SOLine.EntityList lstSOLine = new SOLine.EntityList();
             foreach (UFIDA.U9.SM.SO.SOLine.EntityKey solineKey in bpObj.SOLineKeyList)
             {
-                UFIDA.U9.SM.SO.SOLine soline = solineKey.GetEntity();
-                if (soline != null)
+                if (solineKey != null)
                 {
-                    //如果包装工厂不等于外厂包装，则生成随单BOM，否则生成一行料品等于销售订单行料品的中类的随单BOM行
-                    if (soline.DescFlexField.PubDescSeg18 != "02")
-                    {
-                        string i = "1";
+                    SOLine soline = solineKey.GetEntity();
 
-                        GetBomMaster(soline, soline.ItemInfo.ItemCode, soline.SO.BusinessDate, soline.ItemInfo.ItemID.ManufactureUOM.ID, soline.OrderByQtyTU, soline.TU, soline.OrderByQtyTU, entityList, i);
+                    if (soline != null)
+                    {
+                        lstSOLine.Add(soline);
                     }
-                    else
-                    { 
-                        
-                    }
-                    CreateSOBom(entityList);
                 }
             }
+
+            OrderBomBE.OrderBomHead.CreateOrderBom(lstSOLine);
+            
+            #region Disuse by wf 2015-05-26
+
+            //List<UFIDA.U9.Cust.GS.FT.OrderBomBE.OrderBomHeadDTO> entityList = new List<OrderBomBE.OrderBomHeadDTO>();
+
+            //foreach (UFIDA.U9.SM.SO.SOLine.EntityKey solineKey in bpObj.SOLineKeyList)
+            //{
+            //    UFIDA.U9.SM.SO.SOLine soline = solineKey.GetEntity();
+            //    if (soline != null)
+            //    {
+            //        //如果包装工厂不等于外厂包装，则生成随单BOM，否则生成一行料品等于销售订单行料品的中类的随单BOM行
+            //        if (soline.DescFlexField.PubDescSeg18 != "02")
+            //        {
+            //            string i = "1";
+
+            //            GetBomMaster(soline, soline.ItemInfo.ItemCode, soline.SO.BusinessDate, soline.ItemInfo.ItemID.ManufactureUOM.ID, soline.OrderByQtyTU, soline.TU, soline.OrderByQtyTU, entityList, i);
+            //        }
+            //        else
+            //        { 
+                        
+            //        }
+            //        CreateSOBom(entityList);
+            //    }
+            //}
+
+            #endregion
 
             return true;
 		}

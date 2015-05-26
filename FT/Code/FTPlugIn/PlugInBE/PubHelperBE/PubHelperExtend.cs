@@ -5,20 +5,23 @@ using System.Text;
 using UFSoft.UBF.PL;
 using UFIDA.U9.Base;
 using UFSoft.UBF.Business;
+using UFIDA.U9.Base.Doc;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 namespace UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper
 {
     public static class PubHelperExtend
     {
-        // 贸易中心组织编码 = J002
-        /// <summary>
-        /// 贸易中心组织编码 = J002
-        /// </summary>
-        public const string Const_TradeCenterOrgCode = "J002";
+        //// 贸易中心组织编码 = J002
+        ///// <summary>
+        ///// 贸易中心组织编码 = J002
+        ///// </summary>
+        //public const string Const_TradeCenterOrgCode = "J002";
 
-        public static bool IsTradeCenterOrg()
+        public static bool IsTradeCenterOrg(Doc doc)
         {
-            return UFIDA.U9.Base.Context.LoginOrg.Code == Const_TradeCenterOrgCode;
+            //return UFIDA.U9.Base.Context.LoginOrg.Code == Const_TradeCenterOrgCode;
+            return UFIDA.U9.Base.Context.LoginOrg.Code == GreatStarHelper.Const_TradeCenterOrgCode;
         }
 
         #region 创建项目号
