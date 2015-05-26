@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="c5083429-966a-4a8e-af29-479f9de67143" name="OperationalRateFindUIRef" displayName="成业务汇率单头" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.CBO.RateUI.OperationalRateFindUIRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="30d641cf-39f7-45bb-928d-866b73a4794c" name="cRef" displayName="cRef" description="" help="成业务汇率单头" refEntityId="5ddd5e50-d6ff-47f6-a31f-aedd0f9dc97e" refEntityName="UFIDA.U9.Cust.CBO.RateBE.OperationalRateHead" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="8194519e-9562-4917-ba8d-219728dc5c43" name="ID" displayName="ID" description="" help="成业务汇率单头.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.CBO.RateBE.OperationalRateHead:ID" displayNameIndexStr="2" />
+        <RefField id="8010ba30-64c2-42e1-82cd-b9d62c2bdf01" name="IsCurrency_Name" displayName="原币" description="" help="币种.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.CBO.RateBE.OperationalRateHead:IsCurrency.Name" displayNameIndexStr="" />
+        <RefField id="06a1b3ac-d30d-4552-bbc1-a4757a4dc530" name="NotCurrency_Name" displayName="目标币" description="" help="币种.基本.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.CBO.RateBE.OperationalRateHead:NotCurrency.Name" displayNameIndexStr="" />
+        <RefField id="41485f3b-c02b-4d12-af6f-180dec56f4d4" name="OperationalType" displayName="业务类型" description="" help="成业务汇率单头.Misc.业务类型" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.CBO.RateBE.OperationalRateHead:OperationalType" displayNameIndexStr="2" />
+      </RefFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

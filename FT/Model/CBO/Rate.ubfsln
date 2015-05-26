@@ -1,0 +1,12 @@
+<Solution>
+  <SourceControl>
+  </SourceControl>
+  <ItemGroup>
+    <Item id="8ea3d3e1-f23b-4fe9-b8f5-fb4d1cf60ea3" include="RateBE\RateBE.ubfmlproj" />
+    <Item id="1124fa31-cd16-4f24-9d3c-0b59d341ee23" include="RateUI\RateUI.ubfuiproj" />
+    <Item id="7bc6c6c8-66b3-4c54-8b24-c9db916fccd8" include="RateListUI\RateListUI.ubfuiproj" />
+    <Item id="b195d640-357b-408f-bae4-6fb5393fb302" include="RateListBP\RateListBP.ubfbpproj" />
+    <Item id="47250e68-dfb1-4712-a87c-f9799f07f885" include="RateListUI\RateListUI.ubfqueryproj" />
+  </ItemGroup>
+  <ServiceGroupInfo id="34df5687-a2cf-47ba-9749-08f4f6ce5036" name="UFIDA.U9.Cust.CBO.Rate" displayName="Rate" description="" help="" fullPath="D:\UFIDA\VSProject\GS\Rate\Model\Rate\UFIDA.U9.Cust.CBO.Rate.sg" applicationID="" />
+</Solution>

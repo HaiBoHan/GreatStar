@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceGroup>
+  <ServiceGroupInfo id="34df5687-a2cf-47ba-9749-08f4f6ce5036" name="UFIDA.U9.Cust.CBO.Rate" displayName="Rate" description="" help="" fullPath="D:\UFIDA\VSProject\GS\Rate\Model\Rate\UFIDA.U9.Cust.CBO.Rate.sg" applicationID="" />
+  <AssemblyGroup>
+    <Assembly ID="c7a2eb74-d0e1-45e3-93e1-ad149baf9af5" name="UFIDA.U9.Cust.CBO.RateBE" type="BE" path="" />
+    <Assembly ID="bbb55cd0-f319-4e67-bea5-0e6a13e37599" name="UFIDA.U9.Cust.CBO.RateUI" type="UI" path="" />
+    <Assembly ID="a2f43d5a-3526-4fc1-b110-1b0e6a433ace" name="UFIDA.U9.Cust.CBO.RateListUI" type="UI" path="" />
+    <Assembly ID="35db4c5f-8f8c-430d-90d3-d1316fe7c930" name="UFIDA.U9.Cust.CBO.RateListBP" type="BP" path="" />
+    <Assembly ID="90da3786-c296-4962-92df-d70e64ba7037" name="RateListUI" type="" path="" />
+  </AssemblyGroup>
+</ServiceGroup>

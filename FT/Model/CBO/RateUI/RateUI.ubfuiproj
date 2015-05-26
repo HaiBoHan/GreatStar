@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="bbb55cd0-f319-4e67-bea5-0e6a13e37599" name="RateUI" displayName="RateUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.CBO.RateUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="8973dd15-b7c8-47ae-8612-582fa5699d80" name="RateBE" displayName="RateBE" description="" help="" componentid="c7a2eb74-d0e1-45e3-93e1-ad149baf9af5" path="..\..\..\..\..\..\UBFV28\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.CBO.RateBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="8cd58c3d-80be-4c3a-9a75-b15d74756761" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="177e1d39-98ad-43e9-a3c8-2017a47a9789" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="0b78021b-ab34-424b-a5ab-0b02e36284b5" name="CurrencyUI" displayName="CurrencyUI" description="" help="" componentid="91655029-2285-4196-87b1-d7e3a48e866f" path="..\..\..\..\..\..\UBFV28\U9.VOB.Product.Metadata\UI\UFIDA.U9.Base.Currency.CurrencyUI.MetaData.dll" type="UI" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="88f3920f-c03f-4d9c-b46b-358b2a03238f" name="OperationalRateUIModel.ubfuim" displayName="OperationalRateUIModel.ubfuim" description="" help="" include="OperationalRateUIModel.ubfuim" type="" />
+    <Item id="ffbcceff-d615-43e4-a19e-4abf326edb95" name="OperationalRateUIForm.ubfform" displayName="OperationalRateUIForm.ubfform" description="" help="" include="OperationalRateUIForm.ubfform" type="" />
+    <Item id="65811d7f-b773-4919-9014-bfddc46ffa3a" name="OperationalRateFindUIRef.ubfref" displayName="OperationalRateFindUIRef.ubfref" description="" help="" include="OperationalRateFindUIRef.ubfref" type="" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="a2f43d5a-3526-4fc1-b110-1b0e6a433ace" name="RateListUI" displayName="RateListUI" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.CBO.RateListUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="fe7956ac-2982-4f24-8896-8b75198fcc74" name="RateBE" displayName="RateBE" description="" help="" componentid="c7a2eb74-d0e1-45e3-93e1-ad149baf9af5" path="..\..\..\..\..\..\UBFV28\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.CBO.RateBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="9caba69b-65d2-4078-b4e7-68f37c20beb1" name="OperationalRateBListUIModel.ubfuim" displayName="OperationalRateBListUIModel.ubfuim" description="" help="" include="OperationalRateBListUIModel.ubfuim" type="" />
+    <Item id="caa71483-39d1-4263-93b9-31815d658996" name="OperationalRateBListUIForm.ubfform" displayName="OperationalRateBListUIForm.ubfform" description="" help="" include="OperationalRateBListUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="90da3786-c296-4962-92df-d70e64ba7037" name="RateListUI" displayName="RateListUI" description="" help="" type="" assemblyName="RateListUI" mapProject="" resourceName="" projectVersion="V21">
+  <Imports>
+    <Import id="9934a84e-f3ae-4cbb-85ba-5aef3700ba78" name="RateListUI" displayName="RateListUI" description="" help="" componentid="a2f43d5a-3526-4fc1-b110-1b0e6a433ace" path="RateListUI.ubfuiproj" type="UI" isRuntime="False" />
+    <Import id="3447d89c-51f5-40a8-9377-f098c420dd76" name="RateListBP" displayName="RateListBP" description="" help="" componentid="35db4c5f-8f8c-430d-90d3-d1316fe7c930" path="..\RateListBP\RateListBP.ubfbpproj" type="BP" isRuntime="False" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="74d1d2ce-544a-41f5-a37b-02c87fa62de0" name="RateListUI.ubfquery" displayName="RateListUI.ubfquery" description="" help="" include="RateListUI.ubfquery" type="" />
+  </ItemGroup>
+</Project>
