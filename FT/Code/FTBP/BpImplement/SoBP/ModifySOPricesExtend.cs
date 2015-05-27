@@ -43,7 +43,8 @@
             {
                 if (bpObj.IsAll)
                 {
-                    ModifySOPrice(bpObj.SO);
+                    //ModifySOPrice(bpObj.SO);
+                    RecalcSODiscount(bpObj.SO);
                 }
                 else
                 {

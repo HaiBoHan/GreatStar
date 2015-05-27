@@ -300,54 +300,54 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             btnPrints.Click += new EventHandler(CustomerItemPrint_Click);
             #endregion
 
-            #region 新增 佣金折扣 按钮组
+            #region 新增 佣金折扣 按钮组 (已删除，下面没有位置了，页面显示的空白是假象)
 
-            IUFDropDownButton ddDiscount = new UFWebDropDownButtonAdapter();
-            ddDiscount.Text = "佣金折扣";
-            ddDiscount.ID = "ddDiscount";
+            //IUFDropDownButton ddDiscount = new UFWebDropDownButtonAdapter();
+            //ddDiscount.Text = "佣金折扣";
+            //ddDiscount.ID = "ddDiscount";
 
-            // 整单重算
-            IUFMenu btnAllRecreate = new UFWebMenuAdapter();
-            btnAllRecreate.Text = "整单生成";
-            btnAllRecreate.ID = "btnAllRecreate";
-            btnAllRecreate.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnCreateBroAndDis_ItemClick);
-            btnAllRecreate.AutoPostBack = true;
-            ddDiscount.MenuItems.Add(btnAllRecreate);
+            //// 整单重算
+            //IUFMenu btnAllRecreate = new UFWebMenuAdapter();
+            //btnAllRecreate.Text = "整单生成";
+            //btnAllRecreate.ID = "btnAllRecreate";
+            //btnAllRecreate.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnCreateBroAndDis_ItemClick);
+            //btnAllRecreate.AutoPostBack = true;
+            //ddDiscount.MenuItems.Add(btnAllRecreate);
 
-            //整单佣金重算 
-            IUFMenu btnReBrokerage = new UFWebMenuAdapter();
-            btnReBrokerage.Text = "整单佣金重算";
-            btnReBrokerage.ID = "btnReBrokerage";
-            btnReBrokerage.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnBrokerage_ItemClick);
-            btnReBrokerage.AutoPostBack = true;
-            ddDiscount.MenuItems.Add(btnReBrokerage);
+            ////整单佣金重算 
+            //IUFMenu btnReBrokerage = new UFWebMenuAdapter();
+            //btnReBrokerage.Text = "整单佣金重算";
+            //btnReBrokerage.ID = "btnReBrokerage";
+            //btnReBrokerage.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnBrokerage_ItemClick);
+            //btnReBrokerage.AutoPostBack = true;
+            //ddDiscount.MenuItems.Add(btnReBrokerage);
 
-            //生成折扣
-            IUFMenu btnReDiscount = new UFWebMenuAdapter();
-            btnReDiscount.Text = "整单折扣重算";
-            btnReDiscount.ID = "BtnDiscount";
-            btnReDiscount.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnDiscount_ItemClick);
-            btnReDiscount.AutoPostBack = true;
-            ddDiscount.MenuItems.Add(btnReDiscount);
+            ////生成折扣
+            //IUFMenu btnReDiscount = new UFWebMenuAdapter();
+            //btnReDiscount.Text = "整单折扣重算";
+            //btnReDiscount.ID = "BtnDiscount";
+            //btnReDiscount.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnDiscount_ItemClick);
+            //btnReDiscount.AutoPostBack = true;
+            //ddDiscount.MenuItems.Add(btnReDiscount);
 
-            // 订单折扣
-            IUFMenu btnDiscountQuery = new UFWebMenuAdapter();
-            btnDiscountQuery.Text = "折扣查询";
-            btnDiscountQuery.ID = "BtnDiscountDetail";
-            btnDiscountQuery.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnDiscountDetail_ItemClick);
-            btnDiscountQuery.AutoPostBack = true;
-            ddDiscount.MenuItems.Add(btnDiscountQuery);
+            //// 订单折扣
+            //IUFMenu btnDiscountQuery = new UFWebMenuAdapter();
+            //btnDiscountQuery.Text = "折扣查询";
+            //btnDiscountQuery.ID = "BtnDiscountDetail";
+            //btnDiscountQuery.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnDiscountDetail_ItemClick);
+            //btnDiscountQuery.AutoPostBack = true;
+            //ddDiscount.MenuItems.Add(btnDiscountQuery);
 
-            //订单佣金
-            IUFMenu btnBrokerageQuery = new UFWebMenuAdapter();
-            btnBrokerageQuery.Text = "佣金查询";
-            btnBrokerageQuery.ID = "BtnOrderBrokerage";
-            btnBrokerageQuery.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnOrderBrokerage_ItemClick);
-            btnBrokerageQuery.AutoPostBack = true;
-            ddDiscount.MenuItems.Add(btnBrokerageQuery);
+            ////订单佣金
+            //IUFMenu btnBrokerageQuery = new UFWebMenuAdapter();
+            //btnBrokerageQuery.Text = "佣金查询";
+            //btnBrokerageQuery.ID = "BtnOrderBrokerage";
+            //btnBrokerageQuery.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnOrderBrokerage_ItemClick);
+            //btnBrokerageQuery.AutoPostBack = true;
+            //ddDiscount.MenuItems.Add(btnBrokerageQuery);
 
-            card.Controls.Add(ddDiscount);
-            CommonFunctionExtend.Layout(card, ddDiscount, 15, 0);
+            //card.Controls.Add(ddDiscount);
+            //CommonFunctionExtend.Layout(card, ddDiscount, 15, 0);
 
             #endregion
         }
@@ -544,7 +544,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
         #endregion
 
         #region 页面校验
-        public bool IsSO_Null()
+        public bool IsSO_NeedSave()
         {
             //if (this.part.Model.Views["SO"].FocusedRecord == null)
             //{
@@ -579,11 +579,11 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             if (error.Length > 0)
             {
                 this.part.Model.ErrorMessage.Message = error.ToString();
-                return false;
+                return true;
             }
             else
             {
-                return true;
+                return false;
             }
         }
         #endregion
@@ -844,8 +844,8 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
         {
             this.part.Model.ClearErrorMessage();
 
-            // 判断当前页面的销售订信息不为空
-            if (!IsSO_Null())
+            // 判断当前页面的销售订信息不为空,或需要保存
+            if (!IsSO_NeedSave())
             {
                 try
                 {
@@ -926,8 +926,8 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
 
             long headID = this.part.Model.Views["SO"].FocusedRecord.PrimaryKey;
 
-            // 判断当前页面的销售订信息不为空
-            if (!IsSO_Null())
+            // 判断当前页面的销售订信息不为空,或需要保存
+            if (!IsSO_NeedSave())
             {
                 try
                 {
