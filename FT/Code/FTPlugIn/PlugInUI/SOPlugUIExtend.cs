@@ -346,7 +346,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             btnBrokerageQuery.AutoPostBack = true;
             ddDiscount.MenuItems.Add(btnBrokerageQuery);
 
-            card.Controls.Add(dpSODetail);
+            card.Controls.Add(ddDiscount);
             CommonFunctionExtend.Layout(card, ddDiscount, 15, 0);
 
             #endregion
