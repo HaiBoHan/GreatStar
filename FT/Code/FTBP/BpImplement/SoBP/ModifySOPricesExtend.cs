@@ -62,17 +62,12 @@
 
             if (entity != null)
             {
-                using (ISession session = Session.Open())
+                foreach (SOLine soline in entity.SOLines)
                 {
-                    foreach (SOLine soline in entity.SOLines)
+                    if (soline != null)
                     {
-                        if (soline != null)
-                        {
-                            SOLineHelper.SetDiscounted(soline.DescFlexField, false);
-                        }
+                        SOLineHelper.SetDiscounted(soline.DescFlexField, false);
                     }
-
-                    session.Commit();
                 }
             }
         }

@@ -202,7 +202,22 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
         {
             if (descSegments != null)
             {
-                descSegments.PrivateDescSeg19 = isCalc.ToString();
+                if (!isCalc)
+                {
+                    // 为了标记未重算，又标记一次未重算，会不走保存；所以 将未重算 和 空字符串之间做切换;
+                    if (descSegments.PrivateDescSeg19 == isCalc.ToString())
+                    {
+                        descSegments.PrivateDescSeg19 = string.Empty;
+                    }
+                    else
+                    {
+                        descSegments.PrivateDescSeg19 = isCalc.ToString();
+                    }
+                }
+                else
+                {
+                    descSegments.PrivateDescSeg19 = isCalc.ToString();
+                }
             }
         }
 

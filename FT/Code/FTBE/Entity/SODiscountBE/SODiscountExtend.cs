@@ -150,6 +150,8 @@ namespace UFIDA.U9.Cust.GS.FT.SODiscountBE {
 
                  using (ISession session = Session.Open())
                  {
+                     HBHHelper.SOLineHelper.SetDiscounted(soline.DescFlexField, true);
+
                      // 找到订单折扣行
                      if (lstDiscount != null
                          && lstDiscount.Count > 0
