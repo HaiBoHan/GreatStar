@@ -191,6 +191,21 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             return false;
         }
 
+        // 设置折扣已计算标记（私有段19）
+        /// <summary>
+        /// 设置折扣已计算标记（私有段19）
+        /// </summary>
+        /// <param name="descSegments">扩展段集合</param>
+        /// <param name="isCalc">折扣是否已计算</param>
+        /// <returns></returns>
+        public static void SetDiscounted(DescFlexSegments descSegments,bool isCalc)
+        {
+            if (descSegments != null)
+            {
+                descSegments.PrivateDescSeg19 = isCalc.ToString();
+            }
+        }
+
         #endregion
 
         #region 一些计算的公共逻辑

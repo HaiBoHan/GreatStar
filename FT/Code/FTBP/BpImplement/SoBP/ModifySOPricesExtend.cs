@@ -10,6 +10,7 @@
     using UFIDA.U9.ISV.SM;
     using UFSoft.UBF.Business;
     using UFSoft.UBF.PL;
+    using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
     /// <summary>
     /// ModifySOPrices partial 
@@ -52,6 +53,29 @@
             }
             return true;
         }
+
+        // 订单折扣重算
+        private void RecalcSODiscount(long so)
+        {
+            SO entity = SO.Finder.FindByID(so);
+
+            if (entity != null)
+            {
+                using (ISession session = Session.Open())
+                {
+                    foreach (SOLine soline in entity.SOLines)
+                    {
+                        if (soline != null)
+                        {
+                            SOLineHelper.SetDiscounted(soline.DescFlexField, false);
+                        }
+                    }
+
+                    session.Commit();
+                }
+            }
+        }
+
         #region 整单折扣
         private void ModifySOPrice(long so)
         {

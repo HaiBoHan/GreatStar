@@ -61,6 +61,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
 
             //Register_DataGrid4_ExportPrice_PostBack();
         }
+
         public override void BeforeDataLoad(UFSoft.UBF.UI.IView.IPart Part, out bool executeDefault)
         {
             base.BeforeDataLoad(Part, out executeDefault);
@@ -91,6 +92,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             //    txtOrderOrg.AutoPostBack = true;
             //}
         }
+
         public override void BeforeDataBinding(UFSoft.UBF.UI.IView.IPart Part, out bool executeDefault)
         {
             base.BeforeDataBinding(Part, out executeDefault);
@@ -233,6 +235,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             dpSODetail.Text = "订单明细";
             dpSODetail.ID = "dpSODetail";
 
+            // 订单折扣
             IUFMenu BtnDiscountDetail = new UFWebMenuAdapter();
             BtnDiscountDetail.Text = "订单折扣";
             BtnDiscountDetail.ID = "BtnDiscountDetail";
@@ -295,6 +298,57 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             btnPrints.Text = "唛头打印";
             ((UFWebToolbarAdapter)_Toolbar).Items.Add(btnPrints as System.Web.UI.WebControls.WebControl);
             btnPrints.Click += new EventHandler(CustomerItemPrint_Click);
+            #endregion
+
+            #region 新增 佣金折扣 按钮组
+
+            IUFDropDownButton ddDiscount = new UFWebDropDownButtonAdapter();
+            ddDiscount.Text = "佣金折扣";
+            ddDiscount.ID = "ddDiscount";
+
+            // 整单重算
+            IUFMenu btnAllRecreate = new UFWebMenuAdapter();
+            btnAllRecreate.Text = "整单生成";
+            btnAllRecreate.ID = "btnAllRecreate";
+            btnAllRecreate.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnCreateBroAndDis_ItemClick);
+            btnAllRecreate.AutoPostBack = true;
+            ddDiscount.MenuItems.Add(btnAllRecreate);
+
+            //整单佣金重算 
+            IUFMenu btnReBrokerage = new UFWebMenuAdapter();
+            btnReBrokerage.Text = "整单佣金重算";
+            btnReBrokerage.ID = "btnReBrokerage";
+            btnReBrokerage.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnBrokerage_ItemClick);
+            btnReBrokerage.AutoPostBack = true;
+            ddDiscount.MenuItems.Add(btnReBrokerage);
+
+            //生成折扣
+            IUFMenu btnReDiscount = new UFWebMenuAdapter();
+            btnReDiscount.Text = "整单折扣重算";
+            btnReDiscount.ID = "BtnDiscount";
+            btnReDiscount.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnDiscount_ItemClick);
+            btnReDiscount.AutoPostBack = true;
+            ddDiscount.MenuItems.Add(btnReDiscount);
+
+            // 订单折扣
+            IUFMenu btnDiscountQuery = new UFWebMenuAdapter();
+            btnDiscountQuery.Text = "折扣查询";
+            btnDiscountQuery.ID = "BtnDiscountDetail";
+            btnDiscountQuery.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnDiscountDetail_ItemClick);
+            btnDiscountQuery.AutoPostBack = true;
+            ddDiscount.MenuItems.Add(btnDiscountQuery);
+
+            //订单佣金
+            IUFMenu btnBrokerageQuery = new UFWebMenuAdapter();
+            btnBrokerageQuery.Text = "佣金查询";
+            btnBrokerageQuery.ID = "BtnOrderBrokerage";
+            btnBrokerageQuery.ItemClick += new UFSoft.UBF.UI.WebControls.MenuItemHandle(BtnOrderBrokerage_ItemClick);
+            btnBrokerageQuery.AutoPostBack = true;
+            ddDiscount.MenuItems.Add(btnBrokerageQuery);
+
+            card.Controls.Add(dpSODetail);
+            CommonFunctionExtend.Layout(card, ddDiscount, 15, 0);
+
             #endregion
         }
         private void SetButtonEnabled()
@@ -850,7 +904,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                 }
                 if (solineList.Count > 0)
                 {
-                    SOUIHelperExtend.DeleteBrokerage(solineList);
+                    //SOUIHelperExtend.DeleteBrokerage(solineList);
                     SOUIHelperExtend.CreateBrokerage(solineList);
                     (this.part.Action as BaseAction).NavigateAction.Refresh(null);
                 }
@@ -898,7 +952,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                         }
                         if (solineList.Count > 0)
                         {
-                            SOUIHelperExtend.DeleteBrokerage(solineList);
+                            //SOUIHelperExtend.DeleteBrokerage(solineList);
                             SOUIHelperExtend.CreateBrokerage(solineList);
                         }
 

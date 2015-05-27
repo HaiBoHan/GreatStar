@@ -335,7 +335,6 @@
       Copy $(TargetDir)\$(TargetName).sub.xml $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
 
       if not exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"
-      Copy $(TargetDir) $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

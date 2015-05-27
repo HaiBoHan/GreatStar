@@ -9,6 +9,7 @@ using System.Text;
 using UFIDA.U9.SM.SO;
 using UFIDA.U9.Cust.GS.FT.BrokerageBE;
 using UFSoft.UBF.PL;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -160,30 +161,35 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
                 && lstOldSOBrge.Count > 0
                 )
             {
-                foreach (OrderLineBrokerage oldBrokerage in lstOldSOBrge)
+                using (ISession session = Session.Open())
                 {
-                    if (oldBrokerage != null)
+                    foreach (OrderLineBrokerage oldBrokerage in lstOldSOBrge)
                     {
-                        if (oldBrokerage.SrcBrokerageLineKey != null)
+                        if (oldBrokerage != null)
                         {
-                            long srcBrokerageLine = oldBrokerage.SrcBrokerageLineKey.ID;
-
-                            if (!dicOldBrokerage.ContainsKey(srcBrokerageLine))
+                            if (oldBrokerage.SrcBrokerageLineKey != null)
                             {
-                                dicOldBrokerage.Add(srcBrokerageLine, oldBrokerage);
+                                long srcBrokerageLine = oldBrokerage.SrcBrokerageLineKey.ID;
+
+                                if (!dicOldBrokerage.ContainsKey(srcBrokerageLine))
+                                {
+                                    dicOldBrokerage.Add(srcBrokerageLine, oldBrokerage);
+                                }
+                                // 删除多余的
+                                else
+                                {
+                                    oldBrokerage.Remove();
+                                }
                             }
-                            // 删除多余的
+                            // 删除异常的
                             else
                             {
                                 oldBrokerage.Remove();
                             }
                         }
-                        // 删除异常的
-                        else
-                        {
-                            oldBrokerage.Remove();
-                        }
                     }
+
+                    session.Commit();
                 }
             }
 

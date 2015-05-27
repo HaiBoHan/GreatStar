@@ -8,6 +8,7 @@
     using UFSoft.UBF.Business;
     using UFSoft.UBF.PL;
     using UFIDA.U9.Base;
+    using UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE;
 
 	/// <summary>
 	/// CreateSOBrokerageBP partial 
@@ -43,13 +44,17 @@
                     UFIDA.U9.SM.SO.SOLine soline = solineKey.GetEntity();
                     if (soline != null)
                     {
-                        CreateSOBrokerage(soline);
+                        //CreateSOBrokerage(soline);
+
+                        // 2015-05-27 wf 变为在 订单行折扣中实现; BE插件,BP都可能会调
+                        OrderLineBrokerage.CreateBrokerageBySO(soline);
                     }
                 }
                 session.Commit();
             }
             return true;
 		}
+
         private void CreateSOBrokerage(UFIDA.U9.SM.SO.SOLine soline)
         {
             string strWhere = "BrokerageHead.Custmer.Code=@Customer and BrokerageHead.Product.Code=@Item and BrokerageHead.States=2 and BrokerageHead.Org=@Org and Valid=1 and @Date >= ValidDate and @Date <= UnValidDate";

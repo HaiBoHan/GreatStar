@@ -235,7 +235,7 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
 
                 System.Data.DataSet ds = null;
                 UFSoft.UBF.Util.DataAccess.DataParamList sqlParams = new UFSoft.UBF.Util.DataAccess.DataParamList();
-                sqlParams.Add(UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput("SO", lstSOLine[0].SO.ID, System.Data.DbType.Int64));
+                // sqlParams.Add(UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput("SO", lstSOLine[0].SO.ID, System.Data.DbType.Int64));
                 sqlParams.Add(UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput("SOLines", PubClass.GetStringRemoveLastSplit(sbSOLineIDs), System.Data.DbType.AnsiString));
 
                 string ProcedureName = "HBH_SP_GreatStar_GetSOBom";
@@ -294,6 +294,21 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
                         //foreach (SOLine soline in so.SOLines)
                         foreach (SOLine soline in lstSOLine)
                         {
+                            // 删除订单行旧随单Bom
+                            {
+                                string strOld = string.Format("OrderLine=@SOLine");
+                                OrderBomBE.OrderBomHead.EntityList oldBom = OrderBomBE.OrderBomHead.Finder.FindAll(strOld,new OqlParam(soline.ID));
+                                if (oldBom != null
+                                    && oldBom.Count > 0
+                                    )
+                                {
+                                    for (int i = oldBom.Count - 1; i >= 0; i--)
+                                    {
+                                        oldBom[i].Remove();
+                                    }
+                                }
+                            }
+
                             //long itemID = soline.ItemInfo.ItemIDKey.ID;
                             ItemMaster item = soline.ItemInfo.ItemID;
                             //decimal orderByQtyTU = soline.OrderByQtyTU;

@@ -126,6 +126,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.Deploy.dll</HintPath>
     </Reference>
+    <Reference Include="UFIDA.U9.Cust.GS.FT.HBHHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.HBHHelper.dll</HintPath>
+    </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.SP.SPBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.SP.SPBE.dll</HintPath>

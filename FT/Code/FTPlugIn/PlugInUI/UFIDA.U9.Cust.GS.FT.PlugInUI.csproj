@@ -309,9 +309,23 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="UFIDA.U9.Cust.GS.FT.PlugInUI.config" />
+    <None Include="UFIDA.U9.Cust.GS.FT.PlugInUI.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      if exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\" goto copyfile
+      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"
+      :copyfile
+      Copy $(TargetDir)\$(TargetName).dll $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
+      Copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
+      Copy $(TargetDir)\$(TargetName).config $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
+
+      if not exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
