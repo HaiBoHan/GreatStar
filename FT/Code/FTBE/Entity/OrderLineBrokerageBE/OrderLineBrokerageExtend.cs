@@ -148,20 +148,42 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
 
 		#region Model Methods
 
+        public static List<OrderLineBrokerage> CreateBrokerageBySO(UFIDA.U9.SM.SO.SOLine.EntityList list)
+        {
+            List<OrderLineBrokerage> listResult = new List<OrderLineBrokerage>();
+
+            if (list != null
+                && list.Count > 0
+                )
+            {
+                foreach (SOLine line in list)
+                {
+                     listResult.AddRange(CreateBrokerageBySO(line));
+                }
+            }
+
+            return listResult;
+        }
+
         public static List<OrderLineBrokerage> CreateBrokerageBySO(UFIDA.U9.SM.SO.SOLine soline)
         {
             List<OrderLineBrokerage> listResult = new List<OrderLineBrokerage>();
+
+            if (soline == null)
+                return listResult;
 
             BrokerageLine.EntityList brokerageList = BrokerageLine.GetBrokerageLineBySOLine(soline);
 
             OrderLineBrokerage.EntityList lstOldSOBrge = OrderLineBrokerage.Finder.FindAll("OrderLineID=@SOLine", new OqlParam(soline.ID));
 
+            long solineID = soline.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted ? -999 : soline.ID;
+
             Dictionary<long, OrderLineBrokerage> dicOldBrokerage = new Dictionary<long, OrderLineBrokerage>();
-            if (lstOldSOBrge != null
-                && lstOldSOBrge.Count > 0
-                )
+            using (ISession session = Session.Open())
             {
-                using (ISession session = Session.Open())
+                if (lstOldSOBrge != null
+                    && lstOldSOBrge.Count > 0
+                    )
                 {
                     foreach (OrderLineBrokerage oldBrokerage in lstOldSOBrge)
                     {
@@ -169,13 +191,21 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
                         {
                             if (oldBrokerage.SrcBrokerageLineKey != null)
                             {
-                                long srcBrokerageLine = oldBrokerage.SrcBrokerageLineKey.ID;
+                                long srcBrokerageLine = -1;
 
-                                if (!dicOldBrokerage.ContainsKey(srcBrokerageLine))
+                                // 如果来源行已经删除，那么本行也删除即可
+                                if (oldBrokerage.SrcBrokerageLine != null)
+                                {
+                                    srcBrokerageLine = oldBrokerage.SrcBrokerageLine.ID;
+                                }
+
+                                if (solineID == srcBrokerageLine
+                                    && !dicOldBrokerage.ContainsKey(srcBrokerageLine)
+                                    )
                                 {
                                     dicOldBrokerage.Add(srcBrokerageLine, oldBrokerage);
                                 }
-                                // 删除多余的
+                                // 删除多余的，或来源佣金行已被删除，或订单行是删除动作
                                 else
                                 {
                                     oldBrokerage.Remove();
@@ -188,81 +218,81 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
                             }
                         }
                     }
-
-                    session.Commit();
                 }
-            }
 
-            if (brokerageList != null
-                && brokerageList.Count > 0
-                )
-            {
-                foreach (BrokerageLine brgLine in brokerageList)
+                if (brokerageList != null
+                    && brokerageList.Count > 0
+                    )
                 {
-                    if (brgLine != null)
+                    foreach (BrokerageLine brgLine in brokerageList)
                     {
-                        long brokerageLineID = brgLine.ID;
+                        if (brgLine != null)
+                        {
+                            long brokerageLineID = brgLine.ID;
 
-                        OrderLineBrokerage orderLineBrg;
-                        if (dicOldBrokerage.ContainsKey(brokerageLineID))
-                        {
-                            orderLineBrg = dicOldBrokerage[brokerageLineID];
-
-                            dicOldBrokerage.Remove(brokerageLineID);
-                        }
-                        else
-                        {
-                            orderLineBrg = OrderLineBrokerage.Create();
-                        }
-                        orderLineBrg.OrderLineRowNo = soline.DocLineNo;//行号
-                        orderLineBrg.OrderLineIDKey = soline.Key;//销售订单行ID
-                        orderLineBrg.ClientKey = brgLine.BrokerageHead.CustmerKey;// soline.customerItem.Customer.Key;//客户
-                        orderLineBrg.ProductKey = soline.ItemInfo.ItemIDKey;//料品
-                        orderLineBrg.BrokerageType = brgLine.BrokerageType;//佣金方式
-                        orderLineBrg.Prices = brgLine.Prices;//单价
-                        orderLineBrg.BrokerageRatio = brgLine.Brokerage;//佣金比例
-                        if (brgLine.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues && brgLine.CurrentyKey == soline.OriginalTCKey)//固定值
-                        {
-                            orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU;//支付金额=佣金.单价*销售行.数量
-                            orderLineBrg.PayCurrencyKey = brgLine.CurrentyKey;//支付币种=佣金.支付币种
-                        }
-                        else
-                        {//百分比 
-                            if (brgLine.Computes == AllEnumBE.ComputeEnum.IsPlan)//折扣金额前计划
+                            OrderLineBrokerage orderLineBrg;
+                            if (dicOldBrokerage.ContainsKey(brokerageLineID))
                             {
-                                if (!string.IsNullOrEmpty(soline.DescFlexField.PrivateDescSeg5 + ""))
+                                orderLineBrg = dicOldBrokerage[brokerageLineID];
+
+                                dicOldBrokerage.Remove(brokerageLineID);
+                            }
+                            else
+                            {
+                                orderLineBrg = OrderLineBrokerage.Create();
+                            }
+                            orderLineBrg.OrderLineRowNo = soline.DocLineNo;//行号
+                            orderLineBrg.OrderLineIDKey = soline.Key;//销售订单行ID
+                            orderLineBrg.ClientKey = brgLine.BrokerageHead.CustmerKey;// soline.customerItem.Customer.Key;//客户
+                            orderLineBrg.ProductKey = soline.ItemInfo.ItemIDKey;//料品
+                            orderLineBrg.BrokerageType = brgLine.BrokerageType;//佣金方式
+                            orderLineBrg.Prices = brgLine.Prices;//单价
+                            orderLineBrg.BrokerageRatio = brgLine.Brokerage;//佣金比例
+                            if (brgLine.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues && brgLine.CurrentyKey == soline.OriginalTCKey)//固定值
+                            {
+                                orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU;//支付金额=佣金.单价*销售行.数量
+                                orderLineBrg.PayCurrencyKey = brgLine.CurrentyKey;//支付币种=佣金.支付币种
+                            }
+                            else
+                            {//百分比 
+                                if (brgLine.Computes == AllEnumBE.ComputeEnum.IsPlan)//折扣金额前计划
                                 {
-                                    orderLineBrg.PayAmount = orderLineBrg.BrokerageRatio * soline.OrderByQtyPU * Convert.ToDecimal(soline.DescFlexField.PrivateDescSeg5);//支付金额=佣金.比例*销售行.数量*销售行.外销价
+                                    if (!string.IsNullOrEmpty(soline.DescFlexField.PrivateDescSeg5 + ""))
+                                    {
+                                        orderLineBrg.PayAmount = orderLineBrg.BrokerageRatio * soline.OrderByQtyPU * Convert.ToDecimal(soline.DescFlexField.PrivateDescSeg5);//支付金额=佣金.比例*销售行.数量*销售行.外销价
+                                    }
+                                    orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
                                 }
-                                orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
+                                else //折扣后金额计算
+                                {
+                                    orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * soline.FinallyPriceTC;//支付金额=佣金.单价*销售行.数量*销售行.最终价
+                                    orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
+                                }
                             }
-                            else //折扣后金额计算
-                            {
-                                orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * soline.FinallyPriceTC;//支付金额=佣金.单价*销售行.数量*销售行.最终价
-                                orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
-                            }
+
+                            orderLineBrg.SourceType = AllEnumBE.SourceTypeEnum.SelfMotion;//来源类型 ="自动产生"
+                            //  Brokerage.Memo;//备注
+                            // Brokerage.OutPayment;//已付款金额
+                            orderLineBrg.OrderCurrencyKey = soline.OriginalTCKey;//订单币种
+                            orderLineBrg.PayeeKey = brgLine.PayManKey;//收款人
+                            orderLineBrg.Rate = soline.TCToCCExchRate;//汇率
+
+                            listResult.Add(orderLineBrg);
                         }
-
-                        orderLineBrg.SourceType = AllEnumBE.SourceTypeEnum.SelfMotion;//来源类型 ="自动产生"
-                        //  Brokerage.Memo;//备注
-                        // Brokerage.OutPayment;//已付款金额
-                        orderLineBrg.OrderCurrencyKey = soline.OriginalTCKey;//订单币种
-                        orderLineBrg.PayeeKey = brgLine.PayManKey;//收款人
-                        orderLineBrg.Rate = soline.TCToCCExchRate;//汇率
-
-                        listResult.Add(orderLineBrg);
                     }
                 }
-            }
 
-            if (dicOldBrokerage != null
-                && dicOldBrokerage.Count > 0
-                )
-            {
-                for (int i = dicOldBrokerage.Count - 1; i >= 0; i--)
+                if (dicOldBrokerage != null
+                    && dicOldBrokerage.Count > 0
+                    )
                 {
-                    dicOldBrokerage[i].Remove();
+                    for (int i = dicOldBrokerage.Count - 1; i >= 0; i--)
+                    {
+                        dicOldBrokerage[i].Remove();
+                    }
                 }
+
+                session.Commit();
             }
 
             return listResult;

@@ -31,11 +31,6 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             //{
             //    CalcSODiscount(enity);
             //}
-
-            if (SOLineHelper.IsRecalcBrokerage(enity))
-            {
-                CalcSOBrokerage(enity);
-            }
         }
 
         public static void CalcSODiscount(SOLine entity)
@@ -76,13 +71,6 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
                 //    Session.Current.InList(entity.SO);
                 //}
             }
-        }
-
-
-        private void CalcSOBrokerage(SOLine enity)
-        {
-            List<UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE.OrderLineBrokerage> soBrokerage = UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE.OrderLineBrokerage.CreateBrokerageBySO(enity);
-
         }
     }
 }

@@ -29,6 +29,12 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                     return true;
                 }
 
+                // 删除重算折扣(即,删除折扣明细行)
+                if (soline.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted)
+                {
+                    return true;
+                }
+
                 // 新旧价变更，计算折扣
                 //decimal oldPrice = GetExportPrice(soline.OriginalData.DescFlexField);
                 //decimal newPrice = GetExportPrice(soline.DescFlexField);
@@ -54,7 +60,19 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             if (soline != null)
             {
                 // 暂时，计算折扣时，就计算佣金
-                return IsRecalcDiscount(soline);
+                if (IsRecalcDiscount(soline))
+                    return true;
+
+                // 如果旧数据的折扣需要重算，在Updated时候，重算新佣金
+                if(soline.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
+                    && soline.OriginalData != null
+                    && GetDiscounted(soline.OriginalData.DescFlexField)
+                    )
+                {
+                    return true;
+                }
+
+                return false;
             }
             return false;
         }

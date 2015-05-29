@@ -41,10 +41,13 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             }
 
             // 挪到行上执行了
+            SOLine.EntityList lstLine = new SOLine.EntityList();
             foreach (SOLine soline in so.SOLines)
             {
                 if (SOLineHelper.IsRecalcDiscount(soline))
                 {
+                    lstLine.Add(soline);
+
                     UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount soDisLine = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.CreateDiscountBySO(soline);
 
                     if (soDisLine != null

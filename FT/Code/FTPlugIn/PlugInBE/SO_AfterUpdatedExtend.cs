@@ -8,6 +8,7 @@ using UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelper;
 using UFIDA.U9.Cust.GS.FT.PlugInBE.PubHelperBE;
 using UFIDA.U9.SM.SO;
 using UFIDA.U9.Cust.GS.FT.HBHHelper;
+using UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE;
 
 namespace UFIDA.U9.Cust.GS.FT.PlugInBE
 {
@@ -29,6 +30,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
 
             // 创建随单Bom
             SOLine.EntityList lstUpdBom = new SOLine.EntityList();
+            SOLine.EntityList lstCrBrokerage = new SOLine.EntityList();
             foreach (SOLine soline in entity.SOLines)
             {
                 if (soline != null
@@ -37,6 +39,11 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
                 {
                     lstUpdBom.Add(soline);
                 }
+
+                if (SOLineHelper.IsRecalcBrokerage(soline))
+                {
+                    lstCrBrokerage.Add(soline);
+                }
             }
 
             if (lstUpdBom.Count > 0)
@@ -44,6 +51,10 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
                 OrderBomBE.OrderBomHead.CreateOrderBom(lstUpdBom);
             }
 
+            if (lstCrBrokerage.Count > 0)
+            {
+                OrderLineBrokerage.CreateBrokerageBySO(lstCrBrokerage);
+            }
 
 
             List<UFIDA.U9.SM.SO.SOLine> sssessTypeList = new List<SM.SO.SOLine>();//需要创建大货评估的订单行
@@ -150,6 +161,13 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
                 SOValidateExtend.ValidateSOPrice(entity.ID);
             }
             #endregion
+        }
+
+
+        private void CalcSOBrokerage(SOLine soline)
+        {
+            List<UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE.OrderLineBrokerage> soBrokerage = UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE.OrderLineBrokerage.CreateBrokerageBySO(soline);
+
         }
     }
 }
