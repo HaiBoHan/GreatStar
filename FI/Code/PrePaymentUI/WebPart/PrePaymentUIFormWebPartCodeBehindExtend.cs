@@ -31,6 +31,8 @@ using System.Collections.Generic;
 using UFSoft.UBF.UI.WebControls.Association;
 using UFSoft.UBF.UI.WebControls.Association.Adapter;
 using UFIDA.U9.Cust.GS.FI.EnumBE;
+using UFIDA.U9.Cust.GS.FI.PrePaymentBP.Proxy;
+using UFIDA.U9.Cust.GS.FI.PrePaymentBP;
 
 
 
@@ -471,7 +473,15 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 		private void DocumentType98_TextChanged_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-			
+            if (this.Model.PrePayment.FocusedRecord.DocumentType == null)
+            {
+                throw new Exception("单据类型不可为空！");
+            }
+            GetPrePaymentDocTypeBPProxy getDocType = new GetPrePaymentDocTypeBPProxy();
+            getDocType.DocType = this.Model.PrePayment.FocusedRecord.DocumentType.Value;
+            PrePaymentDocTypeDTOData  doctypeData= getDocType.Do();
+            this.Model.PrePayment.FocusedRecord.PaymentType = doctypeData.PaymentType;
+			//this.Model.PrePayment.FocusedRecord.PaymentType = this.Model.PrePayment.FocusedRecord.DocumentType.
 		
 			DocumentType98_TextChanged_DefaultImpl(sender,e);
 		}

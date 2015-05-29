@@ -61,6 +61,7 @@
                 {
                     dto.PayReqDocType = docType.PayReqDocType.ID;
                 }
+                dto.PaymentType = docType.PaymentType.Value;
             }
             return dto;
 		}		
