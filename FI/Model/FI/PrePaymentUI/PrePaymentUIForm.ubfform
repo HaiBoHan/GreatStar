@@ -659,6 +659,15 @@
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
           <CurrencyType Name="CurrencyType3" />
         </NumberControl>
+        <Label ID="f0f040f0-a444-478f-8d23-d9257a6cd881" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblPaymentType66" RelationControl="PaymentType66" TabIndex="45" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="250" Y="105">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <DropDownList ID="4b19a93e-063a-4aab-8537-fc81d90d9273" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.PaymentTypeEnum" EnumID="7b00f734-3ccc-46c7-8d95-4005d890ef76" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PaymentType66" ReadOnly="True" RelationControl="lblPaymentType66" TabIndex="46" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PaymentType" UIViewID="PrePayment" Visible="True" Width="120" X="355" Y="105">
+          <Events />
+          <RelationControls />
+        </DropDownList>
       </TabPage>
       <Events />
     </TabControl>

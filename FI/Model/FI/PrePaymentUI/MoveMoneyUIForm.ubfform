@@ -176,7 +176,7 @@
           <CurrencyType BindType="UIField" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePaymentLine" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="61b04bf9-5d0e-426f-b1bb-2cbca3269d40" DefaultValue="" DisplayFormat="18.0" Enabled="False" Help="UserGroup.可挪出金额" IsNull="True" IsProperty="False" IsSequence="False" Name="CanMoveMoney0" NPos="17" NumberType="Currency" Point="0" UIFieldID="CanMoveMoney" UIViewID="PrePaymentLine" Visible="True">
+        <NumberColumn ID="61b04bf9-5d0e-426f-b1bb-2cbca3269d40" DefaultValue="" DisplayFormat="18.0" Enabled="False" Formula="PrePayMoney-SumRedFlushMoney-DRMoney-SumMoveMoney-SumApplyMoney" Help="UserGroup.可挪出金额" IsNull="True" IsProperty="False" IsSequence="False" Name="CanMoveMoney0" NPos="17" NumberType="Currency" Point="0" UIFieldID="CanMoveMoney" UIViewID="PrePaymentLine" Visible="True">
           <PrecisionBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_Precision" UIViewID="PrePaymentLine" />
           <RoundRuleBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundType" UIViewID="PrePaymentLine" />
           <ValueOfRoundByValueBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundValue" UIViewID="PrePaymentLine" />
