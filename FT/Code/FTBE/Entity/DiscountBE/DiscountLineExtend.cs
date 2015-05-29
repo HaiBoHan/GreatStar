@@ -9,6 +9,7 @@ using System.Text;
 using UFSoft.UBF.PL;
 using UFIDA.U9.SM.SO;
 using UFIDA.U9.Base;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -74,7 +75,7 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
 			base.OnDeleting();
             bool isExt = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.Finder.IsExists("DiscountLine=@DiscountLine", new OqlParam("DiscountLine", this.ID));
             if (isExt)
-                throw new Exception("第"+ this.RowNo.ToString() +"行已被销售订单引用，不允许删除！");
+                throw new BusinessException("第"+ this.RowNo.ToString() +"行已被销售订单引用，不允许删除！");
 			// TO DO: write your business code here...
 		}
 
@@ -93,7 +94,7 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
 			base.OnValidate();
 			this.SelfEntityValidator();
             if (this.DiscountType == AllEnumBE.DiscountTypeEnum.FixedValues && this.CurrencyType == null)
-                throw new Exception("当折扣方式为固定值时，币种不允许为空！");
+                throw new BusinessException("当折扣方式为固定值时，币种不允许为空！");
 			// TO DO: write your business code here...
 		}
 		#endregion

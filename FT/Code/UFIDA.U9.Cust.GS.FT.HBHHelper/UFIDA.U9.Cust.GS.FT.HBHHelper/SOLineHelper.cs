@@ -221,6 +221,10 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             }
         }
 
+        public const string SOLine_DiscountedUIField = "DescFlexField_PrivateDescSeg19";
+
+
+
         #endregion
 
         #region 一些计算的公共逻辑

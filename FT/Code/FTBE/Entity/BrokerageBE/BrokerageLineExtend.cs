@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.SM.SO;
 using UFSoft.UBF.PL;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -90,10 +91,10 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageBE {
 			this.SelfEntityValidator();
             if (this.PayMan == null) 
             {
-                throw new Exception(string.Format("行【{0}】对应的收款人为空，请确认！", this.RowID));
+                throw new BusinessException(string.Format("行【{0}】对应的收款人为空，请确认！", this.RowID));
             }
             if (this.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues && this.Currenty == null)
-                throw new Exception("当佣金方式为固定值时，币种不允许为空！");
+                throw new BusinessException("当佣金方式为固定值时，币种不允许为空！");
 			// TO DO: write your business code here...
 		}
 		#endregion

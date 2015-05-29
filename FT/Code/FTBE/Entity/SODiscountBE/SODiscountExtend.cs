@@ -182,7 +182,7 @@ namespace UFIDA.U9.Cust.GS.FT.SODiscountBE {
                          if (disLine.DiscountType == AllEnumBE.DiscountTypeEnum.PercentValues)//百分比
                          {
                              //如果是百分比，则使用外销价*百分比
-                             soDis.DiscountPrice = soExportPrice * disLine.Discount;
+                             soDis.DiscountPrice = soExportPrice * (1 - disLine.Discount);
                          }
                          else if (disLine.DiscountType == AllEnumBE.DiscountTypeEnum.FixedValues)//固定值
                          {
@@ -190,7 +190,7 @@ namespace UFIDA.U9.Cust.GS.FT.SODiscountBE {
                              // update Bug:96 Ldward 20150205
                              if (soExportPrice < disLine.Prices)
                              {
-                                 throw new Exception("固定折扣小于外销价生成折扣失败，请确认！");
+                                 throw new BusinessException("固定折扣小于外销价生成折扣失败，请确认！");
                              }
                              soDis.DiscountPrice = soExportPrice - disLine.Prices;
                          }

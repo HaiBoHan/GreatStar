@@ -41,32 +41,32 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             }
 
             // 挪到行上执行了
-            //foreach (SOLine soline in so.SOLines)
-            //{
-            //    if (SOLineHelper.IsRecalcDiscount(soline))
-            //    {
-            //        UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount soDisLine = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.CreateDiscountBySO(soline);
+            foreach (SOLine soline in so.SOLines)
+            {
+                if (SOLineHelper.IsRecalcDiscount(soline))
+                {
+                    UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount soDisLine = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.CreateDiscountBySO(soline);
 
-            //        if (soDisLine != null
-            //            && soline.FinallyPriceTC != soDisLine.DiscountPrice
-            //            )
-            //        {
-            //            soline.FinallyPriceTC = soDisLine.DiscountPrice;
-            //            soline.PriceCalField = "FinallyPrice";
+                    if (soDisLine != null
+                        && soline.FinallyPriceTC != soDisLine.DiscountPrice
+                        )
+                    {
+                        soline.FinallyPriceTC = soDisLine.DiscountPrice;
+                        soline.PriceCalField = "FinallyPrice";
 
-            //            // OBA更新会触发价格计算;
-            //            /*
-            //            internal static CommonArchiveDataDTO SetSO(SaleOrderDTO dto, bool isAdd);
-            //            Declaring Type: UFIDA.U9.ISV.SM.CommonTools 
-            //            Assembly: UFIDA.U9.ISV.SM.SDIndustryChainSV, Version=25.5401.2051.0 
-            //             */
-            //            if (so.ActionSrc != SMActivityEnum.OBAUpdate)
-            //            {
-            //                so.ActionSrc = SMActivityEnum.OBAUpdate;
-            //            }
-            //        }
-            //    }
-            //}
+                        // OBA更新会触发价格计算;
+                        /*
+                        internal static CommonArchiveDataDTO SetSO(SaleOrderDTO dto, bool isAdd);
+                        Declaring Type: UFIDA.U9.ISV.SM.CommonTools 
+                        Assembly: UFIDA.U9.ISV.SM.SDIndustryChainSV, Version=25.5401.2051.0 
+                         */
+                        if (so.ActionSrc != SMActivityEnum.OBAUpdate)
+                        {
+                            so.ActionSrc = SMActivityEnum.OBAUpdate;
+                        }
+                    }
+                }
+            }
         }
 
         // 根据接单组织改变记账期间、币种、法人组织

@@ -58,7 +58,7 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             // 只能新增包材类的BOM
             //if (this.SubkeyType == null)
             //{
-            //    throw new Exception("子项不可为空！");
+            //    throw new BusinessException("子项不可为空！");
             //}
 
         }
@@ -83,10 +83,10 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             //{
             //    if (this.SubkeyType.Code != "03")
             //    {
-            //        throw new Exception("当前修改的非包材类型子项，不可修改！");
+            //        throw new BusinessException("当前修改的非包材类型子项，不可修改！");
             //    }
             //}
-            //else { throw new Exception("子项不可为空！"); }
+            //else { throw new BusinessException("子项不可为空！"); }
             decimal Qty = 0;
             //校验业务员页签=》采购数量集合之和不能大于单头需求数量
             foreach (OrderBomLine line in this.OrderBomLine)
@@ -96,7 +96,7 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             if (Qty != this.NeedNumber)
             {
 
-                throw new Exception("采购数量之和与需求数量不等");
+                throw new BusinessException("采购数量之和与需求数量不等");
 
             }
         }
@@ -120,7 +120,7 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             // TO DO: write your business code here...
             //if (this.SubkeyType != null && this.SubkeyType.Code != "03")
             //{
-            //    throw new Exception("当前删除的非包材类型子项，不可删除！");
+            //    throw new BusinessException("当前删除的非包材类型子项，不可删除！");
             //}
         }
 
@@ -448,7 +448,7 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             UFIDA.U9.CBO.SCM.Item.ItemMaster item = UFIDA.U9.CBO.SCM.Item.ItemMaster.Finder.Find("Code=@Code and Org=@Org", new OqlParam("Code", code), new OqlParam("Org", Context.LoginOrg.ID));
 
             if (item == null)
-                throw new Exception("子件料号【" + code + "】未下发到组织【" + Context.LoginOrg.Name + "】");
+                throw new BusinessException("子件料号【" + code + "】未下发到组织【" + Context.LoginOrg.Name + "】");
 
             return item;
         }

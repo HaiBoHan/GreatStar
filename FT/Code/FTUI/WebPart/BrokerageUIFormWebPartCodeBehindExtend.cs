@@ -137,29 +137,40 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageUIModel
         private void BtnSubmit_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            this.Model.ClearErrorMessage();
+
             this.Model.BrokerageHead.FocusedRecord.States = 1;
             BtnSave_Click_DefaultImpl(sender, e);
             BtnSubmit_Click_DefaultImpl(sender, e);
+
+            this.Action.NavigateAction.Refresh(null);
         }
 
         //BtnApprove_Click...
         private void BtnApprove_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            this.Model.ClearErrorMessage();
 
             this.Model.BrokerageHead.FocusedRecord.States = 2;
             BtnSave_Click_DefaultImpl(sender, e);
             BtnApprove_Click_DefaultImpl(sender, e);
+
+            this.Action.NavigateAction.Refresh(null);
         }
 
         //BtnUndoApprove_Click...
         private void BtnUndoApprove_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            this.Model.ClearErrorMessage();
+
             this.Model.BrokerageHead.FocusedRecord.States = 0;
             BtnSave_Click_DefaultImpl(sender, e);
 
             BtnUndoApprove_Click_DefaultImpl(sender, e);
+
+            this.Action.NavigateAction.Refresh(null);
         }
 
         //BtnFind_Click...

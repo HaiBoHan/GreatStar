@@ -18,6 +18,7 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageUIModel
             //this.Views[0].Fields[0].DefaultValue = thsi.co
             this.viewBrokerageHead_BrokerageLine.FieldValidDate.DefaultValue = DateTime.Now;
             this.viewBrokerageHead_BrokerageLine.FieldUnValidDate.DefaultValue = DateTime.MaxValue;
+            this.viewBrokerageHead_BrokerageLine.FieldValid.DefaultValue = true;
         }
 
         //UIModel提交保存之前的校验操作.

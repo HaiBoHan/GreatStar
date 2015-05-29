@@ -11,6 +11,7 @@
     using UFSoft.UBF.Business;
     using UFSoft.UBF.PL;
     using UFIDA.U9.Cust.GS.FT.HBHHelper;
+    using UFIDA.U9.SM.Enums;
 
     /// <summary>
     /// ModifySOPrices partial 
@@ -62,6 +63,8 @@
 
             if (entity != null)
             {
+                entity.ActionSrc = SMActivityEnum.OBAUpdate;
+
                 foreach (SOLine soline in entity.SOLines)
                 {
                     if (soline != null)

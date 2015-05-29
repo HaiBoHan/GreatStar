@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE;
 using UFIDA.U9.Cust.GS.FT.AllEnumBE;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -93,12 +94,12 @@ namespace UFIDA.U9.Cust.GS.FT.InstalledArkBE
             {
                 if (head.ShipPlanState == ShipPlanStateEnum.IssuedStorage)
                 {
-                    throw new Exception("出运明细单" + head.DocNo + "已下发仓库无法取消预装柜");
+                    throw new BusinessException("出运明细单" + head.DocNo + "已下发仓库无法取消预装柜");
                 }
                 foreach (ShipPlanDetailLine line in head.ShipPlanDetailLine)
                 {
                     if (line.IsWms)
-                        throw new Exception("出运明细单" + head.DocNo + "行" + line.RowNo + "已同步WMS，不能取消预装柜");
+                        throw new BusinessException("出运明细单" + head.DocNo + "行" + line.RowNo + "已同步WMS，不能取消预装柜");
                     line.IsShipping = false;
                 }
             }

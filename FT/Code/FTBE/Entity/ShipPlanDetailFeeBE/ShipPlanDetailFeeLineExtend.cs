@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -39,18 +40,18 @@ namespace UFIDA.U9.Cust.GS.FT.ShipPlanDetailFeeBE {
             if (this.Payment == AllEnumBE.PaymentEnum.WePay)
             {
                 if (this.PayObject == null || this.Payment.Value == -1)
-                    throw new Exception("行"+this.RowNo+"代付对象不能为空");
+                    throw new BusinessException("行"+this.RowNo+"代付对象不能为空");
                
             }
             if (this.PayObject == AllEnumBE.PayObjectEnum.ClientObject)
             {
                 if(this.PayClient == null)
-                    throw new Exception("行" + this.RowNo + "代付对象等于客户时，代付客户不能为空");
+                    throw new BusinessException("行" + this.RowNo + "代付对象等于客户时，代付客户不能为空");
             }
             if (this.PayObject == AllEnumBE.PayObjectEnum.SupplierObject)
             {
                 if (this.PaySupplier == null)
-                    throw new Exception("行" + this.RowNo + "代付对象等于供应商时，代付供应商不能为空");
+                    throw new BusinessException("行" + this.RowNo + "代付对象等于供应商时，代付供应商不能为空");
             }
 			base.OnInserting();
 			// TO DO: write your business code here...
@@ -72,18 +73,18 @@ namespace UFIDA.U9.Cust.GS.FT.ShipPlanDetailFeeBE {
             if (this.Payment == AllEnumBE.PaymentEnum.OtherPay)
             {
                 if (this.PayObject == null || this.PayObject.Value == -1)
-                    throw new Exception("行" + this.RowNo + "代付对象不能为空");
+                    throw new BusinessException("行" + this.RowNo + "代付对象不能为空");
 
             }
             if (this.PayObject == AllEnumBE.PayObjectEnum.ClientObject)
             {
                 if (this.PayClient == null)
-                    throw new Exception("行" + this.RowNo + "代付对象等于客户时，代付客户不能为空");
+                    throw new BusinessException("行" + this.RowNo + "代付对象等于客户时，代付客户不能为空");
             }
             if (this.PayObject == AllEnumBE.PayObjectEnum.SupplierObject)
             {
                 if (this.PaySupplier == null)
-                    throw new Exception("行" + this.RowNo + "代付对象等于供应商时，代付供应商不能为空");
+                    throw new BusinessException("行" + this.RowNo + "代付对象等于供应商时，代付供应商不能为空");
             }
 			base.OnUpdating();
 			// TO DO: write your business code here...

@@ -27,10 +27,10 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             //if (UFIDA.U9.Base.Context.LoginOrg.Code != "J002") return;//组织必须等于贸易中心
             if (!PubHelperExtend.IsTradeCenterOrg(enity.SO)) return;//组织必须等于贸易中心
 
-            if (SOLineHelper.IsRecalcDiscount(enity))
-            {
-                CalcSODiscount(enity);
-            }
+            //if (SOLineHelper.IsRecalcDiscount(enity))
+            //{
+            //    CalcSODiscount(enity);
+            //}
 
             if (SOLineHelper.IsRecalcBrokerage(enity))
             {
@@ -38,16 +38,28 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
             }
         }
 
-        public static void CalcSODiscount(SOLine enity)
+        public static void CalcSODiscount(SOLine entity)
         {
-            UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount soDisLine = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.CreateDiscountBySO(enity);
+            UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount soDisLine = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.CreateDiscountBySO(entity);
 
             if (soDisLine != null
-                && enity.FinallyPriceTC != soDisLine.DiscountPrice
+                && entity.FinallyPriceTC != soDisLine.DiscountPrice
                 )
             {
-                enity.FinallyPriceTC = soDisLine.DiscountPrice;
-                enity.PriceCalField = "FinallyPrice";
+                entity.FinallyPriceTC = soDisLine.DiscountPrice;
+                entity.PriceCalField = "FinallyPrice";
+
+                // 清空价格金额
+                entity.TotalMoneyAC = 0;
+                entity.TotalMoneyCC = 0;
+                entity.TotalMoneyFC = 0;
+                entity.TotalMoneyTC = 0;
+                entity.NetMoneyFC = 0;
+                entity.NetMoneyTC = 0;
+                entity.NetMontyAC = 0;
+                entity.TaxMoneyAC = 0;
+                entity.TaxMoneyFC = 0;
+                entity.TaxMoneyTC = 0;
 
                 // OBA更新会触发价格计算;
                 /*
@@ -55,12 +67,14 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
                 Declaring Type: UFIDA.U9.ISV.SM.CommonTools 
                 Assembly: UFIDA.U9.ISV.SM.SDIndustryChainSV, Version=25.5401.2051.0 
                  */
-                if (enity.SO.ActionSrc != SMActivityEnum.OBAUpdate)
-                {
-                    enity.SO.ActionSrc = SMActivityEnum.OBAUpdate;
 
-                    Session.Current.InList(enity.SO);
-                }
+                // 在这里写已经晚了，得在外面BP里写
+                //if (entity.SO.ActionSrc != SMActivityEnum.OBAUpdate)
+                //{
+                //    entity.SO.ActionSrc = SMActivityEnum.OBAUpdate;
+
+                //    Session.Current.InList(entity.SO);
+                //}
             }
         }
 

@@ -64,11 +64,11 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
             {
                 if (this.OriginalData.Prices != 0 && this.Prices > this.OriginalData.Prices)
                 {
-                    throw new Exception("佣金单价不允许大于" + this.OriginalData.Prices);
+                    throw new BusinessException("佣金单价不允许大于" + this.OriginalData.Prices);
                 }
                 if (this.OriginalData.BrokerageRatio != 0 && this.BrokerageRatio > this.OriginalData.BrokerageRatio)
                 {
-                    throw new Exception("佣金比例不允许大于" + this.OriginalData.BrokerageRatio);
+                    throw new BusinessException("佣金比例不允许大于" + this.OriginalData.BrokerageRatio);
                 }
                 this.SourceType = AllEnumBE.SourceTypeEnum.HandModify;
             }

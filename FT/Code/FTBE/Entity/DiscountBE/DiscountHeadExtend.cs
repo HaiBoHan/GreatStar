@@ -141,7 +141,7 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
         //    {
         //        if (line.UnValidDate < line.ValidDate)
         //        {
-        //            throw new Exception(string.Format("行【{0}】失效日期小于生效日期，请确认！", line.RowNo));
+        //            throw new BusinessException(string.Format("行【{0}】失效日期小于生效日期，请确认！", line.RowNo));
         //        }
         //        DisInfo info = new DisInfo();
         //        info.ID = line.ID;
@@ -176,7 +176,7 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
         //        //        };
         //        //bool isEx = UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountLine.Finder.IsExists(sb.ToString(), appOqlparm);
         //        //if (isEx)
-        //        //    throw new Exception("第" + line.RowNo.ToString() + "行:在当前有效期范围内出现其他折扣类型的折扣行！");
+        //        //    throw new BusinessException("第" + line.RowNo.ToString() + "行:在当前有效期范围内出现其他折扣类型的折扣行！");
         //        #endregion
         //    }
         //    foreach (DiscountLine line in this.DiscountLine)
@@ -188,7 +188,7 @@ namespace UFIDA.U9.Cust.GS.FT.DiscountBE {
         //                    || (info.FromValue < line.ValidDate && info.FromValue>line.ValidDate && info.ToValue<line.UnValidDate) 
         //                    || (info.FromValue < line.ValidDate && info.ToValue>line.UnValidDate))) 
         //            {
-        //                throw new Exception("第" + line.RowNo + "行:在当前有效期范围内出现其他折扣类型的折扣行！");
+        //                throw new BusinessException("第" + line.RowNo + "行:在当前有效期范围内出现其他折扣类型的折扣行！");
         //            }
         //        }
         //    }

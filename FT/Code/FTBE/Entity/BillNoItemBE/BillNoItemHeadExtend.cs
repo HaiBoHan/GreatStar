@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.PL;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -76,7 +77,7 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoItemBE {
 			base.OnDeleting();
             bool isE = UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE.ShipPlanDetailHead.Finder.IsExists("BillNoItem=@BillNoItem", new OqlParam("BillNoItem", this.ID));
             if (isE)
-                throw new Exception("发票号组已分配给出运明细单，不允许删除！");
+                throw new BusinessException("发票号组已分配给出运明细单，不允许删除！");
 			// TO DO: write your business code here...
 		}
 

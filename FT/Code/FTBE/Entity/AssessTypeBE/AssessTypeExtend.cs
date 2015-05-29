@@ -79,7 +79,7 @@ namespace UFIDA.U9.Cust.GS.FT.AssessTypeBE
             // TO DO: write your business code here...
             //if (this.TestResult.Value != -1 && this.TestResult.Value != 0)
             //{
-            //    throw new Exception("不可删除！");
+            //    throw new BusinessException("不可删除！");
             //}
         }
 

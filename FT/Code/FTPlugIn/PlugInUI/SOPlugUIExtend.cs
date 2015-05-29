@@ -22,6 +22,7 @@ using UFIDA.U9.SCM.SM.SOUIModel;
 using UFIDA.U9.PriceCal.PriceCalSV;
 using UFSoft.UBF.UI.Controls;
 using UFSoft.UBF.UI.WebControls;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 namespace UFIDA.U9.Cust.GS.FT.PlugInUI
 {
@@ -164,6 +165,12 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                         if (!string.IsNullOrEmpty(curRecord["DescFlexField_PrivateDescSeg16"] + ""))
                         {
                             curRecord["DescFlexField_PrivateDescSeg16"] = decimal.Zero;//实际出运数量
+                        }
+                        // 是否生成折扣
+                        string isDiscountField = SOLineHelper.SOLine_DiscountedUIField;
+                        if (!PubClass.IsNull(curRecord[isDiscountField]))
+                        {
+                            curRecord[isDiscountField] = string.Empty;
                         }
                     }
                 }

@@ -73,7 +73,7 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoItemBE {
 		protected override void OnDeleting() {
 			base.OnDeleting();
             if (this.State == AllEnumBE.BillNoItemLineEnum.IsUsed)
-                throw new Exception("发票号[" + BillNoid.BillNoName + "]已使用，不允许删除！");
+                throw new BusinessException("发票号[" + BillNoid.BillNoName + "]已使用，不允许删除！");
             UpdateBillNoStatus(true);
 			// TO DO: write your business code here...
 		}

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
 using UFSoft.UBF.PL;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -117,7 +118,7 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageBE {
                         };
                 bool isEx = UFIDA.U9.Cust.GS.FT.BrokerageBE.BrokerageLine.Finder.IsExists(sb.ToString(), appOqlparm);
                 if (isEx)
-                    throw new Exception("第" + line.RowID.ToString() + "行:在当前有效期范围内出现其他佣金类型的佣金行！");
+                    throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现其他佣金类型的佣金行！");
 
                 if (line.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues)
                 {
@@ -142,7 +143,7 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageBE {
                         };
                     bool isEx1 = UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountLine.Finder.IsExists(sb1.ToString(), appOqlparm1);
                     if (isEx)
-                        throw new Exception("第" + line.RowID.ToString() + "行:在当前有效期范围内出现相同佣金类型相同币种的佣金行！");
+                        throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现相同佣金类型相同币种的佣金行！");
                 }
             }
         }

@@ -118,7 +118,7 @@ namespace UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE {
                      shippedQty = Convert.ToDecimal(soLine.DescFlexField.PrivateDescSeg8);
                  if (this.Qty - this.OriginalData.Qty > soLine.OrderByQtyTU - shippedQty)
                  {
-                     throw new Exception("出运明细单" + this.ShipPlanDetailHead.DocNo + "行" + this.RowNo + "本次出运数量不能大于可出运数量" + (soLine.OrderByQtyTU - shippedQty + this.OriginalData.Qty));
+                     throw new BusinessException("出运明细单" + this.ShipPlanDetailHead.DocNo + "行" + this.RowNo + "本次出运数量不能大于可出运数量" + (soLine.OrderByQtyTU - shippedQty + this.OriginalData.Qty));
                  }
              }
              //判断总体积/5000（系统预制参数）和毛重的大小，取两者的最大值赋值给体积重量字段；
@@ -215,7 +215,7 @@ namespace UFIDA.U9.Cust.GS.FT.ShipPlanDetailBE {
 		protected override void OnValidate() {
 			base.OnValidate();
             if (this.Qty == 0)
-                throw new Exception("出运数量不能为0");
+                throw new BusinessException("出运数量不能为0");
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...
 		}

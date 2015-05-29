@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -74,7 +75,7 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoBE {
 		protected override void OnDeleting() {
 			base.OnDeleting();
             if (this.BillNoState == AllEnumBE.BillNoSatetEnum.IsCite)
-                throw new Exception("发票号"+ this.BillNoName +"已使用，不允许删除！");
+                throw new BusinessException("发票号"+ this.BillNoName +"已使用，不允许删除！");
 			// TO DO: write your business code here...
 		}
 

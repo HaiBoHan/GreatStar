@@ -262,13 +262,17 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-      if exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\" goto copyfile
-      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"
+      if exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\" goto copyfile
+      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"
       :copyfile
+
       Copy $(TargetDir)\$(TargetName).dll $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
       Copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
 
-      if not exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\"
+      Copy $(TargetDir)\$(TargetName).dll $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
+      Copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
+
+      if not exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

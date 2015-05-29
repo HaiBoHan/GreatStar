@@ -75,10 +75,10 @@ namespace UFIDA.U9.Cust.GS.FTBillNoRuleBE {
 		protected override void OnDeleting() {
 			base.OnDeleting();
             if (this.IsCompile)
-                throw new Exception("已编译的发票号规则不允许删除！");
+                throw new BusinessException("已编译的发票号规则不允许删除！");
             //bool IsExists = UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.Finder.IsExists("BillNoRuleID=@SrcID and BillNoState=0",new OqlParam("SrcID",this.ID));
             //if (IsExists)
-            //    throw new Exception("发票号规则所产生的发票号已被引用，不允许删除！");
+            //    throw new BusinessException("发票号规则所产生的发票号已被引用，不允许删除！");
             //UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.EntityList entityList = UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.Finder.FindAll("BillNoRuleID=@SrcID",new OqlParam("SrcID",this.ID));
             //using (ISession session = Session.Open())
             //{
@@ -106,11 +106,11 @@ namespace UFIDA.U9.Cust.GS.FTBillNoRuleBE {
 			base.OnValidate();
 			this.SelfEntityValidator();
             if (this.Prefix.Value <= -1)
-                throw new Exception("前缀不能为空！");
+                throw new BusinessException("前缀不能为空！");
             if (this.Center.Value <= -1)
-                throw new Exception("中段不能为空！");
+                throw new BusinessException("中段不能为空！");
             if (this.BillNoStart > this.BillNoEnd)
-                throw new Exception("流水号起不能大于流水号止！");
+                throw new BusinessException("流水号起不能大于流水号止！");
             ValidateRepeat();
 			// TO DO: write your business code here...
 		}
@@ -135,7 +135,7 @@ namespace UFIDA.U9.Cust.GS.FTBillNoRuleBE {
                         };
             bool isExists = FTBillNoRuleBE.BillNoRule.Finder.IsExists(sb.ToString(), appOqlparm);
             if (isExists)
-                throw new Exception("前缀+中段+流水号起止出现重复！");
+                throw new BusinessException("前缀+中段+流水号起止出现重复！");
         }
 		#endregion
 		
