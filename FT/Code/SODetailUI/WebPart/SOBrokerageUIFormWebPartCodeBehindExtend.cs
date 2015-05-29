@@ -28,6 +28,8 @@ using System.Collections.Generic;
 using UFSoft.UBF.UI.WebControls.Association.Adapter;
 using UFSoft.UBF.UI.WebControls.Association;
 using UFSoft.UBF.UI.ControlModel;
+using UFIDA.U9.SCM.PM.PMPubForUI.Data;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 
 
@@ -172,6 +174,8 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
             this.lblPrice.Text = dto.FinallyPriceTC.ToString();
             this.lblMoney.Text = dto.TotalMoney.ToString();
         }
+
+        #endregion
             
 
 		#region 自定义数据初始化加载和数据收集
@@ -200,6 +204,9 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
             Register_DataGrid4_Price_CallBack();
 
             FlexFieldHelper.SetDescFlexField(this.DataGrid0, this.DataGrid0.Columns.Count - 1);
+
+            // 固定值 0 ； 百分比  3 ； 
+            this.Model.OrderLineBrokerage.FieldBrokerageMoney.AttributeName = "case when BrokerageType = 3 then OrderLineID.TotalMoneyTC * BrokerageRatio  else Prices * OrderLineID.OrderByQtyPU end";
         }
         
         public void AfterEventBind()
@@ -246,31 +253,106 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
         }
         public object cF_DoCustomerAction(CustomerActionEventArgs args)
         {
-            ArrayList list = (ArrayList)args.ArgsHash[UFWebClientGridAdapter.ALL_GRIDDATA_SelectedRows];
-            ArrayList lstAllData = (ArrayList)args.ArgsHash[this.DataGrid0.ClientID];
-            int colIndex = Convert.ToInt32(args.ArgsHash["ALL_GRIDDATA_FocusColumn"]);//取列号
-            int rowIndex = Convert.ToInt32(args.ArgsHash["ALL_GRIDDATA_FocusRow"]);//取行号
-            Hashtable hs = lstAllData[rowIndex] as Hashtable;
-            int num = Convert.ToInt32(hs["BrokerageType"]);//
-            UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
-            if (num == (int)AllEnumBE.DiscountTypeEnumData.FixedValues)//固定值
+			CustomerActionArg customerActionArg = new CustomerActionArg(args);
+			string focusColumnName = customerActionArg.GetFocusColumnName(this.DataGrid0);
+			OrderLineBrokerageView view = this.Model.OrderLineBrokerage;
+			Hashtable focusRowData = customerActionArg.GetFocusRowData(this.DataGrid0.ClientID);
+			object result;
+            if (focusRowData == null || focusRowData.Count == 0)
             {
-                //比例清空 不可以输入
-                grid.CellValue.Add(new Object[] { rowIndex, "BrokerageRatio", new string[] { "0.0000%", "0.0000%", "0.0000%" } });
-                this.DataGrid0.Columns["BrokerageRatio"].Enabled = false;
-                this.DataGrid0.Columns["Prices"].Enabled = true;
+                result = args;
             }
             else
             {
-                //价格清空，不可输入
-                grid.CellValue.Add(new Object[] { rowIndex, "Prices", new string[] { "0", "0", "0" } });
-                this.DataGrid0.Columns["Prices"].Enabled = false;
-                this.DataGrid0.Columns["BrokerageRatio"].Enabled = true;
+                string fieldID = this.Model.OrderLineBrokerage.FieldID.Name;
+                long curID = Convert.ToInt64(focusRowData[fieldID]);
+                OrderLineBrokerageRecord curLineRecord = (OrderLineBrokerageRecord)this.Model.OrderLineBrokerage.FindByFieldValue(fieldID, curID);
+                if (curLineRecord == null)
+                {
+                    result = args;
+                }
+                else
+                {
+                    ArrayList list = (ArrayList)args.ArgsHash[UFWebClientGridAdapter.ALL_GRIDDATA_SelectedRows];
+                    ArrayList lstAllData = (ArrayList)args.ArgsHash[this.DataGrid0.ClientID];
+                    int colIndex = Convert.ToInt32(args.ArgsHash["ALL_GRIDDATA_FocusColumn"]);//取列号
+                    int rowIndex = Convert.ToInt32(args.ArgsHash["ALL_GRIDDATA_FocusRow"]);//取行号
+                    Hashtable hs = lstAllData[rowIndex] as Hashtable;
+
+
+                    this.Model.OrderLineBrokerage.FocusedRecord = curLineRecord;
+                    string text = focusColumnName;
+                    switch (text)
+                    {
+                        case "BrokerageType":
+                            {
+                                int num = Convert.ToInt32(hs["BrokerageType"]);//
+                                UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
+                                if (num == (int)AllEnumBE.DiscountTypeEnumData.FixedValues)//固定值
+                                {
+                                    //比例清空 不可以输入
+                                    grid.CellValue.Add(new Object[] { rowIndex, "BrokerageRatio", new string[] { "0.0000%", "0.0000%", "0.0000%" } });
+                                    this.DataGrid0.Columns["BrokerageRatio"].Enabled = false;
+                                    this.DataGrid0.Columns["Prices"].Enabled = true;
+                                }
+                                else
+                                {
+                                    //价格清空，不可输入
+                                    grid.CellValue.Add(new Object[] { rowIndex, "Prices", new string[] { "0", "0", "0" } });
+                                    this.DataGrid0.Columns["Prices"].Enabled = false;
+                                    this.DataGrid0.Columns["BrokerageRatio"].Enabled = true;
+                                }
+                                args.ArgsResult.Add(grid.ClientInstanceWithValue);
+
+                            }
+                            break;
+                        case "BrokerageRatio":
+                            {
+                                decimal ratio = Convert.ToDecimal(hs["BrokerageRatio"]);//
+                                UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
+
+                                curLineRecord.BrokerageRatio = ratio;
+                                decimal oldMoney = curLineRecord.BrokerageMoney.GetValueOrDefault(0);
+                                decimal newMoney = curLineRecord.OrderLineID_TotalMoneyTC * ratio;
+
+                                if (oldMoney != newMoney)
+                                {
+                                    curLineRecord.BrokerageMoney = newMoney;
+                                    string str = PubClass.GetStringRemoveZero(newMoney);
+                                    grid.CellValue.Add(new Object[] { rowIndex, "BrokerageMoney", new string[] { str, str, str } });
+                                }
+
+                                args.ArgsResult.Add(grid.ClientInstanceWithValue);
+
+                            }
+                            break;
+                        case "Prices":
+                            {
+                                decimal price = Convert.ToDecimal(hs["Prices"]);//
+                                UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
+
+                                curLineRecord.Prices = price;
+                                decimal oldMoney = curLineRecord.BrokerageMoney.GetValueOrDefault(0);
+                                decimal newMoney = curLineRecord.OrderLineID_OrderByQtyPU * price;
+
+                                if (oldMoney != newMoney)
+                                {
+                                    curLineRecord.BrokerageMoney = newMoney;
+                                    string str = PubClass.GetStringRemoveZero(newMoney);
+                                    grid.CellValue.Add(new Object[] { rowIndex, "BrokerageMoney", new string[] { str, str, str } });
+                                }
+
+                                args.ArgsResult.Add(grid.ClientInstanceWithValue);
+
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
-            args.ArgsResult.Add(grid.ClientInstanceWithValue);
 
             return args;
-
         }
         #endregion
 
@@ -392,7 +474,6 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
 
             return args;
         }
-        #endregion
         #endregion
 
         #endregion

@@ -34,23 +34,29 @@
   <ItemGroup>
     <Reference Include="UFIDA.U9.Cust.GS.FT.FTBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FT.FTBE.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.FTBE.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FT.FTBE.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FT.FTBE.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.FTBE.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FT.FTBP, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FT.FTBP.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.FTBP.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FT.FTBP.Agent, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FT.FTBP.Agent.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.FTBP.Agent.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FT.FTBP.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.GS.FT.FTBP.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FT.FTBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.GS.FT.HBHHelper">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.WebPart\UFIDA.U9.Cust.GS.FT.HBHHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SCM.PM.PMPubForUI">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.WebPart\UFIDA.U9.SCM.PM.PMPubForUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

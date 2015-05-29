@@ -5,7 +5,7 @@
       <Groups>
         <Group id="b2137abc-73c8-47ea-8145-cb92356be515" name="Key" displayName="Key" description="" help="" />
         <Group id="209995a5-661f-4f21-a23f-242e0112e7e3" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="19ea544c-6679-4a26-bc32-0701cfc27c57" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="bfddd239-0ba2-4e48-bfac-aff3f4b0a316" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="7a6c413f-3403-478b-84f9-4a7eaf69abc1" name="ID" displayName="ID" description="" help="订单行佣金明细表.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -51,6 +51,10 @@
     <Diagram id="00000000-0000-0000-0000-000000000000" name="OrderLineBrokerageBE" displayName="OrderLineBrokerageBE">
       <Class Editable="True" ID="bc15bfe1-9309-4b97-b973-03a799de58d6" Type="Entity" ADID="4d972813-e80f-496d-af70-0c0d09047e0f">
         <Location X="79" Y="46" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="7c10bbc2-b272-49aa-a40b-a91b23699bd3" Type="EnumType" ADID="277228bd-ebca-47c8-8de6-51ea219c7f59">
+        <Location X="322" Y="59" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>

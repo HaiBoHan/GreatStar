@@ -97,56 +97,103 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageBE {
 
         private void ValidateLine()
         {
-            foreach ( BrokerageLine line in this.BrokerageLine)
-            {
-                StringBuilder sb = new StringBuilder(200);
-                sb.Append(" BrokerageHead.Custmer.Code=@Customer");
-                sb.Append(" and BrokerageHead.Product.Code=@Item");
-                sb.Append(" and Valid='true'");
-                sb.Append(" and BrokerageHead.Org=@Org");
-                sb.Append(" and BrokerageType != @BrokerageType");
-                sb.Append(" and ID != @LineID");
-                sb.Append(" and ((@FromValue >= ValidDate and @FromValue<=UnValidDate) or (@ToValue>=ValidDate and @ToValue <=UnValidDate) or (ValidDate >=@FromValue and ValidDate <= @FromValue) or (UnValidDate >=@ToValue and UnValidDate<=@ToValue))");
-                OqlParam[] appOqlparm = new OqlParam[] {
-                            new OqlParam("Customer", this.Custmer.Code),
-                            new OqlParam("Item", this.Product.Code),
-                            new OqlParam("Org",this.Org.ID),
-                            new OqlParam("BrokerageType",line.BrokerageType.Value),
-                            new OqlParam("LineID",line.ID),                           
-                            new OqlParam("FromValue",line.ValidDate),
-                            new OqlParam("ToValue",line.UnValidDate)
-                        };
-                bool isEx = UFIDA.U9.Cust.GS.FT.BrokerageBE.BrokerageLine.Finder.IsExists(sb.ToString(), appOqlparm);
-                if (isEx)
-                    throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现其他佣金类型的佣金行！");
+            //Dictionary<string, List<BrokerageLine>> dicBrLine = new Dictionary<string, List<BrokerageLine>>();
+            //foreach ( BrokerageLine line in this.BrokerageLine)
+            //{
+            //    string key = GetKey(line);
 
-                if (line.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues)
+            //    if (!dicBrLine.ContainsKey(key))
+            //    {
+            //        dicBrLine.Add(key, new List<BrokerageLine>());
+            //    }
+            //    dicBrLine[key].Add(line);
+            //}
+
+            //foreach (string key in dicBrLine.Keys)
+            //{
+            //    List<BrokerageLine> list = dicBrLine[key];
+
+            //    BrokerageLine line = list[0];
+            foreach (BrokerageLine line in this.BrokerageLine)
+            {
+                if (line.Valid)
                 {
-                    StringBuilder sb1 = new StringBuilder(200);
+                    StringBuilder sb = new StringBuilder(200);
                     sb.Append(" BrokerageHead.Custmer.Code=@Customer");
                     sb.Append(" and BrokerageHead.Product.Code=@Item");
                     sb.Append(" and Valid='true'");
                     sb.Append(" and BrokerageHead.Org=@Org");
-                    sb.Append(" and BrokerageType = @BrokerageType");
-                    sb.Append(" and Currenty = @Currency");
+                    //sb.Append(" and BrokerageType != @BrokerageType");
                     sb.Append(" and ID != @LineID");
                     sb.Append(" and ((@FromValue >= ValidDate and @FromValue<=UnValidDate) or (@ToValue>=ValidDate and @ToValue <=UnValidDate) or (ValidDate >=@FromValue and ValidDate <= @FromValue) or (UnValidDate >=@ToValue and UnValidDate<=@ToValue))");
-                    OqlParam[] appOqlparm1 = new OqlParam[] {
-                            new OqlParam("Customer", this.Custmer.Code),
-                            new OqlParam("Item", this.Product.Code),
-                            new OqlParam("Org",this.Org.ID),
-                            new OqlParam("BrokerageType",line.BrokerageType.Value),
-                            new OqlParam("Currency",line.Currenty.ID),
-                            new OqlParam("LineID",line.ID),                           
-                            new OqlParam("FromValue",line.ValidDate),
-                            new OqlParam("ToValue",line.UnValidDate)
+                    sb.Append(" and BrokerageHead != @HeadID");
+                    OqlParam[] appOqlparm = new OqlParam[] {
+                            new OqlParam("Customer", this.Custmer.Code)
+                            ,new OqlParam("Item", this.Product.Code)
+                            ,new OqlParam("Org",this.Org.ID)
+                            //,new OqlParam("BrokerageType",line.BrokerageType.Value)
+                            ,new OqlParam("LineID",line.ID)                          
+                            ,new OqlParam("FromValue",line.ValidDate)
+                            ,new OqlParam("ToValue",line.UnValidDate)
+                            ,new OqlParam("HeadID", this.ID)
                         };
-                    bool isEx1 = UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountLine.Finder.IsExists(sb1.ToString(), appOqlparm1);
+                    bool isEx = UFIDA.U9.Cust.GS.FT.BrokerageBE.BrokerageLine.Finder.IsExists(sb.ToString(), appOqlparm);
+                    // 校验本单
+                    if (!isEx)
+                    {
+                        foreach (BrokerageLine other in this.BrokerageLine)
+                        {
+                            if (other != line)
+                            {
+                                if (other.Valid)
+                                {
+                                    if (!(line.ValidDate > other.UnValidDate
+                                        || line.UnValidDate < other.ValidDate
+                                        )
+                                        )
+                                    {
+                                        string msg = string.Format("行{0}与行{1}生失效时间不允许交叉!"
+                                            , line.RowID, other.RowID);
+                                        throw new BusinessException(msg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     if (isEx)
-                        throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现相同佣金类型相同币种的佣金行！");
+                        //throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现其他佣金类型的佣金行！");
+                        throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现其他佣金行！");
+
+                    //if (line.BrokerageType == AllEnumBE.DiscountTypeEnum.FixedValues)
+                    //{
+                    //    StringBuilder sb1 = new StringBuilder(200);
+                    //    sb.Append(" BrokerageHead.Custmer.Code=@Customer");
+                    //    sb.Append(" and BrokerageHead.Product.Code=@Item");
+                    //    sb.Append(" and Valid='true'");
+                    //    sb.Append(" and BrokerageHead.Org=@Org");
+                    //    sb.Append(" and BrokerageType = @BrokerageType");
+                    //    sb.Append(" and Currenty = @Currency");
+                    //    sb.Append(" and ID != @LineID");
+                    //    sb.Append(" and ((@FromValue >= ValidDate and @FromValue<=UnValidDate) or (@ToValue>=ValidDate and @ToValue <=UnValidDate) or (ValidDate >=@FromValue and ValidDate <= @FromValue) or (UnValidDate >=@ToValue and UnValidDate<=@ToValue))");
+                    //    OqlParam[] appOqlparm1 = new OqlParam[] {
+                    //        new OqlParam("Customer", this.Custmer.Code),
+                    //        new OqlParam("Item", this.Product.Code),
+                    //        new OqlParam("Org",this.Org.ID),
+                    //        new OqlParam("BrokerageType",line.BrokerageType.Value),
+                    //        new OqlParam("Currency",line.Currenty.ID),
+                    //        new OqlParam("LineID",line.ID),                           
+                    //        new OqlParam("FromValue",line.ValidDate),
+                    //        new OqlParam("ToValue",line.UnValidDate)
+                    //    };
+                    //    bool isEx1 = UFIDA.U9.Cust.GS.FT.DiscountBE.DiscountLine.Finder.IsExists(sb1.ToString(), appOqlparm1);
+                    //    if (isEx)
+                    //        throw new BusinessException("第" + line.RowID.ToString() + "行:在当前有效期范围内出现相同佣金类型相同币种的佣金行！");
+                    //}
                 }
             }
         }
+
 		#endregion
 		
 		#region 异常处理，开发人员可以重新封装异常

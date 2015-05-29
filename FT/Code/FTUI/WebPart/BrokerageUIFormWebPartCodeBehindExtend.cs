@@ -141,7 +141,7 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageUIModel
 
             this.Model.BrokerageHead.FocusedRecord.States = 1;
             BtnSave_Click_DefaultImpl(sender, e);
-            BtnSubmit_Click_DefaultImpl(sender, e);
+            //BtnSubmit_Click_DefaultImpl(sender, e);
 
             this.Action.NavigateAction.Refresh(null);
         }
@@ -154,7 +154,7 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageUIModel
 
             this.Model.BrokerageHead.FocusedRecord.States = 2;
             BtnSave_Click_DefaultImpl(sender, e);
-            BtnApprove_Click_DefaultImpl(sender, e);
+            //BtnApprove_Click_DefaultImpl(sender, e);
 
             this.Action.NavigateAction.Refresh(null);
         }
@@ -168,7 +168,7 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageUIModel
             this.Model.BrokerageHead.FocusedRecord.States = 0;
             BtnSave_Click_DefaultImpl(sender, e);
 
-            BtnUndoApprove_Click_DefaultImpl(sender, e);
+            //BtnUndoApprove_Click_DefaultImpl(sender, e);
 
             this.Action.NavigateAction.Refresh(null);
         }
