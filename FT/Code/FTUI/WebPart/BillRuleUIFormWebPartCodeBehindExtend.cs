@@ -205,6 +205,9 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoRuleUIModel
             string message = PDResource.GetDeleteConfirmInfo();
             //绑定注册弹出对话框到删除按钮
             PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
+
+            //绑定注册弹出对话框到 取消编译按钮
+            PDFormMessage.ShowConfirmDialog(this.Page, "是否取消编译？", "取消编译", this.btnUnCompile);
         }
 
         public void AfterEventBind()

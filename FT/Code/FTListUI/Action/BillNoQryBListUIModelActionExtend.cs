@@ -19,6 +19,7 @@ using UFSoft.UBF.UI.ControlModel;
 using UFIDA.UBF.Query.CommonService.QueryStrategy;
 using UFIDA.UBF.Query.CaseModel;
 using UFIDA.U9.UI.PDHelper;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 
 
@@ -122,6 +123,14 @@ this.OnLoadData_DefaultImpl(sender,e);
             {
                 filterOpath += string.Format(" and Org={0}", PDContext.Current.OrgID);
             }
+
+            long billRuleID = PubClass.GetLong(this.CurrentPart.NameValues["ID"]);
+            if (billRuleID > 0)
+            {
+                filterOpath += string.Format(" and BillNoRuleID={0}",billRuleID);
+            }
+
+
             return filterOpath;
         }
         

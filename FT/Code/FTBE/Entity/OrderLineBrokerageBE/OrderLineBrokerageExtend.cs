@@ -272,21 +272,33 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
                                 orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU;//支付金额=佣金.单价*销售行.数量
                                 orderLineBrg.PayCurrencyKey = brgLine.CurrentyKey;//支付币种=佣金.支付币种
                             }
+                            //百分比 
                             else
-                            {//百分比 
+                            {
+                                //if (brgLine.Computes == AllEnumBE.ComputeEnum.IsPlan)//折扣金额前计划
+                                //{
+                                //    if (!string.IsNullOrEmpty(soline.DescFlexField.PrivateDescSeg5 + ""))
+                                //    {
+                                //        orderLineBrg.PayAmount = orderLineBrg.BrokerageRatio * soline.OrderByQtyPU * Convert.ToDecimal(soline.DescFlexField.PrivateDescSeg5);//支付金额=佣金.比例*销售行.数量*销售行.外销价
+                                //    }
+                                //    orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
+                                //}
+                                //else //折扣后金额计算
+                                //{
+                                //    orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * soline.FinallyPriceTC;//支付金额=佣金.单价*销售行.数量*销售行.最终价
+                                //    orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
+                                //}
+                                decimal price;
                                 if (brgLine.Computes == AllEnumBE.ComputeEnum.IsPlan)//折扣金额前计划
                                 {
-                                    if (!string.IsNullOrEmpty(soline.DescFlexField.PrivateDescSeg5 + ""))
-                                    {
-                                        orderLineBrg.PayAmount = orderLineBrg.BrokerageRatio * soline.OrderByQtyPU * Convert.ToDecimal(soline.DescFlexField.PrivateDescSeg5);//支付金额=佣金.比例*销售行.数量*销售行.外销价
-                                    }
-                                    orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
+                                    price = PubClass.GetDecimal(soline.DescFlexField.PrivateDescSeg5);
                                 }
                                 else //折扣后金额计算
                                 {
-                                    orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * soline.FinallyPriceTC;//支付金额=佣金.单价*销售行.数量*销售行.最终价
-                                    orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
+                                    price = soline.FinallyPriceTC;
                                 }
+                                orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * price;//支付金额=佣金.单价*销售行.数量* 价格
+                                orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
                             }
 
                             orderLineBrg.SourceType = AllEnumBE.SourceTypeEnum.SelfMotion;//来源类型 ="自动产生"

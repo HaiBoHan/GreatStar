@@ -10,6 +10,7 @@
     using UFSoft.UBF.Util.DataAccess;
     using UFSoft.UBF.PL;
     using UFSoft.UBF.Business;
+    using UFIDA.U9.Cust.GS.FT.AllEnumBE;
 
     /// <summary>
     /// GetBillNoRuleIStrue partial 
@@ -39,7 +40,7 @@
             UFIDA.U9.Cust.GS.FTBillNoRuleBE.BillNoRule entity = UFIDA.U9.Cust.GS.FTBillNoRuleBE.BillNoRule.Finder.FindByID(bpObj.BillNoRuleID);
             if (entity != null)
             {
-                bool IsExists = UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.Finder.IsExists("BillNoRuleID=@SrcID and BillNoState=0", new OqlParam("SrcID", entity.ID));
+                bool IsExists = UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.Finder.IsExists("BillNoRuleID=@SrcID and BillNoState=@Status", new OqlParam("SrcID", entity.ID), new OqlParam("Status", BillNoSatetEnum.IsCite.Value));
                 if (IsExists)
                     throw new Exception("发票号规则所产生的发票号已被引用，不允许取消编译！");
                 UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.EntityList entityList = UFIDA.U9.Cust.GS.FT.BillNoBE.BillNo.Finder.FindAll("BillNoRuleID=@SrcID", new OqlParam("SrcID", entity.ID));

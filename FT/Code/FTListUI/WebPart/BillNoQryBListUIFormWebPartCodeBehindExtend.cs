@@ -106,13 +106,16 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoQryBListUIModel
 			DataGrid1_GridRowDbClicked_DefaultImpl(sender,e);
 		}
 
-		
-            
-            
-            
 
-		#region 自定义数据初始化加载和数据收集
-		private void OnLoadData_Extend(object sender)
+        #endregion
+
+
+
+
+
+
+        #region 自定义数据初始化加载和数据收集
+        private void OnLoadData_Extend(object sender)
 		{	
 			OnLoadData_DefaultImpl(sender);
 		}
@@ -158,8 +161,5 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoQryBListUIModel
 
 
         #endregion
-		
-        #endregion
-		
     }
 }

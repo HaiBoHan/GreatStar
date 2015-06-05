@@ -396,22 +396,16 @@
       <RelationControls />
       <Events />
     </Label>
-    <Reference ID="407872ac-9910-4ef6-b3ba-4aa0344cf2a8" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="UsedPerson_Code" CodeFieldUIViewID="BillNoItemHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="UsedPerson122" NameAttributeName="Name" NameFieldUIFieldID="UsedPerson_Name" NameFieldUIViewID="BillNoItemHead" PkeyField="ID" RefType="9f2c4026-a9c0-4c6c-8cc4-51e4b99dbca6" RelationControl="lblUsedPerson122" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="UsedPerson" UIViewID="BillNoItemHead" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="695" Y="0">
+    <Reference ID="407872ac-9910-4ef6-b3ba-4aa0344cf2a8" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="UsedPerson_Code" CodeFieldUIViewID="BillNoItemHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="UsedPerson122" NameAttributeName="Name" NameFieldUIFieldID="UsedPerson_Name" NameFieldUIViewID="BillNoItemHead" PkeyField="ID" RefType="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RelationControl="lblUsedPerson122" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="UsedPerson" UIViewID="BillNoItemHead" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="695" Y="0">
       <Events />
       <RelationControls />
       <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="部门ID" ColumnID="Dept_ID" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="部门编码" ColumnID="Dept_Code" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="部门名称" ColumnID="Dept_Name" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="来源组织" ColumnID="MasterOrg_Name" TargetControlType="" TargetID="" TargetProperty="" />
       <RefNameFields>
         <RefNameField UIFieldID="Name" />
       </RefNameFields>
-      <UIFilterBar Name="ReferenceFilter">
-        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OperatorType" />
-      </UIFilterBar>
+      <UIFilterBar Name="ReferenceFilter" />
       <Events />
     </Reference>
     <Label ID="1cd31b7c-2df6-46e1-9bc0-1634f8e1f64d" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblBillNoItemStates109" RelationControl="BillNoItemStates109" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="523" Y="25">

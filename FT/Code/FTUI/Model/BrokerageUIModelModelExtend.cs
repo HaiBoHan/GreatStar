@@ -5,6 +5,7 @@ using System.Collections;
 using System.Data;
 using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.MD.Runtime.Implement;
+using UFIDA.U9.Cust.GS.FT.AllEnumBE;
 
 #endregion
 
@@ -19,6 +20,9 @@ namespace UFIDA.U9.Cust.GS.FT.BrokerageUIModel
             this.viewBrokerageHead_BrokerageLine.FieldValidDate.DefaultValue = DateTime.Now;
             this.viewBrokerageHead_BrokerageLine.FieldUnValidDate.DefaultValue = DateTime.MaxValue;
             this.viewBrokerageHead_BrokerageLine.FieldValid.DefaultValue = true;
+
+            // 折后  ISCompute   1    ；折前 IsPlan  2
+            this.viewBrokerageHead_BrokerageLine.FieldComputes.DefaultValue = ComputeEnumData.ISCompute;
         }
 
         //UIModel提交保存之前的校验操作.

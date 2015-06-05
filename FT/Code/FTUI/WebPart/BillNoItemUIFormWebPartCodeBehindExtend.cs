@@ -182,6 +182,8 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoItemUIModel
             BtnAttachment_Click_DefaultImpl(sender, e);
         }
 
+        #endregion
+
 
         #region 自定义数据初始化加载和数据收集
         private void OnLoadData_Extend(object sender)
@@ -306,6 +308,7 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoItemUIModel
             return index;
         }
         #endregion
+
         #region 发票号 改变事件
         private void CellDataChangedPostBack()
         {
@@ -331,7 +334,17 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoItemUIModel
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    BillNoItemHead_BillNoItemLineRecord Record = this.Model.BillNoItemHead_BillNoItemLine.AddNewUIRecord();
+                    BillNoItemHead_BillNoItemLineRecord Record = null;
+
+                    if (i == 0)
+                    {
+                        Record = this.Model.BillNoItemHead_BillNoItemLine.FocusedRecord;
+                    }
+                    else
+                    {
+                        Record =
+    this.Model.BillNoItemHead_BillNoItemLine.AddNewUIRecord();
+                    }
                     Record.BillNoid = long.Parse(dt.Rows[i]["ID"] + "");
                     Record.BillNoid_BillNoID = dt.Rows[i]["Code"] + "";
                     Record.BillNoid_BillNoName = dt.Rows[i]["Name"] + "";
@@ -359,8 +372,6 @@ namespace UFIDA.U9.Cust.GS.FT.BillNoItemUIModel
             this.BtnOutput.Visible = false;//输出  不可见
             this.BtnPrint.Visible = false;//打印  不可见
         }
-
-        #endregion
 
         #endregion
 
