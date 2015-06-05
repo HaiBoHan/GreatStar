@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using UFSoft.UBF.UI.WebControls.Association;
 using UFSoft.UBF.UI.ControlModel;
 using UFSoft.UBF.UI.WebControls.Association.Adapter;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 
 
@@ -135,9 +136,9 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
                 List<long> solineList = new List<long>();
                 solineList.Add(dto.SoLineID);
 
-                UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.DeleteSoLineBomProxy deleteBp = new SoBomBP.Proxy.DeleteSoLineBomProxy();
-                deleteBp.SoLineListKey = solineList;
-                deleteBp.Do();
+                //UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.DeleteSoLineBomProxy deleteBp = new SoBomBP.Proxy.DeleteSoLineBomProxy();
+                //deleteBp.SoLineListKey = solineList;
+                //deleteBp.Do();
 
                 UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.CreateSOBomBPProxy bp = new SoBomBP.Proxy.CreateSOBomBPProxy();
                 bp.SOLineKeyList = solineList;
@@ -154,7 +155,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
             {
                 this.Model.OrderBomHead.Clear();
                 this.Model.OrderBomHead.CurrentFilter.OPath = this.Model.OrderBomHead.FieldOrderLine.AttributeName + "='" + dto.SoLineID.ToString() + "'";
-                this.Action.CommonAction.Load(this.Model.OrderBomHead);
+                this.Action.CommonAction.Load(this.Model.OrderBomHead,this.Model.OrderBomHead_OrderBomLine);
             }
         }
 		
@@ -162,6 +163,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         private void BtnPrev_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnPrev_Click_DefaultImpl(sender, e);
 
             ReturnUpDownBrokerageDTOData dto = CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
@@ -177,15 +179,17 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
                     CurrentState["DTO"] = dto;
                     this.CurrentState["IsBefore"] = "True";
                     //LoadData(0, l.SoLineID.ToString(), l.RowNo.ToString(), l.ItemInfo_Code + "", l.ItemInfo_ItemName, l.Qty, l.Uom, l.Precision_Qty);
+                    LoadData(dto);
                 }
             }
-            BtnPrev_Click_DefaultImpl(sender, e);
         }
 		 
 				//BtnNext_Click...
 		private void BtnNext_Click_Extend(object sender, EventArgs  e)
-		{            
-			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+		{
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnNext_Click_DefaultImpl(sender, e);
+
             ReturnUpDownBrokerageDTOData dto = CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             if (dto != null)
@@ -200,10 +204,9 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
                     CurrentState["DTO"] = dto;
                     this.CurrentState["IsBefore"] = "True";
                     //LoadData(0, l.SoLineID.ToString(), l.RowNo.ToString(), l.ItemInfo_Code + "", l.ItemInfo_ItemName, l.Qty, l.Uom, l.Precision_Qty);
+                    LoadData(dto);
                 }
             }
-		
-			BtnNext_Click_DefaultImpl(sender,e);
 		}
 
         private void BtnCancel_Click_Extend(object sender, EventArgs e)
@@ -224,52 +227,80 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         //保存
         private void BtnAdd161_Click_Extend(object sender, EventArgs e)
         {
-            UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.SOBomAddOrRemoveBPProxy soProxy = new SoBomBP.Proxy.SOBomAddOrRemoveBPProxy();
-            List<SoBomBP.ReturnUpDownLineDtoData> soBOMs = new List<SoBomBP.ReturnUpDownLineDtoData>();
-            if (this.CurrentState["DTO"] != null)
+            //UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.SOBomAddOrRemoveBPProxy soProxy = new SoBomBP.Proxy.SOBomAddOrRemoveBPProxy();
+            //List<SoBomBP.ReturnUpDownLineDtoData> soBOMs = new List<SoBomBP.ReturnUpDownLineDtoData>();
+            //if (this.CurrentState["DTO"] != null)
+            //{
+            //    ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
+            //    foreach (OrderBomHeadRecord record in this.Model.OrderBomHead.Records)
+            //    {
+            //        if (record.DataRecordState == DataRowState.Added)
+            //        {
+            //            SoBomBP.ReturnUpDownLineDtoData soReturn = new SoBomBP.ReturnUpDownLineDtoData();
+            //            soReturn.ItemInfo_ItemID = record.SubKey.Value + "";
+            //            soReturn.Qty = record.Dosage.Value;
+            //            soReturn.SoLineID = dto.SoLineID;
+            //            soReturn.SoID = record.ID;
+            //            soBOMs.Add(soReturn);
+            //        }
+            //    }
+            //    soProxy.SOLineID = dto.SoLineID;
+            //}
+            //soProxy.InParams = soBOMs;
+            //soProxy.ActionType = 0;
+            //soProxy.Do(); OnRefresh();
+
+            // 新增行，层级为空，子键为空；删除该行，无意义；
+            for (int i = this.Model.OrderBomHead.Records.Count - 1; i >= 0; i-- )
             {
-                ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
-                foreach (OrderBomHeadRecord record in this.Model.OrderBomHead.Records)
+                OrderBomHeadRecord record = this.Model.OrderBomHead.Records[i] as OrderBomHeadRecord;
+                // 新增
+                if (record != null
+                    && record.DataRecordState == DataRowState.Added
+                    )
                 {
-                    if (record.DataRecordState == DataRowState.Added)
+                    // 层级为空，子键为空；删除该行，无意义；
+                    if (PubClass.IsNull(record.Tier)
+                        && record.SubKey.GetValueOrDefault(-1) <= 0
+                        )
                     {
-                        SoBomBP.ReturnUpDownLineDtoData soReturn = new SoBomBP.ReturnUpDownLineDtoData();
-                        soReturn.ItemInfo_ItemID = record.SubKey.Value + "";
-                        soReturn.Qty = record.Dosage.Value;
-                        soReturn.SoLineID = dto.SoLineID;
-                        soReturn.SoID = record.ID;
-                        soBOMs.Add(soReturn);
+                        record.Delete();
                     }
                 }
-                soProxy.SOLineID = dto.SoLineID;
             }
-            soProxy.InParams = soBOMs;
-            soProxy.ActionType = 0;
-            soProxy.Do(); OnRefresh();
+
+            BtnSave_Click_Extend(sender, e);
         }
         //删除
         private void BtnRemove117_Click_Extend(object sender, EventArgs e)
         {
-            UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.SOBomAddOrRemoveBPProxy soProxy = new SoBomBP.Proxy.SOBomAddOrRemoveBPProxy();
-            List<SoBomBP.ReturnUpDownLineDtoData> soBOMs = new List<SoBomBP.ReturnUpDownLineDtoData>();
-            if (this.CurrentState["DTO"] != null)
+            //UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.SOBomAddOrRemoveBPProxy soProxy = new SoBomBP.Proxy.SOBomAddOrRemoveBPProxy();
+            //List<SoBomBP.ReturnUpDownLineDtoData> soBOMs = new List<SoBomBP.ReturnUpDownLineDtoData>();
+            //if (this.CurrentState["DTO"] != null)
+            //{
+            //    ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
+            //    foreach (OrderBomHeadRecord record in this.Model.OrderBomHead.GetSelectRecords())
+            //    {
+            //            SoBomBP.ReturnUpDownLineDtoData soReturn = new SoBomBP.ReturnUpDownLineDtoData();
+            //            soReturn.ItemInfo_ItemID = record.SubKey.Value + "";
+            //            soReturn.Qty = record.Dosage.Value;
+            //            soReturn.SoLineID = dto.SoLineID;
+            //            soReturn.SoID = record.ID;
+            //            soBOMs.Add(soReturn);
+            //    }
+            //    soProxy.SOLineID = dto.SoLineID;
+            //}
+            //soProxy.InParams = soBOMs;
+            //soProxy.ActionType = 1;
+            //soProxy.Do(); 
+            //OnRefresh();
+
+            IList<IUIRecord> listDel = this.Model.OrderBomHead.GetSelectRecords();
+            for(int i = listDel.Count - 1 ; i >= 0 ; i -- )
             {
-                ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
-                foreach (OrderBomHeadRecord record in this.Model.OrderBomHead.GetSelectRecords())
-                {
-                        SoBomBP.ReturnUpDownLineDtoData soReturn = new SoBomBP.ReturnUpDownLineDtoData();
-                        soReturn.ItemInfo_ItemID = record.SubKey.Value + "";
-                        soReturn.Qty = record.Dosage.Value;
-                        soReturn.SoLineID = dto.SoLineID;
-                        soReturn.SoID = record.ID;
-                        soBOMs.Add(soReturn);
-                }
-                soProxy.SOLineID = dto.SoLineID;
+                IUIRecord record = listDel[i];
+                record.Delete();
             }
-            soProxy.InParams = soBOMs;
-            soProxy.ActionType = 1;
-            soProxy.Do(); 
-            OnRefresh();
         }
 
         private void ConfirmSubItem(bool isConfirm)
@@ -304,8 +335,12 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
                     this.Model.OrderBomHead.Clear();
 
                     this.Model.OrderBomHead.CurrentFilter.OPath = this.Model.OrderBomHead.FieldOrderLine.AttributeName + "='" + dto.SoLineID.ToString() + "'";
-                    this.Action.CommonAction.Load(this.Model.OrderBomHead);
+                    this.Action.CommonAction.Load(this.Model.OrderBomHead, this.Model.OrderBomHead_OrderBomLine);
                     this.CurrentState["IsBefore"] = null;
+
+                    this.Model.OrderBomHead.FieldOrderLine.DefaultValue = dto.SoLineID;
+                    this.Model.OrderBomHead.FieldParentDemandQty.DefaultValue = dto.Qty;
+                    this.Model.OrderBomHead.FieldParentDosageQty.DefaultValue = 1;
                 }
                 //if (this.Model.OrderBomHead.FocusedRecord != null)
                 //{
@@ -317,18 +352,40 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         }
         private void SetLable(ReturnUpDownBrokerageDTOData dto)
         {
-            this.lblLineNum.Text = dto.RowNo.ToString();
-            this.lblItemCode.Text = dto.ItemInfo_Code;
-            this.lblItemName.Text = dto.ItemInfo_ItemName;
-            this.lblUOM.Text = dto.Uom;
-            this.lblQty.Text = dto.Qty.ToString();
-        }
-            
+            //this.lblLineNum.Text = dto.RowNo.ToString();
+            //this.lblItemCode.Text = dto.ItemInfo_Code;
+            //this.lblItemName.Text = dto.ItemInfo_ItemName;
+            //this.lblUOM.Text = dto.Uom;
+            //this.lblQty.Text = dto.Qty.ToString();
+            this.Model.SOLine.Clear();
 
-		#region 自定义数据初始化加载和数据收集
-		private void OnLoadData_Extend(object sender)
+            SOLineRecord soline = this.Model.SOLine.AddNewUIRecord();
+            this.Model.SOLine.FocusedRecord = soline;
+
+            soline.DocLineNo = dto.RowNo;
+            soline.ItemInfo_ItemCode = dto.ItemInfo_Code;
+            soline.ItemInfo_ItemID = dto.ItemInfo_Item;
+            soline.ItemInfo_ItemName = dto.ItemInfo_ItemName;
+            soline.TU_Name = dto.Uom;
+            soline.OrderByQtyTU = dto.Qty;
+            // soline. = dto.Currecy;
+        }
+
+        #endregion
+
+        #region 自定义数据初始化加载和数据收集
+        private void OnLoadData_Extend(object sender)
 		{
-            OnLoadData_DefaultImpl(sender);
+            //OnLoadData_DefaultImpl(sender);
+
+            this.BtnClear.Visible = false;
+            if (this.CurrentState["DTO"] != null)
+            {
+                ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
+                //this.CurrentState["DTO"] = null;
+                LoadData(dto);
+            }
+
 		}
 		private void OnDataCollect_Extend(object sender)
 		{
@@ -364,13 +421,6 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         
 		public void BeforeUIModelBinding()
 		{
-            this.BtnClear.Visible = false;
-            if (this.CurrentState["DTO"] != null)
-            {
-                ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
-                LoadData(dto);
-            }
-
 		}
 
 		public void AfterUIModelBinding()
@@ -381,6 +431,8 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
 
 
         #endregion
+
+        #region Custom Method
 
         #region 关联控件 当已使用时,不可编辑行
         private void CustGridControlForFalse()
@@ -451,6 +503,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         }
 
         #endregion
+
         private void Register_PostBack_DataGrid_OnCellClick()
         {
             //结合控件
@@ -485,6 +538,10 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         }
         private void PostBack_DataGrid_OnCellClick(object sender, UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs e)
         {
+            this.OnDataCollect(this);
+            base.IsDataBinding = true;
+            base.IsConsuming = false;
+
             //控制非我们自定义事件时，不执行此代码
             if (!e.PostTag.ToString().EndsWith("OnRowChanged")) return;
 
@@ -497,14 +554,17 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
             //先收集子grid，再收集孙grid，能加载old record，new record能加入，但parent不对
             //先收集孙gird，再收集子grid，目前测试正常
             //this.DataCollect();
-            DataGrid1.CollectData();
+
+
+            //DataGrid1.CollectData();
            
-            DataGrid0.CollectData();
-            this.Model.OrderBomHead_OrderBomLine.Clear();
-            this.Model.OrderBomHead_OrderBomLine.CurrentFilter.OPath = this.Model.OrderBomHead_OrderBomLine.FieldOrderBomHead.AttributeName + "='" + this.Model.OrderBomHead.FocusedRecord.ID.ToString() + "'";
-            this.Action.CommonAction.Load(this.Model.OrderBomHead_OrderBomLine);
+            //DataGrid0.CollectData();
+            //this.Model.OrderBomHead_OrderBomLine.Clear();
+            //this.Model.OrderBomHead_OrderBomLine.CurrentFilter.OPath = this.Model.OrderBomHead_OrderBomLine.FieldOrderBomHead.AttributeName + "='" + this.Model.OrderBomHead.FocusedRecord.ID.ToString() + "'";
+            //this.Action.CommonAction.Load(this.Model.OrderBomHead_OrderBomLine);
            
         }
+
         #region 关联控件，当单位用量变化时，自动计算需求量
         private void UnitQtyCustGridCallToPostBack()
         {
@@ -520,30 +580,41 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         }
         private object UnitQtyChange_CustomCallback(CustomerActionEventArgs args)
         {
-            this.DataCollect();
-            this.DataBinding();
+            this.OnDataCollect(this);
+            base.IsDataBinding = true;
+            base.IsConsuming = false;
+
             ArrayList list = (ArrayList)args.ArgsHash[UFWebClientGridAdapter.ALL_GRIDDATA_SelectedRows];
             ArrayList lstAllData = (ArrayList)args.ArgsHash[this.DataGrid0.ClientID];
             int colIndex = Convert.ToInt32(args.ArgsHash["ALL_GRIDDATA_FocusColumn"]);//取列号
             int rowIndex = Convert.ToInt32(args.ArgsHash["ALL_GRIDDATA_FocusRow"]);//取行号
             Hashtable hs = lstAllData[rowIndex] as Hashtable;
-            if (list.Count != 0)
+
+            OrderBomHeadRecord focusedRecord = this.Model.OrderBomHead.FocusedRecord as OrderBomHeadRecord;
+
+            if (focusedRecord != null)
             {
-                int rowIndexUI = int.Parse(list[0].ToString());
-                decimal unitQty = 0;
-                if (hs["Dosage"] != null && string.IsNullOrEmpty(hs["Dosage"].ToString()) == false)
+                if (list.Count != 0)
                 {
-                    unitQty = decimal.Parse(hs["Dosage"].ToString());
+                    int rowIndexUI = int.Parse(list[0].ToString());
+                    decimal unitQty = 0;
+                    if (hs["Dosage"] != null && string.IsNullOrEmpty(hs["Dosage"].ToString()) == false)
+                    {
+                        unitQty = decimal.Parse(hs["Dosage"].ToString());
+                    }
+                    //ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
+                    //decimal demandQty = 0;
+                    //if (dto != null)
+                    //{
+                    //    demandQty = unitQty * dto.Qty;
+                    //} 
+                    focusedRecord.Dosage = unitQty;
+                    decimal demandQty = Math.Ceiling(focusedRecord.ParentDemandQty.GetValueOrDefault(0) * (focusedRecord.Dosage.GetValueOrDefault(0) / focusedRecord.ParentDosageQty.GetValueOrDefault(1)));
+                    focusedRecord.NeedNumber = demandQty;
+                    UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
+                    grid.CellValue.Add(new Object[] { rowIndex, "NeedNumber", new string[] { demandQty.ToString(), demandQty.ToString(), demandQty.ToString() } });
+                    args.ArgsResult.Add(grid.ClientInstanceWithValue);
                 }
-                ReturnUpDownBrokerageDTOData dto = this.CurrentState["DTO"] as ReturnUpDownBrokerageDTOData;
-                decimal demandQty = 0;
-                if (dto != null)
-                {
-                    demandQty = unitQty * dto.Qty;
-                }
-                UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
-                grid.CellValue.Add(new Object[] { rowIndex, "NeedNumber", new string[] { demandQty.ToString(), demandQty.ToString(), demandQty.ToString() } });
-                args.ArgsResult.Add(grid.ClientInstanceWithValue);
             }
             return args;
         }
@@ -579,6 +650,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
             args.ArgsResult.Add(grid.ClientInstanceWithValue);
             return args;
         }
+
         #endregion
 
     }

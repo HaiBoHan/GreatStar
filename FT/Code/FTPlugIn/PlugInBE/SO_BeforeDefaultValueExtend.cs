@@ -50,6 +50,8 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
 
                     UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount soDisLine = UFIDA.U9.Cust.GS.FT.SODiscountBE.SODiscount.CreateDiscountBySO(soline);
 
+                    HBHHelper.SOLineHelper.SetDiscountMoney(soline.DescFlexField, soDisLine.CalAmount);
+
                     if (soDisLine != null
                         && soline.FinallyPriceTC != soDisLine.DiscountPrice
                         )

@@ -9,6 +9,17 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 {
     public class SOLineHelper
     {
+        // 是否已计算折扣
+        /// <summary>
+        /// 是否已计算折扣
+        /// </summary>
+        public const string SOLine_DiscountedUIField = "DescFlexField_PrivateDescSeg19";
+        // 折扣额
+        /// <summary>
+        /// 折扣额
+        /// </summary>
+        public const string SOLine_DiscountMoneyUIField = "DescFlexField_PrivateDescSeg21";
+
         #region 触发时机
 
         // 是否计算折扣
@@ -239,7 +250,39 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             }
         }
 
-        public const string SOLine_DiscountedUIField = "DescFlexField_PrivateDescSeg19";
+        // 折扣额
+        /// <summary>
+        /// 折扣额
+        /// </summary>
+        /// <param name="descSegments"></param>
+        /// <returns></returns>
+        public static decimal GetDiscountMoney(DescFlexSegments descSegments)
+        {
+            if (descSegments != null)
+            {
+                return PubClass.GetDecimal(descSegments.PrivateDescSeg21);
+            }
+            return 0;
+        }
+
+        // 折扣额
+        /// <summary>
+        /// 折扣额
+        /// </summary>
+        /// <param name="descSegments"></param>
+        /// <returns></returns>
+        public static void SetDiscountMoney(DescFlexSegments descSegments, decimal price)
+        {
+            if (descSegments != null)
+            {
+                string strDisMoney = PubClass.GetStringRemoveZero(price);
+
+                if (descSegments.PrivateDescSeg21 != strDisMoney)
+                {
+                    descSegments.PrivateDescSeg21 = strDisMoney;
+                }
+            }
+        }
 
 
 

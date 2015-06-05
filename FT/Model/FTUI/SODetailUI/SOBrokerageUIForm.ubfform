@@ -160,11 +160,11 @@
           <CurrencyType Name="CurrencyType2" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="b9deffb1-1659-404c-a6e1-603004d02d53" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单行.B_交易.数量" IsNull="False" IsProperty="False" IsSequence="False" Name="OrderLineID_OrderByQtyPU0" NPos="4" Point="0" UIFieldID="OrderLineID_OrderByQtyPU" UIViewID="OrderLineBrokerage" Visible="True">
+        <NumberColumn ID="b9deffb1-1659-404c-a6e1-603004d02d53" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单行.B_交易.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="OrderLineID_OrderByQtyPU0" NPos="4" Point="0" UIFieldID="OrderLineID_OrderByQtyPU" UIViewID="OrderLineBrokerage" Visible="True">
           <PrecisionBind BindType="UIField" UIFieldID="OrderLineID_PU_Round_Precision" UIViewID="OrderLineBrokerage" />
           <RoundRuleBind BindType="UIField" UIFieldID="OrderLineID_PU_Round_RoundType" UIViewID="OrderLineBrokerage" />
           <ValueOfRoundByValueBind BindType="UIField" UIFieldID="OrderLineID_PU_Round_RoundValue" UIViewID="OrderLineBrokerage" />
-          <CurrencyType />
+          <CurrencyType Name="CurrencyType14" />
           <Events />
         </NumberColumn>
         <ReferenceColumn ID="ad03ae53-906b-40ff-8e6c-c682ed7912a8" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Payee_Code" CodeFieldUIViewID="OrderLineBrokerage" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="订单行佣金明细表.Misc.收款人" IsNull="True" IsProperty="False" IsSequence="False" Name="Payee0" NameAttributeName="Name" NameFieldUIFieldID="Payee_Name" NameFieldUIViewID="OrderLineBrokerage" NPos="5" PkeyField="ID" Point="0" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" TextAlign="Right" UIFieldID="Payee" UIViewID="OrderLineBrokerage" Visible="True" WindowHeight="408" WindowWidth="580">
@@ -204,11 +204,11 @@
           <CurrencyType BindType="UIField" UIFieldID="PayCurrency_Symbol" UIViewID="OrderLineBrokerage" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="de8125fd-4a46-4384-a12b-a8a8ddf2b12d" DefaultValue="" DisplayFormat="18.0" Enabled="False" Formula="OrderLineID_OrderByQtyPU * Prices" Help="Misc.佣金金额" IsNull="True" IsProperty="False" IsSequence="False" Name="BrokerageMoney0" NPos="10" Point="0" UIFieldID="BrokerageMoney" UIViewID="OrderLineBrokerage" Visible="True">
-          <PrecisionBind BindType="UIField" UIFieldID="OrderCurrency_MoneyRound_Precision" UIViewID="OrderLineBrokerage" />
-          <RoundRuleBind BindType="UIField" UIFieldID="OrderCurrency_MoneyRound_RoundType" UIViewID="OrderLineBrokerage" />
-          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="OrderCurrency_MoneyRound_RoundValue" UIViewID="OrderLineBrokerage" />
-          <CurrencyType BindType="UIField" UIFieldID="OrderCurrency_Symbol" UIViewID="OrderLineBrokerage" />
+        <NumberColumn ID="de8125fd-4a46-4384-a12b-a8a8ddf2b12d" DefaultValue="" DisplayFormat="18.0" Enabled="False" Formula="OrderLineID_OrderByQtyPU * Prices" Help="Misc.佣金金额" IsNull="True" IsProperty="False" IsSequence="False" Name="BrokerageMoney0" NPos="10" NumberType="Currency" Point="0" UIFieldID="BrokerageMoney" UIViewID="OrderLineBrokerage" Visible="True">
+          <PrecisionBind BindType="UIField" UIFieldID="PayCurrency_PriceRound_Precision" UIViewID="OrderLineBrokerage" />
+          <RoundRuleBind BindType="UIField" UIFieldID="PayCurrency_PriceRound_RoundType" UIViewID="OrderLineBrokerage" />
+          <ValueOfRoundByValueBind BindType="UIField" UIFieldID="PayCurrency_PriceRound_RoundValue" UIViewID="OrderLineBrokerage" />
+          <CurrencyType BindType="UIField" UIFieldID="PayCurrency_Symbol" UIViewID="OrderLineBrokerage" />
           <Events />
         </NumberColumn>
         <ReferenceColumn ID="2f4211a2-a0e6-4310-a794-137235dac837" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="PayCurrency_Code" CodeFieldUIViewID="OrderLineBrokerage" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="订单行佣金明细表.Misc.支付币种" IsNull="True" IsProperty="False" IsSequence="False" Name="PayCurrency0" NameAttributeName="Name" NameFieldUIFieldID="PayCurrency_Name" NameFieldUIViewID="OrderLineBrokerage" NPos="11" PkeyField="ID" Point="0" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" TextAlign="Right" UIFieldID="PayCurrency" UIViewID="OrderLineBrokerage" Visible="True" WindowHeight="408" WindowWidth="580">
@@ -239,7 +239,7 @@
           <CurrencyType BindType="UIField" UIFieldID="PayCurrency_Symbol" UIViewID="OrderLineBrokerage" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="0c89de7a-87b5-4e84-8e47-3e46726c8092" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单行.C_金额.最终价" IsNull="False" IsProperty="False" IsSequence="False" Name="OrderLineID_FinallyPriceTC0" NPos="13" NumberType="Currency" Point="0" UIFieldID="OrderLineID_FinallyPriceTC" UIViewID="OrderLineBrokerage" Visible="True">
+        <NumberColumn ID="0c89de7a-87b5-4e84-8e47-3e46726c8092" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单行.C_金额.最终价" IsNull="True" IsProperty="False" IsSequence="False" Name="OrderLineID_FinallyPriceTC0" NPos="13" NumberType="Currency" Point="0" UIFieldID="OrderLineID_FinallyPriceTC" UIViewID="OrderLineBrokerage" Visible="True">
           <PrecisionBind BindType="UIField" UIFieldID="OrderCurrency_PriceRound_Precision" UIViewID="OrderLineBrokerage" />
           <RoundRuleBind BindType="UIField" UIFieldID="OrderCurrency_PriceRound_RoundType" UIViewID="OrderLineBrokerage" />
           <ValueOfRoundByValueBind BindType="UIField" UIFieldID="OrderCurrency_PriceRound_RoundValue" UIViewID="OrderLineBrokerage" />
@@ -249,7 +249,7 @@
         <TextBoxColumn ID="e84bf406-f778-4841-92b3-45dc83a7a64f" DefaultValue="" DisplayFormat="1000" Enabled="False" Help="销售订单行.V_其它.描述性弹性域.实体扩展字段集合.Misc.私有段5" IsNull="True" IsProperty="False" IsSequence="False" Name="OrderLineID_DescFlexField_PrivateDescSeg50" NPos="14" Point="4" TextAlign="Left" UIFieldID="OrderLineID_DescFlexField_PrivateDescSeg5" UIViewID="OrderLineBrokerage" Visible="True">
           <Events />
         </TextBoxColumn>
-        <NumberColumn ID="af760f20-2406-489a-ae43-f30620ea1d1c" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="销售订单行.C_金额.价税合计" IsNull="False" IsProperty="False" IsSequence="False" Name="OrderLineID_TotalMoneyTC0" NPos="15" NumberType="Currency" Point="0" UIFieldID="OrderLineID_TotalMoneyTC" UIViewID="OrderLineBrokerage" Visible="True">
+        <NumberColumn ID="af760f20-2406-489a-ae43-f30620ea1d1c" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="销售订单行.C_金额.价税合计" IsNull="True" IsProperty="False" IsSequence="False" Name="OrderLineID_TotalMoneyTC0" NPos="15" NumberType="Currency" Point="0" UIFieldID="OrderLineID_TotalMoneyTC" UIViewID="OrderLineBrokerage" Visible="True">
           <PrecisionBind BindType="UIField" UIFieldID="OrderCurrency_MoneyRound_Precision" UIViewID="OrderLineBrokerage" />
           <RoundRuleBind BindType="UIField" UIFieldID="OrderCurrency_MoneyRound_RoundType" UIViewID="OrderLineBrokerage" />
           <ValueOfRoundByValueBind BindType="UIField" UIFieldID="OrderCurrency_MoneyRound_RoundValue" UIViewID="OrderLineBrokerage" />
@@ -284,17 +284,17 @@
           </UIFilterBar>
           <Events />
         </ReferenceColumn>
-        <TextBoxColumn ID="3c6d2588-a0dc-41c3-8c40-7c491ff8af9d" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="False" IsProperty="False" IsSequence="False" Name="PayCurrency_Symbol0" NPos="18" Point="0" TextAlign="Left" UIFieldID="PayCurrency_Symbol" UIViewID="OrderLineBrokerage" Visible="False">
+        <TextBoxColumn ID="3c6d2588-a0dc-41c3-8c40-7c491ff8af9d" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="True" IsProperty="False" IsSequence="False" Name="PayCurrency_Symbol0" NPos="18" Point="0" TextAlign="Left" UIFieldID="PayCurrency_Symbol" UIViewID="OrderLineBrokerage" Visible="False">
           <Events />
         </TextBoxColumn>
-        <NumberColumn ID="a621a79e-ccd1-4425-ab75-9ccc8fcc8123" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.单价精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="PayCurrency_PriceRound_Precision0" NPos="19" Point="0" UIFieldID="PayCurrency_PriceRound_Precision" UIViewID="OrderLineBrokerage" Visible="False">
+        <NumberColumn ID="a621a79e-ccd1-4425-ab75-9ccc8fcc8123" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.单价精度.精度.Misc.精度" IsNull="True" IsProperty="False" IsSequence="False" Name="PayCurrency_PriceRound_Precision0" NPos="19" Point="0" UIFieldID="PayCurrency_PriceRound_Precision" UIViewID="OrderLineBrokerage" Visible="False">
           <PrecisionBind Name="PrecisionBind10" />
           <RoundRuleBind Name="RoundRuleBind10" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind10" />
           <CurrencyType Name="CurrencyType10" />
           <Events />
         </NumberColumn>
-        <DropDownListColumn ID="e8de4b4e-8a28-441a-8f19-35683a362e58" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="币种.精度.单价精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="PayCurrency_PriceRound_RoundType0" NPos="20" Point="0" UIFieldID="PayCurrency_PriceRound_RoundType" UIViewID="OrderLineBrokerage" Visible="False">
+        <DropDownListColumn ID="e8de4b4e-8a28-441a-8f19-35683a362e58" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="币种.精度.单价精度.精度.Misc.舍入类型" IsNull="True" IsProperty="False" IsSequence="False" Name="PayCurrency_PriceRound_RoundType0" NPos="20" Point="0" UIFieldID="PayCurrency_PriceRound_RoundType" UIViewID="OrderLineBrokerage" Visible="False">
           <Events />
         </DropDownListColumn>
         <NumberColumn ID="aa3fda5e-c27a-4ff7-b2b3-8160af63a843" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.单价精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="PayCurrency_PriceRound_RoundValue0" NPos="21" Point="0" UIFieldID="PayCurrency_PriceRound_RoundValue" UIViewID="OrderLineBrokerage" Visible="False">

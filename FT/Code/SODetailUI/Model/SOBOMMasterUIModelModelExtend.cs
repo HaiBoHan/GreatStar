@@ -15,6 +15,10 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         public override  void AfterInitModel()
         {
             //this.Views[0].Fields[0].DefaultValue = thsi.co
+            this.OrderBomHead.FieldSourceType.DefaultValue = (int)AllEnumBE.SourceTypeEnumData.HandWork;
+
+            this.SOLine.BindingKind = UIViewBindingKind.Custom;
+            //this.SOLine.ViewDealFlag = CommonDealFlag.None;
         }
         
         //UIModel提交保存之前的校验操作.

@@ -16,6 +16,7 @@
     <Item id="d9f29670-bb14-4992-81ff-c8cb8c95438e" include="SODetailUI\SODetailUI.ubfuiproj" />
     <Item id="57d94a3a-c0ee-48b0-a8eb-779d3786de2e" include="ShipPlanDDQueryUI\ShipPlanDDQueryUI.ubfuiproj" />
     <Item id="a54360fc-b6a9-4b5f-997f-871bd8822d62" include="..\FT\FTBE\FTBE.ubfmlproj" />
+    <Item id="48661edf-419b-4a9b-9224-4565b2d0822d" include="..\FT\FTUI\FTUI.ubfuiproj" />
   </ItemGroup>
   <ServiceGroupInfo id="db460340-b0e6-4df2-a3c8-9559075ea55f" name="FTUI" displayName="FTUI" description="" help="" fullPath="D:\U9Cust\UFIDA\U9Proj\GreatStar\FT\Model\FTUI\FTUI.ubfsln" applicationID="" />
 </Solution>

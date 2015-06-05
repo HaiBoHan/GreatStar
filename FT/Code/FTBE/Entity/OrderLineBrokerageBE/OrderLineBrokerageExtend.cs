@@ -10,6 +10,8 @@ using UFIDA.U9.SM.SO;
 using UFIDA.U9.Cust.GS.FT.BrokerageBE;
 using UFSoft.UBF.PL;
 using UFSoft.UBF.Business;
+using UFIDA.U9.Cust.GS.FT.AllEnumBE;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 #endregion
 
@@ -33,9 +35,9 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
 		/// </summary>
 		protected override void OnSetDefaultValue()
 		{
+			base.OnSetDefaultValue();
             if (this.Org == null)
                 this.Org = Base.Context.LoginOrg;
-			base.OnSetDefaultValue();
 		}
 		/// <summary>
 		/// before Insert
@@ -57,21 +59,6 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
 		/// before Update
 		/// </summary>
 		protected override void OnUpdating() {
-            //出运明细佣金修改校验
-            //将订单佣金明细中的来源类型修改为“手工修改”，
-            //佣金单价或者佣金比例只允许改小，不允许改大；
-            if (this.ShipPlanLine != null)
-            {
-                if (this.OriginalData.Prices != 0 && this.Prices > this.OriginalData.Prices)
-                {
-                    throw new BusinessException("佣金单价不允许大于" + this.OriginalData.Prices);
-                }
-                if (this.OriginalData.BrokerageRatio != 0 && this.BrokerageRatio > this.OriginalData.BrokerageRatio)
-                {
-                    throw new BusinessException("佣金比例不允许大于" + this.OriginalData.BrokerageRatio);
-                }
-                this.SourceType = AllEnumBE.SourceTypeEnum.HandModify;
-            }
             if (this.PayAmount != this.OriginalData.PayAmount && this.SourceType != AllEnumBE.SourceTypeEnum.HandModify)
                 this.SourceType = AllEnumBE.SourceTypeEnum.HandModify;
 			base.OnUpdating();
@@ -110,6 +97,36 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...
+
+            // 佣金明细  比例、单价不允许超过来源 佣金比例行
+            if (this.SrcBrokerageLine != null)
+            {
+                if (this.BrokerageRatio > this.SrcBrokerageLine.Brokerage)
+                {
+                    throw new BusinessException("佣金比例不允许大于 来源佣金档案佣金比例" + PubClass.GetStringRemoveZero(this.SrcBrokerageLine.Brokerage));
+                }
+                if (this.Prices > this.SrcBrokerageLine.Prices)
+                {
+                    throw new BusinessException("佣金单价不允许大于 来源佣金档案佣金单价" + PubClass.GetStringRemoveZero(this.SrcBrokerageLine.Prices));
+                }
+            }
+
+            ////出运明细佣金修改校验
+            ////将订单佣金明细中的来源类型修改为“手工修改”，
+            ////佣金单价或者佣金比例只允许改小，不允许改大；
+            //if (this.ShipPlanLine != null)
+            //{
+                
+            //    if (this.OriginalData.Prices != 0 && this.Prices > this.OriginalData.Prices)
+            //    {
+            //        throw new BusinessException("佣金单价不允许大于" + this.OriginalData.Prices);
+            //    }
+            //    if (this.OriginalData.BrokerageRatio != 0 && this.BrokerageRatio > this.OriginalData.BrokerageRatio)
+            //    {
+            //        throw new BusinessException("佣金比例不允许大于" + this.OriginalData.BrokerageRatio);
+            //    }
+            //    this.SourceType = AllEnumBE.SourceTypeEnum.HandModify;
+            //}
 		}
 		#endregion
 		
@@ -241,6 +258,8 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
                             {
                                 orderLineBrg = OrderLineBrokerage.Create();
                             }
+                            orderLineBrg.SourceType = SourceTypeEnum.SoOrder;
+                            orderLineBrg.SrcBrokerageLine = brgLine;
                             orderLineBrg.OrderLineRowNo = soline.DocLineNo;//行号
                             orderLineBrg.OrderLineIDKey = soline.Key;//销售订单行ID
                             orderLineBrg.ClientKey = brgLine.BrokerageHead.CustmerKey;// soline.customerItem.Customer.Key;//客户
@@ -261,19 +280,19 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
                                     {
                                         orderLineBrg.PayAmount = orderLineBrg.BrokerageRatio * soline.OrderByQtyPU * Convert.ToDecimal(soline.DescFlexField.PrivateDescSeg5);//支付金额=佣金.比例*销售行.数量*销售行.外销价
                                     }
-                                    orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
+                                    orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
                                 }
                                 else //折扣后金额计算
                                 {
                                     orderLineBrg.PayAmount = brgLine.Prices * soline.OrderByQtyPU * soline.FinallyPriceTC;//支付金额=佣金.单价*销售行.数量*销售行.最终价
-                                    orderLineBrg.PayCurrencyKey = soline.OriginalTCKey;//支付币种=销售单.支付币种
+                                    orderLineBrg.PayCurrencyKey = soline.SO.TCKey;//支付币种=销售单.支付币种
                                 }
                             }
 
                             orderLineBrg.SourceType = AllEnumBE.SourceTypeEnum.SelfMotion;//来源类型 ="自动产生"
                             //  Brokerage.Memo;//备注
                             // Brokerage.OutPayment;//已付款金额
-                            orderLineBrg.OrderCurrencyKey = soline.OriginalTCKey;//订单币种
+                            orderLineBrg.OrderCurrencyKey = soline.SO.TCKey;//订单币种
                             orderLineBrg.PayeeKey = brgLine.PayManKey;//收款人
                             orderLineBrg.Rate = soline.TCToCCExchRate;//汇率
 

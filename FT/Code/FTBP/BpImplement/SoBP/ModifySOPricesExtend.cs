@@ -42,15 +42,15 @@
                 return null;
             using (ISession session = Session.Open())
             {
-                if (bpObj.IsAll)
-                {
-                    //ModifySOPrice(bpObj.SO);
-                    RecalcSODiscount(bpObj.SO);
-                }
-                else
-                {
-                    ModifySOPrice(bpObj.SO, bpObj.ReturnDiscountDTOs);
-                }
+                //if (bpObj.IsAll)
+                //{
+                //    ModifySOPrice(bpObj.SO);
+                //}
+                //else
+                //{
+                //    ModifySOPrice(bpObj.SO, bpObj.ReturnDiscountDTOs);
+                //}
+                RecalcSODiscount(bpObj.SO);
                 session.Commit();
             }
             return true;

@@ -96,9 +96,9 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
             }
             if (ids.Count > 0)
             {
-                UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.Proxy.DeleteBrokerageProxy bp = new SOLineBrokerageBP.Proxy.DeleteBrokerageProxy();
-                bp.SoLineListID = ids;
-                bp.Do();
+                //UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.Proxy.DeleteBrokerageProxy bp = new SOLineBrokerageBP.Proxy.DeleteBrokerageProxy();
+                //bp.SoLineListID = ids;
+                //bp.Do();
 
                 UFIDA.U9.Cust.GS.FT.SOLineBrokerageBP.Proxy.CreateSOBrokerageBPProxy createBp = new SOLineBrokerageBP.Proxy.CreateSOBrokerageBPProxy();
                 createBp.SOLineKey = ids;
@@ -198,8 +198,8 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
         public void AfterCreateChildControls()
         {
 
-            PDFormMessage.ShowConfirmDialog(this.Page, "确定清除选择的佣金明细？", "", this.BtnClear);
-            PDFormMessage.ShowConfirmDialog(this.Page, "确定需要重新读取和计算佣金吗？", "", this.BtnReset);
+            PDFormMessage.ShowConfirmDialog(this.Page, "确定清除选择的佣金明细？", "清除佣金明细", this.BtnClear);
+            PDFormMessage.ShowConfirmDialog(this.Page, "确定需要重新读取和计算佣金吗？", "佣金重算", this.BtnReset);
             Register_CallBack_Fee_DoCustomerAction();
             Register_DataGrid4_Price_CallBack();
 
@@ -207,6 +207,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBrokerageUIModel
 
             // 固定值 0 ； 百分比  3 ； 
             this.Model.OrderLineBrokerage.FieldBrokerageMoney.AttributeName = "case when BrokerageType = 3 then OrderLineID.TotalMoneyTC * BrokerageRatio  else Prices * OrderLineID.OrderByQtyPU end";
+            this.Model.OrderLineBrokerage.FieldBrokerageMoney.IsLoadable = true;
         }
         
         public void AfterEventBind()

@@ -74,7 +74,7 @@
           <PrecisionBind BindType="UIField" UIFieldID="SOLine_TU_Round_Precision" UIViewID="SODiscount" />
           <RoundRuleBind BindType="UIField" UIFieldID="SOLine_TU_Round_RoundType" UIViewID="SODiscount" />
           <ValueOfRoundByValueBind BindType="UIField" UIFieldID="SOLine_TU_Round_RoundValue" UIViewID="SODiscount" />
-          <CurrencyType />
+          <CurrencyType Name="CurrencyType9" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="4e764c68-00a6-48dd-b684-86eec4513787" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="销售订单折扣.Misc.外销价" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" Name="ExportPrice0" NPos="6" NumberType="Currency" Point="0" UIFieldID="ExportPrice" UIViewID="SODiscount" Visible="True">
@@ -171,20 +171,20 @@
           <Events />
         </NumberColumn>
         <NumberColumn ID="3cf1f761-f2ea-413f-8f50-4694dcb40b22" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="计量单位.Misc.精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_TU_Round_Precision0" NPos="21" Point="0" UIFieldID="SOLine_TU_Round_Precision" UIViewID="SODiscount" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind9" />
+          <RoundRuleBind Name="RoundRuleBind9" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind9" />
+          <CurrencyType Name="CurrencyType10" />
           <Events />
         </NumberColumn>
         <DropDownListColumn ID="aea2e0f6-9b09-4039-b9ad-0a2c539388f5" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="计量单位.Misc.精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="SOLine_TU_Round_RoundType0" NPos="22" Point="0" UIFieldID="SOLine_TU_Round_RoundType" UIViewID="SODiscount" Visible="False">
           <Events />
         </DropDownListColumn>
         <NumberColumn ID="960c3b4b-87fe-4b62-9cf6-4a8b7c629a9a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="计量单位.Misc.精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="SOLine_TU_Round_RoundValue0" NPos="23" Point="0" UIFieldID="SOLine_TU_Round_RoundValue" UIViewID="SODiscount" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind10" />
+          <RoundRuleBind Name="RoundRuleBind10" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind10" />
+          <CurrencyType Name="CurrencyType11" />
           <Events />
         </NumberColumn>
       </Columns>

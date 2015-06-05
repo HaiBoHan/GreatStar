@@ -26,6 +26,7 @@ using UFSoft.UBF.UI.WebControls.Association;
 using UFSoft.UBF.UI.ControlModel;
 using UFSoft.UBF.UI.WebControls.Association.Adapter;
 using System.Collections.Generic;
+using UFIDA.U9.UI.PDHelper;
 
 
 
@@ -126,6 +127,8 @@ namespace UFIDA.U9.Cust.GS.FT.SODiscountUIModel
 			BtnReset_Click_DefaultImpl(sender,e);
 		}
 
+        #endregion
+
 		
             
             
@@ -156,6 +159,8 @@ namespace UFIDA.U9.Cust.GS.FT.SODiscountUIModel
             RateCustGridCallToPostBack();
             //RegisterGridCellEnableFalse1(this.DataGrid0, "DiscountType", "1", "DiscountRate");
             //RegisterGridCellEnableTrue1(this.DataGrid0, "DiscountType", "1", "DiscountRate");
+
+            PDFormMessage.ShowConfirmDialog(this.Page, "确定需要重新读取和计算折扣吗？", "折扣重算", this.BtnReset);
         }
         
         public void AfterEventBind()
@@ -307,8 +312,6 @@ namespace UFIDA.U9.Cust.GS.FT.SODiscountUIModel
             }
             return args;
         }
-
-        #endregion
 
         #endregion
 

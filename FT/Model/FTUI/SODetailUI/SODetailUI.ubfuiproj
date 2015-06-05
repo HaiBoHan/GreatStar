@@ -7,6 +7,7 @@
     <Import id="ef31b4b3-0f1b-4af8-b7bc-598e35f405a6" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="cfeda988-7498-47e0-9c1d-7c76ccb2028e" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
     <Import id="c1fdb055-fcc0-4284-9435-8a891dd12d6c" name="FIReferenceUI" displayName="FIReferenceUI" description="" help="" componentid="13ef8b81-9e14-40c2-91a3-64f89aeedacf" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.FIReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
     <Import id="c1e09098-9f1d-4931-bc61-2c55fa3f8f49" name="ERReferenceUI" displayName="ERReferenceUI" description="" help="" componentid="99de092d-5ed2-49fc-8198-891c0bb7d53b" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.FI.ER.ERReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="5dd010e4-3a83-4c73-9039-0b285dc293f2" name="SMBE" displayName="SMBE" description="" help="" componentid="c901c367-9f35-425c-812e-9a9966cb21a3" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
   </Imports>
   <SourceControl />
   <ItemGroup>

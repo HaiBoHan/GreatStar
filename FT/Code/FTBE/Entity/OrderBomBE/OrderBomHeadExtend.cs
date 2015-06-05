@@ -43,10 +43,101 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             base.OnSetDefaultValue();
             if (this.OrderLine != null)
             {
-                this.ParentPart = this.OrderLine.ItemInfo.ItemID;
-                this.OrderLineRow = this.OrderLine.DocLineNo;
-                this.SellNumber = this.OrderLine.OrderByQtyTU;
-                this.SellUnit = this.OrderLine.TU;                
+                if (this.ParentPart != this.OrderLine.ItemInfo.ItemID)
+                {
+                    this.ParentPart = this.OrderLine.ItemInfo.ItemID;
+                }
+                if (this.OrderLineRow != this.OrderLine.DocLineNo)
+                {
+                    this.OrderLineRow = this.OrderLine.DocLineNo;
+                }
+                if (this.SellNumber != this.OrderLine.OrderByQtyTU)
+                {
+                    this.SellNumber = this.OrderLine.OrderByQtyTU;
+                }
+                if (this.SellUnit != this.OrderLine.TU)
+                {
+                    this.SellUnit = this.OrderLine.TU;
+                }
+
+                if (this.SysState == UFSoft.UBF.PL.Engine.ObjectState.Inserted)
+                {
+                    // 前台来的
+                    if (this.OrderLineKey != null
+                        && !PubClass.IsNull(this.Tier)
+                        // && this.OrderHead == null
+                        && this.SourceType == AllEnumBE.SourceTypeEnum.HandWork
+                        )
+                    {
+                        //int firstTier = Convert.ToInt32(this.Tier.Substring(0, this.Tier.IndexOf('.')));
+                        //int secondTier = Convert.ToInt32(this.Tier.Substring(this.Tier.IndexOf('.') + 1, this.Tier.Length - 2));
+
+                        //secondTier = secondTier + 1;
+                        //this.Tier = firstTier + "." + secondTier;
+
+
+                        OrderBomBE.OrderBomHead head = OrderBomBE.OrderBomHead.Finder.Find("OrderLine='" + this.OrderLineKey.ID + "' order by Tier desc");
+                        if (head != null)
+                        {
+                            head.ParentDemandQty = head.NeedNumber;
+                            head.ParentDosageQty = 1;
+                            this.NeedNumber = Math.Ceiling(head.ParentDemandQty * (this.Dosage / head.ParentDosageQty));//需求数量=母件的需求数量*子件用量/母件底数
+                            decimal qty = this.NeedNumber;
+
+                            ItemMaster item = this.SubKey;
+                            if (item == null)
+                            {
+                                string msg = string.Format("{0}层找不到对应的料品，请刷新！", this.Tier);
+                                throw new BusinessException(msg);
+                            }
+                            //this.SubKey = item;
+                            //this.SubkeyType = ItemCategory.Finder.Find("Code='03'");
+                            this.ArrirmState = false;
+                            this.ParentPartKey = head.ParentPartKey;//母件
+                            //this.BomMaster = head.BomMaster;
+                            //this.BomCompont = dto.BomCompont;
+                            //this.Dosage = returnDTO.Qty;//用量
+                            //this.DosageUnit = item.InventoryUOM;//用量单位
+                            //this.NeedNumber = qty;//需求数量
+                            this.SellNumber = qty;//销售数量
+                            this.SellUnitKey = item.SalesUOMKey;//销售单位
+                            this.Loss = 0;//固定损耗
+                            //this.SourceType = AllEnumBE.SourceTypeEnum.HandWork;
+                            //this.OrderLine = head.OrderLine;
+                            this.OrderHeadKey = head.OrderHeadKey;
+                            OrderBomBE.OrderBomLine line = OrderBomBE.OrderBomLine.Create(this);
+                            line.SalesMan = item.PurchaseInfo.Buyer;
+                            //line.Department = lineDto.Department;
+                            line.SubKeyKey = item.Key;
+                            line.NeedNumber = qty;
+                            line.NeedUomKey = item.InventoryUOMKey;
+                            line.ProcurementQty = qty;
+                        }
+                    }
+                }
+                else if (this.SysState == UFSoft.UBF.PL.Engine.ObjectState.Updated)
+                {
+                    // 数量有变更
+                    if (this.OriginalData != null
+                        && this.NeedNumber != this.OriginalData.NeedNumber
+                        )
+                    {
+                        decimal qty = this.NeedNumber;
+
+                        this.SellNumber = qty;//销售数量
+
+                        if (this.OrderBomLine != null
+                            && this.OrderBomLine.Count > 0
+                            )
+                        {
+                            foreach (OrderBomLine sellLine in this.OrderBomLine)
+                            {
+                                sellLine.NeedNumber = qty;
+                                sellLine.ProcurementQty = qty;
+                            }
+                        }
+                    }
+                }
             }
         }
         /// <summary>
@@ -141,6 +232,16 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             base.OnValidate();
             this.SelfEntityValidator();
             // TO DO: write your business code here...
+
+            if (PubClass.IsNull(this.Tier))
+            {
+                throw new BusinessException("层级不可为空!");
+            }
+            if (this.OrderLine == null)
+            {
+                string msg = string.Format("{0}层,订单行不可为空", this.Tier);
+                throw new BusinessException(msg);
+            }
         }
         #endregion
 
@@ -353,26 +454,31 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
                 head.ParentPart = parentItem;//母件
                 head.BomMaster = bom;
 
+                head.ParentDemandQty = demandQty;
+                //head.SellNumber = orderByQtyTU;//销售数量
+                head.SellNumber = soline.OrderByQtyTU;//销售数量
+                head.SellUnitKey = saleUomKey;//销售单位
                 if (bomCom != null)
                 {
                     head.BomCompont = bomCom;
                     head.Dosage = bomCom.UsageQty;//用量
+                    head.ParentDosageQty = bomCom.ParentQty;    // 母件底数
                     head.DosageUnitKey = bomCom.IssueUOMKey;//用量单位
                     head.Loss = bomCom.FixedScrap;//固定损耗
-                    head.NeedNumber = Math.Ceiling(demandQty * (bomCom.UsageQty / bomCom.ParentQty));//需求数量=母件的需求数量*子件用量/母件底数
+                    //head.NeedNumber = Math.Ceiling(head.ParentDemandQty * (head.Dosage / head.ParentDosageQty));//需求数量=母件的需求数量*子件用量/母件底数
                 }
                 else
                 {
                     head.Dosage = 1;//用量
                     head.DosageUnitKey = saleUomKey;//用量单位
+                    head.ParentDosageQty = 1;    // 母件底数
                     head.Loss = 0;//固定损耗
-                    head.NeedNumber = demandQty;//需求数量=母件的需求数量*子件用量/母件底数
+                    //head.NeedNumber = head.ParentDemandQty;//需求数量=母件的需求数量*子件用量/母件底数
                 }
-                //head.SellNumber = orderByQtyTU;//销售数量
-                head.SellNumber = soline.OrderByQtyTU;//销售数量
-                head.SellUnitKey = saleUomKey;//销售单位
+                head.NeedNumber = Math.Ceiling(head.ParentDemandQty * (head.Dosage / head.ParentDosageQty));//需求数量=母件的需求数量*子件用量/母件底数
 
-                head.SourceType = AllEnumBE.SourceTypeEnum.HandWork;
+                //head.SourceType = AllEnumBE.SourceTypeEnum.HandWork;
+                head.SourceType = AllEnumBE.SourceTypeEnum.SoOrder;
 
                 if (childItem.PurchaseInfo.Buyer != null)
                 {

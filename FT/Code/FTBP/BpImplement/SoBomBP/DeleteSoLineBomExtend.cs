@@ -20,7 +20,7 @@
         }
     }
 
-    #region  implement strategy
+    //#region  implement strategy
     /// <summary>
     /// Impement Implement
     /// 
@@ -39,21 +39,29 @@
                 foreach (UFIDA.U9.SM.SO.SOLine.EntityKey solineKey in bpObj.SoLineListKey)
                 {
                     OrderBomHead.EntityList OrderBomList = OrderBomHead.Finder.FindAll("OrderLine=@SOLine", new OqlParam("SOLine", solineKey.ID));
-                    foreach (OrderBomHead head in OrderBomList)
+                    if (OrderBomList != null
+                        && OrderBomList.Count > 0
+                        )
                     {
-                        if (head.SubkeyType == null)
-                            throw new Exception("子件【"+ head.SubKey.Code +"】未维护料品库存分类，系统无法获取数据进行判断分析！");
-                        if (head.IsSupplyPlan)
-                            throw new Exception("子件【" + head.SubKey.Code + "】已下达供应计划，不允许删除！");
-                        if (head.ArrirmState == true && head.SubkeyType.Code == "03")
+                        //foreach (OrderBomHead head in OrderBomList)
+                        for (int i = OrderBomList.Count - 1; i >= 0; i--)
                         {
-                            throw new Exception("子件【" + head.SubKey.Code + "】为包材类子件并且已确定，不允许删除！");
+                            OrderBomHead head = OrderBomList[i];
+
+                            if (head.SubkeyType == null)
+                                throw new Exception("子件【" + head.SubKey.Code + "】未维护料品库存分类，系统无法获取数据进行判断分析！");
+                            if (head.IsSupplyPlan)
+                                throw new Exception("子件【" + head.SubKey.Code + "】已下达供应计划，不允许删除！");
+                            if (head.ArrirmState == true && head.SubkeyType.Code == "03")
+                            {
+                                throw new Exception("子件【" + head.SubKey.Code + "】为包材类子件并且已确定，不允许删除！");
+                            }
+                            //foreach (OrderBomLine line in head.OrderBomLine)
+                            //{
+                            //    line.Remove();
+                            //}
+                            head.Remove();
                         }
-                        foreach (OrderBomLine line in head.OrderBomLine)
-                        {
-                            line.Remove();
-                        }
-                        head.Remove();
                     }
                 }
                 session.Commit();
@@ -87,7 +95,7 @@
         }
     }
 
-    #endregion
+    //#endregion
 
 
 }

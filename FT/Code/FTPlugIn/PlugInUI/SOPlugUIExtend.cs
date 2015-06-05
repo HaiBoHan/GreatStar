@@ -60,7 +60,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
             //DataGrid4 = part.GetUFControlByName(_strongPart.TopLevelContainer, "DataGrid4") as IUFControl;
             Register_DataGrid4_Price_CallBack();//注册定价的callback事件，当定价改变后，同步改变外销价
 
-            //Register_DataGrid4_ExportPrice_PostBack();
+            Register_DataGrid4_ExportPrice_PostBack();
         }
 
         public override void BeforeDataLoad(UFSoft.UBF.UI.IView.IPart Part, out bool executeDefault)
@@ -171,6 +171,11 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                         if (!PubClass.IsNull(curRecord[isDiscountField]))
                         {
                             curRecord[isDiscountField] = string.Empty;
+                        }
+                        string discountMoneyField = SOLineHelper.SOLine_DiscountMoneyUIField;
+                        if (!PubClass.IsNull(curRecord[discountMoneyField]))
+                        {
+                            curRecord[discountMoneyField] = string.Empty;
                         }
                     }
                 }
@@ -727,6 +732,11 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                 {
                     //外销价
                     decimal price = decimal.Parse(soline.DescFlexField_PrivateDescSeg5);
+
+                    if (soline.OrderPriceTC == 0)
+                    {
+                        soline.OrderPriceTC = price;
+                    }
 
                     List<UIChangeInfoData> changeList = new List<UIChangeInfoData>();
 
