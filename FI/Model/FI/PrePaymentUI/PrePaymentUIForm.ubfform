@@ -399,7 +399,7 @@
           <RelationControls />
           <Events />
         </Label>
-        <Reference ID="a27b9c0a-d176-46d8-967a-51380a10d76e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AccountPeriod_Code" CodeFieldUIViewID="PrePayment" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="14" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AccountPeriod154" NameAttributeName="DisplayName" NameFieldUIFieldID="AccountPeriod_DisplayName" NameFieldUIViewID="PrePayment" PkeyField="ID" RefType="02b42219-084e-4aff-bba6-0be5420c279f" RelationControl="lblAccountPeriod154" TabIndex="17" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AccountPeriod" UIViewID="PrePayment" Visible="True" Width="114" WindowHeight="408" WindowWidth="580" X="845" Y="30">
+        <Reference ID="a27b9c0a-d176-46d8-967a-51380a10d76e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AccountPeriod_Code" CodeFieldUIViewID="PrePayment" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="14" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AccountPeriod154" NameAttributeName="DisplayName" NameFieldUIFieldID="AccountPeriod_DisplayName" NameFieldUIViewID="PrePayment" PkeyField="ID" ReadOnly="True" RefType="02b42219-084e-4aff-bba6-0be5420c279f" RelationControl="lblAccountPeriod154" TabIndex="17" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AccountPeriod" UIViewID="PrePayment" Visible="True" Width="114" WindowHeight="408" WindowWidth="580" X="845" Y="30">
           <Events />
           <RelationControls />
           <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
@@ -572,7 +572,9 @@
           <Events />
         </Label>
         <DatePicker ID="176f1e2a-51c8-4aa3-9872-f17419cc15ea" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PrePayDate120" RelationControl="lblPrePayDate120" TabIndex="27" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PrePayDate" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="55">
-          <Events />
+          <Events>
+            <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+          </Events>
           <RelationControls />
         </DatePicker>
         <Label ID="d0215825-0bf3-4638-93f9-b87ee9717b87" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblIsReview47" RelationControl="IsReview47" TabIndex="28" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="5" Y="80">
@@ -764,7 +766,7 @@
               <CurrencyType BindType="UIField" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePayment_PrePaymentLines" />
               <Events />
             </NumberColumn>
-            <NumberColumn ID="dcb50881-4caa-4158-a2e6-761e756e223f" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="7" NumberType="Currency" Point="0" UIFieldID="ActualMoeny" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+            <NumberColumn ID="dcb50881-4caa-4158-a2e6-761e756e223f" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Formula="PrePayMoney-DRMoney" HasSum="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="7" NumberType="Currency" Point="0" UIFieldID="ActualMoeny" UIViewID="PrePayment_PrePaymentLines" Visible="True">
               <PrecisionBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_Precision" UIViewID="PrePayment_PrePaymentLines" />
               <RoundRuleBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundType" UIViewID="PrePayment_PrePaymentLines" />
               <ValueOfRoundByValueBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundValue" UIViewID="PrePayment_PrePaymentLines" />

@@ -59,7 +59,18 @@
         <Attribute id="ca336861-37ba-4cc4-9766-f0131ca6cd88" name="IsDefault" displayName="获取默认币种" description="" help="获取币种档案BP.Misc.获取默认币种" dataTypeID="5efeea06-cae7-4cc0-82e9-20a789e4e582" isKey="False" defaultValue="false" length="1" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
       </Attributes>
       <Implements>
-        <Operation id="626f062e-af4f-4da9-8b87-8f608ec57a23" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+        <Operation id="626f062e-af4f-4da9-8b87-8f608ec57a23" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="58330d86-1279-429d-b526-b4b10ed8f07f" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Operation id="8af4e602-f5c3-49b4-ae0b-1c7b9b4b3520" name="GetPOOrgBP" displayName="根据供应商获取采购组织操作" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="361c5aa5-7f91-475f-b5b6-8b3c06c43836" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="8cf57a32-2210-4046-b503-7bce1c0620ac" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="096a5a2b-976d-4ba8-bcca-b2ae340c4f52" name="Supplier" displayName="Supplier" description="" help="根据供应商获取采购组织操作.Misc.Supplier" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="43166f79-fd6a-4fba-9208-c138249e2714" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
       </Implements>
     </Operation>
     <Diagram id="03c234db-3de3-45d6-a2bd-0ae5aa95f3d9" name="PubBP" displayName="PubBP">
@@ -71,16 +82,20 @@
         <Location X="180" Y="22" />
         <Size width="120" height="58" />
       </Class>
-      <Class Editable="True" ID="c0199717-96af-40b4-a06f-f77e9c8fe64e" Type="Operation" ADID="b7fab5fc-6ec6-4c68-b908-18ed6afff5eb">
-        <Location X="333" Y="26" />
-        <Size width="120" height="58" />
-      </Class>
       <Class Editable="True" ID="1773072f-73bf-4eb4-b01e-8fc2eb102008" Type="PropertyType" ADID="58330d86-1279-429d-b526-b4b10ed8f07f">
         <Location X="34" Y="116" />
         <Size width="120" height="58" />
       </Class>
+      <Class Editable="True" ID="c0199717-96af-40b4-a06f-f77e9c8fe64e" Type="Operation" ADID="b7fab5fc-6ec6-4c68-b908-18ed6afff5eb">
+        <Location X="333" Y="26" />
+        <Size width="120" height="58" />
+      </Class>
       <Class Editable="True" ID="4166056d-1515-4528-8aed-b03dde1be2da" Type="Operation" ADID="2afa72ba-96df-47db-b8ce-c41b7a090051">
-        <Location X="196" Y="112" />
+        <Location X="197" Y="112" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="1dc2949e-0275-4eeb-bc3b-311b0c91bd2b" Type="Operation" ADID="8af4e602-f5c3-49b4-ae0b-1c7b9b4b3520">
+        <Location X="348" Y="114" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>

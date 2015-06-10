@@ -387,7 +387,9 @@
       </FormLink>
     </Label>
     <Reference ID="cfeadd36-030d-4251-82f9-fd35292f758e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier52" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" RelationControl="lblSupplier52" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Supplier" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="250">
-      <Events />
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
       <RelationControls />
       <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />

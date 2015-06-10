@@ -47,10 +47,10 @@
     <NumberControl ID="247c8178-a9af-4d3d-9614-95187dd8a6e2" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID41" RelationControl="lblID41" TabIndex="2" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="PrePayment" Visible="False" Width="130" X="95" Y="25">
       <Events />
       <RelationControls />
-      <PrecisionBind />
-      <RoundRuleBind />
-      <ValueOfRoundByValueBind />
-      <CurrencyType />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
     </NumberControl>
     <Label ID="4a5e7eaf-b91c-4dc7-b7e0-673283b36424" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion83" RelationControl="SysVersion83" TabIndex="3" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="90" X="0" Y="50">
       <Events />
@@ -60,10 +60,10 @@
     <NumberControl ID="cd554eaf-c758-433d-8cd4-b9011d153be4" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion83" RelationControl="lblSysVersion83" TabIndex="4" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="PrePayment" Visible="False" Width="130" X="95" Y="50">
       <Events />
       <RelationControls />
-      <PrecisionBind />
-      <RoundRuleBind />
-      <ValueOfRoundByValueBind />
-      <CurrencyType />
+      <PrecisionBind Name="PrecisionBind1" />
+      <RoundRuleBind Name="RoundRuleBind1" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+      <CurrencyType Name="CurrencyType1" />
     </NumberControl>
     <Label ID="fd94b315-7740-4200-8472-af9525137c1f" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblStatus103" RelationControl="Status103" TabIndex="5" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="25">
       <Events />
