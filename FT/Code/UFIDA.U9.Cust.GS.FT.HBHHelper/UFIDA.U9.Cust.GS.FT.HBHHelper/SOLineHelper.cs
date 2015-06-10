@@ -9,6 +9,11 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 {
     public class SOLineHelper
     {
+        // 外销价
+        /// <summary>
+        /// 外销价
+        /// </summary>
+        public const string SOLine_ExportPriceUIField = "DescFlexField_PrivateDescSeg5";
         // 是否已计算折扣
         /// <summary>
         /// 是否已计算折扣

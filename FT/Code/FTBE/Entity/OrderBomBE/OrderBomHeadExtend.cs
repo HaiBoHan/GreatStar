@@ -178,18 +178,24 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
             //    }
             //}
             //else { throw new BusinessException("子项不可为空！"); }
-            decimal Qty = 0;
-            //校验业务员页签=》采购数量集合之和不能大于单头需求数量
-            foreach (OrderBomLine line in this.OrderBomLine)
-            {
-                Qty = Qty + Convert.ToDecimal(line.ProcurementQty);
-            }
-            if (Qty != this.NeedNumber)
-            {
 
-                throw new BusinessException("采购数量之和与需求数量不等");
-
+            // 如果有业务员行，那么校验
+            if (this.OrderBomLine != null
+                && this.OrderBomLine.Count > 0
+                )
+            {
+                decimal Qty = 0;
+                //校验业务员页签=》采购数量集合之和不能大于单头需求数量
+                foreach (OrderBomLine line in this.OrderBomLine)
+                {
+                    Qty = Qty + Convert.ToDecimal(line.ProcurementQty);
+                }
+                if (Qty != this.NeedNumber)
+                {
+                    throw new BusinessException("采购数量之和与需求数量不等");
+                }
             }
+
         }
 
         /// <summary>
@@ -283,12 +289,12 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
         #region Model Methods
 
 
-        public static void CreateOrderBom(SO so)
+        public static void CreateOrderBom(SO so, bool isAllowRecreate)
         {
-            CreateOrderBom(so.SOLines);
+            CreateOrderBom(so.SOLines, isAllowRecreate);
         }
 
-        public static void CreateOrderBom(SOLine.EntityList lstSOLine)
+        public static void CreateOrderBom(SOLine.EntityList lstSOLine,bool isAllowRecreate)
         {
             //List<OrderBomHead> listOrderBom = new List<OrderBomHead>();
             if (lstSOLine != null
@@ -318,7 +324,7 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
                 {
                     if (soline != null)
                     {
-                    //    long itemID = ItemMasterHelper.GetItemID(soline.ItemInfo);
+                        //    long itemID = ItemMasterHelper.GetItemID(soline.ItemInfo);
                         long id = soline.ID;
                         if (id > 0)
                         {
@@ -366,29 +372,32 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
                     }
                 }
 
-                string opath = string.Format("ID in ({0})", PubClass.GetStringRemoveLastSplit(sbBomIDs));
-
-                UFIDA.U9.CBO.MFG.BOM.BOMMaster.EntityList lstBom = UFIDA.U9.CBO.MFG.BOM.BOMMaster.Finder.FindAll(opath);
                 Dictionary<long, BOMMaster> dicBom = new Dictionary<long, BOMMaster>();
-                foreach (BOMMaster bom in lstBom)
+                if (sbBomIDs.Length > 0)
                 {
-                    if (bom != null)
-                    {
-                        if (bom.ItemMasterKey != null)
-                        {
-                            long itemID = bom.ItemMasterKey.ID;
+                    string opath = string.Format("ID in ({0})", PubClass.GetStringRemoveLastSplit(sbBomIDs));
 
-                            if (!dicBom.ContainsKey(itemID))
+                    UFIDA.U9.CBO.MFG.BOM.BOMMaster.EntityList lstBom = UFIDA.U9.CBO.MFG.BOM.BOMMaster.Finder.FindAll(opath);
+                    foreach (BOMMaster bom in lstBom)
+                    {
+                        if (bom != null)
+                        {
+                            if (bom.ItemMasterKey != null)
                             {
-                                dicBom.Add(itemID, bom);
+                                long itemID = bom.ItemMasterKey.ID;
+
+                                if (!dicBom.ContainsKey(itemID))
+                                {
+                                    dicBom.Add(itemID, bom);
+                                }
                             }
                         }
                     }
                 }
 
-                if (dicBom != null
-                    && dicBom.Count > 0
-                    )
+                //if (dicBom != null
+                //    && dicBom.Count > 0
+                //    )
                 {
                     using (ISession session = Session.Open())
                     {
@@ -398,11 +407,16 @@ namespace UFIDA.U9.Cust.GS.FT.OrderBomBE
                             // 删除订单行旧随单Bom
                             {
                                 string strOld = string.Format("OrderLine=@SOLine");
-                                OrderBomBE.OrderBomHead.EntityList oldBom = OrderBomBE.OrderBomHead.Finder.FindAll(strOld,new OqlParam(soline.ID));
+                                OrderBomBE.OrderBomHead.EntityList oldBom = OrderBomBE.OrderBomHead.Finder.FindAll(strOld, new OqlParam(soline.ID));
                                 if (oldBom != null
                                     && oldBom.Count > 0
                                     )
                                 {
+                                    if (!isAllowRecreate)
+                                    {
+                                        throw new BusinessException("错误:订单Bom已创建！");
+                                    }
+
                                     for (int i = oldBom.Count - 1; i >= 0; i--)
                                     {
                                         oldBom[i].Remove();

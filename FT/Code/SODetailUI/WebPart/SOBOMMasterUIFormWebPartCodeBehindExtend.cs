@@ -142,6 +142,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
 
                 UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.CreateSOBomBPProxy bp = new SoBomBP.Proxy.CreateSOBomBPProxy();
                 bp.SOLineKeyList = solineList;
+                bp.IsAllowRecreate = true;
                 bp.Do();
                 OnRefresh();
             }
@@ -411,7 +412,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
             UnitQtyCustGridCallToPostBack();
             Register_PostBack_DataGrid_OnCellClick();
             this.DataGrid0.AllowSort = false;
-            CustGridCallToPostBackByRowAdded();
+            //CustGridCallToPostBackByRowAdded();
 
 
         }
@@ -420,7 +421,19 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         }
         
 		public void BeforeUIModelBinding()
-		{
+        {
+            OrderBomHeadRecord head = this.Model.OrderBomHead.FocusedRecord;
+            if (head != null)
+            {
+                OrderBomHead_OrderBomLineView lineView = this.Model.OrderBomHead_OrderBomLine;
+                lineView.FieldOrderBomHead.DefaultValue = head.ID;
+                lineView.FieldNeedUom.DefaultValue = head.DosageUnit;
+                lineView.FieldNeedUom_Code.DefaultValue = head.DosageUnit_Code;
+                lineView.FieldNeedUom_Name.DefaultValue = head.DosageUnit_Name;
+                lineView.FieldNeedUom_Round_Precision.DefaultValue = head.DosageUnit_Round_Precision;
+                lineView.FieldNeedUom_Round_RoundType.DefaultValue = head.DosageUnit_Round_RoundType;
+                lineView.FieldNeedUom_Round_RoundValue.DefaultValue = head.DosageUnit_Round_RoundValue;
+            }
 		}
 
 		public void AfterUIModelBinding()
@@ -538,6 +551,9 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
         }
         private void PostBack_DataGrid_OnCellClick(object sender, UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs e)
         {
+            // 收集子行的Grid，否则子行会匹配错行
+            DataGrid1.CollectData();
+
             this.OnDataCollect(this);
             base.IsDataBinding = true;
             base.IsConsuming = false;
@@ -562,7 +578,7 @@ namespace UFIDA.U9.Cust.GS.FT.SOBOMMasterUIModel
             //this.Model.OrderBomHead_OrderBomLine.Clear();
             //this.Model.OrderBomHead_OrderBomLine.CurrentFilter.OPath = this.Model.OrderBomHead_OrderBomLine.FieldOrderBomHead.AttributeName + "='" + this.Model.OrderBomHead.FocusedRecord.ID.ToString() + "'";
             //this.Action.CommonAction.Load(this.Model.OrderBomHead_OrderBomLine);
-           
+
         }
 
         #region 关联控件，当单位用量变化时，自动计算需求量

@@ -58,10 +58,10 @@
       <NumberControl ID="a30448cb-bfb5-4c5a-8c17-077caed6071f" DisplayFormat="10.0" Enabled="False" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="DocLineNo190" RelationControl="lblDocLineNo190" TabIndex="13" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocLineNo" UIViewID="SOLine" Visible="True" Width="50" X="70" Y="10">
         <Events />
         <RelationControls />
-        <PrecisionBind />
-        <RoundRuleBind />
-        <ValueOfRoundByValueBind />
-        <CurrencyType />
+        <PrecisionBind Name="PrecisionBind9" />
+        <RoundRuleBind Name="RoundRuleBind9" />
+        <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind9" />
+        <CurrencyType Name="CurrencyType10" />
       </NumberControl>
       <Label ID="780ed844-f504-40de-ad72-bfe812966bfb" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblItemInfo_ItemName228" RelationControl="ItemInfo_ItemName228" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="45" X="315" Y="10">
         <Events />
@@ -80,10 +80,10 @@
       <NumberControl ID="cb09d50f-41b9-40e6-bf4e-7fd4aca19a55" DisplayFormat="24.9" Enabled="False" GridHeight="1" GridWidth="1" GridX="14" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="OrderByQtyTU255" RelationControl="lblOrderByQtyTU255" TabIndex="17" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="OrderByQtyTU" UIViewID="SOLine" Visible="True" Width="100" X="555" Y="10">
         <Events />
         <RelationControls />
-        <PrecisionBind />
-        <RoundRuleBind />
-        <ValueOfRoundByValueBind />
-        <CurrencyType />
+        <PrecisionBind Name="PrecisionBind10" />
+        <RoundRuleBind Name="RoundRuleBind10" />
+        <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind10" />
+        <CurrencyType Name="CurrencyType11" />
       </NumberControl>
       <Label ID="6ff40ac9-ec35-41dd-9f81-c0b7c064f7cf" Enabled="True" GridHeight="1" GridWidth="1" GridX="16" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblTU_Name268" RelationControl="TU_Name268" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="70" X="665" Y="10">
         <Events />
@@ -288,6 +288,7 @@
             <HeaderCell ID="29958f99-06dc-4e43-a2de-89cd9549b181" ColSpan="1" DisplayName="事务版本" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell54" OwnerColName="SysVersion1" RowSpan="1" />
             <HeaderCell ID="d4825027-6e66-4e6c-8298-e9968ca8f2be" ColSpan="1" Name="HeaderCell52" OwnerColName="SalesMan0" RowSpan="1" />
             <HeaderCell ID="c7a39c1f-3408-4a68-9895-422afb24cae9" ColSpan="1" Name="HeaderCell55" OwnerColName="ProcurementQty0" RowSpan="1" />
+            <HeaderCell ID="96f1998e-7d2f-469d-a732-d69f88e4badb" ColSpan="1" DisplayName="txtOrderHeadID" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell61" OwnerColName="txtOrderHeadID" RowSpan="1" />
           </HeaderRow>
         </Header>
         <UIFilterBar Name="LocateBar" />
@@ -323,6 +324,9 @@
             <CurrencyType Name="CurrencyType7" />
             <Events />
           </NumberColumn>
+          <TextBoxColumn ID="4dd6a8c0-3ace-48de-9a8a-28e17214b4b6" DisplayFormat="19.0" Enabled="True" IsNull="True" IsProperty="False" IsSequence="False" Name="txtOrderHeadID" NPos="5" Point="0" TextAlign="Right" UIFieldID="OrderBomHead" UIViewID="OrderBomHead_OrderBomLine" Visible="True">
+            <Events />
+          </TextBoxColumn>
         </Columns>
       </DataGrid>
     </Card>

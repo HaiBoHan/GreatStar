@@ -58,6 +58,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI.PubHelperUI
         {
             UFIDA.U9.Cust.GS.FT.SoBomBP.Proxy.CreateSOBomBPProxy bp = new SoBomBP.Proxy.CreateSOBomBPProxy();
             bp.SOLineKeyList = solineList;
+            bp.IsAllowRecreate = false;
             bp.Do();
         }
         /// <summary>

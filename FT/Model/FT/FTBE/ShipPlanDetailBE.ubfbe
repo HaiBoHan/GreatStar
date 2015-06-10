@@ -135,7 +135,7 @@
       <Groups>
         <Group id="175ab6a7-b065-4400-911f-dd6c63f7e494" name="Key" displayName="Key" description="" help="" />
         <Group id="45308e89-8aa1-49c2-95c7-063fd745a3ce" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="42848f06-b527-444b-ab88-5867d624a680" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="31d23cfd-ec63-4619-811e-7ae981148eb4" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="babb25a9-9507-4b7e-84b2-aa5fad3c1676" name="ID" displayName="ID" description="" help="出运明细单行.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -199,7 +199,7 @@
       <Groups>
         <Group id="51098096-0ff5-4fdb-b9f9-dff40d3db0bc" name="Key" displayName="Key" description="" help="" />
         <Group id="58f78211-7fc4-4f8b-9c20-643dd36371e4" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="01471b0c-5150-4742-b309-bc5f6bd90a61" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="2f8d29ca-aec1-4be4-9cf4-8fc4c4105206" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="f6b0dce9-a2ed-4dfa-b356-318797c2500f" name="ID" displayName="ID" description="" help="出运明细单行费用.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -239,19 +239,19 @@
     </Entity>
     <Diagram id="1ee3cda0-c60c-47a4-a05c-9fd523554b5c" name="ShipPlanDetailBE" displayName="ShipPlanDetailBE">
       <Class Editable="True" ID="2fbb4ffe-b3cb-4725-bedb-d50ad307cd3e" Type="Entity" ADID="4c70f28c-150e-4907-9661-e770ac4ca676">
-        <Location X="133" Y="1382" />
+        <Location X="152" Y="1094" />
         <Size width="118" height="58" />
       </Class>
       <Class Editable="True" ID="2467b5cf-3e64-47be-98c7-298138024ced" Type="Entity" ADID="64f4ffa6-d921-4131-b0df-faaa6cbd46e3">
-        <Location X="338" Y="1384" />
+        <Location X="357" Y="1096" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="False" ID="2b5b1e8d-8642-4fce-a617-8e424cffbba9" Type="Entity" ADID="35ca30b7-f9dd-410b-acda-6190361b6f79">
-        <Location X="138" Y="1278" />
+        <Location X="157" Y="990" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="f0026afa-4af4-44e9-953a-ef905dd0af78" Type="Entity" ADID="d90b1117-b69e-4b0b-85c8-7f855fb37fd0">
-        <Location X="527" Y="1378" />
+        <Location X="546" Y="1090" />
         <Size width="189" height="58" />
       </Class>
     </Diagram>

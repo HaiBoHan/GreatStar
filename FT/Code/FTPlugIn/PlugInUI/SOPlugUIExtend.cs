@@ -172,10 +172,17 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInUI
                         {
                             curRecord[isDiscountField] = string.Empty;
                         }
+                        // 折扣额
                         string discountMoneyField = SOLineHelper.SOLine_DiscountMoneyUIField;
                         if (!PubClass.IsNull(curRecord[discountMoneyField]))
                         {
                             curRecord[discountMoneyField] = string.Empty;
+                        }
+                        // 外销价
+                        string exportPrice = SOLineHelper.SOLine_ExportPriceUIField;
+                        if (!PubClass.IsNull(curRecord[exportPrice]))
+                        {
+                            curRecord[exportPrice] = string.Empty;
                         }
                     }
                 }

@@ -36,7 +36,7 @@
       <Groups>
         <Group id="51098096-0ff5-4fdb-b9f9-dff40d3db0bc" name="Key" displayName="Key" description="" help="" />
         <Group id="58f78211-7fc4-4f8b-9c20-643dd36371e4" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="29168646-bb6e-4624-b298-5e87dfbdf6b3" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="a8b499a8-cdb7-4220-806b-3fc574187ac5" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="71657b51-6866-4a9d-83f3-991dd6bdda11" name="ID" displayName="ID" description="" help="出运明细单费用单行.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -79,18 +79,26 @@
         <Association id="f9ab2f52-f736-4fd4-aa65-c53e789017b6" name="ShipPlanDetailFeeLine_c0303256-1e0b-41d4-a475-56cba7737015_DescFlexSegments" displayName="出运明细单费用单行.实体扩展字段集合--&gt;实体扩展字段集合" description="" help="" parent_Class_ID="4690962a-5046-44fa-8453-9bbd05f5f038" parent_Attribute_ID="c0303256-1e0b-41d4-a475-56cba7737015" child_Class_ID="8ff5f5ae-fb0c-4e6e-b1c1-6a5fa355938a" child_Attribute_ID="00000000-0000-0000-0000-000000000000" parentCardinality="1" childCardinality="0" kind="0" direction="0" isCascadeDelete="False" cascadeDeleteRule="0" isCascadeUpdate="False" isEnableCascadeValidation="True" cascadeUpdateRule="0" />
         <Association id="74a4191c-d2a4-4378-8689-d30d3b22db2b" name="ShipPlanDetailFeeLine_d29c2de1-1e56-4d08-90be-34fb75c05e52_ItemCategory" displayName="出运明细单费用单行.费用项目--&gt;料品分类" description="" help="" parent_Class_ID="4690962a-5046-44fa-8453-9bbd05f5f038" parent_Attribute_ID="d29c2de1-1e56-4d08-90be-34fb75c05e52" child_Class_ID="7fbc5ded-e837-4545-b922-ea2e14162f42" child_Attribute_ID="00000000-0000-0000-0000-000000000000" parentCardinality="1" childCardinality="0" kind="0" direction="0" isCascadeDelete="False" cascadeDeleteRule="0" isCascadeUpdate="False" isEnableCascadeValidation="True" cascadeUpdateRule="0" />
       </Associations>
+      <BEIndecs>
+        <BEIndex id="e8f8e360-3f6a-4566-955b-69382e3b7b2f" name="IX_ShipPlanDetailFeeLine_1" displayName="IX_ShipPlanDetailFeeLine_1" description="" help="" isUnique="False" isClustered="False" isForBusinessKeys="False">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="1e5447e2-e710-4522-88ae-730e9cd03d1d" name="ShipPlanDetailFeeHead" displayName="出运明细单费用单头" description="" help="" isAscend="False" attributeID="bd6bea73-1b24-4803-b9fa-56f15345e1db" sequence="0" attributeFullName="ShipPlanDetailFeeHead" />
+            <BEIndexAttribute id="d35ee8b9-5404-417a-bcf6-d02a5a3da1f7" name="RowNo" displayName="行号" description="" help="" isAscend="True" attributeID="cd887528-fe7d-47a6-8c58-c7903ebb4593" sequence="0" attributeFullName="RowNo" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
     </Entity>
     <Diagram id="d182c7e4-68eb-437e-b46b-06e72eee5e7a" name="ShipPlanDetailFeeBE" displayName="ShipPlanDetailFeeBE">
       <Class Editable="True" ID="7b9aad6a-2cb2-4b31-ac0c-0a0f5a95f62e" Type="Entity" ADID="00cbf23e-a708-4ccc-8582-71c0ddfbed88">
-        <Location X="4" Y="862" />
+        <Location X="257" Y="599" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="f2d826fc-92ee-4062-b2cd-ac01c479e988" Type="Entity" ADID="4690962a-5046-44fa-8453-9bbd05f5f038">
-        <Location X="243" Y="870" />
+        <Location X="496" Y="607" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="False" ID="a6f235ba-f096-48cb-8728-6d2f7a9c7ce1" Type="Entity" ADID="35ca30b7-f9dd-410b-acda-6190361b6f79">
-        <Location X="0" Y="777" />
+        <Location X="253" Y="514" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>

@@ -53,7 +53,7 @@ using UFIDA.U9.Base.UOM;
                 }
             }
 
-            OrderBomBE.OrderBomHead.CreateOrderBom(lstSOLine);
+            OrderBomBE.OrderBomHead.CreateOrderBom(lstSOLine, bpObj.IsAllowRecreate);
             
             #region Disuse by wf 2015-05-26
 
