@@ -112,6 +112,11 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// on Validate
 		/// </summary>
 		protected override void OnValidate() {
+            if (this.PrePayDate < this.BusinessDate)
+            {
+                throw new Exception("预付款日期不允许小于业务日期！");
+            }
+           
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...

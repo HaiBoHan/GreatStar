@@ -15,6 +15,9 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
         public override  void AfterInitModel()
         {
             this.DeductionRegister.FieldBusinessDate.DefaultValue = DateTime.Today;
+            this.DeductionRegister.FieldStatus.DefaultValue = UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum.Opened;
+            this.DeductionRegister.FieldSrcDocType.DefaultValue = UFIDA.U9.Cust.GS.FI.EnumBE.DRSrcDocTypeEnumData.Hand;
+      
         }
         
         //UIModel提交保存之前的校验操作.

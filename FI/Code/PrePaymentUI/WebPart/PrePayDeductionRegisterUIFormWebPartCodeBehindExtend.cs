@@ -80,6 +80,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePayDeductionRegisterUIModel
             {
                 throw new Exception("本次扣款金额不能大于预付款通知单行的可扣款金额！");
             }
+            
             UFIDA.U9.Cust.GS.FI.PrePaymentBP.Proxy.BatchCreatePrePaymentDRDetailBPProxy bp = new PrePaymentBP.Proxy.BatchCreatePrePaymentDRDetailBPProxy();
             bp.PreDeductionRegisterDTOs = dtoList;
             bool isSucces = bp.Do();

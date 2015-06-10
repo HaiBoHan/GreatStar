@@ -99,6 +99,11 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// on Validate
 		/// </summary>
 		protected override void OnValidate() {
+
+            if (this.PrePayMoney < this.ActualMoeny + this.SumApplyMoney + this.SumRedFlushMoney + this.SumMoveMoney)
+            {
+                throw new Exception("预付金额不允许小于 已扣款金额 + 已核销金额 + 已红冲金额 + 已挪出金额！");
+            }
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...

@@ -286,20 +286,39 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
 			
 		
 			Currency70_TextChanged_DefaultImpl(sender,e);
-		}	
-		 
+		}
 
-			
 
-		//DRObject52_TextChanged...
-		private void DRObject52_TextChanged_Extend(object sender, EventArgs  e)
+
+
+        //Supplier52_TextChanged_Extend...
+        private void Supplier52_TextChanged_Extend(object sender, EventArgs e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.			
-	
-			DRObject52_TextChanged_DefaultImpl(sender,e);
-		}	
-		 
+            if (this.Model.DeductionRegister.FocusedRecord.Supplier != null)
+            {
+                UFIDA.U9.Cust.GS.FI.PubBP.Proxy.GetCurrencyBPProxy bp = new PubBP.Proxy.GetCurrencyBPProxy();
+                bp.Supplier = this.Model.DeductionRegister.FocusedRecord.Supplier.Value;
+                UFIDA.U9.Cust.GS.FI.PubBP.CurrencyDTOData dto = bp.Do();
+                if (dto != null)
+                {
+                    this.Model.DeductionRegister.FocusedRecord.Currency = dto.ID;
+                    this.Model.DeductionRegister.FocusedRecord.Currency_Code = dto.Code;
+                    this.Model.DeductionRegister.FocusedRecord.Currency_Name = dto.Name;
+                   
+                }
+            }
+            Supplier52_TextChanged_DefaultImpl(sender, e);
+		}
 
+        //DRObject52_TextChanged...
+        private void DRObject52_TextChanged_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.			
+
+            DRObject52_TextChanged_DefaultImpl(sender, e);
+        }	
+		 
 			
 
 		//lblSumDRMoney82_TitleClick...

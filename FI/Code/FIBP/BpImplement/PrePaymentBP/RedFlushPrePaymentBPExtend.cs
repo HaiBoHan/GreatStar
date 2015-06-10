@@ -73,7 +73,7 @@
             head.DeptKey = doc.DeptKey;
             head.BuyerKey = doc.BuyerKey;
             head.PrePayDate = head.BusinessDate;
-
+            head.Status = head.Status;
             if (doc.POOrg != null)
             {
                 head.AccountPeriod = PubHelperExtend.GetSOBAccountingPeriod(head.BusinessDate, doc.POOrg.ID);

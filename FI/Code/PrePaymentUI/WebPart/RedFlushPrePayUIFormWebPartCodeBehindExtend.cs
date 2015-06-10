@@ -58,10 +58,15 @@ namespace UFIDA.U9.Cust.GS.FI.RedFlushPrePayUIModel
             {
                 throw new Exception("没有选择要红冲的预付款通知单行！");
             }
+            if (this.Model.PrePaymentLine.FocusedRecord.ThisRedMoney == 0)
+            {
+                return;
+            }
             List<UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentHeadDTOData> headList = new List<PrePaymentBP.PrePaymentHeadDTOData>();
             UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentHeadDTOData head = new PrePaymentBP.PrePaymentHeadDTOData();
             head.DocumentType = this.Model.DocumentTypeView.FocusedRecord.DocType;
             head.SrcPrePayDocID = long.Parse(this.Model.PrePaymentLine.SelectRecords[0]["PrePayment_ID"].ToString());
+            head.Status = UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum.Apporved.Value;
             head.PrePaymentLineDTOs = new List<PrePaymentBP.PrePaymentLineDTOData>();
 
             foreach (PrePaymentLineRecord record in this.Model.PrePaymentLine.SelectRecords)

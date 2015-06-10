@@ -261,7 +261,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 			MenuCancelReview_Click_DefaultImpl(sender,e);
 		}
 
-        //复终
+        //终审
 		private void MenuFinal_Click_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
@@ -575,7 +575,13 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
                 lblLineNum.Text = this.Model.PrePayment_PrePaymentLines.FocusedRecord.LineNum.ToString();
                 lblPO.Text = this.Model.PrePayment_PrePaymentLines.FocusedRecord.SrcPO_DocNo;
                 lblMoney.Text = Decimal.Round(this.Model.PrePayment_PrePaymentLines.FocusedRecord.PrePayMoney.Value, this.Model.PrePayment.FocusedRecord.Currency_MoneyRound_Precision).ToString();
+
+                if (this.Model.PrePayment_PrePaymentLines.FocusedRecord["SrcPO0"]!=null)
+                {
+                    this.DataGrid11.Columns["SrcPO0"].Enabled = false;
+                }
             }
+           
         }
 
         public void AfterCreateChildControls()

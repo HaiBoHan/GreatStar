@@ -118,15 +118,31 @@ namespace UFIDA.U9.Cust.GS.FI.BatchPaymentForPOUIModel
         {
             if (this.Model.QueryConditionView.FocusedRecord.Supplier > 0L)
             {
+                //根据供应商设置币种
                 UFIDA.U9.Cust.GS.FI.PubBP.Proxy.GetCurrencyBPProxy bp = new PubBP.Proxy.GetCurrencyBPProxy();
                 bp.Supplier = this.Model.QueryConditionView.FocusedRecord.Supplier;
+                
                 UFIDA.U9.Cust.GS.FI.PubBP.CurrencyDTOData dto = bp.Do();
                 if (dto != null)
                 {
                     this.Model.QueryConditionView.FocusedRecord.Currency = dto.ID;
                     this.Model.QueryConditionView.FocusedRecord.Currency_Code = dto.Code;
                     this.Model.QueryConditionView.FocusedRecord.Currency_Name = dto.Name;
+
+                   // this.Model.QueryConditionView.FocusedRecord.POOrg = dto.
                 }
+                //根据供应商设置采购组织
+                UFIDA.U9.Cust.GS.FI.PubBP.Proxy.GetPOOrgBPProxy getPOOrg = new PubBP.Proxy.GetPOOrgBPProxy();
+                getPOOrg.Supplier = this.Model.QueryConditionView.FocusedRecord.Supplier;
+                UFIDA.U9.Cust.GS.FI.PubBP.CommonDTOData commonDTO = getPOOrg.Do();
+                if (commonDTO != null)
+                {
+                    this.Model.QueryConditionView.FocusedRecord.POOrg = commonDTO.ID;
+                    this.Model.QueryConditionView.FocusedRecord.POOrg_Code = commonDTO.Code;
+                    this.Model.QueryConditionView.FocusedRecord.POOrg_Name = commonDTO.Name;
+
+                }
+               // this.Model.QueryConditionView.FocusedRecord.Supplier
             }
         }
         #endregion
@@ -141,6 +157,11 @@ namespace UFIDA.U9.Cust.GS.FI.BatchPaymentForPOUIModel
         #region 拉单确认
 		private void BtnOk_Click_Extend(object sender, EventArgs  e)
 		{
+            if (this.Model.QueryConditionView.FocusedRecord.Supplier <= 0)
+            {
+                throw new Exception("供应商必须录入！");
+            }
+
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.         
             if (this.NameValues["IsEnabled"] != null && this.NameValues["IsEnabled"].ToString().Contains("true"))//挪用
             {

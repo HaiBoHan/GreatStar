@@ -35,6 +35,14 @@
     <Reference Include="UFIDA.U9.Approval.Util">
       <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.U9.Approval.Util.dll</HintPath>
     </Reference>
+    <Reference Include="UFIDA.U9.Cust.GS.FI.FIBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.GS.FI.FIBE.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBE.Deploy.dll</HintPath>
+    </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP">
       <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.dll</HintPath>
     </Reference>
