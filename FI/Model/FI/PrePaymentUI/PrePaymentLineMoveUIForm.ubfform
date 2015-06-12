@@ -1,0 +1,189 @@
+<View ID="849f5a94-54d6-49ee-bc45-9e6dac6d23ff" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="10" Height="500" LayoutType="GridBag" Name="PrePaymentLineMoveUIForm" Namespace="UFIDA.U9.Cust.GS.FI.PrePaymentUIModel" TabStop="False" TemplateCode="UI_ModalFormOneColumn" TemplateType="CustomTemplate" UIModelID="9aef8efc-d77d-471a-ad64-521994e518d4" URI=".UI_弹出Form_1列WebPart" ViewID="4983" Width="845" X="10" Y="10">
+  <Columns>
+    <Column Fixed="True" Name="Column0" Type="Title" Width="810" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="430" Name="Row0" />
+    <Row Fixed="True" Height="25" Name="Row1" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="a2ae994c-09f7-4966-9b2f-f2d3d3dd209c" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="0" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="0" Height="430" LayoutType="GridBag" Name="Card0" TabIndex="1" TabStop="False" Width="810" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="800" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="180" Name="Row0" />
+      <Row Fixed="True" Height="235" Name="Row2" />
+    </Rows>
+    <DataGrid ID="a6183180-230d-4937-a247-c55552516d5e" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" HasSum="False" Height="180" Name="DataGrid0" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="800">
+      <Events />
+      <Header ID="ad95d7b0-5d30-4a2f-af45-e7a3430ec12d" Name="Header0">
+        <HeaderRow ID="584ddef0-fc33-4726-b707-d83080756acf" Name="DefaultRow">
+          <HeaderCell ID="3632b828-f112-4fd3-991b-4556cd108748" ColSpan="1" Name="HeaderCell1" OwnerColName="ID0" RowSpan="1" />
+          <HeaderCell ID="b87031be-2e77-4671-90a0-0bfca1115f80" ColSpan="1" Name="HeaderCell2" OwnerColName="LineNum0" RowSpan="1" />
+          <HeaderCell ID="959f6fd9-2ecc-476a-9d19-5b1d145e5c82" ColSpan="1" Name="HeaderCell3" OwnerColName="SrcPO0" RowSpan="1" />
+          <HeaderCell ID="0f31fd8a-b8a4-4b1d-b156-a7c55bcd4cc6" ColSpan="1" Name="HeaderCell4" OwnerColName="PrePayMoney0" RowSpan="1" />
+          <HeaderCell ID="90092857-8374-4898-9e01-7435c3335951" ColSpan="1" Name="HeaderCell5" OwnerColName="DRMoney0" RowSpan="1" />
+          <HeaderCell ID="9c712702-1886-4d16-aadf-30aa6218733d" ColSpan="1" Name="HeaderCell6" OwnerColName="ActualMoeny0" RowSpan="1" />
+          <HeaderCell ID="ed26d63c-5360-4853-9660-97e9e7ad2900" ColSpan="1" Name="HeaderCell7" OwnerColName="SumApplyMoney0" RowSpan="1" />
+          <HeaderCell ID="6939e27c-7600-4fa9-a912-b3be39743aea" ColSpan="1" Name="HeaderCell8" OwnerColName="SumRedFlushMoney0" RowSpan="1" />
+          <HeaderCell ID="55f798ac-b625-4fa2-bd88-40ad6a70e8e9" ColSpan="1" Name="HeaderCell9" OwnerColName="SumMoveMoney0" RowSpan="1" />
+          <HeaderCell ID="6686d543-42bc-483d-9b49-e9d6b874eb94" ColSpan="1" Name="HeaderCell10" OwnerColName="CanMoveMoney0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <NumberColumn ID="ac98f127-c4df-4cd2-bf46-ead34c38af1c" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="预付款通知单行.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="PrePayment_PrePaymentLines" Visible="False">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="84d687e7-3424-4ba8-8342-a12aa3c0a1e0" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="预付款通知单行.Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" Name="LineNum0" NPos="2" Point="0" UIFieldID="LineNum" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <ReferenceColumn ID="9d0c66d8-ca90-4ae1-9c94-eb7b55635445" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="预付款通知单行.Misc.采购订单" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcPO0" NPos="3" Point="0" TextAlign="Right" UIFieldID="SrcPO" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <RefNameFields />
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <NumberColumn ID="b497fca8-1594-4d1b-98b7-5eb766276df4" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.预付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="PrePayMoney0" NPos="4" Point="0" UIFieldID="PrePayMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="2ad60048-492f-45e2-9ddb-e061f70f90c1" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.扣款金额" IsNull="True" IsProperty="False" IsSequence="False" Name="DRMoney0" NPos="5" Point="0" UIFieldID="DRMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="a5db8840-684e-4ec5-888a-4ae98bd4b7cf" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="6" Point="0" UIFieldID="ActualMoeny" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="130d2a4f-7f32-404b-b709-7b7504f6a5d8" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.已核销金额" IsNull="True" IsProperty="False" IsSequence="False" Name="SumApplyMoney0" NPos="7" Point="0" UIFieldID="SumApplyMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="f4855c9d-e93a-4e46-815d-3382b94e6674" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.已红冲金额" IsNull="True" IsProperty="False" IsSequence="False" Name="SumRedFlushMoney0" NPos="8" Point="0" UIFieldID="SumRedFlushMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="63e02fb6-db8e-40f5-9072-ae954c9f6d6c" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.已挪出金额" IsNull="True" IsProperty="False" IsSequence="False" Name="SumMoveMoney0" NPos="9" Point="0" UIFieldID="SumMoveMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="85db3faf-11e6-4162-8a75-e17d0119f3fe" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.剩余可挪用" IsNull="True" IsProperty="False" IsSequence="False" Name="CanMoveMoney0" NPos="10" Point="0" UIFieldID="CanMoveMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+      </Columns>
+    </DataGrid>
+    <DataGrid ID="527cc6b1-e174-46fe-87e6-32a4d47320d0" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" HasSum="False" Height="235" Name="DataGrid1" PageSize="20" Paging="True" TabIndex="1" TabStop="True" Width="800" X="0" Y="185">
+      <Events />
+      <Header ID="caee7be3-a908-4a69-9ef1-17915cc92990" Name="Header1">
+        <HeaderRow ID="91e8ac02-3848-4d9f-bd09-6ee8531faca8" Name="DefaultRow">
+          <HeaderCell ID="96ddea30-b039-4e76-9be9-f297312e5188" ColSpan="1" Name="HeaderCell12" OwnerColName="ID1" RowSpan="1" />
+          <HeaderCell ID="804e807c-dcf1-4241-92d3-32630dc9bd7c" ColSpan="1" Name="HeaderCell13" OwnerColName="LineNum1" RowSpan="1" />
+          <HeaderCell ID="3f8989d6-20e9-45f6-b03f-0b2a831419a6" ColSpan="1" Name="HeaderCell14" OwnerColName="SrcMovePO0" RowSpan="1" />
+          <HeaderCell ID="eeca1a2a-ec1a-4688-ab50-7f85928bc0e1" ColSpan="1" Name="HeaderCell15" OwnerColName="MoveMoney0" RowSpan="1" />
+          <HeaderCell ID="80b9e4b3-04ef-4bee-ba94-6987a84d62b2" ColSpan="1" Name="HeaderCell16" OwnerColName="Memo0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <NumberColumn ID="93bda58a-3917-4f79-956b-e0f8e377c40c" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="预付款行挪用明细.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID1" NPos="1" Point="0" UIFieldID="ID" UIViewID="PrePayment_PrePaymentLines_PrePaymentLineMoveDetails" Visible="False">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="6811b039-7d79-4a06-9021-ccdd13363e5d" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="预付款行挪用明细.Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" Name="LineNum1" NPos="2" Point="0" UIFieldID="LineNum" UIViewID="PrePayment_PrePaymentLines_PrePaymentLineMoveDetails" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <ReferenceColumn ID="39c15198-786b-4639-b1b3-8728bf21ec31" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="预付款行挪用明细.Misc.挪用PO" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcMovePO0" NPos="3" Point="0" TextAlign="Right" UIFieldID="SrcMovePO" UIViewID="PrePayment_PrePaymentLines_PrePaymentLineMoveDetails" Visible="True">
+          <RefNameFields />
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </ReferenceColumn>
+        <NumberColumn ID="45c5ddbe-a628-453b-8879-d5b2fd816717" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款行挪用明细.Misc.挪用金额" IsNull="True" IsProperty="False" IsSequence="False" Name="MoveMoney0" NPos="4" Point="0" UIFieldID="MoveMoney" UIViewID="PrePayment_PrePaymentLines_PrePaymentLineMoveDetails" Visible="True">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <TextBoxColumn ID="2090f70f-7d47-438f-b2f6-d86111746c5c" DefaultValue="" DisplayFormat="50" Enabled="True" Help="预付款行挪用明细.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo0" NPos="5" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="PrePayment_PrePaymentLines_PrePaymentLineMoveDetails" Visible="True">
+          <Events />
+        </TextBoxColumn>
+      </Columns>
+    </DataGrid>
+  </Card>
+  <Card ID="949b62af-9e51-42ef-ae8a-a2bfbe0b898d" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="0" GridColumnCount="18" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="10" GridRowCount="1" GridRowSpace="0" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="25" LayoutType="GridBag" Name="Card1" TabIndex="2" TabStop="False" Width="810" X="10" Y="450">
+    <Columns>
+      <Column Fixed="True" Name="Column6" Width="5" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column8" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column14" Width="80" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column16" Width="80" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column18" Width="80" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="40e31bbf-099f-4338-a78b-4cc4743c036f" AccessKey="" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="OnBtnClose" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="17" GridY="0" Height="20" Name="BtnClose" TabIndex="3" TabStop="True" Width="80" X="720" Y="0">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="ce829a34-7bcd-4547-a5ed-2a10ce1c6a2e" AccessKey="" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="OnBtnOk" DisplaySrcUIViewID="ResourceView" GridHeight="1" GridWidth="1" GridX="15" GridY="0" Height="20" Name="BtnOk" TabIndex="2" TabStop="True" Width="80" X="630" Y="0">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Events />
+</View>

@@ -10,6 +10,7 @@ using UFSoft.UBF.Business;
 using UFSoft.UBF.PL;
 using UFIDA.U9.PM.PO;
 using UFIDA.U9.Cust.GS.FT.HBHHelper;
+using UFIDA.U9.Base.Doc;
 
 #endregion
 
@@ -34,13 +35,26 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnSetDefaultValue()
 		{
 			base.OnSetDefaultValue();
-           
+
+            decimal drMoney = 0;
+            foreach (PrePaymentDRDetail subLine in this.PrePaymentDRDetails)
+            {
+                drMoney = drMoney + subLine.DRMoney;
+            }
+            if (this.DRMoney != drMoney)
+            {
+                this.DRMoney = drMoney;
+            }
+            if (this.ActualMoeny != this.PrePayMoney - this.DRMoney)
+            {
+                this.ActualMoeny = this.PrePayMoney - this.DRMoney;
+            }
 		}
 		/// <summary>
 		/// before Insert
 		/// </summary>
 		protected override void OnInserting() {
-            UpdatePOPrePaymentMoney();
+            //UpdatePOPrePaymentMoney();
 			base.OnInserting();
 
 			// TO DO: write your business code here...
@@ -61,7 +75,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// before Update
 		/// </summary>
 		protected override void OnUpdating() {
-            UpdatePOPrePaymentMoney();
+            //UpdatePOPrePaymentMoney();
 			base.OnUpdating();
 			// TO DO: write your business code here...
 		}
@@ -80,7 +94,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// before Delete
 		/// </summary>
 		protected override void OnDeleting() {
-            UpdatePOPrePaymentMoney();
+            //UpdatePOPrePaymentMoney();
 			base.OnDeleting();
 			// TO DO: write your business code here...
 		}
@@ -138,12 +152,26 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
         /// </summary>
         private void ResetSrcOrder()
         {
-            EntityTakeQtyUpdate etup = new EntityTakeQtyUpdate();
-            etup.UpdateTakeQty(this, this.SrcPO, "PrePayMoney", "DescFlexField_PrivateDescSeg3");
-            etup.UpdateTakeQty(this, this.SrcPO, "SumApplyMoney", "DescFlexField_PrivateDescSeg4");
-            etup.UpdateTakeQty(this, this.SrcPO, "SumRedFlushMoney", "DescFlexField_PrivateDescSeg5");
-            etup.UpdateTakeQty(this, this.SrcPO, "SumMoveMoney", "DescFlexField_PrivateDescSeg6");
-		        
+            // 来源采购订单
+            /*
+            规则	挪用明细行(本单)	                预付款行字段(本单)	采购订单头.	备注
+变化更新来源订单		实付金额(预付金额 - 扣款金额)	私有段3 (已预付金额)	
+变化更新来源订单		预付已核销金额	                私有段4 (预付已核销金额)	
+变化更新来源订单		预付已红冲金额	                私有段5 (预付已红冲金额)	
+变化更新来源预付款行	挪用金额	                    预付已挪出金额	私有段6 (预付已挪出金额)	
+变化更新挪用来源订单	挪用金额		                私有段7 (预付已挪入金额)	挪用行与预付款行来源订单不同，更新的实体也不同
+             */
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "PrePayMoney", "DescFlexField_PrivateDescSeg3");
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumApplyMoney", "DescFlexField_PrivateDescSeg4");
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumRedFlushMoney", "DescFlexField_PrivateDescSeg5");
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumMoveMoney", "DescFlexField_PrivateDescSeg6");
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.ActualMoeny, POHelper.PrePayedMoney);
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.SumApplyMoney, POHelper.PrePayApplyedMoney);
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.SumRedFlushMoney, POHelper.PrePayRededMoney);
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.SumMoveMoney, POHelper.PrePayMovedOutMoney);
+
+            // 红冲，来源蓝字 预付款单行
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPrePayLine, PrePaymentLine.EntityRes.ActualMoeny, PrePaymentLine.EntityRes.SumRedFlushMoney);
         }
 
         /// <summary>

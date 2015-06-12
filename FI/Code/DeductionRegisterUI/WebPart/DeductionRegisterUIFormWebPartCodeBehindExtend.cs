@@ -23,6 +23,7 @@ using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.UI.PDHelper;
+using UFIDA.U9.Base.Doc;
 
 
 
@@ -291,25 +292,25 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
 
 
 
-        //Supplier52_TextChanged_Extend...
-        private void Supplier52_TextChanged_Extend(object sender, EventArgs e)
-		{
-			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.			
-            if (this.Model.DeductionRegister.FocusedRecord.Supplier != null)
-            {
-                UFIDA.U9.Cust.GS.FI.PubBP.Proxy.GetCurrencyBPProxy bp = new PubBP.Proxy.GetCurrencyBPProxy();
-                bp.Supplier = this.Model.DeductionRegister.FocusedRecord.Supplier.Value;
-                UFIDA.U9.Cust.GS.FI.PubBP.CurrencyDTOData dto = bp.Do();
-                if (dto != null)
-                {
-                    this.Model.DeductionRegister.FocusedRecord.Currency = dto.ID;
-                    this.Model.DeductionRegister.FocusedRecord.Currency_Code = dto.Code;
-                    this.Model.DeductionRegister.FocusedRecord.Currency_Name = dto.Name;
+        ////Supplier52_TextChanged_Extend...
+        //private void Supplier52_TextChanged_Extend(object sender, EventArgs e)
+        //{
+        //    //调用模版提供的默认实现.--默认实现可能会调用相应的Action.			
+        //    if (this.Model.DeductionRegister.FocusedRecord.Supplier != null)
+        //    {
+        //        UFIDA.U9.Cust.GS.FI.PubBP.Proxy.GetCurrencyBPProxy bp = new PubBP.Proxy.GetCurrencyBPProxy();
+        //        bp.Supplier = this.Model.DeductionRegister.FocusedRecord.Supplier.Value;
+        //        UFIDA.U9.Cust.GS.FI.PubBP.CurrencyDTOData dto = bp.Do();
+        //        if (dto != null)
+        //        {
+        //            this.Model.DeductionRegister.FocusedRecord.Currency = dto.ID;
+        //            this.Model.DeductionRegister.FocusedRecord.Currency_Code = dto.Code;
+        //            this.Model.DeductionRegister.FocusedRecord.Currency_Name = dto.Name;
                    
-                }
-            }
-            Supplier52_TextChanged_DefaultImpl(sender, e);
-		}
+        //        }
+        //    }
+        //    Supplier52_TextChanged_DefaultImpl(sender, e);
+        //}
 
         //DRObject52_TextChanged...
         private void DRObject52_TextChanged_Extend(object sender, EventArgs e)
@@ -343,7 +344,9 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
                 isAF = rec.DocumentType_ConfirmType == 2;
             }
             return isAF;
-        }     
+        }
+
+        #endregion
             
             
 
@@ -403,8 +406,19 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
 
 		public void AfterUIModelBinding()
 		{
+            DeductionRegisterRecord record = this.Model.DeductionRegister.FocusedRecord;
 
-
+            if (record != null)
+            {
+                if (record.DocumentType_DocHeaderSequenceStyle != (int)DocHeaderSequenceStyleEnumData.Artificial)
+                {
+                    this.DocNo94.Enabled = false;
+                }
+                else
+                {
+                    this.DocNo94.Enabled = true;
+                }
+            }
 		}
 
 
@@ -498,8 +512,6 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
                     break;
             }
         }
-
-        #endregion
 
         #endregion
 

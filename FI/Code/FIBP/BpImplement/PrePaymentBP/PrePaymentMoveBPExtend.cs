@@ -7,6 +7,7 @@
 	using UFSoft.UBF.Util.Context;
     using UFSoft.UBF.Business;
     using System.Data;
+    using UFIDA.U9.Cust.GS.FI.PrePaymentBE;
 
 	/// <summary>
 	/// PrePaymentMoveBP partial 
@@ -39,34 +40,37 @@
             {
                 foreach (PrePaymentLineMoveDetailDTO moveDetailDTO in bpObj.PrePaymentLineMoveDetailDTO)
                 {
-                    UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLineMoveDeail moveDetail = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLineMoveDeail.Create();
+                    PrePaymentLine prepayLine =  UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine.Finder.FindByID(moveDetailDTO.PrePaymentLineID);
+
+                    UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLineMoveDetail moveDetail = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLineMoveDetail.Create(prepayLine);
                     moveDetail.SrcMoveDocID = moveDetailDTO.SrcMoveDocID;
                     moveDetail.SrcMoveDocNo = moveDetailDTO.SrcMoveDocNo;
                     moveDetail.MoveMoney = moveDetailDTO.MoveMoney;
-                    moveDetail.PrePaymentLine = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine.Finder.FindByID(moveDetailDTO.PrePaymentLineID);
+                    //moveDetail.PrePaymentLine = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine.Finder.FindByID(moveDetailDTO.PrePaymentLineID);
                 }
 
-                foreach (PrePaymentHeadDTO head in bpObj.PrePaymentHeadDTOs)
-                {
-                    UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment doc = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment.Finder.FindByID(head.ID);
-                    if (doc != null)
-                    {
-                        int lineNum = GetMaxLineNum(doc.ID);
-                        foreach (PrePaymentLineDTO lineDto in head.PrePaymentLineDTOs)
-                        {
-                            if (lineDto.ID > 0L)
-                            {
-                                UpdatePrePaymentLine(doc, lineDto);
-                            }
-                            else
-                            {
-                                CreatePrePaymentLine(doc, lineDto,lineNum);
+                // 在BE里实现；
+                //foreach (PrePaymentHeadDTO head in bpObj.PrePaymentHeadDTOs)
+                //{
+                //    UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment doc = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePayment.Finder.FindByID(head.ID);
+                //    if (doc != null)
+                //    {
+                //        int lineNum = GetMaxLineNum(doc.ID);
+                //        foreach (PrePaymentLineDTO lineDto in head.PrePaymentLineDTOs)
+                //        {
+                //            if (lineDto.ID > 0L)
+                //            {
+                //                UpdatePrePaymentLine(doc, lineDto);
+                //            }
+                //            else
+                //            {
+                //                CreatePrePaymentLine(doc, lineDto,lineNum);
 
-                                lineNum = lineNum + 10;
-                            }                            
-                        }
-                    }
-                }
+                //                lineNum = lineNum + 10;
+                //            }                            
+                //        }
+                //    }
+                //}
                 session.Commit();
             }
 

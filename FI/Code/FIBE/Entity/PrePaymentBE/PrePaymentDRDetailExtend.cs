@@ -102,13 +102,12 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
         #region 回写上游单据
         protected void ResetSrcOrder()
         {
-            EntityTakeQtyUpdate etup = new EntityTakeQtyUpdate();
-            etup.UpdateTakeQty(this, this.PrePaymentLine, "MoveMoney", "SumMoveMoney");
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.PrePaymentLine, "MoveMoney", "SumMoveMoney");
 
             if (this != null && this.PrePaymentLine != null && this.PrePaymentLine.SrcPO != null)
             {
                 PurchaseOrder po = this.PrePaymentLine.SrcPO;
-                etup.UpdateTakeQty(this, po, "MoveMoney", "DescFlexField_PrivateDescSeg7");
+                EntityTakeQtyUpdate.UpdateTakeQty(this, po, "MoveMoney", "DescFlexField_PrivateDescSeg7");
 
             }
         }

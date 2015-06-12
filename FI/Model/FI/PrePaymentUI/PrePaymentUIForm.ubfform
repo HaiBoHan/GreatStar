@@ -197,7 +197,7 @@
         </Menu>
       </Menus>
     </DropDownButton>
-    <DropDownButton ID="400ea2d2-5ee0-4919-9698-98b85cf701b2" DisplayName="" DisplayNameIndexStr="" DisplayNameResourceID="61a151e6-462e-4392-b264-c988ddd844b8" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" Name="DDBtnQuery" TabIndex="3" TabStop="True" Width="80" X="280" Y="3">
+    <DropDownButton ID="400ea2d2-5ee0-4919-9698-98b85cf701b2" DisplayName="" DisplayNameIndexStr="" DisplayNameResourceID="61a151e6-462e-4392-b264-c988ddd844b8" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="DDBtnQuery" TabIndex="3" TabStop="True" Visible="False" Width="80" X="280" Y="3">
       <Events />
     </DropDownButton>
     <Button ID="ce836740-9668-43a0-b551-db40c94b9bef" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOk" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
@@ -237,7 +237,7 @@
       <Row Fixed="False" Height="1" Name="Row4" />
     </Rows>
     <TabControl ID="59351f10-1335-4765-8288-a94196def92e" GridHeight="1" GridWidth="2" GridX="0" GridY="0" Height="165" Name="TabControl0" TabIndex="1" TabStop="True" Width="972" X="10" Y="0">
-      <TabPage ID="56978207-75d6-4e03-b248-6f83cc80ff46" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="ad16c26a-0bfe-4b1c-91a5-b0c6bf17491a" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="TabPage0" DisplaySrcUIViewID="ResourceView" GridBottomMargin="5" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="5" GridRowSpace="5" GridTopMargin="5" Height="135" LayoutType="GridBag" Name="TabPage0" TabIndex="1" TabStop="False" Width="964" X="0" Y="0">
+      <TabPage ID="56978207-75d6-4e03-b248-6f83cc80ff46" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="ad16c26a-0bfe-4b1c-91a5-b0c6bf17491a" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="TabPage0" DisplaySrcUIViewID="ResourceView" GridBottomMargin="5" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="5" GridRowSpace="5" GridTopMargin="5" Height="132" LayoutType="GridBag" Name="TabPage0" TabIndex="1" TabStop="False" Width="964" X="0" Y="0">
         <Columns>
           <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
           <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
@@ -288,7 +288,7 @@
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
           <CurrencyType Name="CurrencyType1" />
         </NumberControl>
-        <Label ID="18e96b4d-ece3-4d54-8268-b7da7905f057" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblStatus68" RelationControl="Status68" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="5">
+        <Label ID="18e96b4d-ece3-4d54-8268-b7da7905f057" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblStatus68" RelationControl="Status68" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="495" Y="105">
           <Events />
           <RelationControls />
           <Events />
@@ -299,7 +299,7 @@
             <OutParameters />
           </FormLink>
         </Label>
-        <DropDownList ID="d57248b6-b1ba-45c7-afb6-e26b149f98da" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum" EnumID="67d4c713-68bf-433b-a082-9c9cf81fa96c" GridHeight="1" GridWidth="1" GridX="14" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Status68" RelationControl="lblStatus68" TabIndex="5" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Status" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="5">
+        <DropDownList ID="d57248b6-b1ba-45c7-afb6-e26b149f98da" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum" EnumID="67d4c713-68bf-433b-a082-9c9cf81fa96c" GridHeight="1" GridWidth="1" GridX="10" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Status68" RelationControl="lblStatus68" TabIndex="5" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Status" UIViewID="PrePayment" Visible="True" Width="120" X="600" Y="105">
           <Events />
           <RelationControls />
         </DropDownList>
@@ -370,6 +370,7 @@
           <ReferenceRelation Action="Clear" ColumnDisplayName="确认方式" ColumnID="ConfirmType" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="业务类型" ColumnID="BusType" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="审批方式" ColumnID="ApproveType" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="付款类型" ColumnID="PaymentType" TargetControlType="DropDownListModel" TargetID="PaymentType66" TargetProperty="Value" />
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>
@@ -394,12 +395,12 @@
           <Events />
           <RelationControls />
         </DatePicker>
-        <Label ID="7d86558b-a327-4f5a-be3e-24667a129444" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblAccountPeriod154" RelationControl="AccountPeriod154" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="30">
+        <Label ID="7d86558b-a327-4f5a-be3e-24667a129444" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblAccountPeriod154" RelationControl="AccountPeriod154" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="5" Y="105">
           <Events />
           <RelationControls />
           <Events />
         </Label>
-        <Reference ID="a27b9c0a-d176-46d8-967a-51380a10d76e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AccountPeriod_Code" CodeFieldUIViewID="PrePayment" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="14" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AccountPeriod154" NameAttributeName="DisplayName" NameFieldUIFieldID="AccountPeriod_DisplayName" NameFieldUIViewID="PrePayment" PkeyField="ID" ReadOnly="True" RefType="02b42219-084e-4aff-bba6-0be5420c279f" RelationControl="lblAccountPeriod154" TabIndex="17" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AccountPeriod" UIViewID="PrePayment" Visible="True" Width="114" WindowHeight="408" WindowWidth="580" X="845" Y="30">
+        <Reference ID="a27b9c0a-d176-46d8-967a-51380a10d76e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AccountPeriod_Code" CodeFieldUIViewID="PrePayment" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AccountPeriod154" NameAttributeName="DisplayName" NameFieldUIFieldID="AccountPeriod_DisplayName" NameFieldUIViewID="PrePayment" PkeyField="ID" ReadOnly="True" RefType="02b42219-084e-4aff-bba6-0be5420c279f" RelationControl="lblAccountPeriod154" TabIndex="17" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AccountPeriod" UIViewID="PrePayment" Visible="True" Width="120" WindowHeight="408" WindowWidth="580" X="110" Y="105">
           <Events />
           <RelationControls />
           <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
@@ -566,12 +567,12 @@
           </UIFilterBar>
           <Events />
         </Reference>
-        <Label ID="77d81245-4bc9-42ed-bc18-1c339771e853" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblPrePayDate120" RelationControl="PrePayDate120" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="55">
+        <Label ID="77d81245-4bc9-42ed-bc18-1c339771e853" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblPrePayDate120" RelationControl="PrePayDate120" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="5">
           <Events />
           <RelationControls />
           <Events />
         </Label>
-        <DatePicker ID="176f1e2a-51c8-4aa3-9872-f17419cc15ea" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PrePayDate120" RelationControl="lblPrePayDate120" TabIndex="27" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PrePayDate" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="55">
+        <DatePicker ID="176f1e2a-51c8-4aa3-9872-f17419cc15ea" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PrePayDate120" RelationControl="lblPrePayDate120" TabIndex="27" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PrePayDate" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="5">
           <Events>
             <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
           </Events>
@@ -604,16 +605,16 @@
           <Events />
           <RelationControls />
         </CheckBox>
-        <Label ID="ff5b6700-d162-404f-8ebe-19adef673f56" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblMemo102" RelationControl="Memo102" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="80">
+        <Label ID="ff5b6700-d162-404f-8ebe-19adef673f56" Enabled="True" GridHeight="1" GridWidth="1" GridX="12" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblMemo102" RelationControl="Memo102" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="740" Y="30">
           <Events />
           <RelationControls />
           <Events />
         </Label>
-        <TextBox ID="83e8b341-e9dc-43c7-b226-c24235840053" DisplayFormat="2000" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Memo102" RelationControl="lblMemo102" TabIndex="35" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="80">
+        <TextBox ID="83e8b341-e9dc-43c7-b226-c24235840053" DisplayFormat="2000" Enabled="True" GridHeight="3" GridWidth="1" GridX="14" GridY="1" Height="70" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Memo102" RelationControl="lblMemo102" TabIndex="35" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="PrePayment" Visible="True" Width="114" X="845" Y="30">
           <Events />
           <RelationControls />
         </TextBox>
-        <FlexFieldPicker ID="62edac8f-b26d-4d1b-8ff2-b6ebc92a3709" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="36" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="120" X="110" Y="105">
+        <FlexFieldPicker ID="62edac8f-b26d-4d1b-8ff2-b6ebc92a3709" Enabled="True" GridHeight="1" GridWidth="1" GridX="14" GridY="4" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="36" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="114" X="845" Y="105">
           <Events />
           <RelationControls />
         </FlexFieldPicker>
@@ -674,14 +675,14 @@
       <Events />
     </TabControl>
     <TabControl ID="51871e30-6deb-4ce3-be6f-08b969e55744" EventResponseType="Server" GridHeight="2" GridWidth="2" GridX="0" GridY="1" Height="246" Name="TabControl1" TabIndex="2" TabStop="True" Width="972" X="10" Y="175">
-      <TabPage ID="fbafc284-65fe-42fa-92bd-1cd90034213b" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="e500caae-5af4-49c5-85e4-2a1ddfdcd842" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="TabPage0" DisplaySrcUIViewID="ResourceView" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" Height="216" LayoutType="GridBag" Name="TabPage9" TabIndex="1" TabStop="False" Width="964" X="0" Y="0">
+      <TabPage ID="fbafc284-65fe-42fa-92bd-1cd90034213b" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="e500caae-5af4-49c5-85e4-2a1ddfdcd842" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="TabPage0" DisplaySrcUIViewID="ResourceView" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" Height="213" LayoutType="GridBag" Name="TabPage9" TabIndex="1" TabStop="False" Width="964" X="0" Y="0">
         <Columns>
           <Column Fixed="True" Name="Column0" Type="Value" Width="954" />
         </Columns>
         <Rows>
-          <Row Fixed="True" Height="206" Name="Row0" />
+          <Row Fixed="True" Height="200" Name="Row0" />
         </Rows>
-        <DataGrid ID="da5d263b-6ab3-4545-8cf0-3195697e844d" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" HasSum="True" Height="206" Name="DataGrid10" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="954" X="5" Y="5">
+        <DataGrid ID="da5d263b-6ab3-4545-8cf0-3195697e844d" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" HasSum="True" Height="200" Name="DataGrid10" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="954" X="5" Y="5">
           <Events />
           <Header ID="a91de4af-1e98-49f1-b78c-f0031cfcde73" Name="Header10">
             <HeaderRow ID="5c25b964-4ac6-4121-bc6d-f4c5afb9ae79" Name="DefaultRow">
@@ -695,7 +696,6 @@
               <HeaderCell ID="3b10a0a4-4e96-43c7-9595-cbbd36ceac0c" ColSpan="1" Name="HeaderCell8" OwnerColName="SumApplyMoney0" RowSpan="1" />
               <HeaderCell ID="6ed3b8b5-d21c-44ce-aade-ace8df49886b" ColSpan="1" Name="HeaderCell9" OwnerColName="SumRedFlushMoney0" RowSpan="1" />
               <HeaderCell ID="6759dfb1-a992-4ba1-a209-0bc8e5561567" ColSpan="1" Name="HeaderCell10" OwnerColName="SumMoveMoney0" RowSpan="1" />
-              <HeaderCell ID="68bea073-d559-43a1-9e7c-263b7d3a9914" ColSpan="1" Name="HeaderCell11" OwnerColName="SrcMoveDocNo0" RowSpan="1" />
               <HeaderCell ID="a9d1c9b6-5fc6-42a8-a733-1dfc7152b59f" ColSpan="1" Name="HeaderCell12" OwnerColName="Memo103" RowSpan="1" />
               <HeaderCell ID="8232325c-753c-441b-93f1-93b71e613de9" ColSpan="1" Name="HeaderCell26" OwnerColName="PrePayment_Currency_Symbol0" RowSpan="1" />
               <HeaderCell ID="50e4bdcb-cfc9-429f-b342-dd2a45466f1a" ColSpan="1" Name="HeaderCell27" OwnerColName="PrePayment_Currency_MoneyRound_Precision0" RowSpan="1" />
@@ -794,26 +794,23 @@
               <CurrencyType BindType="UIField" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePayment_PrePaymentLines" />
               <Events />
             </NumberColumn>
-            <TextBoxColumn ID="5f0deef6-bd09-4b09-955e-18c4c5c07978" DefaultValue="" DisplayFormat="50" Enabled="False" Help="预付款通知单行.Misc.挪入来源单号" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcMoveDocNo0" NPos="11" Point="0" TextAlign="Left" UIFieldID="SrcMoveDocNo" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+            <TextBoxColumn ID="ff115310-41cc-4ee8-be95-93278b8a3e35" DefaultValue="" DisplayFormat="50" Enabled="True" Help="预付款通知单行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo103" NPos="11" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="PrePayment_PrePaymentLines" Visible="True">
               <Events />
             </TextBoxColumn>
-            <TextBoxColumn ID="ff115310-41cc-4ee8-be95-93278b8a3e35" DefaultValue="" DisplayFormat="50" Enabled="True" Help="预付款通知单行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo103" NPos="12" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+            <TextBoxColumn ID="2440f5e0-cfa3-4ce7-8c39-4b12ec1be895" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_Symbol0" NPos="12" Point="0" TextAlign="Left" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePayment_PrePaymentLines" Visible="False">
               <Events />
             </TextBoxColumn>
-            <TextBoxColumn ID="2440f5e0-cfa3-4ce7-8c39-4b12ec1be895" DefaultValue="" DisplayFormat="10" Enabled="True" Help="币种.基本.货币符号" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_Symbol0" NPos="13" Point="0" TextAlign="Left" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePayment_PrePaymentLines" Visible="False">
-              <Events />
-            </TextBoxColumn>
-            <NumberColumn ID="372893b4-41fe-44ad-b2df-5e5984211a6a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.金额精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_MoneyRound_Precision0" NPos="14" Point="0" UIFieldID="PrePayment_Currency_MoneyRound_Precision" UIViewID="PrePayment_PrePaymentLines" Visible="False">
+            <NumberColumn ID="372893b4-41fe-44ad-b2df-5e5984211a6a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.金额精度.精度.Misc.精度" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_MoneyRound_Precision0" NPos="13" Point="0" UIFieldID="PrePayment_Currency_MoneyRound_Precision" UIViewID="PrePayment_PrePaymentLines" Visible="False">
               <PrecisionBind Name="PrecisionBind16" />
               <RoundRuleBind Name="RoundRuleBind16" />
               <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind16" />
               <CurrencyType Name="CurrencyType16" />
               <Events />
             </NumberColumn>
-            <DropDownListColumn ID="1c4769f2-cd23-4536-8fdd-0e092975775f" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="币种.精度.金额精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_MoneyRound_RoundType0" NPos="15" Point="0" UIFieldID="PrePayment_Currency_MoneyRound_RoundType" UIViewID="PrePayment_PrePaymentLines" Visible="False">
+            <DropDownListColumn ID="1c4769f2-cd23-4536-8fdd-0e092975775f" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.PropertyTypes.RoundTypeEnum" EnumID="fbf427db-9665-4dce-a024-11de74c9beae" Help="币种.精度.金额精度.精度.Misc.舍入类型" IsNull="False" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_MoneyRound_RoundType0" NPos="14" Point="0" UIFieldID="PrePayment_Currency_MoneyRound_RoundType" UIViewID="PrePayment_PrePaymentLines" Visible="False">
               <Events />
             </DropDownListColumn>
-            <NumberColumn ID="2c3a4ca4-6ed9-4c95-b697-35d1783d6f58" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.金额精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_MoneyRound_RoundValue0" NPos="16" Point="0" UIFieldID="PrePayment_Currency_MoneyRound_RoundValue" UIViewID="PrePayment_PrePaymentLines" Visible="False">
+            <NumberColumn ID="2c3a4ca4-6ed9-4c95-b697-35d1783d6f58" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="币种.精度.金额精度.精度.Misc.舍入值" IsNull="True" IsProperty="False" IsSequence="False" Name="PrePayment_Currency_MoneyRound_RoundValue0" NPos="15" Point="0" UIFieldID="PrePayment_Currency_MoneyRound_RoundValue" UIViewID="PrePayment_PrePaymentLines" Visible="False">
               <PrecisionBind Name="PrecisionBind17" />
               <RoundRuleBind Name="RoundRuleBind17" />
               <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind17" />
@@ -823,7 +820,7 @@
           </Columns>
         </DataGrid>
       </TabPage>
-      <TabPage ID="2b874919-be33-4861-97fc-5bd8503c6706" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="扣款明细" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="0" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="2" GridRowSpace="5" GridTopMargin="5" Height="216" LayoutType="GridBag" Name="TabPage2" TabIndex="2" TabStop="False" Width="964" X="0" Y="0">
+      <TabPage ID="2b874919-be33-4861-97fc-5bd8503c6706" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="扣款明细" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="0" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="2" GridRowSpace="5" GridTopMargin="5" Height="213" LayoutType="GridBag" Name="TabPage2" TabIndex="2" TabStop="False" Width="964" X="0" Y="0">
         <Columns>
           <Column Fixed="True" Name="Column0" Type="Title" Width="954" />
         </Columns>

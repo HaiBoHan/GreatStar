@@ -473,18 +473,19 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 		private void DocumentType98_TextChanged_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            if (this.Model.PrePayment.FocusedRecord.DocumentType == null)
-            {
-                throw new Exception("单据类型不可为空！");
-            }
-            GetPrePaymentDocTypeBPProxy getDocType = new GetPrePaymentDocTypeBPProxy();
-            getDocType.DocType = this.Model.PrePayment.FocusedRecord.DocumentType.Value;
-            PrePaymentDocTypeDTOData  doctypeData= getDocType.Do();
-            this.Model.PrePayment.FocusedRecord.PaymentType = doctypeData.PaymentType;
-			//this.Model.PrePayment.FocusedRecord.PaymentType = this.Model.PrePayment.FocusedRecord.DocumentType.
+            //if (this.Model.PrePayment.FocusedRecord.DocumentType == null)
+            //{
+            //    throw new Exception("单据类型不可为空！");
+            //}
+            //GetPrePaymentDocTypeBPProxy getDocType = new GetPrePaymentDocTypeBPProxy();
+            //getDocType.DocType = this.Model.PrePayment.FocusedRecord.DocumentType.Value;
+            //PrePaymentDocTypeDTOData  doctypeData= getDocType.Do();
+            //this.Model.PrePayment.FocusedRecord.PaymentType = doctypeData.PaymentType;
+            ////this.Model.PrePayment.FocusedRecord.PaymentType = this.Model.PrePayment.FocusedRecord.DocumentType.
 		
 			DocumentType98_TextChanged_DefaultImpl(sender,e);
 		}
+
         private void Supplier106_TextChanged_Extend(object sender, EventArgs e)
         {
             if (this.Model.PrePayment.FocusedRecord.Supplier != null)
@@ -548,7 +549,14 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
                 isAF = rec.DocumentType_ConfirmType == 2;
             }
             return isAF;
-        }       
+        }
+
+        private void PrePayDate120_TextChanged_Extend(object sender, EventArgs e)
+        {
+            PrePayDate120_TextChanged_DefaultImpl(sender, e);
+        }
+
+        #endregion
             
             
 
@@ -823,8 +831,6 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
             UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentDocTypeDTOData dto = bp.Do();
             return dto;
         }
-        #endregion
-
         #endregion
 		
     }

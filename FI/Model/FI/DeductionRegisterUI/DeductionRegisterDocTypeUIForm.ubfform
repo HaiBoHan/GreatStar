@@ -11,6 +11,9 @@
     <Parameter IsProvider="True" Name="ID" UIFieldID="ID" UIViewID="DeductionRegisterDocType" />
     <Parameter IsProvider="True" Name="Code" UIFieldID="Code" UIViewID="DeductionRegisterDocType" />
     <Parameter IsProvider="True" Name="Name" UIFieldID="Name" UIViewID="DeductionRegisterDocType" />
+    <Parameter IsProvider="True" Name="DocHeaderSequenceStyle" UIFieldID="DocHeaderSequenceStyle" UIViewID="DeductionRegisterDocType" />
+    <Parameter IsProvider="True" Name="ConfirmType" UIFieldID="ConfirmType" UIViewID="DeductionRegisterDocType" />
+    <Parameter IsProvider="True" Name="ApproveType" UIFieldID="ApproveType" UIViewID="DeductionRegisterDocType" />
   </Providers>
   <InParameters>
     <Parameter DataType="" IsConsumer="True" IsPersoner="False" Name="ID" UIModelParameterName="" UIViewID="" />
@@ -216,7 +219,9 @@
       <Events />
     </Label>
     <DropDownList ID="d2f3a18d-a49b-4b8c-803e-36efcb8c744f" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ConfirmTypeEnum" EnumID="d232b8fb-1938-4ebe-a90c-41c911c0bc10" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ConfirmType34" RelationControl="lblConfirmType34" TabIndex="17" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ConfirmType" UIViewID="DeductionRegisterDocType" Visible="True" Width="153" X="168" Y="175">
-      <Events />
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
       <RelationControls />
     </DropDownList>
     <Label ID="b8a41d0b-7e3e-4e5f-81b6-f814a0af2ac4" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="8" Height="20" IsNull="True" IsSequence="False" Name="lblApproveType82" RelationControl="ApproveType82" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="200">
@@ -235,7 +240,9 @@
       <Events />
     </Label>
     <DropDownList ID="1b40f4d1-7b5c-48f0-ada9-ce0ea168b77c" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.DocHeaderSequenceStyleEnum" EnumID="dcf65e0a-1554-447b-b4c6-b3ec2951d965" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocHeaderSequenceStyle55" RelationControl="lblDocHeaderSequenceStyle55" TabIndex="22" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocHeaderSequenceStyle" UIViewID="DeductionRegisterDocType" Visible="True" Width="153" X="168" Y="250">
-      <Events />
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
       <RelationControls />
     </DropDownList>
     <Label ID="cc9e8a8f-6432-4572-851c-528f425a5c92" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblDocHeaderSequence49" RelationControl="DocHeaderSequence49" TabIndex="23" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="275">

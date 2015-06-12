@@ -7,6 +7,9 @@ using UFIDA.U9.SM.SO;
 
 namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 {
+    /// <summary>
+    /// 销售订单头公共
+    /// </summary>
     public class SOHelper
     {
 

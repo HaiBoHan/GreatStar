@@ -20,6 +20,30 @@
         <Location X="101" Y="194" />
         <Size width="120" height="58" />
       </Class>
+      <Class Editable="False" ID="53da2afd-349a-4ddc-a181-5c8cd19d5bab" Type="EnumType" ADID="d4b6e1a9-d80d-4516-8316-4b1d436cd449">
+        <Location X="778" Y="94" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="4f4a7cd5-9896-4248-b304-0f643c22e799" Type="EnumType" ADID="fc998dce-aa68-4d34-8557-a0afdf601afe">
+        <Location X="551" Y="56" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="19e3b244-df72-46b3-9676-63cd8c69b755" Type="EnumType" ADID="d232b8fb-1938-4ebe-a90c-41c911c0bc10">
+        <Location X="392" Y="122" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="57f70b7a-4d61-468b-9009-9a8fc99dbbac" Type="EnumType" ADID="dcf65e0a-1554-447b-b4c6-b3ec2951d965">
+        <Location X="236" Y="33" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="c30a3bc4-dc8b-4e74-8420-abb677381ab4" Type="EnumType" ADID="6862b23e-62fb-4453-9eed-4a2fad986a9f">
+        <Location X="873" Y="21" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="82a4aa04-2055-46c8-89aa-736eaba37f25" Type="EnumType" ADID="25989155-e5ec-47c2-9347-2d789440602f">
+        <Location X="706" Y="25" />
+        <Size width="120" height="58" />
+      </Class>
     </Diagram>
   </Namespace>
 </Component>

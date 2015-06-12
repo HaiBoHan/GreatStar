@@ -230,21 +230,21 @@
       <Events />
       <RelationControls />
     </DatePicker>
-    <Label ID="1c0b7dea-863d-4dcd-abe8-55c601564556" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblBusType64" RelationControl="BusType64" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="125">
+    <Label ID="1c0b7dea-863d-4dcd-abe8-55c601564556" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblBusType64" RelationControl="BusType64" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="150">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <DropDownList ID="fa289229-aa1b-4c97-aa18-3e45fc7aff0e" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FIBusTypeEnum" EnumID="d18f74e2-24a5-4de9-8d79-ab372286e481" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="BusType64" RelationControl="lblBusType64" TabIndex="23" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="125">
+    <DropDownList ID="fa289229-aa1b-4c97-aa18-3e45fc7aff0e" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.FIBusTypeEnum" EnumID="d18f74e2-24a5-4de9-8d79-ab372286e481" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="BusType64" RelationControl="lblBusType64" TabIndex="23" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="150">
       <Events />
       <RelationControls />
     </DropDownList>
-    <Label ID="e9c15c4f-4bb8-4061-8e5e-4ca68d33ddc0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblPayReqDocType172" RelationControl="PayReqDocType172" TabIndex="24" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="150">
+    <Label ID="e9c15c4f-4bb8-4061-8e5e-4ca68d33ddc0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblPayReqDocType172" RelationControl="PayReqDocType172" TabIndex="24" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="175">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <Reference ID="0033f54f-8d49-47fa-8b38-8365488f3b26" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="PayReqDocType_Code" CodeFieldUIViewID="PrePaymentDocType" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PayReqDocType172" NameAttributeName="Name" NameFieldUIFieldID="PayReqDocType_Name" NameFieldUIViewID="PrePaymentDocType" PkeyField="ID" RefType="be71e814-ad2d-48d7-81dc-474dc00f535d" RelationControl="lblPayReqDocType172" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PayReqDocType" UIViewID="PrePaymentDocType" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="150">
+    <Reference ID="0033f54f-8d49-47fa-8b38-8365488f3b26" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="PayReqDocType_Code" CodeFieldUIViewID="PrePaymentDocType" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PayReqDocType172" NameAttributeName="Name" NameFieldUIFieldID="PayReqDocType_Name" NameFieldUIViewID="PrePaymentDocType" PkeyField="ID" RefType="be71e814-ad2d-48d7-81dc-474dc00f535d" RelationControl="lblPayReqDocType172" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PayReqDocType" UIViewID="PrePaymentDocType" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="175">
       <Events />
       <RelationControls />
       <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
@@ -335,12 +335,12 @@
       </UIFilterBar>
       <Events />
     </Reference>
-    <Label ID="3288c5c4-734e-4408-9341-73c253278cea" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblPaymentType155" RelationControl="PaymentType155" TabIndex="36" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="175">
+    <Label ID="3288c5c4-734e-4408-9341-73c253278cea" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblPaymentType155" RelationControl="PaymentType155" TabIndex="36" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="125">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <DropDownList ID="d3c55e43-4d1d-4d39-a409-0c6a361a5527" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.PaymentTypeEnum" EnumID="7b00f734-3ccc-46c7-8d95-4005d890ef76" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PaymentType155" RelationControl="lblPaymentType155" TabIndex="37" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PaymentType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="175">
+    <DropDownList ID="d3c55e43-4d1d-4d39-a409-0c6a361a5527" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.GS.FI.EnumBE.PaymentTypeEnum" EnumID="7b00f734-3ccc-46c7-8d95-4005d890ef76" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PaymentType155" RelationControl="lblPaymentType155" TabIndex="37" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PaymentType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="125">
       <Events />
       <RelationControls />
     </DropDownList>

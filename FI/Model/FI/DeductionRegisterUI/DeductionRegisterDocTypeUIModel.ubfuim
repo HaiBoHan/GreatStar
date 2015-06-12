@@ -268,6 +268,9 @@
             <UIFieldInfo id="b22d747e-0ce7-4c4f-ba35-0e60f7754ed9" name="ApproveType" displayName="审批方式" description="" DefaultValue="-1" GroupName="Misc" DisplayRule="10.0" IsNullable="True" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095606-50d1-4296-a35a-623b21d654f0" DataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" EnumTypeID="d4b6e1a9-d80d-4516-8316-4b1d436cd449" BindingFullName="DeductionRegisterDocTypeUIModel.DeductionRegisterDocType.ApproveType" Expression="" Sequence="0" Length="4" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
             <UIFieldInfo id="4a8e3409-4cb3-49de-831b-3fe162d2a4e6" name="IsApprovingCanModify" displayName="核准中可改" description="" DefaultValue="true" GroupName="Misc" DisplayRule="1" IsNullable="False" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095602-50d1-4296-a35a-623b21d654f0" DataTypeID="5efeea06-cae7-4cc0-82e9-20a789e4e582" EnumTypeID="" BindingFullName="DeductionRegisterDocTypeUIModel.DeductionRegisterDocType.IsApprovingCanModify" Expression="" Sequence="0" Length="1" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
           </Fields>
+          <Filters>
+            <UIFilterInfo id="54ed45e4-a1c3-499b-94e7-12e7cb6dcbaf" name="DefaultFilter" displayName="缺省过滤条件" description="" help="" OPath="" OrderBy="" />
+          </Filters>
         </UIViewInfo>
       </Views>
       <ActionGroups>

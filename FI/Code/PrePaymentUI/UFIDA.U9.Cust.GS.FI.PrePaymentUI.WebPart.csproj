@@ -36,13 +36,13 @@
       <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.U9.Approval.Util.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP">
-      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Agent">
-      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP.Deploy">
-      <HintPath>..\..\..\..\U9V30\U9.VOB.Product.Component\App\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Cust.GS.CBO.CBOBP, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

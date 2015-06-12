@@ -45,16 +45,16 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
             if (this.Org == null)
                 this.Org = Context.LoginOrg;
 
-            foreach (PrePaymentLine line in this.PrePaymentLines)
-            {
-                decimal drMoney = 0;
-                foreach (PrePaymentDRDetail subLine in line.PrePaymentDRDetails)
-                {
-                    drMoney = drMoney + subLine.DRMoney;
-                }
-                line.DRMoney = drMoney;
-                line.ActualMoeny = line.PrePayMoney - line.DRMoney;
-            }
+            //foreach (PrePaymentLine line in this.PrePaymentLines)
+            //{
+            //    decimal drMoney = 0;
+            //    foreach (PrePaymentDRDetail subLine in line.PrePaymentDRDetails)
+            //    {
+            //        drMoney = drMoney + subLine.DRMoney;
+            //    }
+            //    line.DRMoney = drMoney;
+            //    line.ActualMoeny = line.PrePayMoney - line.DRMoney;
+            //}
 
 		}
 		/// <summary>

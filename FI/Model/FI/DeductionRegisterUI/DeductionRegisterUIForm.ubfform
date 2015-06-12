@@ -218,6 +218,9 @@
           <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
         </InParameters>
         <OutParameters>
+          <Parameter ContextID="" ControlID="DocumentType_DocHeaderSequenceStyle91" ControlProperty="Value" ControlType="DropDownListModel" Name="DocHeaderSequenceStyle" />
+          <Parameter ContextID="" ControlID="DocumentType_ConfirmType52" ControlProperty="Value" ControlType="DropDownListModel" Name="ConfirmType" />
+          <Parameter ContextID="" ControlID="DocumentType_ApproveType43" ControlProperty="Value" ControlType="DropDownListModel" Name="ApproveType" />
           <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
           <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
           <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
@@ -233,7 +236,7 @@
       <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="编号方式" ColumnID="DocHeaderSequenceStyle" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编号方式" ColumnID="DocHeaderSequenceStyle" TargetControlType="DropDownListModel" TargetID="DocumentType_DocHeaderSequenceStyle91" TargetProperty="Value" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="审批方式" ColumnID="ApproveType" TargetControlType="DropDownListModel" TargetID="DocumentType_ApproveType43" TargetProperty="Value" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="确认方式" ColumnID="ConfirmType" TargetControlType="DropDownListModel" TargetID="DocumentType_ConfirmType52" TargetProperty="Value" />
@@ -386,21 +389,44 @@
         </OutParameters>
       </FormLink>
     </Label>
-    <Reference ID="cfeadd36-030d-4251-82f9-fd35292f758e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier52" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="ea01ca72-c3a4-4563-b9b9-d47c720f051c" RelationControl="lblSupplier52" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Supplier" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="250">
-      <Events>
-        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
-      </Events>
+    <Reference ID="cfeadd36-030d-4251-82f9-fd35292f758e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Supplier_Code" CodeFieldUIViewID="DeductionRegister" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier52" NameAttributeName="Name" NameFieldUIFieldID="Supplier_Name" NameFieldUIViewID="DeductionRegister" PkeyField="ID" RefType="888719db-59e8-40cc-9542-56a4a2a36761" RelationControl="lblSupplier52" TabIndex="25" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Supplier" UIViewID="DeductionRegister" Visible="True" Width="153" WindowHeight="408" WindowWidth="580" X="168" Y="250">
+      <Events />
       <RelationControls />
       <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="分类" ColumnID="Category_Name" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商分类ID" ColumnID="Category_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商分类编码" ColumnID="Category_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商分类名称" ColumnID="Category_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商地区ID" ColumnID="Territory_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商地区编码" ColumnID="Territory_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商地区名称" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="一次性供应商" ColumnID="IsMISC" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种ID" ColumnID="TradeCurrency_ID" TargetControlType="ReferenceModel" TargetID="Currency70" TargetProperty="Key" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种编码" ColumnID="TradeCurrency_Code" TargetControlType="ReferenceModel" TargetID="Currency70" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种名称" ColumnID="TradeCurrency_Name" TargetControlType="ReferenceModel" TargetID="Currency70" TargetProperty="Text" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="TextBoxModel" TargetID="Currency_Symbol100" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="NumberControlModel" TargetID="Currency_MoneyRound_Precision86" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="NumberControlModel" TargetID="Currency_MoneyRound_RoundValue118" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="DropDownListModel" TargetID="Currency_MoneyRound_RoundType109" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商位置ID" ColumnID="DefaultShipTo_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商位置编码" ColumnID="DefaultShipTo_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商位置名称" ColumnID="DefaultShipTo_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商VMI规则" ColumnID="VMIRule" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商VMI规则编码" ColumnID="VMIRuleCode" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商VMI规则名称" ColumnID="VMIRuleName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="Scale" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="RoundValue" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="RoundType" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="CurrencySymbol" />
       <RefNameFields>
         <RefNameField UIFieldID="Name" />
       </RefNameFields>
-      <UIFilterBar Name="ReferenceFilter" />
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CurOrgID" />
+        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CruDate" />
+      </UIFilterBar>
       <Events />
     </Reference>
     <Label ID="ada25f37-be01-4e9d-8b2b-13579585d26d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblCustomer77" RelationControl="Customer77" TabIndex="26" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="275">
@@ -459,19 +485,20 @@
       <ReferenceRelation Action="Clear" ColumnDisplayName="销售员ID" ColumnID="Saleser_ID" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="销售员编码" ColumnID="Saleser_Code" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="销售员名称" ColumnID="Saleser_Name" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种ID" ColumnID="TradeCurrency_ID" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种编码" ColumnID="TradeCurrency_Code" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种名称" ColumnID="TradeCurrency_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种ID" ColumnID="TradeCurrency_ID" TargetControlType="ReferenceModel" TargetID="Currency70" TargetProperty="Key" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种编码" ColumnID="TradeCurrency_Code" TargetControlType="ReferenceModel" TargetID="Currency70" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种名称" ColumnID="TradeCurrency_Name" TargetControlType="ReferenceModel" TargetID="Currency70" TargetProperty="Text" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
       <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="精度1" ColumnID="TradeCurrency_MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值1" ColumnID="TradeCurrency_MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
-      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="TextBoxModel" TargetID="Currency_Symbol100" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="NumberControlModel" TargetID="Currency_MoneyRound_Precision86" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="NumberControlModel" TargetID="Currency_MoneyRound_RoundValue118" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="DropDownListModel" TargetID="Currency_MoneyRound_RoundType109" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度1" ColumnID="TradeCurrency_MoneyRound_Precision" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="Scale" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值1" ColumnID="TradeCurrency_MoneyRound_RoundValue" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="RoundValue" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_MoneyRound_RoundType" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="RoundType" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="NumberControlModel" TargetID="DRMoney59" TargetProperty="CurrencySymbol" />
       <RefNameFields>
         <RefNameField UIFieldID="Name" />
       </RefNameFields>
@@ -766,6 +793,15 @@
       <Events />
     </Label>
     <DropDownList ID="e4e9bfb2-3316-4190-b436-626f64009aa0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ConfirmTypeEnum" EnumID="d232b8fb-1938-4ebe-a90c-41c911c0bc10" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocumentType_ConfirmType52" RelationControl="lblDocumentType_ConfirmType52" TabIndex="71" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType_ConfirmType" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="50">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="b84e8f3c-463e-4c03-ba76-8d89283c552b" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDocumentType_DocHeaderSequenceStyle91" RelationControl="DocumentType_DocHeaderSequenceStyle91" TabIndex="72" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="670" Y="25">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="7a7a2f7b-bd1c-4b2a-ae17-b7ca396a44b0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.DocHeaderSequenceStyleEnum" EnumID="dcf65e0a-1554-447b-b4c6-b3ec2951d965" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocumentType_DocHeaderSequenceStyle91" RelationControl="lblDocumentType_DocHeaderSequenceStyle91" TabIndex="73" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType_DocHeaderSequenceStyle" UIViewID="DeductionRegister" Visible="False" Width="152" X="827" Y="25">
       <Events />
       <RelationControls />
     </DropDownList>

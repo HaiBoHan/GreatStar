@@ -23,6 +23,7 @@ using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.UI.PDHelper;
+using UFIDA.U9.Base.Doc;
 
 
 
@@ -125,16 +126,32 @@ namespace UFIDA.U9.Cust.FI.DeductionRegisterDocTypeUIModel
 			
 		
 			BtnOk_Click_DefaultImpl(sender,e);
-		}	
-		 
-				//BtnClose_Click...
-		private void BtnClose_Click_Extend(object sender, EventArgs  e)
-		{
-			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+		}
+
+        //BtnClose_Click...
+        private void BtnClose_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
             this.CloseDialog(false);
-			BtnClose_Click_DefaultImpl(sender,e);
-		}
+            BtnClose_Click_DefaultImpl(sender, e);
+        }
+
+        //ConfirmType34_TextChanged...
+        private void ConfirmType34_TextChanged_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            ConfirmType34_TextChanged_DefaultImpl(sender, e);
+        }
+
+        //DocHeaderSequenceStyle55_TextChanged...
+        private void DocHeaderSequenceStyle55_TextChanged_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            DocHeaderSequenceStyle55_TextChanged_DefaultImpl(sender, e);
+        }
+		
+        #endregion
 
 		
             
@@ -190,13 +207,30 @@ namespace UFIDA.U9.Cust.FI.DeductionRegisterDocTypeUIModel
 
 		public void AfterUIModelBinding()
 		{
+            DeductionRegisterDocTypeRecord record = this.Model.DeductionRegisterDocType.FocusedRecord;
 
-
+            if (record != null)
+            {
+                if (record.ConfirmType != (int)ConfirmTypeEnumData.ApproveFlow)
+                {
+                    this.ApproveType82.Enabled = false;
+                }
+                else
+                {
+                    this.ApproveType82.Enabled = true;
+                }
+                if (record.DocHeaderSequenceStyle != (int)DocHeaderSequenceStyleEnumData.Auto)
+                {
+                    this.DocHeaderSequence49.Enabled = false;
+                }
+                else
+                {
+                    this.DocHeaderSequence49.Enabled = true;
+                }
+            }
 		}
 
 
-        #endregion
-		
         #endregion
 		
     }

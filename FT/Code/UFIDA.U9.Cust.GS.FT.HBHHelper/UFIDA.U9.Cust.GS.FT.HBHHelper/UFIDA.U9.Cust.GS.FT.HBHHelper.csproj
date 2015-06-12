@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\UFIDA.U9.Cust.GS.FT.HBHHelper.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -258,6 +259,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SOHelper.cs" />
     <Compile Include="SOLineHelper.cs" />
+    <Compile Include="POHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -268,9 +270,11 @@
 
       Copy $(TargetDir)\$(TargetName).dll $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
       Copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
+      Copy $(TargetDir)\$(TargetName).xml $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\\
 
       Copy $(TargetDir)\$(TargetName).dll $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
       Copy $(TargetDir)\$(TargetName).pdb $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
+      Copy $(TargetDir)\$(TargetName).xml $(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\
 
       if not exist "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"      Md "$(ProjectDir)\.\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\\"
 </PostBuildEvent>
