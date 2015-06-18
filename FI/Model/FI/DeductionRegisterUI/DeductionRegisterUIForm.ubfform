@@ -631,7 +631,7 @@
       <RelationControls />
       <Events />
     </Label>
-    <TextBox ID="ccf6f8d5-bd44-4bff-9fe8-96caa0cc18c9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="RegisterBy94" RelationControl="lblRegisterBy94" TabIndex="42" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterBy" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="75">
+    <TextBox ID="ccf6f8d5-bd44-4bff-9fe8-96caa0cc18c9" DisplayFormat="50" Enabled="False" GridHeight="1" GridWidth="1" GridX="6" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="RegisterBy94" RelationControl="lblRegisterBy94" TabIndex="42" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterBy" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="75">
       <Events />
       <RelationControls />
     </TextBox>
@@ -640,7 +640,7 @@
       <RelationControls />
       <Events />
     </Label>
-    <DatePicker ID="14af2f82-17bb-4b87-9d0f-ebf06e77f5de" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RegisterDate88" RelationControl="lblRegisterDate88" TabIndex="44" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterDate" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="100">
+    <DatePicker ID="14af2f82-17bb-4b87-9d0f-ebf06e77f5de" DisplayFormat="8" Enabled="False" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RegisterDate88" RelationControl="lblRegisterDate88" TabIndex="44" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RegisterDate" UIViewID="DeductionRegister" Visible="True" Width="152" X="498" Y="100">
       <Events />
       <RelationControls />
     </DatePicker>

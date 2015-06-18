@@ -53,7 +53,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
             //        drMoney = drMoney + subLine.DRMoney;
             //    }
             //    line.DRMoney = drMoney;
-            //    line.ActualMoeny = line.PrePayMoney - line.DRMoney;
+            //    line.ActualMoney = line.PrePayMoney - line.DRMoney;
             //}
 
 		}
@@ -70,9 +70,10 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// </summary>
 		protected override void OnInserted() {
 			base.OnInserted();
-			// TO DO: write your business code here...
-           
-           // etup.UpdateTakeQty(this,
+            // TO DO: write your business code here...
+
+            // 更新来源单据
+            ResetSrcOrder();
 		}
 
 		/// <summary>
@@ -88,7 +89,10 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// </summary>
 		protected override void OnUpdated() {
 			base.OnUpdated();
-			// TO DO: write your business code here...
+            // TO DO: write your business code here...
+
+            // 更新来源单据
+            ResetSrcOrder();
 		}
 
 
@@ -106,6 +110,9 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnDeleted() {
 			base.OnDeleted();
 			// TO DO: write your business code here...
+
+            // 更新来源单据
+            ResetSrcOrder();
 		}
 
 		/// <summary>
@@ -158,6 +165,38 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 
 
 		#region Model Methods
+
+        /// <summary>
+        /// 回写上游单据
+        /// </summary>
+        private void ResetSrcOrder()
+        {
+            // 来源采购订单
+            /*
+            规则	挪用明细行(本单)	                预付款行字段(本单)	采购订单头.	备注
+变化更新来源订单		实付金额(预付金额 - 扣款金额)	私有段3 (已预付金额)	
+变化更新来源订单		预付已核销金额	                私有段4 (预付已核销金额)	
+变化更新来源订单		预付已红冲金额	                私有段5 (预付已红冲金额)	
+变化更新来源预付款行	挪用金额	                    预付已挪出金额	私有段6 (预付已挪出金额)	
+变化更新挪用来源订单	挪用金额		                私有段7 (预付已挪入金额)	挪用行与预付款行来源订单不同，更新的实体也不同
+             */
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "PrePayMoney", "DescFlexField_PrivateDescSeg3");
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumApplyMoney", "DescFlexField_PrivateDescSeg4");
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumRedFlushMoney", "DescFlexField_PrivateDescSeg5");
+            //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumMoveMoney", "DescFlexField_PrivateDescSeg6");
+            // 实际预付金额
+            EntityTakeQtyUpdate.UpdateTakeQty<PrePaymentLine>(this, PrePayment.EntityRes.PrePaymentLines, PrePaymentLine.EntityRes.SrcPO, PrePaymentLine.EntityRes.ActualMoney, POHelper.PrePayedMoney);
+            // 预付已核销金额
+            EntityTakeQtyUpdate.UpdateTakeQty<PrePaymentLine>(this, PrePayment.EntityRes.PrePaymentLines, PrePaymentLine.EntityRes.SrcPO, PrePaymentLine.EntityRes.SumApplyMoney, POHelper.PrePayApplyedMoney);
+            // 预付已红冲金额
+            EntityTakeQtyUpdate.UpdateTakeQty<PrePaymentLine>(this, PrePayment.EntityRes.PrePaymentLines, PrePaymentLine.EntityRes.SrcPO, PrePaymentLine.EntityRes.SumRedFlushMoney, POHelper.PrePayRededMoney);
+            // 挪出金额
+            EntityTakeQtyUpdate.UpdateTakeQty<PrePaymentLine>(this, PrePayment.EntityRes.PrePaymentLines, PrePaymentLine.EntityRes.SrcPO, PrePaymentLine.EntityRes.SumMoveMoney, POHelper.PrePayMovedOutMoney);
+
+            // 红冲，来源蓝字 预付款单行
+            EntityTakeQtyUpdate.UpdateTakeQty<PrePaymentLine>(this, PrePayment.EntityRes.PrePaymentLines, PrePaymentLine.EntityRes.SrcPrePayLine, PrePaymentLine.EntityRes.ActualMoney, PrePaymentLine.EntityRes.SumRedFlushMoney);
+        }
+
 		#endregion		
 	}
 }

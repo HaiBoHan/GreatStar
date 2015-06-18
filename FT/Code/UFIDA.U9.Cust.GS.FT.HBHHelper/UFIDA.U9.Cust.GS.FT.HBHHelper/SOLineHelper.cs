@@ -14,6 +14,11 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
         /// 外销价
         /// </summary>
         public const string SOLine_ExportPriceUIField = "DescFlexField_PrivateDescSeg5";
+        // 是否已计算佣金
+        /// <summary>
+        /// 是否已计算佣金
+        /// </summary>
+        public const string SOLine_BrokeragedUIField = "DescFlexField_PrivateDescSeg6";
         // 是否已计算折扣
         /// <summary>
         /// 是否已计算折扣
@@ -80,12 +85,19 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                     return true;
 
                 // 如果旧数据的折扣需要重算，在Updated时候，重算新佣金
-                if(soline.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
-                    && soline.OriginalData != null
-                    && GetDiscounted(soline.OriginalData.DescFlexField)
+                if (soline.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted
                     )
                 {
-                    return true;
+                    if (soline.OriginalData != null
+                        && !GetDiscounted(soline.OriginalData.DescFlexField)
+                        )
+                    {
+                        return true;
+                    }
+                    if (!GetBrokeraged(soline.DescFlexField))
+                    {
+                        return true;
+                    }
                 }
 
                 return false;
@@ -225,6 +237,21 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
             return false;
         }
 
+        // 佣金是否已计算标记
+        /// <summary>
+        /// 佣金是否已计算标记
+        /// </summary>
+        /// <param name="descSegments"></param>
+        /// <returns></returns>
+        public static bool GetBrokeraged(DescFlexSegments descSegments)
+        {
+            if (descSegments != null)
+            {
+                return PubClass.GetBool(descSegments.PrivateDescSeg6);
+            }
+            return false;
+        }
+
         // 设置折扣已计算标记（私有段19）
         /// <summary>
         /// 设置折扣已计算标记（私有段19）
@@ -251,6 +278,36 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
                 else
                 {
                     descSegments.PrivateDescSeg19 = isCalc.ToString();
+                }
+            }
+        }
+
+        // 设置佣金已计算标记（私有段6）
+        /// <summary>
+        /// 设置佣金已计算标记（私有段6）
+        /// </summary>
+        /// <param name="descSegments">扩展段集合</param>
+        /// <param name="isCalc">折扣是否已计算</param>
+        /// <returns></returns>
+        public static void SetBrokeraged(DescFlexSegments descSegments, bool isCalc)
+        {
+            if (descSegments != null)
+            {
+                if (!isCalc)
+                {
+                    // 为了标记未重算，又标记一次未重算，会不走保存；所以 将未重算 和 空字符串之间做切换;
+                    if (descSegments.PrivateDescSeg6 == isCalc.ToString())
+                    {
+                        descSegments.PrivateDescSeg6 = string.Empty;
+                    }
+                    else
+                    {
+                        descSegments.PrivateDescSeg6 = isCalc.ToString();
+                    }
+                }
+                else
+                {
+                    descSegments.PrivateDescSeg6 = isCalc.ToString();
                 }
             }
         }

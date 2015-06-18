@@ -473,18 +473,19 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
                             BtnApprove.Enabled = false; //审核
                             BtnSubmit.Enabled = false;//提交
                             BtnCopy.Enabled = true;//复制
-                            BtnUndoApprove.Enabled = true; //弃审
                             //this.Card2.ReadOnly = true;
+
+                            //BtnUndoApprove.Enabled = true; //弃审
+                            if (this.Model.DeductionRegister.FocusedRecord.DRStatus.Value > 0)
+                            {
+                                BtnUndoApprove.Enabled = false; //弃审
+                            }
+                            else
+                            {
+                                BtnUndoApprove.Enabled = true; //弃审
+                            }
                             break;
 
-                    }
-                    if (this.Model.DeductionRegister.FocusedRecord.DRStatus.Value > 0)
-                    {
-                        BtnUndoApprove.Enabled = false; //弃审
-                    }
-                    else
-                    {
-                        BtnUndoApprove.Enabled = true; //弃审
                     }
                 }
             }

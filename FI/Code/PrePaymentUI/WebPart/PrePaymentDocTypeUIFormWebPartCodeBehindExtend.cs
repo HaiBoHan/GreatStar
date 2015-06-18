@@ -23,6 +23,7 @@ using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.UI.PDHelper;
+using UFIDA.U9.Base.Doc;
 
 
 
@@ -136,13 +137,40 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentDocTypeUIModel
 			BtnClose_Click_DefaultImpl(sender,e);
 		}
 
-		
-            
-            
-            
 
-		#region 自定义数据初始化加载和数据收集
-		private void OnLoadData_Extend(object sender)
+        private void DocHeaderSequenceStyle55_TextChanged_Extend(object sender, EventArgs e)
+        {
+            //DocHeaderSequenceStyle55_TextChanged_DefaultImpl(sender, e);
+
+            PrePaymentDocTypeRecord record = this.Model.PrePaymentDocType.FocusedRecord;
+
+            if (record != null)
+            {
+                if (record.ConfirmType != (int)ConfirmTypeEnumData.ApproveFlow)
+                {
+                    record.ApproveType = (int)ApproveTypeEnumData.Empty;
+                }
+                if (record.DocHeaderSequenceStyle != (int)DocHeaderSequenceStyleEnumData.Auto)
+                {
+                    record.DocHeaderSequence = -1;
+                    record.DocHeaderSequence_Code = string.Empty;
+                    record.DocHeaderSequence_Name = string.Empty;
+                }
+            }
+        }
+
+
+        private void ConfirmType79_TextChanged_Extend(object sender, EventArgs e)
+        {
+            //ConfirmType79_TextChanged_DefaultImpl(sender, e);
+        }
+
+        #endregion
+
+
+
+        #region 自定义数据初始化加载和数据收集
+        private void OnLoadData_Extend(object sender)
 		{	
 			OnLoadData_DefaultImpl(sender);
 		}
@@ -196,7 +224,6 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentDocTypeUIModel
 
         #endregion
 		
-        #endregion
 		
     }
 }

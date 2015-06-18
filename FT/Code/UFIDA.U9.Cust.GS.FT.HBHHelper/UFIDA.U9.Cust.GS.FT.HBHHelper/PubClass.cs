@@ -206,20 +206,40 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 
         public static int GetInt(object obj)
         {
+            ////int result = int.MinValue;
+            //int result = 0;
+            //bool blstTmp;
+            //string strValue = GetString(obj);
+
+            //if (!int.TryParse(GetString(obj), out result))
+            //{
+            //    if (bool.TryParse(strValue, out blstTmp))
+            //    {
+            //        result = Convert.ToInt32(blstTmp);
+            //    }
+            //}
+
+            //return result;
+
+            return GetInt(obj, 0);
+        }
+
+        public static int GetInt(object obj,int defaultValue)
+        {
             //int result = int.MinValue;
-            int result = 0;
+            //int defaultValue = 0;
             bool blstTmp;
             string strValue = GetString(obj);
 
-            if (!int.TryParse(GetString(obj), out result))
+            if (!int.TryParse(GetString(obj), out defaultValue))
             {
                 if (bool.TryParse(strValue, out blstTmp))
                 {
-                    result = Convert.ToInt32(blstTmp);
+                    defaultValue = Convert.ToInt32(blstTmp);
                 }
             }
 
-            return result;
+            return defaultValue;
         }
 
         public static long GetLong(object obj)

@@ -154,7 +154,7 @@ namespace UFIDA.U9.Cust.GS.FI.RedFlushPrePayUIModel
             foreach (PrePaymentLineRecord record in this.Model.PrePaymentLine.Records)
             {
                 decimal moveMoney = record.SumMoveMoney ?? decimal.Zero;
-                decimal actualMoney = record.ActualMoeny ?? decimal.Zero;
+                decimal actualMoney = record.ActualMoney ?? decimal.Zero;
                 decimal redFlushMoney = record.SumRedFlushMoney ?? decimal.Zero;
                 decimal applyMoney = record.SumApplyMoney ?? decimal.Zero;
 

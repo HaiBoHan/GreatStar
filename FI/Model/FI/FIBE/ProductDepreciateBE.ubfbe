@@ -5,7 +5,7 @@
       <Groups>
         <Group id="38643f1a-b47d-41e1-be3a-9808ad9065ec" name="Key" displayName="Key" description="" help="" />
         <Group id="eb06d75d-67fc-4f82-ba7c-37f1d84063b8" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="42099dc4-5522-4bd0-a75c-def5c73429a1" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="410c0652-4079-4ea3-aa5b-e39daaeacd4b" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="c4ac2e9a-a457-46df-9359-7ff33ef0de44" name="ID" displayName="ID" description="" help="产品降价档案.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />

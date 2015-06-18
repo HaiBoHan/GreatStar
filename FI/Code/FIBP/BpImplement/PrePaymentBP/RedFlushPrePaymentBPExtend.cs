@@ -89,7 +89,7 @@
                 line.LineNum = lineNum;
                 line.SrcPOKey = lineDto.PurchaseOrder;
                 line.PrePayMoney = lineDto.ThisRedMoney;
-                line.ActualMoeny = lineDto.ThisRedMoney;
+                line.ActualMoney = lineDto.ThisRedMoney;
 
                 UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine oldLine = UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine.Finder.FindByID(lineDto.SrcPrePayLineID);
                 if (oldLine != null)

@@ -51,7 +51,8 @@
                             lineNum = lineNum + 10;
                             sumDRMoney = sumDRMoney + dto.ThisDRMoney;
                         }
-                        UpdatePrePaymentLine(line, sumDRMoney);
+                        // 在实体中回写
+                        //UpdatePrePaymentLine(line, sumDRMoney);
                         
                         session.Commit();
                     }
@@ -83,10 +84,14 @@
                 subLine.CurrencyKey = drDoc.CurrencyKey;
                 subLine.DRMoney = dto.ThisDRMoney;
 
+                // 在实体中回写
                 //UpdateDeductionRegister(drDoc, dto.ThisDRMoney);
             }
 
         }
+
+        #region Disused   回写都放到实体里
+
         /// <summary>
         /// 更新预付款通知单行的扣款金额及实付金额
         /// </summary>
@@ -120,6 +125,8 @@
                 doc.DRStatus = DRStatusEnum.Closed;//扣款关闭                    
             }
         }
+
+        #endregion
     }
 
 	#endregion

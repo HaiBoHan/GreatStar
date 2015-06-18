@@ -11,6 +11,7 @@ using UFSoft.UBF.PL;
 using UFIDA.U9.PM.PO;
 using UFIDA.U9.Cust.GS.FT.HBHHelper;
 using UFIDA.U9.Base.Doc;
+using UFIDA.U9.Cust.GS.FI.EnumBE;
 
 #endregion
 
@@ -36,18 +37,19 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		{
 			base.OnSetDefaultValue();
 
-            decimal drMoney = 0;
-            foreach (PrePaymentDRDetail subLine in this.PrePaymentDRDetails)
+            // 这个要么前台赋值，要么回写赋值
+            //decimal drMoney = 0;
+            //foreach (PrePaymentDRDetail subLine in this.PrePaymentDRDetails)
+            //{
+            //    drMoney = drMoney + subLine.DRMoney;
+            //}
+            //if (this.DRMoney != drMoney)
+            //{
+            //    this.DRMoney = drMoney;
+            //}
+            if (this.ActualMoney != this.PrePayMoney - this.DRMoney)
             {
-                drMoney = drMoney + subLine.DRMoney;
-            }
-            if (this.DRMoney != drMoney)
-            {
-                this.DRMoney = drMoney;
-            }
-            if (this.ActualMoeny != this.PrePayMoney - this.DRMoney)
-            {
-                this.ActualMoeny = this.PrePayMoney - this.DRMoney;
+                this.ActualMoney = this.PrePayMoney - this.DRMoney;
             }
 		}
 		/// <summary>
@@ -68,7 +70,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnInserted() {
 			base.OnInserted();
 			// TO DO: write your business code here...
-            ResetSrcOrder();
+            // ResetSrcOrder();
 		}
 
 		/// <summary>
@@ -86,7 +88,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnUpdated() {
 			base.OnUpdated();
 			// TO DO: write your business code here...
-            ResetSrcOrder();
+            // ResetSrcOrder();
 		}
 
 
@@ -105,7 +107,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		protected override void OnDeleted() {
 			base.OnDeleted();
 			// TO DO: write your business code here...
-            ResetSrcOrder();
+            // ResetSrcOrder();
            
 		}
 
@@ -114,14 +116,70 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// </summary>
 		protected override void OnValidate() {
 
-            if (this.PrePayMoney < this.ActualMoeny + this.SumApplyMoney + this.SumRedFlushMoney + this.SumMoveMoney)
-            {
-                throw new Exception("预付金额不允许小于 已扣款金额 + 已核销金额 + 已红冲金额 + 已挪出金额！");
-            }
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...
+
+            // 蓝票，校验
+            if (this.PrePayment != null
+                && this.PrePayment.PaymentType != null
+                && this.PrePayment.PaymentType == PaymentTypeEnum.BlueWord
+                )
+            {
+                if (this.ActualMoney < this.SumApplyMoney + this.SumRedFlushMoney + this.SumMoveMoney)
+                {
+                    string msg = string.Format("预付款单{0}行{1},预付金额[{2}]不允许小于 已核销金额[{3}] + 已红冲金额[{4}] + 已挪出金额[{5}]！"
+                        , this.PrePayment.DocNo
+                        , this.LineNum
+                        , PubClass.GetStringRemoveZero(this.PrePayMoney)
+                        , PubClass.GetStringRemoveZero(this.ActualMoney)
+                        , PubClass.GetStringRemoveZero(this.SumApplyMoney)
+                        , PubClass.GetStringRemoveZero(this.SumRedFlushMoney)
+                        , PubClass.GetStringRemoveZero(this.SumMoveMoney)
+                        );
+                    throw new Exception(msg);
+                }
+            }
+
+            if (this.SysState == UFSoft.UBF.PL.Engine.ObjectState.Updated)
+            {
+                if (this.OriginalData != null
+                    && !IsEqual(this.OriginalData.SrcPOKey, this.SrcPOKey)
+                    )
+                {
+                    string msg = string.Format("预付款单[{0}]行[{1}]不允许修改来源采购订单信息！"
+                        , this.PrePayment != null ? this.PrePayment.DocNo : string.Empty
+                        , this.LineNum
+                        );
+                    throw new BusinessException(msg);
+                }
+            }
 		}
+
+        private bool IsEqual(PurchaseOrder.EntityKey oldKey, PurchaseOrder.EntityKey newKey)
+        {
+            long oldID = -1, newID = -1;
+
+            if (oldKey != null
+                && oldKey.ID > 0
+                )
+            {
+                oldID = oldKey.ID;
+            }
+            if (newKey != null
+                && newKey.ID > 0
+                )
+            {
+                newID = newKey.ID;
+            }
+
+            if (oldID == newID)
+            {
+                return true;
+            }
+
+            return false;
+        }   
 		#endregion
 		
 		#region 异常处理，开发人员可以重新封装异常
@@ -146,7 +204,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		#endregion 
 
 
-        #region 自定义方法
+        #region 更新来源单据 ；  改为头更新
         /// <summary>
         /// 回写上游单据
         /// </summary>
@@ -165,13 +223,17 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
             //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumApplyMoney", "DescFlexField_PrivateDescSeg4");
             //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumRedFlushMoney", "DescFlexField_PrivateDescSeg5");
             //EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, "SumMoveMoney", "DescFlexField_PrivateDescSeg6");
-            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.ActualMoeny, POHelper.PrePayedMoney);
+            // 实际预付金额
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.ActualMoney, POHelper.PrePayedMoney);
+            // 预付已核销金额
             EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.SumApplyMoney, POHelper.PrePayApplyedMoney);
+            // 预付已红冲金额
             EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.SumRedFlushMoney, POHelper.PrePayRededMoney);
+            // 挪出金额
             EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPO, PrePaymentLine.EntityRes.SumMoveMoney, POHelper.PrePayMovedOutMoney);
 
             // 红冲，来源蓝字 预付款单行
-            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPrePayLine, PrePaymentLine.EntityRes.ActualMoeny, PrePaymentLine.EntityRes.SumRedFlushMoney);
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.SrcPrePayLine, PrePaymentLine.EntityRes.ActualMoney, PrePaymentLine.EntityRes.SumRedFlushMoney);
         }
 
         /// <summary>

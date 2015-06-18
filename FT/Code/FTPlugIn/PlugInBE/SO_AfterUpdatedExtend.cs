@@ -48,7 +48,7 @@ namespace UFIDA.U9.Cust.GS.FT.PlugInBE
 
             if (lstUpdBom.Count > 0)
             {
-                OrderBomBE.OrderBomHead.CreateOrderBom(lstUpdBom);
+                OrderBomBE.OrderBomHead.CreateOrderBom(lstUpdBom,false);
             }
 
             if (lstCrBrokerage.Count > 0)

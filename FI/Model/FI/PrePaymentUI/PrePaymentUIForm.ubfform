@@ -374,7 +374,10 @@
           <RefNameFields>
             <RefNameField UIFieldID="Name" />
           </RefNameFields>
-          <UIFilterBar Name="ReferenceFilter" />
+          <UIFilterBar Name="ReferenceFilter">
+            <Parameter ContextID="" ControlID="PaymentType66" ControlProperty="Value" ControlType="DropDownListModel" Name="PaymentType" ParameterBindType="Bind2Control" />
+            <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PaymentType2" />
+          </UIFilterBar>
           <Events />
         </Reference>
         <Label ID="80cc5ade-24ab-4983-82a8-72da10e33981" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblDocNo80" RelationControl="DocNo80" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="5" Y="30">
@@ -391,7 +394,7 @@
           <RelationControls />
           <Events />
         </Label>
-        <DatePicker ID="2c41d0d6-dd0f-483d-9bcb-b8f7eb79a93a" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="BusinessDate26" RelationControl="lblBusinessDate26" TabIndex="15" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusinessDate" UIViewID="PrePayment" Visible="True" Width="120" X="110" Y="55">
+        <DatePicker ID="2c41d0d6-dd0f-483d-9bcb-b8f7eb79a93a" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="BusinessDate26" RelationControl="lblBusinessDate26" TabIndex="15" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusinessDate" UIViewID="PrePayment" Visible="True" Width="120" X="110" Y="55">
           <Events />
           <RelationControls />
         </DatePicker>
@@ -692,7 +695,7 @@
               <HeaderCell ID="d3217577-a449-4aba-9e9c-1ce5342b7cd9" ColSpan="1" Name="HeaderCell4" OwnerColName="SrcPO0" RowSpan="1" />
               <HeaderCell ID="959f508f-70d0-4b94-b0f3-2304f8d2e3c6" ColSpan="1" Name="HeaderCell5" OwnerColName="PrePayMoney0" RowSpan="1" />
               <HeaderCell ID="ecfaca9a-58d2-456c-811d-0b5d62dd0e8a" ColSpan="1" Name="HeaderCell6" OwnerColName="DRMoney0" RowSpan="1" />
-              <HeaderCell ID="e89ba3c8-87d2-4861-a5ac-74565f0972a9" ColSpan="1" Name="HeaderCell7" OwnerColName="ActualMoeny0" RowSpan="1" />
+              <HeaderCell ID="e89ba3c8-87d2-4861-a5ac-74565f0972a9" ColSpan="1" Name="HeaderCell7" OwnerColName="ActualMoney0" RowSpan="1" />
               <HeaderCell ID="3b10a0a4-4e96-43c7-9595-cbbd36ceac0c" ColSpan="1" Name="HeaderCell8" OwnerColName="SumApplyMoney0" RowSpan="1" />
               <HeaderCell ID="6ed3b8b5-d21c-44ce-aade-ace8df49886b" ColSpan="1" Name="HeaderCell9" OwnerColName="SumRedFlushMoney0" RowSpan="1" />
               <HeaderCell ID="6759dfb1-a992-4ba1-a209-0bc8e5561567" ColSpan="1" Name="HeaderCell10" OwnerColName="SumMoveMoney0" RowSpan="1" />
@@ -766,7 +769,7 @@
               <CurrencyType BindType="UIField" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePayment_PrePaymentLines" />
               <Events />
             </NumberColumn>
-            <NumberColumn ID="dcb50881-4caa-4158-a2e6-761e756e223f" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Formula="PrePayMoney-DRMoney" HasSum="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="7" NumberType="Currency" Point="0" UIFieldID="ActualMoeny" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+            <NumberColumn ID="dcb50881-4caa-4158-a2e6-761e756e223f" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Formula="PrePayMoney-DRMoney" HasSum="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoney0" NPos="7" NumberType="Currency" Point="0" UIFieldID="ActualMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
               <PrecisionBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_Precision" UIViewID="PrePayment_PrePaymentLines" />
               <RoundRuleBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundType" UIViewID="PrePayment_PrePaymentLines" />
               <ValueOfRoundByValueBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundValue" UIViewID="PrePayment_PrePaymentLines" />

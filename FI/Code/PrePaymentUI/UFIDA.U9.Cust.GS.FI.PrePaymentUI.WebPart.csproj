@@ -35,6 +35,9 @@
     <Reference Include="UFIDA.U9.Approval.Util">
       <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFIDA.U9.Approval.Util.dll</HintPath>
     </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBE.Deploy">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+    </Reference>
     <Reference Include="UFIDA.U9.Base.BaseBP">
       <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.dll</HintPath>
     </Reference>
@@ -75,6 +78,10 @@
     <Reference Include="UFIDA.U9.Cust.GS.FI.FIBP.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\UFIDA.U9.Cust.GS.FI.FIBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.GS.FT.HBHHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.WebPart\UFIDA.U9.Cust.GS.FT.HBHHelper.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Cust.GS.FT.HBHHelper;
 using UFIDA.U9.PM.PO;
+using UFIDA.U9.Cust.GS.FI.DeductionRegisterBE;
 
 #endregion
 
@@ -37,7 +38,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// before Insert
 		/// </summary>
 		protected override void OnInserting() {
-            UFIDA.U9.Cust.GS.FI.FIBE.PubHelper.PubHelperExtend.UpdateDeductionRegister(0,0,this.DRMoney,this.SrcDocID);
+            //UFIDA.U9.Cust.GS.FI.FIBE.PubHelper.PubHelperExtend.UpdateDeductionRegister(0,0,this.DRMoney,this.SrcDocID);
 			base.OnInserting();
 			// TO DO: write your business code here...
 		}
@@ -56,7 +57,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// before Update
 		/// </summary>
 		protected override void OnUpdating() {
-            UFIDA.U9.Cust.GS.FI.FIBE.PubHelper.PubHelperExtend.UpdateDeductionRegister(2, this.OriginalData.DRMoney, this.DRMoney, this.SrcDocID);
+            //UFIDA.U9.Cust.GS.FI.FIBE.PubHelper.PubHelperExtend.UpdateDeductionRegister(2, this.OriginalData.DRMoney, this.DRMoney, this.SrcDocID);
 			base.OnUpdating();
 			// TO DO: write your business code here...
 		}
@@ -75,7 +76,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
 		/// before Delete
 		/// </summary>
 		protected override void OnDeleting() {
-            UFIDA.U9.Cust.GS.FI.FIBE.PubHelper.PubHelperExtend.UpdateDeductionRegister(1, this.OriginalData.DRMoney, this.DRMoney, this.SrcDocID);
+            //UFIDA.U9.Cust.GS.FI.FIBE.PubHelper.PubHelperExtend.UpdateDeductionRegister(1, this.OriginalData.DRMoney, this.DRMoney, this.SrcDocID);
 			base.OnDeleting();
 			// TO DO: write your business code here...
 		}
@@ -102,14 +103,10 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentBE {
         #region 回写上游单据
         protected void ResetSrcOrder()
         {
-            EntityTakeQtyUpdate.UpdateTakeQty(this, this.PrePaymentLine, "MoveMoney", "SumMoveMoney");
+            EntityTakeQtyUpdate.UpdateTakeQty(this, this.PrePaymentLine, "DRMoney", "DRMoney");
 
-            if (this != null && this.PrePaymentLine != null && this.PrePaymentLine.SrcPO != null)
-            {
-                PurchaseOrder po = this.PrePaymentLine.SrcPO;
-                EntityTakeQtyUpdate.UpdateTakeQty(this, po, "MoveMoney", "DescFlexField_PrivateDescSeg7");
-
-            }
+            DeductionRegister drEntity = DeductionRegister.Finder.FindByID(this.SrcDocID);
+            EntityTakeQtyUpdate.UpdateTakeQty(this, drEntity, "DRMoney", "SumDRMoney");
         }
         #endregion
 

@@ -291,7 +291,9 @@
       <Events />
     </Label>
     <DropDownList ID="07cb6272-8e16-455e-b052-15355af6aff7" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.ConfirmTypeEnum" EnumID="d232b8fb-1938-4ebe-a90c-41c911c0bc10" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ConfirmType79" RelationControl="lblConfirmType79" TabIndex="31" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ConfirmType" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="250">
-      <Events />
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
       <RelationControls />
     </DropDownList>
     <Label ID="4e3e1dcb-6456-4be4-ad5f-83de645d06e9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="13" Height="20" IsNull="True" IsSequence="False" Name="lblDocHeaderSequenceStyle55" RelationControl="DocHeaderSequenceStyle55" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="325">
@@ -300,7 +302,9 @@
       <Events />
     </Label>
     <DropDownList ID="c5852592-83bc-4780-924f-8f81a540fa06" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.DocHeaderSequenceStyleEnum" EnumID="dcf65e0a-1554-447b-b4c6-b3ec2951d965" GridHeight="1" GridWidth="1" GridX="2" GridY="13" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocHeaderSequenceStyle55" RelationControl="lblDocHeaderSequenceStyle55" TabIndex="33" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocHeaderSequenceStyle" UIViewID="PrePaymentDocType" Visible="True" Width="153" X="168" Y="325">
-      <Events />
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
       <RelationControls />
     </DropDownList>
     <Label ID="aaa47e15-4f0c-44fd-bd0e-32dca01c9fb9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="14" Height="20" IsNull="True" IsSequence="False" Name="lblDocHeaderSequence52" RelationControl="DocHeaderSequence52" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="350">

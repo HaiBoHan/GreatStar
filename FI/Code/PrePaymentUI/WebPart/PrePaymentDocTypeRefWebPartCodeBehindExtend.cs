@@ -22,6 +22,7 @@ using UFSoft.UBF.UI.Engine;
 using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 
 
@@ -95,6 +96,9 @@ namespace PrePaymentDocTypeRef
 		
 			DataGrid_GridRowDbClicked_DefaultImpl(sender,e);
 		}
+		
+        #endregion
+		
 
 		
             
@@ -104,7 +108,18 @@ namespace PrePaymentDocTypeRef
 
 		#region 自定义数据初始化加载和数据收集
 		private void OnLoadData_Extend(object sender)
-		{	
+		{
+            int payType = PubClass.GetInt(this.NameValues["PaymentType"],-1);
+            if (payType >= 0)
+            {
+                this.Model.cRef.CurrentFilter.OPath = string.Format("{0} and PaymentType=@PaymentType", this.Model.cRef.CurrentFilter.OriginalOPath);
+            }
+            else
+            {
+                this.Model.cRef.CurrentFilter.OPath = string.Format("{0} and 0>IsNull(@PaymentType,-1)", this.Model.cRef.CurrentFilter.OriginalOPath);
+            }
+            //  and PaymentType=@PaymentType
+
 			OnLoadData_DefaultImpl(sender);
 		}
 		private void OnDataCollect_Extend(object sender)
@@ -143,8 +158,5 @@ namespace PrePaymentDocTypeRef
 
 
         #endregion
-		
-        #endregion
-		
     }
 }

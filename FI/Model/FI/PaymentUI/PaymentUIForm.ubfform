@@ -911,7 +911,7 @@
               <HeaderCell ID="ac909198-9197-430c-badc-0159ca652098" ColSpan="1" Name="HeaderCell25" OwnerColName="TotalMoney0" RowSpan="1" />
               <HeaderCell ID="9e45447a-891a-48d9-a777-4565b17c505e" ColSpan="1" Name="HeaderCell26" OwnerColName="DRMoney0" RowSpan="1" />
               <HeaderCell ID="085d23f8-577b-4c92-b9c9-43b37968ac01" ColSpan="1" Name="HeaderCell27" OwnerColName="ApplyMoney0" RowSpan="1" />
-              <HeaderCell ID="4d655984-8391-43da-9b59-bf2b1bc84ee9" ColSpan="1" Name="HeaderCell28" OwnerColName="ActualMoeny0" RowSpan="1" />
+              <HeaderCell ID="4d655984-8391-43da-9b59-bf2b1bc84ee9" ColSpan="1" Name="HeaderCell28" OwnerColName="ActualMoney0" RowSpan="1" />
               <HeaderCell ID="444b11b9-96d3-444d-9225-6ad0b62ebaf5" ColSpan="1" Name="HeaderCell29" OwnerColName="UOM0" RowSpan="1" />
               <HeaderCell ID="e1c448ba-21cf-4b8d-9ea1-480f917fa601" ColSpan="1" Name="HeaderCell30" OwnerColName="InvoiceNo0" RowSpan="1" />
               <HeaderCell ID="e818b535-0e2b-40f2-86d3-e496bcfbdf4e" ColSpan="1" Name="HeaderCell31" OwnerColName="CustomerNo0" RowSpan="1" />
@@ -1050,7 +1050,7 @@
               <CurrencyType BindType="UIField" UIFieldID="Payment_Currency_Symbol" UIViewID="Payment_PaymentLine" />
               <Events />
             </NumberColumn>
-            <NumberColumn ID="64e4631c-c819-4276-bb3f-c58537aea46b" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="13" NumberType="Currency" Point="0" UIFieldID="ActualMoeny" UIViewID="Payment_PaymentLine" Visible="True">
+            <NumberColumn ID="64e4631c-c819-4276-bb3f-c58537aea46b" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoney0" NPos="13" NumberType="Currency" Point="0" UIFieldID="ActualMoney" UIViewID="Payment_PaymentLine" Visible="True">
               <PrecisionBind BindType="UIField" UIFieldID="Payment_Currency_MoneyRound_Precision" UIViewID="Payment_PaymentLine" />
               <RoundRuleBind BindType="UIField" UIFieldID="Payment_Currency_MoneyRound_RoundType" UIViewID="Payment_PaymentLine" />
               <ValueOfRoundByValueBind BindType="UIField" UIFieldID="Payment_Currency_MoneyRound_RoundValue" UIViewID="Payment_PaymentLine" />

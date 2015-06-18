@@ -198,6 +198,8 @@ namespace UFIDA.U9.Cust.GS.FT.OrderLineBrokerageBE {
             Dictionary<long, OrderLineBrokerage> dicOldBrokerage = new Dictionary<long, OrderLineBrokerage>();
             using (ISession session = Session.Open())
             {
+                HBHHelper.SOLineHelper.SetBrokeraged(soline.DescFlexField, true);
+
                 if (lstOldSOBrge != null
                     && lstOldSOBrge.Count > 0
                     )

@@ -262,7 +262,7 @@ namespace PaymentUIModel
                 decimal payMoney = record.TotalMoney ?? decimal.Zero;
                 decimal drMoney = record.DRMoney ?? decimal.Zero;
                 decimal applyMoney = record.ApplyMoney ?? decimal.Zero;
-                decimal actualMoney = record.ActualMoeny ?? decimal.Zero;
+                decimal actualMoney = record.ActualMoney ?? decimal.Zero;
 
                 sumPayMoney = sumPayMoney + payMoney;
                 sumDRMoney = sumDRMoney + drMoney;
@@ -298,7 +298,7 @@ namespace PaymentUIModel
             param.Add("sumPayMoney", decimal.Round(this.Model.Payment_PaymentLine.FocusedRecord.TotalMoney ?? decimal.Zero, this.Model.Payment.FocusedRecord.Currency_PriceRound_Precision).ToString());
             param.Add("sumDRMoney", decimal.Round(this.Model.Payment_PaymentLine.FocusedRecord.DRMoney ?? decimal.Zero, this.Model.Payment.FocusedRecord.Currency_PriceRound_Precision).ToString());
             param.Add("sumPreMoney", decimal.Round(this.Model.Payment_PaymentLine.FocusedRecord.ApplyMoney ?? decimal.Zero, this.Model.Payment.FocusedRecord.Currency_PriceRound_Precision).ToString());
-            param.Add("sumActualMoney", decimal.Round(this.Model.Payment_PaymentLine.FocusedRecord.ActualMoeny ?? decimal.Zero, this.Model.Payment.FocusedRecord.Currency_PriceRound_Precision).ToString());
+            param.Add("sumActualMoney", decimal.Round(this.Model.Payment_PaymentLine.FocusedRecord.ActualMoney ?? decimal.Zero, this.Model.Payment.FocusedRecord.Currency_PriceRound_Precision).ToString());
 
             this.ShowAtlasModalDialog(this.BtnRefresh, FormID, "单行扣款", "830", "420", null, param, true, true, false);
 

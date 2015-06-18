@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
 using UFIDA.U9.Cust.GS.FI.EnumBE;
+using UFIDA.U9.Cust.GS.FT.HBHHelper;
 
 #endregion
 
@@ -33,9 +34,9 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterBE {
 		/// <summary>
 		/// 设置默认值
 		/// </summary>
-		protected override void OnSetDefaultValue()
-		{
-			base.OnSetDefaultValue();
+        protected override void OnSetDefaultValue()
+        {
+            base.OnSetDefaultValue();
             if (this.StateMachineInstance.CurrentState == DeductionRegisterStateMachine.State.Empty)
             {
                 this.StateMachineInstance.Initialize();
@@ -43,12 +44,35 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterBE {
             if (this.Org == null)
                 this.Org = Context.LoginOrg;
 
-            if(string.IsNullOrEmpty(this.RegisterBy))
+            if (this.SysState == UFSoft.UBF.PL.Engine.ObjectState.Inserted)
             {
-                this.RegisterBy = Context.LoginUser;
+                if (string.IsNullOrEmpty(this.RegisterBy))
+                {
+                    this.RegisterBy = Context.LoginUser;
+                }
+                this.RegisterDate = Context.LoginDate;
             }
-             this.RegisterDate = Context.LoginDate;
-		}
+
+            int iDrStatus = DRStatusEnum.None.Value;
+            if (this.DRMoney > 0)
+            {
+                if (this.SumDRMoney >= this.DRMoney)
+                {
+                    iDrStatus = DRStatusEnum.Closed.Value;
+                }
+                else
+                {
+                    iDrStatus = DRStatusEnum.Part.Value;
+                }
+            }
+
+            if (this.DRStatus == null
+                || this.DRStatus.Value != iDrStatus
+                )
+            {
+                this.DRStatus = DRStatusEnum.GetFromValue(iDrStatus);
+            }
+        }
 		/// <summary>
 		/// before Insert
 		/// </summary>
@@ -109,23 +133,26 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterBE {
 
             if (this.SrcDocType != DRSrcDocTypeEnum.Hand && string.IsNullOrEmpty(this.SrcDocNo))
             {
-                throw new Exception("来源类型不为手工创建，来源单号不能为空！");
+                throw new Exception(string.Format("扣款登记[{0}]来源类型不为手工创建，来源单号不能为空！", this.DocNo));
             }
             if (this.DRObject == DRObjectEnum.Customer && this.Customer == null)
             {
-                throw new Exception("扣款对象为客户时，客户不能为空！");
+                throw new Exception(string.Format("扣款登记[{0}]扣款对象为客户时，客户不能为空！",this.DocNo));
             }
             if (this.DRObject == DRObjectEnum.Suppler && this.Supplier == null)
             {
-                throw new Exception("扣款对象为供应商时，供应商不能为空！");
+                throw new Exception(string.Format("扣款登记[{0}]扣款对象为供应商时，供应商不能为空！",this.DocNo));
             }
             if (this.DRObject == DRObjectEnum.Org && this.DROrg == null)
             {
-                throw new Exception("扣款对象为组织时，组织不能为空！");
+                throw new Exception(string.Format("扣款登记[{0}]扣款对象为组织时，组织不能为空！",this.DocNo));
             }
             if (this.SumDRMoney > this.DRMoney)
             {
-                throw new Exception("累计扣款金额不允许大于扣款金额！");
+                throw new Exception(string.Format("扣款登记[{0}]累计扣款金额[{1}]不允许大于扣款金额[{2}]！"
+                    ,this.DocNo
+                    ,PubClass.GetStringRemoveZero(this.SumDRMoney)
+                    ,PubClass.GetStringRemoveZero(this.DRMoney)));
             }
 		}
 		#endregion

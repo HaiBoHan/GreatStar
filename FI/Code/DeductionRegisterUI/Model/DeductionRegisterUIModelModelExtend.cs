@@ -5,6 +5,7 @@ using System.Collections;
 using System.Data;
 using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.MD.Runtime.Implement;
+using UFIDA.U9.UI.PDHelper;
 
 #endregion
 
@@ -15,9 +16,12 @@ namespace UFIDA.U9.Cust.GS.FI.DeductionRegisterUIModel
         public override  void AfterInitModel()
         {
             this.DeductionRegister.FieldBusinessDate.DefaultValue = DateTime.Today;
-            this.DeductionRegister.FieldStatus.DefaultValue = UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnum.Opened;
-            this.DeductionRegister.FieldSrcDocType.DefaultValue = UFIDA.U9.Cust.GS.FI.EnumBE.DRSrcDocTypeEnumData.Hand;
-      
+            this.DeductionRegister.FieldStatus.DefaultValue = (int)UFIDA.U9.Cust.GS.FI.EnumBE.FICommonStatusEnumData.Opened;
+            this.DeductionRegister.FieldSrcDocType.DefaultValue = (int)UFIDA.U9.Cust.GS.FI.EnumBE.DRSrcDocTypeEnumData.Hand;
+
+            this.DeductionRegister.FieldRegisterOrg.DefaultValue = PDContext.Current.OrgRef.ID;
+            this.DeductionRegister.FieldRegisterOrg_Code.DefaultValue = PDContext.Current.OrgRef.CodeColumn;
+            this.DeductionRegister.FieldRegisterOrg_Name.DefaultValue = PDContext.Current.OrgRef.NameColumn;
         }
         
         //UIModel提交保存之前的校验操作.

@@ -92,7 +92,7 @@
           <HeaderCell ID="fe0354f4-546e-4a6b-b086-c5c6c858472c" ColSpan="1" Name="HeaderCell6" OwnerColName="PrePayment_Currency0" RowSpan="1" />
           <HeaderCell ID="e52ffe9e-a6e4-414f-aab1-f13c533d724c" ColSpan="1" Name="HeaderCell7" OwnerColName="PrePayMoney0" RowSpan="1" />
           <HeaderCell ID="d14fb2d3-9464-482b-92dd-11fb81203b55" ColSpan="1" Name="HeaderCell8" OwnerColName="DRMoney0" RowSpan="1" />
-          <HeaderCell ID="012a01a9-1182-4afa-acdf-45c79a9c4a10" ColSpan="1" Name="HeaderCell9" OwnerColName="ActualMoeny0" RowSpan="1" />
+          <HeaderCell ID="012a01a9-1182-4afa-acdf-45c79a9c4a10" ColSpan="1" Name="HeaderCell9" OwnerColName="ActualMoney0" RowSpan="1" />
           <HeaderCell ID="c288c525-9ac8-42a2-ad61-35e1c54183d8" ColSpan="1" Name="HeaderCell10" OwnerColName="SumApplyMoney0" RowSpan="1" />
           <HeaderCell ID="7ef3343b-0f2e-4c60-b206-a667143bc05f" ColSpan="1" Name="HeaderCell11" OwnerColName="SumMoveMoney0" RowSpan="1" />
           <HeaderCell ID="3c9a16c1-a70a-4f51-907a-06d6fb070e0c" ColSpan="1" DisplayName="可红冲金额" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell18" OwnerColName="CanRedMoney0" RowSpan="1" />
@@ -191,7 +191,7 @@
           <CurrencyType BindType="UIField" UIFieldID="PrePayment_Currency_Symbol" UIViewID="PrePaymentLine" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="7c4f14a8-48f2-4673-82be-6a148472c45d" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="9" NumberType="Currency" Point="0" UIFieldID="ActualMoeny" UIViewID="PrePaymentLine" Visible="True">
+        <NumberColumn ID="7c4f14a8-48f2-4673-82be-6a148472c45d" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoney0" NPos="9" NumberType="Currency" Point="0" UIFieldID="ActualMoney" UIViewID="PrePaymentLine" Visible="True">
           <PrecisionBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_Precision" UIViewID="PrePaymentLine" />
           <RoundRuleBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundType" UIViewID="PrePaymentLine" />
           <ValueOfRoundByValueBind BindType="UIField" UIFieldID="PrePayment_Currency_MoneyRound_RoundValue" UIViewID="PrePaymentLine" />

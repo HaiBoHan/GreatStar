@@ -26,7 +26,7 @@
           <HeaderCell ID="959f6fd9-2ecc-476a-9d19-5b1d145e5c82" ColSpan="1" Name="HeaderCell3" OwnerColName="SrcPO0" RowSpan="1" />
           <HeaderCell ID="0f31fd8a-b8a4-4b1d-b156-a7c55bcd4cc6" ColSpan="1" Name="HeaderCell4" OwnerColName="PrePayMoney0" RowSpan="1" />
           <HeaderCell ID="90092857-8374-4898-9e01-7435c3335951" ColSpan="1" Name="HeaderCell5" OwnerColName="DRMoney0" RowSpan="1" />
-          <HeaderCell ID="9c712702-1886-4d16-aadf-30aa6218733d" ColSpan="1" Name="HeaderCell6" OwnerColName="ActualMoeny0" RowSpan="1" />
+          <HeaderCell ID="9c712702-1886-4d16-aadf-30aa6218733d" ColSpan="1" Name="HeaderCell6" OwnerColName="ActualMoney0" RowSpan="1" />
           <HeaderCell ID="ed26d63c-5360-4853-9660-97e9e7ad2900" ColSpan="1" Name="HeaderCell7" OwnerColName="SumApplyMoney0" RowSpan="1" />
           <HeaderCell ID="6939e27c-7600-4fa9-a912-b3be39743aea" ColSpan="1" Name="HeaderCell8" OwnerColName="SumRedFlushMoney0" RowSpan="1" />
           <HeaderCell ID="55f798ac-b625-4fa2-bd88-40ad6a70e8e9" ColSpan="1" Name="HeaderCell9" OwnerColName="SumMoveMoney0" RowSpan="1" />
@@ -68,7 +68,7 @@
           <CurrencyType />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="a5db8840-684e-4ec5-888a-4ae98bd4b7cf" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoeny0" NPos="6" Point="0" UIFieldID="ActualMoeny" UIViewID="PrePayment_PrePaymentLines" Visible="True">
+        <NumberColumn ID="a5db8840-684e-4ec5-888a-4ae98bd4b7cf" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="预付款通知单行.Misc.实付金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualMoney0" NPos="6" Point="0" UIFieldID="ActualMoney" UIViewID="PrePayment_PrePaymentLines" Visible="True">
           <PrecisionBind />
           <RoundRuleBind />
           <ValueOfRoundByValueBind />

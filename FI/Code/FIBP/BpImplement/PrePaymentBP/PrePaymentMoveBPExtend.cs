@@ -87,7 +87,7 @@
             line.LineNum = lineNum;
             line.SrcPOKey = lineDto.PurchaseOrder;
             line.PrePayMoney = lineDto.PrePayMoney;
-            line.ActualMoeny = lineDto.PrePayMoney;
+            line.ActualMoney = lineDto.PrePayMoney;
 
             ////line.SrcMoveDocID = lineDto.SrcMoveDocID;
             ////line.SrcMoveDocNo = lineDto.SrcMoveDocNo;

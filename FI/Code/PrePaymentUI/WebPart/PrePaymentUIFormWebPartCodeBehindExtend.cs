@@ -87,12 +87,21 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 		private void BtnCopy_Click_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-
-            this.Model.PrePayment.FocusedRecord.DocNo = string.Empty;
-            this.Model.PrePayment.FocusedRecord.Status = 0;
-            this.Model.PrePayment.FocusedRecord.WFCurrentState = 0;
-            this.Model.PrePayment.FocusedRecord.WFOriginalState = -1;
 			BtnCopy_Click_DefaultImpl(sender,e);
+
+            PrePaymentRecord head = this.Model.PrePayment.FocusedRecord;
+
+            if (head != null)
+            {
+                head.DocNo = string.Empty;
+                head.Status = 0;
+                head.IsReview = false;
+                head.IsFinal = false;
+                head.IsPayment = false;
+                head.IsRefund = false;
+                head.WFCurrentState = 0;
+                head.WFOriginalState = -1;
+            }
 		}
         private UFIDA.U9.Cust.GS.FI.PubBP.ErrorMessageDTOData ApprovedDoc(int type)
         {
@@ -289,7 +298,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
         //红冲
 		private void MenuFlush_Click_Extend(object sender, EventArgs  e)
 		{
-			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //MenuFlush_Click_DefaultImpl(sender,e);
 
             //if (this.Model.PrePayment_PrePaymentLines.FocusedRecord != null)
             //{
@@ -303,17 +313,137 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 
             //    MenuMove_Click_DefaultImpl(sender, e);
             //}
-              this.Model.PrePayment.FocusedRecord.DocNo = string.Empty;
-            this.Model.PrePayment.FocusedRecord.Status = 0;
-            this.Model.PrePayment.FocusedRecord.WFCurrentState = 0;
-            this.Model.PrePayment.FocusedRecord.WFOriginalState = -1;
-            this.Model.PrePayment.FocusedRecord.DocumentType = null;
-           // this.DocumentType98.AddTypeParams("PaymentType", PaymentTypeEnum.RedWord);//.CustomInParams = "";//CurrentFilter.OPath 
-            this.Model.PrePayment.FocusedRecord.PaymentType = PaymentTypeEnum.RedWord.Value;
 
-			BtnCopy_Click_DefaultImpl(sender,e);
+            //BtnCopy_Click_DefaultImpl(sender, e);
 
-			MenuFlush_Click_DefaultImpl(sender,e);
+            PrePaymentRecord head = this.Model.PrePayment.FocusedRecord;
+
+            // 复制了以后，单号清空就
+            if (head != null)
+            {
+                head.Memo = string.Format("冲减蓝字:{0}", head.DocNo);
+            }
+
+            BtnCopy_Click_Extend(sender, e);
+
+            head = this.Model.PrePayment.FocusedRecord;
+
+            if (head != null)
+            {
+                //head.Memo = string.Format("冲减蓝字:", head.DocNo);
+
+                //head.DocNo = string.Empty;
+                //head.Status = 0;
+                //head.IsReview = false;
+                //head.IsFinal = false;
+                //head.IsPayment = false;
+                //head.IsRefund = false;                
+                //head.WFCurrentState = 0;
+                //head.WFOriginalState = -1;
+
+                head.DocumentType = null;
+                head.DocumentType_ApproveType = null;
+                head.DocumentType_ConfirmType = -1;
+                head.DocumentType_Code = string.Empty;
+                head.DocumentType_Name = string.Empty;
+
+
+                // this.DocumentType98.AddTypeParams("PaymentType", PaymentTypeEnum.RedWord);//.CustomInParams = "";//CurrentFilter.OPath 
+                head.PaymentType = PaymentTypeEnum.RedWord.Value;
+
+                // 所有金额都为负数
+                IUIRecord[] childs = head.GetChildRecords(this.Model.PrePayment_PrePaymentLines);
+
+                if (childs != null
+                    && childs.Length > 0
+                    )
+                {
+                    foreach (PrePayment_PrePaymentLinesRecord line in childs)
+                    {
+                        if (line != null)
+                        {
+                            // 问题
+                            // ①扣款如何处理？也红冲本次预付对应的扣款？    (暂,红冲扣款)
+                            // ②被挪出后是否还能红冲，红冲怎么计算？ 实付 - 已红冲 - 已挪用？    (暂,挪用不红冲(无法红冲吧))
+
+
+                            // 来源预收行原始数据
+                            line.SrcPrePayLine = line.ID;
+                            line.SrcPrePayLineID = line.ID;
+                            line.SrcPrePayLineNum = line.LineNum;
+                            line.SrcPrePayLineDocNo = head.DocNo;
+                            line.SrcPrePayLinePrePayMoney = line.PrePayMoney;
+                            line.SrcPrePayLineDRMoney = line.DRMoney;
+                            line.SrcPrePayLineActualMoney = line.ActualMoney;
+                            line.SrcPrePayLineSumApplyMoney = line.SumApplyMoney;
+                            line.SrcPrePayLineSumMoveMoney = line.SumMoveMoney;
+                            line.SrcPrePayLineSumRedFlushMoney = line.SumRedFlushMoney;
+
+                            // 本次红冲金额计算
+                            decimal curRedMoney = line.ActualMoney.GetValueOrDefault(0) - line.SumRedFlushMoney.GetValueOrDefault(0) - line.SumMoveMoney.GetValueOrDefault(0);
+
+                            if (curRedMoney > 0)
+                            {
+                                line.ActualMoney = curRedMoney * -1;
+                                line.DRMoney = line.DRMoney * -1;
+                                //line.PrePayMoney = line.ActualMoney - line.DRMoney;
+                            }
+                            else
+                            {
+                                line.ActualMoney = 0;
+                                line.DRMoney = line.DRMoney * -1;
+                                //line.PrePayMoney = line.ActualMoney - line.DRMoney;
+                            }
+                            line.PrePayMoney = line.ActualMoney - line.DRMoney;
+                            line.SumApplyMoney = line.SumApplyMoney * -1;
+                            line.SumMoveMoney = 0;
+                            line.SumRedFlushMoney = 0;
+
+
+
+                            //line. = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+                            //line.DRMoney = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+                            //line.DRMoney = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+                            //line.DRMoney = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+                            //line.DRMoney = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+                            //line.DRMoney = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+                            //line.DRMoney = Math.Abs(line.DRMoney.GetValueOrDefault(0)) * -1;
+
+                            // 将扣款明细改为负数
+                            IUIRecord[] drDetails = line.GetChildRecords(this.Model.PrePayment_PrePaymentLines_PrePaymentDRDetails);
+
+                            if (drDetails != null
+                                && drDetails.Length > 0
+                                )
+                            {
+                                foreach (PrePayment_PrePaymentLines_PrePaymentDRDetailsRecord drLine in drDetails)
+                                {
+                                    if (drLine != null)
+                                    {
+                                        drLine.DRMoney = Math.Abs(drLine.DRMoney.GetValueOrDefault(0)) * -1;
+                                        drLine.SumDRMoney = Math.Abs(drLine.SumDRMoney.GetValueOrDefault(0)) * -1;
+                                    }
+                                }
+                            }
+
+                            // 删除挪用明细
+                            IUIRecord[] moveDetails = line.GetChildRecords(this.Model.PrePayment_PrePaymentLines_PrePaymentLineMoveDetails);
+                            if (moveDetails != null
+                                && moveDetails.Length > 0
+                                )
+                            {
+                                foreach (PrePayment_PrePaymentLines_PrePaymentLineMoveDetailsRecord moveLine in moveDetails)
+                                {
+                                    if (moveLine != null)
+                                    {
+                                        moveLine.Delete();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 		}
 
         //取消红冲
@@ -584,10 +714,10 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
                 lblPO.Text = this.Model.PrePayment_PrePaymentLines.FocusedRecord.SrcPO_DocNo;
                 lblMoney.Text = Decimal.Round(this.Model.PrePayment_PrePaymentLines.FocusedRecord.PrePayMoney.Value, this.Model.PrePayment.FocusedRecord.Currency_MoneyRound_Precision).ToString();
 
-                if (this.Model.PrePayment_PrePaymentLines.FocusedRecord["SrcPO0"]!=null)
-                {
-                    this.DataGrid11.Columns["SrcPO0"].Enabled = false;
-                }
+                //if (this.Model.PrePayment_PrePaymentLines.FocusedRecord["SrcPO"]!=null)
+                //{
+                //    this.DataGrid10.Columns["SrcPO"].Enabled = false;
+                //}
             }
            
         }
@@ -617,7 +747,10 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
             //绑定注册弹出对话框到删除按钮
             PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
 
+            PDFormMessage.ShowConfirmDialog(this.Page, message, "弃审?", this.BtnUndoApprove);
 
+            //CustGridControl_SrcPODisabled();
+            //CustGridControl_SrcPOEnabled();
         }
         
         public void AfterEventBind()
@@ -627,22 +760,84 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
         
 		public void BeforeUIModelBinding()
 		{
-            SetButtonEnabled();
-
             this.TabControl1.TabPages[1].ShowNavButton = true;//显示方向箭头
             NavButtonHelper.SetNavButtonEnableStatus(this.TabControl1.TabPages[1], this.Model.PrePayment_PrePaymentLines);//方向箭头自动置灰处理
 		}
 
 		public void AfterUIModelBinding()
-		{
+        {
+            SetButtonEnabled();
 
+            //PrePaymentRecord head = this.Model.PrePayment.FocusedRecord;
 
+            //if (head != null)
+            //{
+            //    if (head.Status == (int)FICommonStatusEnumData.Apporved)
+            //    { 
+                    
+            //    }
+            //}
+
+            // 取消红冲，这个功能 从页面点删除；如果需要蓝字关联追溯到红冲，那么新加追溯页面
+            MenuCancelFlush.Visible = false;
 		}
 
 
         #endregion
 
         #region 自定义方法
+
+
+        // 关联控件 当某行某个单元格值改变,某单元格不可编辑
+        private void CustGridControl_SrcPODisabled()
+        {
+            UFWebClientGridAdapter adapter = new UFWebClientGridAdapter(this.DataGrid10);
+            string str = adapter.getSelectedValuePK("SrcPO");
+            string expression = string.Format("debugger;if({0} == '0' || {0} == '-1'))", adapter.getSelectedValuePK("SrcPO"));
+            CodeBlock codeBlock = new CodeBlock();
+            AssociationControl control = this.CreateAssociationControl(this.DataGrid10, codeBlock, "OnBeforeCellFocusEnter", expression);
+
+            string[] strArray = new string[] { "SrcPO" };
+            List<string[]> list = new List<string[]>();
+
+            list.Add(new string[] { "SrcPO", "false", "" });
+
+            foreach (string str2 in strArray)
+            {
+                adapter.FireEventCols.Add(str2);
+            }
+            foreach (string[] strArray2 in list)
+            {
+                adapter.EnabledCols.Add(new string[] { strArray2[0], strArray2[1], strArray2[2] });
+            }
+
+            codeBlock.TargetControls.addControl(adapter);
+        }
+        private void CustGridControl_SrcPOEnabled()
+        {
+            UFWebClientGridAdapter adapter = new UFWebClientGridAdapter(this.DataGrid10);
+            string str = adapter.getSelectedValuePK("SrcPO");
+            string expression = string.Format("debugger;if({0} || {0} <= 0))", adapter.getSelectedValuePK("SrcPO"));
+            CodeBlock codeBlock = new CodeBlock();
+            AssociationControl control = this.CreateAssociationControl(this.DataGrid10, codeBlock, "OnBeforeCellFocusEnter", expression);
+
+            string[] strArray = new string[] { "SrcPO" };
+            List<string[]> list = new List<string[]>();
+
+            list.Add(new string[] { "SrcPO", "true", "" });
+
+            foreach (string str2 in strArray)
+            {
+                adapter.FireEventCols.Add(str2);
+            }
+            foreach (string[] strArray2 in list)
+            {
+                adapter.EnabledCols.Add(new string[] { strArray2[0], strArray2[1], strArray2[2] });
+            }
+
+            codeBlock.TargetControls.addControl(adapter);
+        }
+
         /////////// <summary>
         /////////// 预付金额改变回写采购订单私有字段3（已预付金额）
         /////////// </summary>
@@ -739,7 +934,7 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
                             this.BtnDRMoney.Enabled = true;
                             //this.Card2.ReadOnly = false;
                             break;
-                        default: //已核准
+                        case (int)FICommonStatusEnumData.Apporved: //已核准
                             BtnSave.Enabled = false; //保存
                             BtnDelete.Enabled = false; //删除
                             BtnApprove.Enabled = false; //审核
@@ -752,6 +947,11 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
                                 this.MenuReview.Enabled = true;
                             }
                             //this.Card2.ReadOnly = true;
+                            // 
+                            break;
+                        case (int)FICommonStatusEnumData.Closed: 
+                        case (int)FICommonStatusEnumData.Hold: 
+                        default:
                             break;
 
                     }
@@ -831,7 +1031,23 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
             UFIDA.U9.Cust.GS.FI.PrePaymentBP.PrePaymentDocTypeDTOData dto = bp.Do();
             return dto;
         }
+
+
         #endregion
-		
+
+        #region Common Method
+
+        private AssociationControl CreateAssociationControl(IUFControl ctrl, CodeBlock codeBlock, string eventName, string expression)
+        {
+            AssociationControl control = new AssociationControl();
+            control.SourceServerControl = ctrl;
+            control.SourceControl.EventName = eventName;
+            codeBlock.Condition = expression;
+            control.addBlock(codeBlock);
+            return control;
+        }
+
+        
+        #endregion
     }
 }

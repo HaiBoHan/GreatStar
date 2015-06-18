@@ -96,14 +96,22 @@ namespace UFIDA.U9.Cust.GS.FI.PrePayDeductionRegisterUIModel
             }
         }
 
+        #endregion
+
 		
             
             
 
 		#region 自定义数据初始化加载和数据收集
 		private void OnLoadData_Extend(object sender)
-		{	
-			OnLoadData_DefaultImpl(sender);
+		{
+            //OnLoadData_DefaultImpl(sender);
+            if (this.NameValues["PrePaymentLine"] != null)
+            {
+                this.Model.PrePaymentLine.Clear();
+                this.Model.PrePaymentLine.CurrentFilter.OPath = this.Model.PrePaymentLine.FieldID.AttributeName + "=" + this.NameValues["PrePaymentLine"].ToString();
+                this.Action.CommonAction.Load(this.Model.PrePaymentLine);
+            }
 		}
 		private void OnDataCollect_Extend(object sender)
 		{
@@ -120,9 +128,11 @@ namespace UFIDA.U9.Cust.GS.FI.PrePayDeductionRegisterUIModel
 
         public void AfterCreateChildControls()
         {
-
-
-		
+            this.Model.DeductionRegister.FieldThisDRMoney.AttributeName = "DRMoney - SumDRMoney";
+            this.Model.DeductionRegister.FieldThisDRMoney.IsLoadable = true;
+            // this.Model.DeductionRegister.FieldThisDRMoney.IsCustomField = true;
+            this.Model.DeductionRegister.FieldCanDRMoney.AttributeName = "DRMoney - SumDRMoney";
+            this.Model.DeductionRegister.FieldCanDRMoney.IsLoadable = true;
         }
         
         public void AfterEventBind()
@@ -131,21 +141,15 @@ namespace UFIDA.U9.Cust.GS.FI.PrePayDeductionRegisterUIModel
 
         public void BeforeUIModelBinding()
         {
-            if (this.NameValues["PrePaymentLine"] != null)
-            {
-                this.Model.PrePaymentLine.Clear();
-                this.Model.PrePaymentLine.CurrentFilter.OPath = this.Model.PrePaymentLine.FieldID.AttributeName + "=" + this.NameValues["PrePaymentLine"].ToString();
-                this.Action.CommonAction.Load(this.Model.PrePaymentLine);
-            }
             if (this.Model.PrePaymentLine.FocusedRecord != null)
             {
-                this.Model.PrePaymentLine.FocusedRecord.CanDRMoney = this.Model.PrePaymentLine.FocusedRecord.ActualMoeny;
+                this.Model.PrePaymentLine.FocusedRecord.CanDRMoney = this.Model.PrePaymentLine.FocusedRecord.ActualMoney;
 
                 this.Model.DeductionRegister.Clear();
                 StringBuilder sb = new StringBuilder(500);
-                sb.Append(this.Model.DeductionRegister.FieldSupplier.AttributeName + "=" + this.Model.PrePaymentLine.FocusedRecord.PrePayment_Supplier.Value);
+                sb.Append(this.Model.DeductionRegister.FieldSupplier.AttributeName + "=" + this.Model.PrePaymentLine.FocusedRecord.SrcPO_Supplier_Supplier.GetValueOrDefault());
                 sb.Append(" and ");
-                sb.Append(this.Model.DeductionRegister.FieldCurrency.AttributeName + "=" + this.Model.PrePaymentLine.FocusedRecord.PrePayment_Currency.Value);
+                sb.Append(this.Model.DeductionRegister.FieldCurrency.AttributeName + "=" + this.Model.PrePaymentLine.FocusedRecord.PrePayment_Currency.GetValueOrDefault());
                 sb.Append(" and ");
                 sb.Append(this.Model.DeductionRegister.FieldDRMoney.AttributeName + ">" + this.Model.DeductionRegister.FieldSumDRMoney.AttributeName);
                 sb.Append(" and ");
@@ -153,13 +157,13 @@ namespace UFIDA.U9.Cust.GS.FI.PrePayDeductionRegisterUIModel
                 this.Model.DeductionRegister.CurrentFilter.OPath = sb.ToString();
                 this.Action.CommonAction.Load(this.Model.DeductionRegister);
             }
-            foreach (DeductionRegisterRecord record in this.Model.DeductionRegister.Records)
-            {
-                decimal drMoney = record.DRMoney ?? decimal.Zero;
-                decimal totalMoney = record.SumDRMoney ?? decimal.Zero;
-                record.CanDRMoney = drMoney - totalMoney;
-                record.ThisDRMoney = record.CanDRMoney;
-            }
+            //foreach (DeductionRegisterRecord record in this.Model.DeductionRegister.Records)
+            //{
+            //    decimal drMoney = record.DRMoney ?? decimal.Zero;
+            //    decimal totalMoney = record.SumDRMoney ?? decimal.Zero;
+            //    record.CanDRMoney = drMoney - totalMoney;
+            //    record.ThisDRMoney = record.CanDRMoney;
+            //}
         }
 		public void AfterUIModelBinding()
 		{
@@ -168,8 +172,6 @@ namespace UFIDA.U9.Cust.GS.FI.PrePayDeductionRegisterUIModel
 		}
 
 
-        #endregion
-		
         #endregion
 		
     }
