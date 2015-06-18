@@ -728,7 +728,7 @@
             <UIFieldInfo id="a91164ec-1ddf-4ed9-99b7-bda2365c923b" name="PaymentType" displayName="付款类型" description="" DefaultValue="0" GroupName="Misc" DisplayRule="10.0" IsNullable="True" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095606-50d1-4296-a35a-623b21d654f0" DataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" EnumTypeID="7b00f734-3ccc-46c7-8d95-4005d890ef76" BindingFullName="PrePaymentUIModel.PrePayment.PaymentType" Expression="" Sequence="0" Length="4" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
           </Fields>
           <Filters>
-            <UIFilterInfo id="3dfc13e2-af6d-4800-8bc7-c669b4f67faa" name="DefaultFilter" displayName="缺省过滤条件" description="" help="" OPath="" OrderBy="" />
+            <UIFilterInfo id="3dfc13e2-af6d-4800-8bc7-c669b4f67faa" name="DefaultFilter" displayName="缺省过滤条件" description="" help="" OPath="" OrderBy="ID desc" />
           </Filters>
         </UIViewInfo>
         <UIViewInfo id="5aea9afb-ec4f-4d4d-a1c7-2418396aaa69" name="PrePayment_PrePaymentLines" displayName="预付款通知单行" description="" RootFullName="PrePaymentUIModel.PrePayment.PrePaymentLines.Item">

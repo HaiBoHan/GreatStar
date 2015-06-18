@@ -146,22 +146,24 @@ namespace UFIDA.U9.Cust.GS.FT.HBHHelper
 
 
                 if (lowerLines != null
-                    && lowerLines.Count > 0
                     )
                 {
                     using (ISession session = Session.Open())
                     {
                         bool isUpdated = false;
-                        foreach (Entity lowerEntity in lowerLines)
+                        if (lowerLines.Count > 0)
                         {
-                            Entity upperEntity = GetUpperEntity(srcUpperEntity, lowerEntity, upperEntityFieldInLowerLine);
-                            if (upperEntity != null)
+                            foreach (Entity lowerEntity in lowerLines)
                             {
-                                bool isCurLineUpdated = UpdateLineTakeQty(lowerEntity, upperEntity, lowerField, upperField);
-
-                                if (isCurLineUpdated)
+                                Entity upperEntity = GetUpperEntity(srcUpperEntity, lowerEntity, upperEntityFieldInLowerLine);
+                                if (upperEntity != null)
                                 {
-                                    isUpdated = true;
+                                    bool isCurLineUpdated = UpdateLineTakeQty(lowerEntity, upperEntity, lowerField, upperField);
+
+                                    if (isCurLineUpdated)
+                                    {
+                                        isUpdated = true;
+                                    }
                                 }
                             }
                         }
