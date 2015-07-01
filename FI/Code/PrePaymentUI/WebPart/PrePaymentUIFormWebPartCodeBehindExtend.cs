@@ -44,6 +44,8 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 {
     public partial class PrePaymentUIFormWebPart
     {
+        public const string Const_PrePayment = "PrePayment";
+
         #region Custome eventBind
 	
 		 
@@ -457,19 +459,33 @@ namespace UFIDA.U9.Cust.GS.FI.PrePaymentUIModel
 
         //挪用
 		private void MenuMove_Click_Extend(object sender, EventArgs  e)
-		{
-			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            if (this.Model.PrePayment_PrePaymentLines.FocusedRecord != null)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //MenuMove_Click_DefaultImpl(sender, e);
+
+            //if (this.Model.PrePayment_PrePaymentLines.FocusedRecord != null)
+            //{
+            //    NameValueCollection param = new NameValueCollection();
+            //    param.Add("PDPageStatus", "Browse");//这行代码是控制弹开画面为浏览状态
+            //    string FormID = "16152ede-2d87-469f-ad3a-3161638edd3b";
+            //    param.Add("btnRefresh", this.btnRefresh.ClientID);
+            //    param.Add("PrePaymentLine", this.Model.PrePayment_PrePaymentLines.FocusedRecord.ID.ToString());
+
+            //    this.ShowAtlasModalDialog(this.btnRefresh, FormID, "预付款挪用", "830", "475", null, param, true, true, false);
+            //}
+
+            if (this.Model.PrePayment.FocusedRecord != null)
             {
                 NameValueCollection param = new NameValueCollection();
                 param.Add("PDPageStatus", "Browse");//这行代码是控制弹开画面为浏览状态
-                string FormID = "16152ede-2d87-469f-ad3a-3161638edd3b";
+                // PrePayMoveFormBListUIModel.PrePayMoveFormBListUIFormWebPart , UFIDA.U9.Cust.GS.FI.FIList.WebPart
+                string FormID = "e0e60331-8be9-42cf-a54a-293fdf3dc208";
+                string width = "992";
+                string heigh = "504";
                 param.Add("btnRefresh", this.btnRefresh.ClientID);
-                param.Add("PrePaymentLine", this.Model.PrePayment_PrePaymentLines.FocusedRecord.ID.ToString());
+                param.Add(Const_PrePayment, this.Model.PrePayment.FocusedRecord.ID.ToString());
 
-                this.ShowAtlasModalDialog(this.btnRefresh, FormID, "预付挪用款", "830", "475", null, param, true, true, false);
-
-                MenuMove_Click_DefaultImpl(sender, e);
+                this.ShowAtlasModalDialog(this.btnRefresh, FormID, "预付款挪用", width, heigh, null, param, true, true, false);
             }
 		}
 
