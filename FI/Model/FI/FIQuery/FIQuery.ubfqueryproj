@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="5dd4e03a-798a-4c9e-a64e-0be41bf12ca5" name="FIQuery" displayName="FIQuery" description="" help="" type="" assemblyName="FIQuery" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="a2cbe9af-a1c9-40e2-a9ab-c871c0f304de" name="FIList" displayName="FIList" description="" help="" componentid="2b086b17-a496-4d50-856d-f9e79b30360b" path="..\FIList\FIList.ubfuiproj" type="UI" isRuntime="False" />
+    <Import id="e19ac45a-263a-483b-9a4f-96c96bdc6fc5" name="FIQueryBP" displayName="FIQueryBP" description="" help="" componentid="1e5cd5e9-84f2-400f-992c-8ffb71465b44" path="..\FIQueryBP\FIQueryBP.ubfbpproj" type="BP" isRuntime="False" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="a3f77b59-0a55-473a-8bb0-972a65ace36e" name="PrePayMoveForm.ubfquery" displayName="PrePayMoveForm.ubfquery" description="" help="" include="PrePayMoveForm.ubfquery" type="" />
+  </ItemGroup>
+</Project>

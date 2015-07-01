@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="6b18df29-a845-4451-8a81-49810bb1ec9c" name="PrePayMoveForm" displayName="PrePayMoveForm" description="" help="" QueryType="List" QueryURI="f1004e1e-d564-487b-a320-d90494a487d6" QuerySourceFullName="UFIDA.U9.Cust.GS.FI.PrePaymentBE.PrePaymentLine" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="d4786a09-f03b-4e28-b4dc-4be1ee986bec" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="735c896e-ca67-4545-a1ad-388d4fd98a34" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="b2446b94-b55c-48f7-9b1d-9a64f424d0a0" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="4828cc7e-2d64-455e-a808-848b88d13899" UIFormItemID="d4ed6e5d-32e2-469b-95ed-59e6cee3b82f" UIModelID="f0e21720-9a97-41bd-85b2-ead3d0e658ff" />
+  <FilterDefines>
+    <FilterDefine id="f69cd62a-9749-4850-88d5-a8a9ac0ef739" name="PrePayment.DocNo" displayName="PrePayment.DocNo" description="" help="" ParentName="PrePayment" Alias="PrePayment_DocNo" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="2afa5428-b1c8-4c4f-aad0-8b0dfe7d3ea1" name="PrePayment.DocumentType" displayName="PrePayment.DocumentType" description="" help="" ParentName="PrePayment" Alias="PrePayment_DocumentType" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="01faf461-f6f8-46cf-bedf-d1b363728744" name="LineNum" displayName="LineNum" description="" help="" ParentName="" Alias="LineNum" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="780c36a4-8dce-4733-9898-5ceda5bc11da" name="SrcPO" displayName="SrcPO" description="" help="" ParentName="" Alias="SrcPO" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="2bb7e478-104e-4479-a71a-8c2fed1a67db" name="PrePayment.DocNo" displayName="PrePayment.DocNo" description="" help="" ParentName="PrePayment" Alias="PrePayment_DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="aa6f13c6-943c-423e-b218-56d3fa16912a" name="PrePayment.DocumentType.Name" displayName="PrePayment.DocumentType.Name" description="" help="" ParentName="PrePayment.DocumentType" Alias="PrePayment_DocumentType_Name" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="77bcf84e-a1ec-48e7-95b6-1b4ad30d3dae" name="PrePayment.Status" displayName="PrePayment.Status" description="" help="" ParentName="PrePayment" Alias="PrePayment_Status" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="fa2af1f8-4736-4a60-9cc5-85eb57f62b07" name="LineNum" displayName="LineNum" description="" help="" ParentName="" Alias="LineNum" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="fb05a0e4-83af-443d-85ef-497b6d104586" name="SrcPO.DocNo" displayName="SrcPO.DocNo" description="" help="" ParentName="SrcPO" Alias="SrcPO_DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="a861b280-7a11-47da-b93e-78a95068d797" name="PrePayMoney" displayName="PrePayMoney" description="" help="" ParentName="" Alias="PrePayMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="d1c5a592-315c-4c20-94e5-07b3e7989b3d" name="DRMoney" displayName="DRMoney" description="" help="" ParentName="" Alias="DRMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="81e805ea-7ac3-45c8-8bab-dbee42336937" name="ActualMoney" displayName="ActualMoney" description="" help="" ParentName="" Alias="ActualMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="6d497409-0426-43e0-b29f-a1f3ed8b3068" name="SumApplyMoney" displayName="SumApplyMoney" description="" help="" ParentName="" Alias="SumApplyMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="eaf40116-be76-49d3-8e40-12ddb8fa4a20" name="SumRedFlushMoney" displayName="SumRedFlushMoney" description="" help="" ParentName="" Alias="SumRedFlushMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="4681a98a-8dc2-458d-aa5c-b69ae39f2585" name="SumMoveMoney" displayName="SumMoveMoney" description="" help="" ParentName="" Alias="SumMoveMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="5a143f17-3e39-473f-ab2c-23b9e6f573c2" name="PrePayment.DocNo" displayName="预付款通知单.单据编号" description="" help="" />
+      <BasicFilter id="1137ea2c-d30f-4f62-b1c9-fe099e3e2164" name="PrePayment.DocumentType" displayName="预付款通知单.单据类型" description="" help="" />
+      <BasicFilter id="94153c32-a8a4-4bab-b6c6-7552959f1f79" name="LineNum" displayName="行号" description="" help="" />
+      <BasicFilter id="0c66675a-a1b3-4b65-8e28-df4aad590959" name="SrcPO" displayName="采购订单" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="4614da8f-9bd9-4df3-86ee-967b8755ed70" name="PrePayment.DocNo" displayName="单号" description="" help="" />
+      <Column id="120de1ba-fa92-442b-8a24-16570033bfad" name="PrePayment.DocumentType.Name" displayName="单据类型" description="" help="" />
+      <Column id="f475c824-41c5-4f5e-9526-5e364ef2bcdc" name="PrePayment.Status" displayName="单据状态" description="" help="" />
+      <Column id="79439a22-f9d8-45e8-ae3f-2c405c07743d" name="LineNum" displayName="行号" description="" help="" />
+      <Column id="55bf40f5-348b-4720-93fe-f3604eb66a9f" name="SrcPO.DocNo" displayName="采购订单" description="" help="" />
+      <Column id="18f2aaa6-ee22-4956-aed7-5d26e0b14d04" name="PrePayMoney" displayName="预付金额" description="" help="" />
+      <Column id="e02db4ed-ef75-45e7-8ce3-387a98887042" name="DRMoney" displayName="扣款金额" description="" help="" />
+      <Column id="193d858c-6953-4e02-bfb4-c6e43ceb93e4" name="ActualMoney" displayName="实付金额" description="" help="" />
+      <Column id="edc54e52-9461-4bf8-bf95-b6b2d7c4103e" name="SumApplyMoney" displayName="已核销金额" description="" help="" />
+      <Column id="f281fd41-2d28-4687-83f0-757855873c0d" name="SumRedFlushMoney" displayName="已红冲金额" description="" help="" />
+      <Column id="f17868b8-8e73-40e3-9714-561e1034042b" name="SumMoveMoney" displayName="已挪出金额" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="38d1beb0-7b7b-4310-82b2-62ded2974f02" name="SrcPO.DocNo" displayName="" description="" help="" SortType="DESC" />
+      <Sort id="4bdbac49-d995-4934-9830-6d53e5d4f67b" name="PrePayment.DocNo" displayName="" description="" help="" SortType="DESC" />
+      <Sort id="8c88ecd8-eeab-4d72-91bd-defb84235418" name="LineNum" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

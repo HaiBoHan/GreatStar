@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="2b086b17-a496-4d50-856d-f9e79b30360b" name="FIList" displayName="FIList" description="" help="" type="UI" assemblyName="UFIDA.U9.Cust.GS.FI.FIList" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="03059ac7-8ac6-4284-8e47-5cee7204cffb" name="FIBE" displayName="FIBE" description="" help="" componentid="daa708bc-fde6-441c-a362-cf5087c6d7b4" path="..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\UFIDA.U9.Cust.GS.FI.FIBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="4828cc7e-2d64-455e-a808-848b88d13899" name="PrePayMoveFormBListUIModel.ubfuim" displayName="PrePayMoveFormBListUIModel.ubfuim" description="" help="" include="PrePayMoveFormBListUIModel.ubfuim" type="" />
+    <Item id="d4ed6e5d-32e2-469b-95ed-59e6cee3b82f" name="PrePayMoveFormBListUIForm.ubfform" displayName="PrePayMoveFormBListUIForm.ubfform" description="" help="" include="PrePayMoveFormBListUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>
